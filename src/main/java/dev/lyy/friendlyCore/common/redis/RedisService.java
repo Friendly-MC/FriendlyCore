@@ -571,6 +571,8 @@ public class RedisService {
             redisClient.sadd("friendlycore:known_servers", serverId);
             redisClient.set("friendlycore:server_heartbeat:" + serverId, "1",
                     SetParams.setParams().ex(120));
+            // Keep PubSub subscriber connection alive with periodic traffic
+            publish(new CrossServerPacket(serverId, CrossServerPacket.Action.HEARTBEAT, null, null, 0.0, null));
 
             Set<String> knownServers = redisClient.smembers("friendlycore:known_servers");
             if (knownServers != null) {

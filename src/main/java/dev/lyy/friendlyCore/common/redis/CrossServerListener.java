@@ -432,6 +432,7 @@ public class CrossServerListener extends JedisPubSub {
                         plugin.getOrdersModule().getPacketHandler().handlePacket(packet);
                     }
                 }
+                case HEARTBEAT -> {}
             }
         } catch (Exception e) {
             plugin.getLogger().log(Level.WARNING, "Failed to apply verified Redis packet", e);
