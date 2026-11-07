@@ -1,0 +1,110 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                     ✦ GENERAL & CORE LOCALIZATION ✦                          ║
+# ║               Global Messages & Common Command Feedback                      ║
+# ║                                                                              ║
+# ║  Supports Adventure MiniMessage formatting (<gradient>, <color>, <bold>).    ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SYSTEM & PERMISSIONS
+# ──────────────────────────────────────────────────────────────────────────────
+# Sent when a player lacks the required permission node to execute a command
+no-permission: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴘᴇʀᴍɪѕѕɪᴏɴ ᴛᴏ ᴜѕᴇ ᴛʜɪѕ ᴄᴏᴍᴍᴀɴᴅ."
+error-no-permission: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴘᴇʀᴍɪѕѕɪᴏɴ ᴛᴏ ᴜѕᴇ ᴛʜɪѕ ᴄᴏᴍᴍᴀɴᴅ."
+
+# Sent when a player-only command is executed from the console
+player-only: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛʜɪѕ ᴄᴏᴍᴍᴀɴᴅ ᴄᴀɴ ᴏɴʟʏ ʙᴇ ᴜѕᴇᴅ ʙʏ ᴘʟᴀʏᴇʀѕ."
+
+# Sent when a target player is offline or not found (Placeholders: %player%)
+player-not-found: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘʟᴀʏᴇʀ <color:#E7B85C>%player% <color:#D8D0C3>ᴡᴀѕ ɴᴏᴛ ғᴏᴜɴᴅ ᴏɴʟɪɴᴇ."
+error-player-not-found: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘʟᴀʏᴇʀ <color:#E7B85C>%player% <color:#D8D0C3>ᴡᴀѕ ɴᴏᴛ ғᴏᴜɴᴅ ᴏɴʟɪɴᴇ."
+error-player-not-found-at-all: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘʟᴀʏᴇʀ ɴᴏᴛ ғᴏᴜɴᴅ."
+
+# ──────────────────────────────────────────────────────────────────────────────
+# INPUT VALIDATION
+# ──────────────────────────────────────────────────────────────────────────────
+# Sent when a numerical command argument cannot be parsed
+invalid-number: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɪɴᴠᴀʟɪᴅ ɴᴜᴍʙᴇʀ ғᴏʀᴍᴀᴛ."
+error-invalid-number: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɪɴᴠᴀʟɪᴅ ɴᴜᴍʙᴇʀ ғᴏʀᴍᴀᴛ."
+
+# Sent when a positive number is expected but a negative value or zero was given
+error-invalid-number-negative: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴀᴍᴏᴜɴᴛ ᴄᴀɴɴᴏᴛ ʙᴇ ɴᴇɢᴀᴛɪᴠᴇ."
+
+# Sent when a number exceeds the allowable maximum value
+error-invalid-number-too-big: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛʜɪѕ ᴀᴍᴏᴜɴᴛ ɪѕ ᴛᴏᴏ ʟᴀʀɢᴇ."
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SYSTEM RELOAD
+# ──────────────────────────────────────────────────────────────────────────────
+# Sent when plugin configurations are successfully reloaded (Placeholders: %time%)
+command-reloaded: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴄᴏɴғɪɢᴜʀᴀᴛɪᴏɴѕ ʀᴇʟᴏᴀᴅᴇᴅ ɪɴ <color:#E7B85C>%time%ᴍѕ<color:#D8D0C3>."
+reload-completed: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴄᴏɴғɪɢᴜʀᴀᴛɪᴏɴѕ ʀᴇʟᴏᴀᴅᴇᴅ ɪɴ <color:#E7B85C>%time%ᴍѕ<color:#D8D0C3>."
+reload-module-done: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴍᴏᴅᴜʟᴇ <color:#E7B85C>%module%<color:#D8D0C3> ʀᴇʟᴏᴀᴅᴇᴅ ɪɴ <color:#E7B85C>%time%ᴍѕ<color:#D8D0C3>."
+reload-unknown-module: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴜɴᴋɴᴏᴡɴ ᴍᴏᴅᴜʟᴇ <color:#E7B85C>%module%<color:#D8D0C3>. ᴀᴠᴀɪʟᴀʙʟᴇ: <color:#E7B85C>%modules%"
+# Shown when a file has a YAML error; that file keeps its last good version.
+reload-problems: "<gradient:#FFB703:#E7B85C><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʀᴇʟᴏᴀᴅᴇᴅ <color:#E7B85C>%module%<color:#D8D0C3> ᴡɪᴛʜ <color:#FF9A9A>%count%<color:#D8D0C3> ᴘʀᴏʙʟᴇᴍ(ѕ). ʙʀᴏᴋᴇɴ ғɪʟᴇѕ ᴋᴇᴘᴛ ᴛʜᴇɪʀ ʟᴀѕᴛ ɢᴏᴏᴅ ᴠᴇʀѕɪᴏɴ:"
+reload-problem-line: " <dark_gray>• <color:#FF9A9A>%problem%"
+
+# Shared GUI, input and fallback text
+gui-previous-page: "<yellow>« Previous Page (%page%)"
+gui-page-indicator: "<gold>Page <yellow>%page%</yellow> / <yellow>%total%</yellow>"
+gui-next-page: "<yellow>Next Page (%page%) »"
+gui-data-synchronizing: "<red>Your player data is currently synchronizing across the network. Please wait a moment."
+teleport-world-no-permission: "<red>You do not have permission to enter this world."
+afk-players-only: "Only players can use /afk."
+
+# ──────────────────────────────────────────────────────────────────────────────
+# AFK SERVER (/afk)
+# ──────────────────────────────────────────────────────────────────────────────
+# Each entry is a plain string (sent to chat) or a section with:
+#   text:         the message ("" or DISABLED hides it)
+#   display-type: CHAT, ACTION_BAR or BOTH
+#   enabled:      false hides it
+# Placeholders: %seconds% (warmup left), %server% (AFK server id), %time% (cooldown left)
+afk-warmup:
+  text: "<gradient:#FFB703:#E7B85C><bold>☾ ᴀꜰᴋ</bold></gradient> <dark_gray>» <color:#D8D0C3>Connecting to AFK in <color:#E7B85C>%seconds%s<color:#D8D0C3>. Stay still."
+  display-type: BOTH
+  enabled: true
+# Sent every second during the warmup, after afk-warmup (3, 2, 1...)
+afk-countdown:
+  text: "<gradient:#FFB703:#E7B85C><bold>☾ ᴀꜰᴋ</bold></gradient> <dark_gray>» <color:#D8D0C3>Connecting in <color:#E7B85C>%seconds%s<color:#D8D0C3>..."
+  display-type: ACTION_BAR
+  enabled: true
+afk-connecting:
+  text: "<gradient:#FFB703:#E7B85C><bold>☾ ᴀꜰᴋ</bold></gradient> <dark_gray>» <color:#D8D0C3>Connecting to the AFK server..."
+  display-type: BOTH
+  enabled: true
+afk-cancelled:
+  text: "<gradient:#FFB703:#E7B85C><bold>☾ ᴀꜰᴋ</bold></gradient> <dark_gray>» <color:#D8D0C3>AFK transfer cancelled."
+  display-type: BOTH
+  enabled: true
+afk-failed:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴀꜰᴋ</bold></gradient> <dark_gray>» <color:#D8D0C3>Unable to connect to AFK. Please try again."
+  display-type: CHAT
+  enabled: true
+afk-save-failed:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴀꜰᴋ</bold></gradient> <dark_gray>» <color:#D8D0C3>Unable to save your account for AFK. Please try again."
+  display-type: CHAT
+  enabled: true
+afk-blocked:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴀꜰᴋ</bold></gradient> <dark_gray>» <color:#D8D0C3>You cannot go AFK while fighting, dead, teleporting, or synchronizing."
+  display-type: CHAT
+  enabled: true
+afk-in-progress:
+  text: "<gradient:#FFB703:#E7B85C><bold>☾ ᴀꜰᴋ</bold></gradient> <dark_gray>» <color:#D8D0C3>Your AFK transfer is already in progress."
+  display-type: CHAT
+  enabled: true
+afk-cooldown:
+  text: "<gradient:#FFB703:#E7B85C><bold>☾ ᴀꜰᴋ</bold></gradient> <dark_gray>» <color:#D8D0C3>Please wait <color:#E7B85C>%time%s<color:#D8D0C3> before using /afk again."
+  display-type: CHAT
+  enabled: true
+afk-already-there:
+  text: "<gradient:#FFB703:#E7B85C><bold>☾ ᴀꜰᴋ</bold></gradient> <dark_gray>» <color:#D8D0C3>You are already on the AFK server."
+  display-type: CHAT
+  enabled: true
+afk-no-permission: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>You do not have permission to use /afk."
+afk-usage: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴀꜰᴋ</bold></gradient> <dark_gray>» <color:#D8D0C3>Usage: <color:#E7B85C>/afk"
+afk-disabled: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴀꜰᴋ</bold></gradient> <dark_gray>» <color:#D8D0C3>AFK transfers are disabled."
+afk-not-configured: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴀꜰᴋ</bold></gradient> <dark_gray>» <color:#D8D0C3>The AFK server is not configured."

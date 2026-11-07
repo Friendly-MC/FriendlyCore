@@ -1,0 +1,79 @@
+# DOCUMENTATION: https://docs.artillex-studios.com/axauctions.html
+#
+# some supported regex: (optional)
+# - 'name' #  only 'name' is disallowed
+# - 'name*' #  disallows text starting with 'name'
+# - '*name' #  disallows text ending with 'name'
+# - '*name*' #  disallows text containing 'name'
+#
+# you can use some sections from our item builder: (https://docs.artillex-studios.com/item-builder.html)
+#  > name
+#  > material / type
+#  > custom-model-data (only the old variant)
+#
+# note: category items are always matched with the "OR" logic gate, which means that if any of the "items" sections match the item, it will be part of the category
+#
+# you should not include color codes as the plugin removes them before checking for matches,
+# instead you should put names like this: "name: '*Name*'" meaning that if the item name contains the name, it will match it
+# and of course, every field is case-sensitive!
+
+# should the category system be enabled?
+# note: the category selector item is disabled by default, you need to uncomment the section as well (in the main-gui.yml and my-items.yml) to make it work!
+# restarting the server is recommended after changing this
+enabled: false
+
+# the "all" category just matches all materials
+all:
+  # formatted name of the category, can contain colors
+  name: "All"
+  items:
+    - material: "*"
+
+tools:
+  name: "Tools"
+  items:
+    - material: "*_PICKAXE" # match items with their material ending in _PICKAXE
+    - material: "*_AXE"
+    - material: "*_SHOVEL"
+    - material: "*_HOE"
+
+weapons:
+  name: "Weapons"
+  items:
+    - material: "*_SWORD"
+    - material: "*_AXE"
+    - material: "SHIELD"
+    - material: "TRIDENT"
+    - material: "*BOW"
+    - material: "*ARROW"
+
+armors:
+  name: "Armors"
+  items:
+    - material: "*_HELMET"
+    - material: "*_CHESTPLATE"
+    - material: "*_LEGGINGS"
+    - material: "*_BOOTS"
+
+minerals:
+  name: "Minerals"
+  items:
+    - material: "*_ORE"
+    - material: "*_INGOT"
+    - material: "DIAMOND"
+    - material: "EMERALD"
+    - material: "COAL"
+    - material: "QUARTZ"
+    - material: "REDSTONE"
+    - material: "ANCIENT_DEBRIS"
+
+custom:
+  name: "Custom"
+  items:
+    - custom-model-data: 100
+      name: "*Some custom item*"
+    - custom-model-data: 150
+      name: "*Another custom item*"
+
+# do not change this
+version: 1

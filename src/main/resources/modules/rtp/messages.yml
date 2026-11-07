@@ -1,0 +1,88 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                         ✦ RTP MODULE LOCALIZATION ✦                          ║
+# ║                     Clean, Modern & Premium MiniMessage                      ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# Global message prefix for chat notifications
+prefix: "<gradient:#00d2ff:#3a7bd5><bold>RTP</bold></gradient> <dark_gray>»</dark_gray> <gray>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ACTIONBAR ANIMATIONS & STATUS
+# ──────────────────────────────────────────────────────────────────────────────
+actionbar-searching: "&e⚡ &6&lRTP &8» &fʟᴏᴀᴅɪɴɢ ᴄʜᴜɴᴋs... ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ"
+actionbar-warmup: "&e⚡ &6&lRTP &8» &fᴛᴇʟᴇᴘᴏʀᴛɪɴɢ ɪɴ #fbf100%time% ⌚ &fsᴇᴄᴏɴᴅs... <red><italic>(Don't move!)</italic></red>"
+actionbar-success: "&a✔ &2&lRTP &8» &fʏᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ sᴜᴄᴄᴇssꜰᴜʟʟʏ ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ."
+actionbar-cancelled: "&c✘ &4&lRTP &8» &fᴛᴇʟᴇᴘᴏʀᴛ ᴡᴀs ᴄᴀɴᴄᴇʟʟᴇᴅ!"
+actionbar-failed: "&c✘ &4&lRTP &8» &fɴᴏ sᴀꜰᴇ sᴘᴏᴛs ʟᴏᴄᴀᴛᴇᴅ, ᴛʀʏ ᴀɢᴀɪɴ"
+actionbar-queued: "&e⚡ &6&lRTP &8» &fɪɴ ǫᴜᴇᴜᴇ ꜰᴏʀ #fbf100%server%&f, ᴀʙᴏᴜᴛ #fbf100%seconds%s"
+actionbar-server-full: "&c✘ &4&lRTP &8» #fbf100%server% &fɪs ꜰᴜʟʟ ʀɪɢʜᴛ ɴᴏᴡ, ᴛʀʏ ᴀɢᴀɪɴ sᴏᴏɴ"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# CHAT NOTIFICATIONS & FEEDBACK
+# ──────────────────────────────────────────────────────────────────────────────
+teleporting: "&a✔ &2&lRTP &8» &fʏᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ sᴜᴄᴄᴇssꜰᴜʟʟʏ ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ."
+warmup-started: "&e⚡ &6&lRTP &8» &fᴛᴇʟᴇᴘᴏʀᴛɪɴɢ ɪɴ #fbf100%time% ⌚ &fsᴇᴄᴏɴᴅs..."
+searching: "&e⚡ &6&lRTP &8» &fʟᴏᴀᴅɪɴɢ ᴄʜᴜɴᴋs... ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ"
+cancelled-movement: "&c✘ &4&lRTP &8» &fᴛᴇʟᴇᴘᴏʀᴛ ᴡᴀs ᴄᴀɴᴄᴇʟʟᴇᴅ!"
+cancelled-damage: "&c✘ &4&lRTP &8» &fᴛᴇʟᴇᴘᴏʀᴛ ᴡᴀs ᴄᴀɴᴄᴇʟʟᴇᴅ!"
+cooldown: "<gradient:#ffa726:#fb8c00><bold>COOLDOWN</bold></gradient> <dark_gray>»</dark_gray> <gray>Please wait <#ffa726>%seconds%s</#ffa726> before using RTP again.</gray>"
+not-safe: "&c✘ &4&lRTP &8» &fɴᴏ sᴀꜰᴇ sᴘᴏᴛs ʟᴏᴄᴀᴛᴇᴅ, ᴛʀʏ ᴀɢᴀɪɴ"
+world-disabled: "<gradient:#ff5252:#ff1744><bold>RTP</bold></gradient> <dark_gray>»</dark_gray> <gray>RTP is disabled in world <#ff5252>%world%</#ff5252>!</gray>"
+invalid-world: "<gradient:#ff5252:#ff1744><bold>RTP</bold></gradient> <dark_gray>»</dark_gray> <gray>World <#ff5252>%world%</#ff5252> does not exist or is not loaded!</gray>"
+already-teleporting: "<gradient:#ffa726:#fb8c00><bold>RTP</bold></gradient> <dark_gray>»</dark_gray> <gray>You are already preparing to teleport!</gray>"
+no-permission: "<gradient:#ff5252:#ff1744><bold>RTP</bold></gradient> <dark_gray>»</dark_gray> <gray>You do not have permission to use RTP in this world.</gray>"
+economy-not-enough: "<gradient:#ff5252:#ff1744><bold>RTP</bold></gradient> <dark_gray>»</dark_gray> <gray>You need <#00e676>$%cost%</#00e676> to use RTP! Current balance: <#00d2ff>$%balance%</#00d2ff></gray>"
+economy-paid: "<gradient:#00e676:#00b0ff><bold>RTP</bold></gradient> <dark_gray>»</dark_gray> <gray>Paid <#00e676>$%cost%</#00e676> for random teleportation.</gray>"
+cross-server-searching: "&e⚡ &6&lRTP &8» &fʟᴏᴀᴅɪɴɢ ᴄʜᴜɴᴋs... ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ"
+cross-server-failed: "&c✘ &4&lRTP &8» &fɴᴏ sᴀꜰᴇ sᴘᴏᴛs ʟᴏᴄᴀᴛᴇᴅ, ᴛʀʏ ᴀɢᴀɪɴ"
+admin-teleported-other: "<gradient:#00d2ff:#3a7bd5><bold>RTP ADMIN</bold></gradient> <dark_gray>»</dark_gray> <gray>Teleported <white>%player%</white> to random location in <#00d2ff>%world%</#00d2ff>.</gray>"
+reload-success: "<gradient:#00e676:#00b0ff><bold>RTP</bold></gradient> <dark_gray>»</dark_gray> <gray>RTP configuration, spatial spreading engine, and location cache reloaded successfully!</gray>"
+spread-in-progress: "<gradient:#00d2ff:#3a7bd5><bold>RTP SPREAD</bold></gradient> <dark_gray>»</dark_gray> <gray>Spreading <white>%count%</white> players across <#00d2ff>%world%</#00d2ff> (Radius: <white>%radius%</white>)...</gray>"
+spread-success: "<gradient:#00e676:#00b0ff><bold>RTP SPREAD</bold></gradient> <dark_gray>»</dark_gray> <gray>Successfully spread <white>%count%/%total%</white> players across <#00d2ff>%world%</#00d2ff>!</gray>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SCREEN TITLES & SUBTITLES
+# ──────────────────────────────────────────────────────────────────────────────
+titles:
+  searching:
+    title: "#fbf100⚡ &l&nL#fbe500&l&nO#fcd800&l&nA#fccc00&l&nD#fcc000&l&nI#fdb300&l&nN#fda700&l&nG&r #fda700⚡"
+    subtitle: "&fʟᴏᴀᴅɪɴɢ ᴄʜᴜɴᴋs... ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ"
+  warmup:
+    title: "#fbf100⚡ &l&nT#fbea00&l&nE#fbe200&l&nL#fcdb00&l&nE#fcd300&l&nP#fccc00&l&nO#fcc500&l&nR#fcbd00&l&nT#fdb600&l&nI#fdae00&l&nN#fda700&l&nG&r #fda700⚡"
+    subtitle: "&fᴛᴇʟᴇᴘᴏʀᴛɪɴɢ ɪɴ #fbf100%time% ⌚ &fsᴇᴄᴏɴᴅs..."
+  success:
+    title: "#9cfb00✔ &l&nT#8bfb03&l&nE#79fb06&l&nL#68fc08&l&nE#57fc0b&l&nP#45fc0e&l&nO#34fc11&l&nR#23fd13&l&nT#11fd16&l&nE#00fd19&l&nD&r #00fd19✔"
+    subtitle: "&fʏᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ sᴜᴄᴄᴇssꜰᴜʟʟʏ ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ."
+  cancelled:
+    title: "#FF0000✘ &l&nCANCELLED&r #FF0000✘"
+    subtitle: "&fᴛᴇʟᴇᴘᴏʀᴛ ᴡᴀs ᴄᴀɴᴄᴇʟʟᴇᴅ!"
+  failed:
+    title: "#FF0000✘ &l&nCANCELLED&r #FF0000✘"
+    subtitle: "&fɴᴏ sᴀꜰᴇ sᴘᴏᴛs ʟᴏᴄᴀᴛᴇᴅ, ᴛʀʏ ᴀɢᴀɪɴ"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# COMMAND, GUI AND ADMIN MESSAGES
+# ──────────────────────────────────────────────────────────────────────────────
+no-players-specified-to-spread: "&cNo players specified to spread."
+invalid-target-world-for-player-spreading: "&cInvalid target world for player spreading."
+rtp-is-disabled-in-world: "&cRTP is disabled in world %world_name%"
+usage-rtp: "Usage: /rtp <player|world|server|spread|reload|status>"
+friendlycore-rtp-spreading-status: "&b=== FriendlyCore RTP & Spreading Status ==="
+location-cache-enabled: "&7Location Cache Enabled: &f%enabled%"
+total-cached-safe-spots: "&7Total Cached Safe Spots: &a%total_cached%"
+spreading-engine-enabled: "&7Spreading Engine: &f&aENABLED"
+spreading-engine-disabled: "&7Spreading Engine: &f&cDISABLED"
+default-distribution-algorithm-sectors: "&7Default Distribution Algorithm: &e%default_algorithm% &7(Sectors: %sector_count%)"
+min-distance-from-players-blocks: "&7Min Distance from Players: &f%min_player_distance% blocks"
+min-distance-between-recent-blocks: "&7Min Distance between Recent: &f%min_recent_distance% blocks"
+active-tracked-recent-landings: "&7Active Tracked Recent Landings: &e%total_recent_count%"
+cached-recent-r: "&8 - &f%w_name% &7(%world_type% / %shape% / %distribution_algorithm%): &e%cached% cached &7| &e%recent% recent &7[R: %min_radius% - %max_radius%]"
+landing-pool-size: "&8   &7landing pool: &e%size%"
+usage-rtp-spread-radius:"&cUsage: /rtp spread [radius] <player1,player2,...|all>"
+no-online-players-found-to-spread: "&cNo online players found to spread."
+only-players-can-rtp-to-a: "Only players can RTP to a world."
+only-players-can-cross-server-rtp: "Only players can cross-server RTP."
+player-is-not-online: "&cPlayer '%input%' is not online."
+usage-rtp-world-server-player-spread: "&cUsage: /rtp [world <world> | server <server> | player <player> | spread [radius] <players...> | reload | status]"

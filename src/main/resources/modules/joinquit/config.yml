@@ -1,0 +1,76 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                     ✦ FRIENDLY CORE - JOIN & QUIT ✦                          ║
+# ║                 Clean, Modern & Premium Join/Quit Suite                      ║
+# ║                                                                              ║
+# ║  • Paper & Folia Multi-Threaded Engine Support                               ║
+# ║  • Cross-Server Network Sync over Redis Pub/Sub                              ║
+# ║  • Adventure MiniMessage & RGB Gradient Colors (<green>, <gradient:#...>)    ║
+# ║  • Permission-Based Rank Formats & Staff Silent Joins                        ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# Enable or disable the Join & Quit module.
+# When false, vanilla join/quit messages are also hidden.
+enabled: true
+
+# Suppress default vanilla Minecraft join/quit messages
+suppress-vanilla-messages: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Local Join & Quit Settings
+# ──────────────────────────────────────────────────────────────────────────────
+# Available placeholders:
+#   %player%         - Player username
+#   %name%           - Player username
+#   %displayname%    - Player display name / nickname
+#   %server%         - Current server ID/name
+#   %unique_joins%   - Total unique player joins count
+#   %online%         - Local server online player count
+#   %max_online%     - Server maximum slots
+#   %network_online% - Network-wide online player count (requires Redis)
+
+join:
+  enabled: true
+  message: "<dark_gray>[<color:#00e676>+</color>]</dark_gray> <gray>%player%</gray>"
+  sound: "none" # e.g. ENTITY_EXPERIENCE_ORB_PICKUP or none
+
+quit:
+  enabled: true
+  message: "<dark_gray>[<color:#ff5252>-</color>]</dark_gray> <gray>%player%</gray>"
+# ──────────────────────────────────────────────────────────────────────────────
+# Rank & Permission Group Formats
+# ──────────────────────────────────────────────────────────────────────────────
+groups:
+  owner:
+    priority: 100
+    permission: "friendlycore.joinquit.group.owner"
+    join-message: "<dark_gray>[<gradient:#ff4757:#ff6b81><bold>Owner</bold></gradient>]</dark_gray> <white><bold>%player%</bold></white> <gray>joined the server.</gray>"
+    quit-message: "<dark_gray>[<gradient:#ff4757:#ff6b81><bold>Owner</bold></gradient>]</dark_gray> <white><bold>%player%</bold></white> <gray>left the server.</gray>"
+    join-sound: "UI_TOAST_CHALLENGE_COMPLETE"
+    quit-sound: "none"
+  admin:
+    priority: 80
+    permission: "friendlycore.joinquit.group.admin"
+    join-message: "<dark_gray>[<color:#ff4757><bold>Admin</bold></color>]</dark_gray> <white>%player%</white> <gray>joined the server.</gray>"
+    quit-message: "<dark_gray>[<color:#ff4757><bold>Admin</bold></color>]</dark_gray> <white>%player%</white> <gray>left the server.</gray>"
+    join-sound: "none"
+    quit-sound: "none"
+  vip:
+    priority: 50
+    permission: "friendlycore.joinquit.group.vip"
+    join-message: "<dark_gray>[<color:#ffa502><bold>VIP</bold></color>]</dark_gray> <white>%player%</white> <gray>joined the server.</gray>"
+    quit-message: "<dark_gray>[<color:#ffa502><bold>VIP</bold></color>]</dark_gray> <white>%player%</white> <gray>left the server.</gray>"
+    join-sound: "none"
+    quit-sound: "none"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Staff Silent Join & Quit
+# ──────────────────────────────────────────────────────────────────────────────
+silent:
+  # Permission to join/quit silently without public broadcast
+  permission: "friendlycore.joinquit.silent"
+  # Permission to receive notifications when a staff member joins/quits silently
+  staff-notify-permission: "friendlycore.joinquit.staffnotify"
+  staff-join-notify: "<dark_gray>[<color:#00d2ff>Silent</color>]</dark_gray> <gray>%player% joined %server%.</gray>"
+  staff-quit-notify: "<dark_gray>[<color:#00d2ff>Silent</color>]</dark_gray> <gray>%player% left %server%.</gray>"

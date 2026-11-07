@@ -1,0 +1,89 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                   ✦ TPA-HERE CONFIRMATION MENUS ✦                            ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# TPA-HERE SEND REQUEST CONFIRMATION MENU
+# ──────────────────────────────────────────────────────────────────────────────
+request-inventory:
+  name: '&8✦ #00d2ffᴄᴏɴғɪʀᴍ ᴛᴘ-ʜᴇʀᴇ ʀᴇǫᴜᴇsᴛ &8✦'
+  rows: 3
+  icons:
+    cancel-icon:
+      slot: 10
+      material: RED_STAINED_GLASS_PANE
+      display-name: '&c&lᴄᴀɴᴄᴇʟ'
+      lore:
+        - '&7Click to cancel this teleport.'
+
+    location-icon:
+      slot: 12
+      material: GRASS_BLOCK
+      display-name: '&a&lʟᴏᴄᴀᴛɪᴏɴ'
+      lore:
+        - '&7World: &b%world%'
+
+    player-icon:
+      slot: 13
+      material: PLAYER_HEAD
+      display-name: '&b&lᴛᴀʀɢᴇᴛ ᴘʟᴀʏᴇʀ'
+      lore:
+        - '&7Target: &e%player%'
+
+    fly-icon:
+      slot: 14
+      material: FEATHER
+      display-name: '&e&lғʟɪɢʜᴛ sᴛᴀᴛᴜs'
+      lore:
+        - '&7Is Flying: &f%is_flying%'
+
+    confirm-icon:
+      slot: 16
+      material: LIME_STAINED_GLASS_PANE
+      display-name: '&a&lᴄᴏɴғɪʀᴍ'
+      lore:
+        - '&7Click to send &b%player% &7a TPA-Here request.'
+
+# ──────────────────────────────────────────────────────────────────────────────
+# TPA-HERE INCOMING ACCEPT/DECLINE MENU
+# ──────────────────────────────────────────────────────────────────────────────
+accept-inventory:
+  name: '&8✦ #00d2ffᴀᴄᴄᴇᴘᴛ ᴛᴘ-ʜᴇʀᴇ ʀᴇǫᴜᴇsᴛ &8✦'
+  rows: 3
+  icons:
+    cancel-icon:
+      slot: 10
+      material: RED_STAINED_GLASS_PANE
+      display-name: '&c&lᴅᴇᴄʟɪɴᴇ'
+      lore:
+        - '&7Click to decline this teleport.'
+
+    location-icon:
+      slot: 12
+      material: GRASS_BLOCK
+      display-name: '&a&lʟᴏᴄᴀᴛɪᴏɴ'
+      lore:
+        - '&7World: &b%world%'
+
+    player-icon:
+      slot: 13
+      material: PLAYER_HEAD
+      display-name: '&b&lʀᴇǫᴜᴇsᴛᴇʀ'
+      lore:
+        - '&7From: &e%player%'
+
+    fly-icon:
+      slot: 14
+      material: FEATHER
+      display-name: '&e&lғʟɪɢʜᴛ sᴛᴀᴛᴜs'
+      lore:
+        - '&7Is Flying: &f%is_flying%'
+
+    confirm-icon:
+      slot: 16
+      material: LIME_STAINED_GLASS_PANE
+      display-name: '&a&lᴀᴄᴄᴇᴘᴛ'
+      lore:
+        - '&7Click to accept &b%player%&7''s TPA-Here request.'

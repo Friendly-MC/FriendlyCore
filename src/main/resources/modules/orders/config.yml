@@ -1,0 +1,105 @@
+# ==============================================================================
+#              FriendlyCore - Orders Module Configuration (EXPERIMENTAL)
+# ==============================================================================
+# Disabled by default; do not enable alongside DonutOrder or another orders plugin.
+# Folia-native cross-server buy-order marketplace under active development.
+# ==============================================================================
+
+# Core Settings
+# --------------------------------
+
+# Beta Localization: Auto-translates item display names to client language on Paper/Folia.
+localization: false
+
+# Enables PlaceholderAPI parsing across all GUI item lore.
+fullLorePAPISupport: true
+
+# If an item is enchantable, skip the pick_enchantments GUI when ordering.
+skipEnchants: false
+
+# Stop auto migration of prices on server start.
+stopAutoMigrationOnStart: false
+
+# Announcements when a player creates a new buy order.
+# Can be set as a boolean or a section with chat/actionbar/cross-server toggles.
+announce:
+  chat: true
+  actionbar: true
+  cross-server: true
+
+# When enabled, players can only deliver items that have 100% full durability.
+require-full-durability: false
+
+# Anti-spam click debouncing cooldown in milliseconds for GUI interactions.
+click-cooldown-ms: 100
+
+# When true, /order <item_name> performs a fast search filter in the market GUI.
+quick-search: true
+
+# Input mode for amount, price, and market search prompts:
+# AUTO: Uses Native Dialogs on 1.21.6+, otherwise client virtual signs.
+# Options: AUTO, DIALOG, SIGN, ANVIL, CHAT
+input-mode: AUTO
+
+# Notifications sent to players upon login or live transactions
+notifications:
+  enabled: true
+  toggle: true
+
+# Price limits (in economy currency)
+pricing:
+  total:
+    min: 1.0
+    max: 1000000000.0
+  per-unit:
+    min: -1.0
+    max: -1.0
+
+# Duration settings (in days)
+duration:
+  public: 7        # Days an active order stays in the public market
+  expiration: 30   # Days before an expired/cancelled order is permanently deleted
+
+# Command aliases dynamically registered by FriendlyCore
+aliases:
+  - orders
+  - dorder
+  - buyorder
+  - buyorders
+
+# Permissions & Max Order Limits
+permissions:
+  order-admin: "friendlycore.orders.admin"
+  order-limits:
+    - "friendlycore.orders.default:3"
+    - "friendlycore.orders.vip:5"
+    - "friendlycore.orders.mvp:8"
+    - "friendlycore.orders.admin:26"
+    - "order.default:3"
+    - "order.vip:5"
+    - "order.mvp:8"
+    - "order.admin:26"
+
+# Time formatting unit strings
+timing:
+  days: "d"
+  day: "d"
+  hours: "h"
+  hour: "h"
+  minutes: "m"
+  minute: "m"
+  seconds: "s"
+  second: "s"
+
+# Discord webhook notification dispatch
+webhook:
+  enabled: false
+  url: ""
+  username: "FriendlyCore Orders"
+  avatar-url: ""
+  events:
+    order-create: true
+    order-deliver: true
+    order-collect: true
+    order-expire: true
+    order-cancel: true

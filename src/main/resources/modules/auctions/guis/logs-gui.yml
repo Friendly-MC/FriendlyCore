@@ -1,0 +1,86 @@
+title: "ᴀᴜᴄᴛɪᴏɴs » Logs ({current_page}/{max_page})"
+rows: 6
+page-size: 45
+
+PURCHASE:
+  material: GREEN_BANNER
+  name: "#00FC00ᴘᴜʀᴄʜᴀsᴇ"
+  lore:
+    - ""
+    - "&8▪ &7Buyer: &f%player%"
+    - "&8▪ &7Seller: &f%seller%"
+    - "&8▪ &7Item: &f%item%"
+    - "&8▪ &7Price: #E63A35$%price%"
+    - ""
+    - "&8Date: &7%date%"
+
+CREATE_AUCTION:
+  material: YELLOW_BANNER
+  name: "#FFD700ᴄʀᴇᴀᴛᴇ ʟɪsᴛɪɴɢ"
+  lore:
+    - ""
+    - "&8▪ &7Seller: &f%player%"
+    - "&8▪ &7Item: &f%item%"
+    - "&8▪ &7Price: #E63A35$%price%"
+    - ""
+    - "&8Date: &7%date%"
+
+CANCEL_SELF:
+  material: ORANGE_BANNER
+  name: "#FFA500ᴄᴀɴᴄᴇʟ ʟɪsᴛɪɴɢ"
+  lore:
+    - ""
+    - "&8▪ &7Seller: &f%player%"
+    - "&8▪ &7Item: &f%item%"
+    - "&8▪ &7Price: #E63A35$%price%"
+    - ""
+    - "&8Date: &7%date%"
+
+CANCEL_OTHER:
+  material: RED_BANNER
+  name: "#FC0000ᴀᴅᴍɪɴ ᴄᴀɴᴄᴇʟ"
+  lore:
+    - ""
+    - "&8▪ &7Staff: &f%player%"
+    - "&8▪ &7Seller: &f%seller%"
+    - "&8▪ &7Item: &f%item%"
+    - "&8▪ &7Price: #E63A35$%price%"
+    - ""
+    - "&8Date: &7%date%"
+
+TAKE_ITEM:
+  material: WHITE_BANNER
+  name: "#E63A35ᴀᴅᴍɪɴ ᴛᴀᴋᴇ"
+  lore:
+    - ""
+    - "&8▪ &7Staff: &f%player%"
+    - "&8▪ &7Menu: &f%menu%"
+    - "&8▪ &7Item: &f%item%"
+    - ""
+    - "&8Date: &7%date%"
+
+items:
+  back:
+    slot: 45
+    material: "ARROW"
+    name: "#E63A35ʙᴀᴄᴋ"
+    lore:
+      - "&fClick to go to previous page"
+    actions:
+      - "[PAGE] previous"
+    sound: click
+
+  filler:
+    slot: [46, 47, 48, 49, 50, 51, 52]
+    material: "BLACK_STAINED_GLASS_PANE"
+    name: " "
+
+  next:
+    slot: 53
+    material: "ARROW"
+    name: "#E63A35ɴᴇxᴛ"
+    lore:
+      - "&fClick to go to next page"
+    actions:
+      - "[PAGE] next"
+    sound: click

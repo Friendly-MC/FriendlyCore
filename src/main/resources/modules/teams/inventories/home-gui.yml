@@ -1,0 +1,62 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                        ✦ TEAMS - HOMES MENU GUI ✦                            ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+inventory:
+  title: '&b✹ &7Team Homes &8(&7%page%&8/&7%total%&8)'
+  disposition:
+  - '----o----'
+  - '*'
+  - p---s---n
+  # Number of rows reserved for team home locations
+  rows: 2
+values:
+  home-item-name: '&e&l%home%'
+  home-item-material: RED_BED
+  home-item-lore:
+  - '&7World: &f%world%'
+  - '&7X: &f%x% &8| &7Y: &f%y% &8| &7Z: &f%z%'
+  - '&8'
+  - '&aLeft-click &7to teleport.'
+  - '&cShift-click &7to delete.'
+items:
+  blank:
+    name: '&e'
+    material: LIGHT_GRAY_STAINED_GLASS_PANE
+    symbol: '-'
+  goback:
+    name: '&c&lGO BACK'
+    lore:
+    - '&7Click here to go back.'
+    material: ARROW
+    actions:
+      left-click: go_back
+    symbol: o
+  sethome:
+    name: '&a&lSET HOME'
+    lore:
+    - '&7Click here to set a new home'
+    - '&7at your current location.'
+    material: NETHER_STAR
+    actions:
+      left-click: set_home
+    symbol: s
+  previous-page:
+    name: '&7PREVIOUS PAGE'
+    lore:
+    - '&7Click to go to the previous page.'
+    material: PAPER
+    actions:
+      left-click: to_previous_page
+    symbol: p
+  next-page:
+    name: '&7NEXT PAGE'
+    lore:
+    - '&7Click to go to the next page.'
+    material: PAPER
+    actions:
+      left-click: to_next_page
+    symbol: n
+version: 1

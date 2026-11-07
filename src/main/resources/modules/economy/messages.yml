@@ -1,0 +1,84 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                     ✦ ECONOMY & PAYMENTS LOCALIZATION ✦                      ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# BALANCE QUERIES (/bal, /balance)
+# ──────────────────────────────────────────────────────────────────────────────
+balance-self: "<gradient:#FF6B6B:#E7B85C><bold>✦ ѕᴇʀᴠᴇʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜʀ ʙᴀʟᴀɴᴄᴇ: <color:#8DE969>$%balance%<color:#D8D0C3>."
+balance-other: "<gradient:#FF6B6B:#E7B85C><bold>✦ ѕᴇʀᴠᴇʀ</bold></gradient> <dark_gray>» <color:#E7B85C>%player%<color:#D8D0C3>''ѕ ʙᴀʟᴀɴᴄᴇ: <color:#8DE969>$%balance%<color:#D8D0C3>."
+usage-balance: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴜѕᴀɢᴇ: <color:#E7B85C>/bal [player]<color:#D8D0C3>."
+
+# ──────────────────────────────────────────────────────────────────────────────
+# PLAYER PAYMENTS (/pay)
+# ──────────────────────────────────────────────────────────────────────────────
+cant-pay-yourself: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ѕᴇɴᴅ ᴍᴏɴᴇʏ ᴛᴏ ʏᴏᴜʀѕᴇʟғ."
+minimum-pay-amount: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴍɪɴɪᴍᴜᴍ ᴘᴀʏᴍᴇɴᴛ ᴀᴍᴏᴜɴᴛ ɪѕ <color:#8DE969>$%amount%<color:#D8D0C3>."
+insufficient-funds: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɪɴѕᴜғғɪᴄɪᴇɴᴛ ғᴜɴᴅѕ. ʏᴏᴜ ʜᴀᴠᴇ <color:#8DE969>$%balance%<color:#D8D0C3>."
+player-disabled-pay: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#E7B85C>%player% <color:#D8D0C3>ʜᴀѕ ᴅɪѕᴀʙʟᴇᴅ ʀᴇᴄᴇɪᴠɪɴɢ ᴘᴀʏᴍᴇɴᴛѕ."
+payment-sent: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘᴀɪᴅ <color:#8DE969>$%amount%<color:#D8D0C3> ᴛᴏ <color:#E7B85C>%target%<color:#D8D0C3>."
+payment-received: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʀᴇᴄᴇɪᴠᴇᴅ <color:#8DE969>$%amount%<color:#D8D0C3> ғʀᴏᴍ <color:#E7B85C>%player%<color:#D8D0C3>."
+usage-pay: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴜѕᴀɢᴇ: <color:#E7B85C>/pay <player> <amount><color:#D8D0C3>."
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ACTION BAR NOTIFICATIONS
+# ──────────────────────────────────────────────────────────────────────────────
+actionbar-sent: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘᴀɪᴅ <color:#8DE969>$%amount%</color> ᴛᴏ <color:#E7B85C>%target%</color>"
+actionbar-received: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#8DE969>+$%amount%</color> ғʀᴏᴍ <color:#E7B85C>%player%</color>"
+actionbar-gain: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#8DE969>+$%amount%</color>"
+actionbar-loss: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#FF4D5A>-$%amount%</color>"
+actionbar-set: "<gradient:#FF6B6B:#E7B85C><bold>✦ ѕᴇʀᴠᴇʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʙᴀʟᴀɴᴄᴇ ѕᴇᴛ ᴛᴏ <color:#8DE969>$%amount%</color>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# PAYMENT TOGGLES & COOLDOWNS (/paytoggle)
+# ──────────────────────────────────────────────────────────────────────────────
+pay-toggle-enabled: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴀʀᴇ ɴᴏᴡ ᴀᴄᴄᴇᴘᴛɪɴɢ ᴘᴀʏᴍᴇɴᴛѕ."
+pay-toggle-disabled: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ʜᴀᴠᴇ ᴅɪѕᴀʙʟᴇᴅ ʀᴇᴄᴇɪᴠɪɴɢ ᴘᴀʏᴍᴇɴᴛѕ."
+usage-pay-toggle: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴜѕᴀɢᴇ: <color:#E7B85C>/paytoggle<color:#D8D0C3>."
+cooldown: "<gradient:#FFD166:#FFB347><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴜѕᴇ ᴛʜᴀᴛ ᴄᴏᴍᴍᴀɴᴅ ғᴏʀ <color:#E7B85C>%seconds%ѕ<color:#D8D0C3>."
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ADMINISTRATIVE MANAGEMENT (/eco, /economy)
+# ──────────────────────────────────────────────────────────────────────────────
+admin-give: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴀᴅᴅᴇᴅ <color:#8DE969>$%amount%<color:#D8D0C3> ᴛᴏ <color:#E7B85C>%target%<color:#D8D0C3>''ѕ ᴀᴄᴄᴏᴜɴᴛ."
+admin-take: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴏᴏᴋ <color:#8DE969>$%amount%<color:#D8D0C3> ғʀᴏᴍ <color:#E7B85C>%target%<color:#D8D0C3>''ѕ ᴀᴄᴄᴏᴜɴᴛ."
+admin-set: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴇᴛ <color:#E7B85C>%target%<color:#D8D0C3>''ѕ ʙᴀʟᴀɴᴄᴇ ᴛᴏ <color:#8DE969>$%amount%<color:#D8D0C3>."
+admin-reset: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʀᴇѕᴇᴛ ᴇᴄᴏɴᴏᴍʏ ʙᴀʟᴀɴᴄᴇ ғᴏʀ <color:#E7B85C>%target%<color:#D8D0C3>."
+admin-resetall: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴀʟʟ ᴘʟᴀʏᴇʀ ᴇᴄᴏɴᴏᴍʏ ᴅᴀᴛᴀ ʜᴀѕ ʙᴇᴇɴ ʀᴇѕᴇᴛ."
+admin-reset-confirm: "<gradient:#FFB703:#E7B85C><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛʏᴘᴇ <color:#FF4D5A><bold>/eco resetall confirm</bold></color> ᴛᴏ ᴅᴇʟᴇᴛᴇ ᴀʟʟ ᴇᴄᴏɴᴏᴍʏ ᴅᴀᴛᴀ."
+admin-reset-cancelled: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʀᴇѕᴇᴛ ᴏᴘᴇʀᴀᴛɪᴏɴ ᴄᴀɴᴄᴇʟᴇᴅ."
+
+# ──────────────────────────────────────────────────────────────────────────────
+# COMMAND, GUI AND ADMIN MESSAGES
+# ──────────────────────────────────────────────────────────────────────────────
+baltop-line: " <#00d2ff>#%rank_value%</#00d2ff> <white>%player%</white> <dark_gray>─</dark_gray> <#00e676>$%bal_formatted%</#00e676>"
+friendlyeconomy-admin-staff-commands: "<gradient:#00d2ff:#3a7bd5><bold>FriendlyEconomy Admin</bold></gradient> <dark_gray>•</dark_gray> <gray>Staff Commands</gray>"
+eco-give-add-money-to-player: " <#00d2ff>/eco give <player> <amount></#00d2ff> <dark_gray>─</dark_gray> <gray>Add money to player</gray>"
+eco-take-remove-money-from-player: " <#00d2ff>/eco take <player> <amount></#00d2ff> <dark_gray>─</dark_gray> <gray>Remove money from player</gray>"
+eco-set-set-player-balance: " <#00d2ff>/eco set <player> <amount></#00d2ff> <dark_gray>─</dark_gray> <gray>Set player balance</gray>"
+eco-see-check-player-balance: " <#00d2ff>/eco see <player></#00d2ff> <dark_gray>─</dark_gray> <gray>Check player balance</gray>"
+eco-reset-reset-player-balance: " <#00d2ff>/eco reset <player></#00d2ff> <dark_gray>─</dark_gray> <gray>Reset player balance</gray>"
+eco-migrate-folder-import-essentialsx-balances: " <#00d2ff>/eco migrate [folder]</#00d2ff> <dark_gray>─</dark_gray> <gray>Import EssentialsX balances</gray>"
+eco-resetall-confirm-wipe-all-economy: " <#00d2ff>/eco resetall CONFIRM</#00d2ff> <dark_gray>─</dark_gray> <gray>Wipe all economy data</gray>"
+this-command-can-only-be-executed: "This command can only be executed by players."
+previous-page: "&7Previous Page"
+click-to-navigate-to-page: "&fClick to navigate to page %prev_page%."
+actual-page: "&eActual Page"
+this-is-page: "&fThis is page %current_page%."
+next-page: "&7Next Page"
+click-to-navigate-to-page-2: "&fClick to navigate to page %next_page%."
+migrate-a-migration-is-already-in-progress: "<red>A migration is already in progress!"
+migrate-migration-scanning-essentialsx-userdata: "<gradient:#00d2ff:#3a7bd5><bold>[Migration]</bold></gradient> <yellow>Scanning EssentialsX userdata...</yellow>"
+migrate-label: "<red>%error%"
+migrate-migration-processing-player-files-from: "<gradient:#00d2ff:#3a7bd5><bold>[Migration]</bold></gradient> <gray>Processing player files from: <aqua>%path%</aqua>...</gray>"
+migrate-migration-processed-files-migrated: "<gradient:#00d2ff:#3a7bd5><bold>[Migration]</bold></gradient> <gray>Processed: <yellow>%total_files%</yellow> files | Migrated: <green>%migrated_count%</green></gray>"
+migrate-migration-completed: "<gradient:#55ff55:#00aa00><bold>[Migration Completed!]</bold></gradient>"
+migrate-total-accounts-processed: " <gray>• Total accounts processed: <aqua>%total_files%</aqua>"
+migrate-accounts-with-balance-migrated: " <gray>• Accounts with balance migrated: <green>%migrated_count%</green>"
+migrate-total-economy-balance-imported: " <gray>• Total economy balance imported: <yellow>$%formatted_total%</yellow>"
+migrate-time-taken-ms: " <gray>• Time taken: <aqua>%elapsed%ms</aqua>"
+
+# Shared GUI, input and fallback text
+baltop-header: "<gradient:#00d2ff:#3a7bd5><bold>Top Wealthy Players</bold></gradient> <dark_gray>•</dark_gray> <gray>Page %page%/%total%</gray>"

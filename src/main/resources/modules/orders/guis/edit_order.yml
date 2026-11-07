@@ -1,0 +1,49 @@
+title: "ᴏʀᴅᴇʀs » ᴇᴅɪᴛ ᴏʀᴅᴇʀ"
+
+items:
+  order_info:
+    slot: 11
+    name: "#E63A35{itemAmount} &f{itemType}"
+    lore:
+      - "#E63A35${itemPrice_short} &feach"
+      - ""
+      - "#E63A35{currentlyDelivered}/#A14444{totalDelivery} &7Delivered"
+      - "#E63A35${totalPaid_short}/#A14444${totalPrice_short} &7Paid"
+      - ""
+      - "&7Unclaimed: #E63A35{uncollected}x"
+
+  cancel:
+    name: "&c<b>ᴄᴀɴᴄᴇʟ ᴏʀᴅᴇʀ</b>"
+    lore:
+      - "&7Cancel this buy order"
+      - "&7Refunds remaining escrow"
+      - ""
+      - "&cClick to cancel"
+    material: "RED_TERRACOTTA"
+    slot: 13
+    customModelData: -1
+    sound: click
+
+  collect:
+    name: "<gradient:#E63A35:#FF6B6B><b>ᴄᴏʟʟᴇᴄᴛ ɪᴛᴇᴍs</b></gradient>"
+    lore:
+      - "&7Available: #E63A35{uncollected}x &7items"
+      - ""
+      - "&aClick to collect items"
+    material: "CHEST"
+    slot: 15
+    customModelData: -1
+    sound: click
+
+  back:
+    name: "#E63A35« ʙᴀᴄᴋ"
+    lore:
+      - "&7Return to previous page"
+    material: "ARROW"
+    slot: 18
+    sound: click
+
+  filler:
+    name: " "
+    material: BLACK_STAINED_GLASS_PANE
+    slot: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 17, 19, 20, 21, 22, 23, 24, 25, 26]

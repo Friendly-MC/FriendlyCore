@@ -1,0 +1,111 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                            ✦ TOOLS MODULE ✦                                  ║
+# ║              Custom Area Drills, Tree Choppers & Special Physics             ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# MINING DRILLS & EXCAVATION TOOLS
+# ──────────────────────────────────────────────────────────────────────────────
+drill:
+  enabled: true
+
+  # Mining radius: 0 = no extra blocks, 1 = 3x3x3, 2 = 5x5x5 (maximum 2)
+  radius: 1
+
+  # Cooldown between drill breaks in milliseconds (0 to disable)
+  cooldown-ms: 0
+
+  # Maximum neighboring blocks checked per player per tick (1-26). Stops on tool changes.
+  # Folia: extra blocks must belong to the player's region; unloaded chunks are skipped.
+  blocks-per-tick: 9
+
+  # Blocks protected from being destroyed by drills
+  blacklisted-materials:
+    - "BEDROCK"
+    - "SPAWNER"
+    - "END_PORTAL"
+    - "END_PORTAL_FRAME"
+    - "BARRIER"
+    - "REINFORCED_DEEPSLATE"
+
+  # Visual particle and sound effects on drill break
+  effects:
+    sound:
+      enabled: true
+      type: "BLOCK_AMETHYST_BLOCK_HIT"
+      volume: 0.8
+      pitch: 1.4
+    particle:
+      enabled: true
+      type: "ENCHANT"
+      count: 12
+      offset-x: 0.45
+      offset-y: 0.45
+      offset-z: 0.45
+      extra: 0.0
+
+  # Custom item display and enchantment definitions
+  items:
+    pickaxe:
+      name: "<#a503fc><bold>Friendly Drill</bold></#a503fc>"
+      lore:
+        - ""
+        - " <#a503fc>❙</#a503fc> <white>Uses Left:</white> <#a503fc>%uses%</#a503fc>"
+        - " <#a503fc>❙</#a503fc> <white>Last Used By:</white> <#a503fc>%lastusedby%</#a503fc>"
+        - ""
+      glow: true
+      enchantments:
+        - "EFFICIENCY:5"
+        - "UNBREAKING:3"
+
+    shovel:
+      name: "<#a503fc><bold>Friendly Shovel</bold></#a503fc>"
+      lore:
+        - ""
+        - " <#a503fc>❙</#a503fc> <white>Uses Left:</white> <#a503fc>%uses%</#a503fc>"
+        - " <#a503fc>❙</#a503fc> <white>Last Used By:</white> <#a503fc>%lastusedby%</#a503fc>"
+        - ""
+      glow: true
+      enchantments:
+        - "EFFICIENCY:5"
+        - "UNBREAKING:3"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# TREE CHOPPERS & TIMBER MECHANICS
+# ──────────────────────────────────────────────────────────────────────────────
+chopper:
+  enabled: true
+
+  # Maximum connected log blocks destroyed in a single tree chop
+  max-logs: 200  # Safety limit: 1-256 logs per operation
+
+  # Cooldown between chop actions in milliseconds
+  cooldown-ms: 0
+
+  # Fast natural leaf decay animation and physics
+  leaf-decay:
+    enabled: true
+    min-delay-ticks: 40
+    max-delay-ticks: 100
+    play-sound: false
+    spawn-particles: false
+
+  items:
+    axe:
+      name: "<#58c8ff><bold>Tree Chopper</bold></#58c8ff>"
+      lore:
+        - ""
+        - " <#58c8ff>❙</#58c8ff> <white>Chops entire tree instantly</white>"
+        - ""
+      glow: true
+      enchantments:
+        - "EFFICIENCY:5"
+        - "UNBREAKING:3"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# TOOLS INVENTORY GUI
+# ──────────────────────────────────────────────────────────────────────────────
+gui:
+  title: "&8✦ #a503fcғʀɪᴇɴᴅʟʏ ᴛᴏᴏʟs &8✦"

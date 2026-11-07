@@ -1,0 +1,17 @@
+# Prices V2 for Orders Module
+# Supports vanilla items, MMOItems, custom textures, custom model data, and categories
+
+prices:
+  diamond_gem:
+    material: DIAMOND
+    price: 100.0
+    category: INGREDIENTS
+    aliases:
+      - "diamond"
+      - "diamonds"
+  netherite_ingot:
+    material: NETHERITE_INGOT
+    price: 1000.0
+    category: INGREDIENTS
+    aliases:
+      - "netherite"

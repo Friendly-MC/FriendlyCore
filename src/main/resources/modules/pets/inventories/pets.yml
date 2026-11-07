@@ -1,0 +1,22 @@
+# Vanilla inventory menu; no resource pack required. Six rows.
+# Collection: four rows of seven pets, inset one slot from the frame (28 per page).
+# Header: 3 and 5 equipped companions, 4 summary.
+# Footer: 45 previous, 48 visibility, 49 close, 50 unequip all, 53 next.
+# Page and unequip buttons only appear when they can be used.
+# Smaller page sizes are supported; legacy values above 28 are clamped safely.
+title: "&0Pets &8%page%/%max_page%"
+page-size: 28
+
+items:
+  back:
+    material: ARROW
+    name: "&fPrevious page"
+  next:
+    material: ARROW
+    name: "&fNext page"
+  close:
+    material: BARRIER
+    name: "&fClose"
+  unequip:
+    material: RED_DYE
+    name: "&fUnequip all"

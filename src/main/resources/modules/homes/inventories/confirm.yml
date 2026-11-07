@@ -1,0 +1,36 @@
+# ######################################################
+#                     CONFIRM GUI                      #
+# ######################################################
+
+title: "Confirm Delete"
+gui-disposition:
+  - '---------'
+  - '--d-h-a--'
+  - '---------'
+
+items:
+  cancel-update:
+    name: '&cᴄᴀɴᴄᴇʟ'
+    lore:
+      - '&fClick to cancel'
+    material: "RED_STAINED_GLASS_PANE"
+    nbt: "TO_CANCEL"
+    symbol: 'd'
+  confirm-update:
+    name: '&aᴄᴏɴғɪʀᴍ'
+    lore:
+      - '&fClick to delete'
+    material: "LIME_STAINED_GLASS_PANE"
+    nbt: "TO_ACCEPT"
+    symbol: 'a'
+  go-back-update:
+    name: '&4ʙᴀᴄᴋ'
+    lore:
+      - '&fClick to return'
+    material: "BARRIER"
+    nbt: "TO_BACK"
+    symbol: 'g'
+  blank:
+    name: '&e'
+    material: BLACK_STAINED_GLASS_PANE
+    symbol: '-'

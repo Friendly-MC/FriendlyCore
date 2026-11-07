@@ -1,0 +1,301 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                            ✦ TEAMS MODULE ✦                                  ║
+# ║          Team Management, Alliances, Shared Banks & Warehouses               ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# GENERAL SETTINGS & FEATURE SWITCHES
+# ──────────────────────────────────────────────────────────────────────────────
+Plugin-Settings:
+  # Formatting suffixes for large economy numbers
+  money-decimals:
+    thousand: '%number%K'
+    million: '%number%M'
+    billion: '%number%B'
+    trillion: '%number%T'
+  # Interactive chat input confirmation settings
+  message-callback-settings:
+    # Lifetime in seconds before pending chat input prompt expires
+    lifetime: 30
+    # Word players can type in chat to abort the prompt
+    cancel-phrase: cancel
+  # Team invitation duration settings
+  invite-settings:
+    # Lifetime in seconds before pending team invites expire
+    lifetime: 60
+  # Warmup delay in seconds before teleporting to team home
+  teleportation-timer: 5
+  # Feature switches: enable or disable individual team subsystems
+  toggle-features:
+    enderchest: true
+    bank: true
+    home: true
+    ally: true
+    leaderboard-gui: true
+    disable-economy: false
+  # Team leaderboard score calculation multipliers
+  leaderboard:
+    death-factor: 3.0
+    kill-factor: 3.0
+    money-factor: 0.5
+  # Custom placeholder formats
+  placeholders:
+    team-name: '%value%'
+    team-tag: '%value%'
+  # Chat listener event priority (LOWEST, LOW, NORMAL, HIGH, HIGHEST, MONITOR)
+  chat-listener-priority: MONITOR
+  # Chat packet handling pipeline: 'MODERN' (Adventure / Component) or 'LEGACY'
+  chat-listener-type: MODERN
+# ──────────────────────────────────────────────────────────────────────────────
+# COMMAND & SUBCOMMAND CONFIGURATION
+# ──────────────────────────────────────────────────────────────────────────────
+Command-Settings:
+  team-command:
+  - team
+  - teams
+  teamchat-command: teamchat
+  allychat-command: allychat
+  teamreload-command: teamreload
+  teamadmin-command: teamadmin
+  team-subcommand:
+    ally:
+      sub-command: ally
+    ally-add:
+      sub-command: add
+    ally-remove:
+      sub-command: remove
+    allies:
+      sub-command: allies
+    bank:
+      sub-command: bank
+    help:
+      sub-command: help
+    home:
+      sub-command: home
+    invite:
+      sub-command: invite
+    accept:
+      sub-command: accept
+    deny:
+      sub-command: deny
+    stats:
+      sub-command: stats
+    create:
+      sub-command: create
+    leaderboard:
+      sub-command: leaderboard
+    promote:
+      sub-command: promote
+    demote:
+      sub-command: demote
+    kick:
+      sub-command: kick
+    enderchest:
+      sub-command: enderchest
+      aliases:
+      - ec
+    info:
+      sub-command: info
+    leave:
+      sub-command: leave
+      aliases:
+      - quit
+    set-home:
+      sub-command: sethome
+    delete-home:
+      sub-command: delhome
+      aliases:
+      - deletehome
+      - removehome
+# ──────────────────────────────────────────────────────────────────────────────
+# TEAM RULES, LIMITS & PERMISSIONS
+# ──────────────────────────────────────────────────────────────────────────────
+Team-Settings:
+  team-tag:
+    max-length: 12
+    # Supported units: d=days, h=hours, m=minutes, s=seconds (e.g. '1h', '12h', '2d').
+    # Set to '0' to disable the cooldown.
+    change-cooldown: 1h
+    change-cost:
+      # Require a Vault economy fee to change team tag
+      enabled: false
+      amount: 1000.0
+  team-name:
+    # Default display color is &#00b1ff. Saved team colors are visible to everyone.
+    # /team rename opens a dialog for Java 1.21.6+ clients, otherwise a sign editor.
+    # Requires friendlycore.teams.rename and the SET_NAME team role permission.
+    # Hex, legacy colors, bold/italic, gradients and rainbow require both:
+    # friendlycore.teams.rename.format and friendlycore.teams.color.custom (or a color wildcard).
+    # Max length counts visible characters; formatting input is capped at 512 characters.
+    # Renaming changes the display name; the short team tag and selected color stay the same.
+    max-length: 12
+    # Compatibility settings below are ignored; rename formatting uses permissions.
+    # Creation remains plain text; permitted formatting is available only through rename.
+    allow-colors: false
+    # Decorations (&k, &l, &o, &n, &m, &r) use the rename formatting permission too.
+    allow-special-colors: false
+  # Blocked phrases and words for team names and tags
+  banned-keywords:
+  - fuck
+  - cock
+  - dick
+  - pussy
+  - nigger
+  - nigga
+  - nazi
+  - hitler
+  - adolf
+  - reich
+  - bitch
+  - gay
+  - ass
+  # Whether to return remaining bank balance to the leader when team is disbanded
+  return-balance-on-disband: true
+  # Default friendly-fire state for new teams (true = PvP between members is blocked)
+  default-friendly-fire-state: true
+  # Cost required to create a new team via Vault
+  team-creation:
+    requires-payment: false
+    payment-amount: 100.0
+  # Restrictions on team home location
+  team-home:
+    max-y-level-enabled: false
+    max-y-Level: 100
+  # Maximum capacity of the shared team bank
+  team-bank:
+    limit: 1000000000
+  # Role configuration and action permissions
+  team-roles:
+    '-1':
+      name: Leader
+      permissions:
+      - MANAGE_MEMBERS
+      - SET_NAME
+      - SWITCH_FRIENDLY_FIRE
+      - ACCESS_BANK
+      - MANAGE_ALLIANCE
+      - USE_HOME
+      - SET_HOME
+      - ACCESS_ENDERCHEST
+      - CHANGE_COLOR
+    '1':
+      name: Recruit
+      permissions:
+      - USE_HOME
+    '6':
+      name: Member
+      permissions:
+      - USE_HOME
+      - ACCESS_BANK
+      - ACCESS_ENDERCHEST
+      - CHANGE_COLOR
+    '8':
+      name: Officer
+      permissions:
+      - MANAGE_MEMBERS
+      - SET_NAME
+      - SWITCH_FRIENDLY_FIRE
+      - ACCESS_BANK
+      - MANAGE_ALLIANCE
+      - USE_HOME
+      - SET_HOME
+      - ACCESS_ENDERCHEST
+      - CHANGE_COLOR
+    '10':
+      name: Co-Leader
+      permissions:
+      - MANAGE_MEMBERS
+      - SET_NAME
+      - SWITCH_FRIENDLY_FIRE
+      - ACCESS_BANK
+      - MANAGE_ALLIANCE
+      - USE_HOME
+      - SET_HOME
+      - ACCESS_ENDERCHEST
+      - CHANGE_COLOR
+  # Cooldown in seconds before a player can create a new team after disbanding
+  team-creation-cooldown: 10
+  # Minimum team member count required to access specific features (1 to disable requirement)
+  min-members-required:
+    enderchest: 2
+    home: 2
+    bank: 1
+  # Selectable colors available in the team settings GUI.
+  # Each entry contains:
+  #   name       - Display name in the GUI
+  #   material   - Inventory icon item
+  #   color      - Color code (legacy '&c' or MiniMessage / Hex '&#RRGGBB')
+  #   permission - Additional permission node; blank still requires a per-color permission.
+  # Players need friendlycore.teams.color.<key> (or legacy zelteams.color.<key>),
+  # the configured permission, or a color wildcard. Their team role also needs CHANGE_COLOR.
+  # Display the colored team name with one PlaceholderAPI token: %zelteams_team_name_colored%.
+  # Saved colors and formatted names are visible to everyone, including offline lookups.
+  # It is empty without a team.
+  # It returns legacy section-sign colors (including hex) and resets formatting.
+  # Permissions control selecting colors and submitting formatted renames, not viewing them.
+  # Missing or unknown colors use the default &#00b1ff display color.
+  # Players can choose their own hex color with /team color #RRGGBB or the custom color menu button.
+  # Custom colors require friendlycore.teams.color.custom (or zelteams.color.custom).
+  team-colors:
+    red:
+      name: Red
+      material: RED_WOOL
+      color: '&c'
+      permission: friendlycore.teams.color.red
+    dark_red:
+      name: Dark Red
+      material: RED_TERRACOTTA
+      color: '&4'
+      permission: friendlycore.teams.color.dark_red
+    orange:
+      name: Orange
+      material: ORANGE_WOOL
+      color: '&6'
+      permission: friendlycore.teams.color.orange
+    yellow:
+      name: Yellow
+      material: YELLOW_WOOL
+      color: '&e'
+      permission: friendlycore.teams.color.yellow
+    lime:
+      name: Lime
+      material: LIME_WOOL
+      color: '&a'
+      permission: friendlycore.teams.color.lime
+    green:
+      name: Green
+      material: GREEN_WOOL
+      color: '&2'
+      permission: friendlycore.teams.color.green
+    aqua:
+      name: Aqua
+      material: LIGHT_BLUE_WOOL
+      color: '&b'
+      permission: friendlycore.teams.color.aqua
+    cyan:
+      name: Cyan
+      material: CYAN_WOOL
+      color: '&3'
+      permission: friendlycore.teams.color.cyan
+    blue:
+      name: Blue
+      material: BLUE_WOOL
+      color: '&9'
+      permission: friendlycore.teams.color.blue
+    purple:
+      name: Purple
+      material: PURPLE_WOOL
+      color: '&5'
+      permission: friendlycore.teams.color.purple
+    pink:
+      name: Pink
+      material: PINK_WOOL
+      color: '&d'
+      permission: friendlycore.teams.color.pink
+    white:
+      name: White
+      material: WHITE_WOOL
+      color: '&f'
+      permission: friendlycore.teams.color.white

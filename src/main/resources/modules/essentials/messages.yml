@@ -1,0 +1,218 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                  ✦ FRIENDLY CORE - ESSENTIALS MESSAGES ✦                     ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+essentials:
+  # ────────────────────────────────────────────────────────────────────────────
+  # GENERAL SYSTEM MESSAGES
+  # ────────────────────────────────────────────────────────────────────────────
+  general:
+    no-permission: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴘᴇʀᴍɪѕѕɪᴏɴ ᴛᴏ ᴇxᴇᴄᴜᴛᴇ ᴛʜɪѕ ᴄᴏᴍᴍᴀɴᴅ."
+    player-not-found: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘʟᴀʏᴇʀ <color:#E7B85C>%player%</color> ᴡᴀѕ ɴᴏᴛ ғᴏᴜɴᴅ ᴏɴʟɪɴᴇ."
+    world-not-found: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴡᴏʀʟᴅ <color:#E7B85C>%world%</color> ᴅᴏᴇѕ ɴᴏᴛ ᴇxɪѕᴛ."
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # GAME MODE MANAGEMENT (/gm, /gamemode)
+  # ────────────────────────────────────────────────────────────────────────────
+  gamemode:
+    invalid-mode: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɪɴᴠᴀʟɪᴅ ɢᴀᴍᴇ ᴍᴏᴅᴇ <color:#E7B85C>%mode%</color>. <dark_gray>(ᴄʀᴇᴀᴛɪᴠᴇ, ѕᴜʀᴠɪᴠᴀʟ, ᴀᴅᴠᴇɴᴛᴜʀᴇ, ѕᴘᴇᴄᴛᴀᴛᴏʀ)</dark_gray>"
+    changed-self: "<gradient:#00d2ff:#3a7bd5><bold>✦ ɢᴀᴍᴇᴍᴏᴅᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜʀ ɢᴀᴍᴇ ᴍᴏᴅᴇ ʜᴀѕ ʙᴇᴇɴ ѕᴇᴛ ᴛᴏ <color:#E7B85C>%gamemode%</color>."
+    changed-other: "<gradient:#00d2ff:#3a7bd5><bold>✦ ɢᴀᴍᴇᴍᴏᴅᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴇᴛ <color:#E7B85C>%player%</color>''ѕ ɢᴀᴍᴇ ᴍᴏᴅᴇ ᴛᴏ <color:#E7B85C>%gamemode%</color>."
+    changed-other-network: "<gradient:#00d2ff:#3a7bd5><bold>✦ ɢᴀᴍᴇᴍᴏᴅᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴇɴᴛ ɢᴀᴍᴇ ᴍᴏᴅᴇ <color:#E7B85C>%gamemode%</color> ᴛᴏ <color:#E7B85C>%player%</color> ᴀᴄʀᴏѕѕ ɴᴇᴛᴡᴏʀᴋ."
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # INVENTORY INSPECTION (/invsee)
+  # ────────────────────────────────────────────────────────────────────────────
+  invsee:
+    usage: "<gradient:#FFD166:#FFB347><bold>⚠ ᴜѕᴀɢᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>/%label% <color:#E7B85C><player></color>"
+    no-self: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ɪɴѕᴘᴇᴄᴛ ʏᴏᴜʀ ᴏᴡɴ ɪɴᴠᴇɴᴛᴏʀʏ."
+    exempt: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘʟᴀʏᴇʀ <color:#E7B85C>%player%</color> ɪѕ ᴇxᴇᴍᴘᴛ ғʀᴏᴍ ɪɴѕᴘᴇᴄᴛɪᴏɴ."
+    requesting-remote: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ɴᴇᴛᴡᴏʀᴋ</bold></gradient> <dark_gray>» <color:#D8D0C3>ғᴇᴛᴄʜɪɴɢ <color:#E7B85C>%player%</color>''ѕ ɪɴᴠᴇɴᴛᴏʀʏ ғʀᴏᴍ ʀᴇᴍᴏᴛᴇ ѕᴇʀᴠᴇʀ..."
+    target-disconnected: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴅɪѕᴄᴏɴɴᴇᴄᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɪɴѕᴘᴇᴄᴛɪᴏɴ ᴄʟᴏѕᴇᴅ: <color:#E7B85C>%player%</color> ʜᴀѕ ᴅɪѕᴄᴏɴɴᴇᴄᴛᴇᴅ."
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # ENDER CHEST INSPECTION (/enderchest, /ec)
+  # ────────────────────────────────────────────────────────────────────────────
+  enderchest:
+    requesting-remote: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ɴᴇᴛᴡᴏʀᴋ</bold></gradient> <dark_gray>» <color:#D8D0C3>ғᴇᴛᴄʜɪɴɢ <color:#E7B85C>%player%</color>''ѕ ᴇɴᴅᴇʀ ᴄʜᴇѕᴛ ғʀᴏᴍ ʀᴇᴍᴏᴛᴇ ѕᴇʀᴠᴇʀ..."
+    target-disconnected: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴅɪѕᴄᴏɴɴᴇᴄᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɪɴѕᴘᴇᴄᴛɪᴏɴ ᴄʟᴏѕᴇᴅ: <color:#E7B85C>%player%</color> ʜᴀѕ ᴅɪѕᴄᴏɴɴᴇᴄᴛᴇᴅ."
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # PLAYER SPEED CONTROLS (/speed, /flyspeed, /walkspeed)
+  # ────────────────────────────────────────────────────────────────────────────
+  speed:
+    usage: "<gradient:#FFD166:#FFB347><bold>⚠ ᴜѕᴀɢᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>/%label% <color:#E7B85C>[fly|walk] <0..10> [player]</color>"
+    invalid-speed: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɪɴᴠᴀʟɪᴅ ѕᴘᴇᴇᴅ <color:#E7B85C>%speed%</color>. <dark_gray>(ѕᴘᴇᴄɪғʏ 0 ᴛᴏ 10)</dark_gray>"
+    fly-changed-self: "<gradient:#6EDBFF:#A7F3FF><bold>✈ ғʟɪɢʜᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜʀ ғʟʏɪɴɢ ѕᴘᴇᴇᴅ ʜᴀѕ ʙᴇᴇɴ ѕᴇᴛ ᴛᴏ <color:#E7B85C>%speed%</color>."
+    walk-changed-self: "<gradient:#7BD88F:#B9FBC0><bold>✦ ѕᴘᴇᴇᴅ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜʀ ᴡᴀʟᴋɪɴɢ ѕᴘᴇᴇᴅ ʜᴀѕ ʙᴇᴇɴ ѕᴇᴛ ᴛᴏ <color:#E7B85C>%speed%</color>."
+    changed-other: "<gradient:#7BD88F:#B9FBC0><bold>✦ ѕᴘᴇᴇᴅ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴇᴛ <color:#E7B85C>%player%</color>''ѕ %type% ѕᴘᴇᴇᴅ ᴛᴏ <color:#E7B85C>%speed%</color>."
+    changed-other-network: "<gradient:#7BD88F:#B9FBC0><bold>✦ ѕᴘᴇᴇᴅ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴇɴᴛ %type% ѕᴘᴇᴇᴅ <color:#E7B85C>%speed%</color> ғᴏʀ <color:#E7B85C>%player%</color> ᴀᴄʀᴏѕѕ ɴᴇᴛᴡᴏʀᴋ."
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # TIME MANAGEMENT (/time)
+  # ────────────────────────────────────────────────────────────────────────────
+  time:
+    usage: "<gradient:#FFD166:#FFB347><bold>⚠ ᴜѕᴀɢᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>/%label% <color:#E7B85C><set|add> <time> [world|all|network]</color>"
+    current: "<gradient:#E7B85C:#FFD166><bold>☀ ᴛɪᴍᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴄᴜʀʀᴇɴᴛ ᴛɪᴍᴇ ɪɴ <color:#E7B85C>%world%</color> ɪѕ <color:#E7B85C>%time%</color> ᴛɪᴄᴋѕ."
+    invalid-time: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɪɴᴠᴀʟɪᴅ ᴛɪᴍᴇ ғᴏʀᴍᴀᴛ <color:#E7B85C>%time%</color>."
+    set: "<gradient:#E7B85C:#FFD166><bold>☀ ᴛɪᴍᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴇᴛ ᴛɪᴍᴇ ᴛᴏ <color:#E7B85C>%time%</color> ɪɴ <color:#E7B85C>%world%</color>."
+    added: "<gradient:#E7B85C:#FFD166><bold>☀ ᴛɪᴍᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴀᴅᴅᴇᴅ <color:#E7B85C>%time%</color> ᴛɪᴄᴋѕ ᴛᴏ <color:#E7B85C>%world%</color>."
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # WEATHER MANAGEMENT (/weather)
+  # ────────────────────────────────────────────────────────────────────────────
+  weather:
+    usage: "<gradient:#FFD166:#FFB347><bold>⚠ ᴜѕᴀɢᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>/%label% <color:#E7B85C><sun|rain|storm> [duration] [world|all|network]</color>"
+    invalid-type: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɪɴᴠᴀʟɪᴅ ᴡᴇᴀᴛʜᴇʀ ᴛʏᴘᴇ <color:#E7B85C>%type%</color>. <dark_gray>(ѕᴜɴ, ʀᴀɪɴ, ѕᴛᴏʀᴍ)</dark_gray>"
+    sun: "<gradient:#E7B85C:#FFD166><bold>☀ ᴡᴇᴀᴛʜᴇʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴇᴛ ᴡᴇᴀᴛʜᴇʀ ᴛᴏ <color:#7BD88F>ᴄʟᴇᴀʀ ѕᴜɴ</color> ɪɴ <color:#E7B85C>%world%</color> <dark_gray>(%duration%ѕ)</dark_gray>."
+    storm: "<gradient:#6EDBFF:#A7F3FF><bold>⛈ ᴡᴇᴀᴛʜᴇʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴇᴛ ᴡᴇᴀᴛʜᴇʀ ᴛᴏ <color:#6EDBFF>ѕᴛᴏʀᴍ</color> ɪɴ <color:#E7B85C>%world%</color> <dark_gray>(%duration%ѕ)</dark_gray>."
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # TELEPORTATION SUITE (/tp, /tphere, /top, /bottom, /jump, /tpall)
+  # ────────────────────────────────────────────────────────────────────────────
+  teleport:
+    usage: "<gradient:#FFD166:#FFB347><bold>⚠ ᴜѕᴀɢᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>/%label% <color:#E7B85C><player> [destination|x y z]</color> ᴏʀ <color:#E7B85C><x> <y> <z> [world]</color>"
+    here-usage: "<gradient:#FFD166:#FFB347><bold>⚠ ᴜѕᴀɢᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>/%label% <color:#E7B85C><player></color>"
+    self-teleport: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴛᴇʟᴇᴘᴏʀᴛ ᴛᴏ ʏᴏᴜʀѕᴇʟғ."
+    teleported-to-player: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ ᴛᴏ <color:#E7B85C>%player%</color>."
+    teleported-other-to-player: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ <color:#E7B85C>%player%</color> ᴛᴏ <color:#E7B85C>%target%</color>."
+    teleported-to-coords: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ ᴛᴏ <color:#E7B85C>%world%</color> <dark_gray>(%x%, %y%, %z%)</dark_gray>."
+    teleported-other-to-coords: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ <color:#E7B85C>%player%</color> ᴛᴏ <color:#E7B85C>%world%</color> <dark_gray>(%x%, %y%, %z%)</dark_gray>."
+    invalid-coords: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɪɴᴠᴀʟɪᴅ ᴄᴏᴏʀᴅɪɴᴀᴛᴇѕ ѕᴘᴇᴄɪғɪᴇᴅ."
+    locating-remote: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʟᴏᴄᴀᴛɪɴɢ <color:#E7B85C>%player%</color> ᴀᴄʀᴏѕѕ ɴᴇᴛᴡᴏʀᴋ..."
+    cross-server-connecting: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴄᴏɴɴᴇᴄᴛɪɴɢ ᴛᴏ ѕᴇʀᴠᴇʀ <color:#6EDBFF>%server%</color> ᴛᴏ ʀᴇᴀᴄʜ <color:#E7B85C>%player%</color>..."
+    teleported-arrival: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴜᴄᴄᴇѕѕғᴜʟʟʏ ᴀʀʀɪᴠᴇᴅ ᴀᴛ ᴅᴇѕᴛɪɴᴀᴛɪᴏɴ!"
+    pulling-remote: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴜᴍᴍᴏɴɪɴɢ <color:#E7B85C>%player%</color> ғʀᴏᴍ ʀᴇᴍᴏᴛᴇ ѕᴇʀᴠᴇʀ..."
+    teleported-player-here: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ <color:#E7B85C>%player%</color> ᴛᴏ ʏᴏᴜʀ ʟᴏᴄᴀᴛɪᴏɴ."
+    teleported-to-admin: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ ᴛᴏ ᴀᴅᴍɪɴ <color:#E7B85C>%admin%</color>."
+    tpall-success: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ <color:#E7B85C>%count%</color> ᴘʟᴀʏᴇʀѕ ᴛᴏ ʏᴏᴜʀ ʟᴏᴄᴀᴛɪᴏɴ."
+    teleported-top: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ʜɪɢʜᴇѕᴛ ѕᴏʟɪᴅ ʙʟᴏᴄᴋ."
+    teleported-bottom: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ʟᴏᴡᴇѕᴛ ѕᴏʟɪᴅ ɢʀᴏᴜɴᴅ."
+    teleported-jump: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ ᴛᴏ ᴛᴀʀɢᴇᴛᴇᴅ ʟᴏᴄᴀᴛɪᴏɴ."
+    no-safe-location: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴄᴏᴜʟᴅ ɴᴏᴛ ғɪɴᴅ ᴀ ѕᴀғᴇ ɢʀᴏᴜɴᴅ ʟᴏᴄᴀᴛɪᴏɴ."
+    no-target-block: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɴᴏ ѕᴏʟɪᴅ ʙʟᴏᴄᴋ ɪɴ ʟɪɴᴇ ᴏғ ѕɪɢʜᴛ ᴡɪᴛʜɪɴ ʀᴀɴɢᴇ."
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # FLIGHT MODE CONTROLS (/fly)
+  # ────────────────────────────────────────────────────────────────────────────
+  fly:
+    enabled-self: "<gradient:#6EDBFF:#A7F3FF><bold>✈ ғʟɪɢʜᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ғʟɪɢʜᴛ ᴍᴏᴅᴇ <color:#7BD88F>ᴇɴᴀʙʟᴇᴅ</color>."
+    disabled-self: "<gradient:#6EDBFF:#A7F3FF><bold>✈ ғʟɪɢʜᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ғʟɪɢʜᴛ ᴍᴏᴅᴇ <color:#FF4D5A>ᴅɪѕᴀʙʟᴇᴅ</color>."
+    enabled-other: "<gradient:#6EDBFF:#A7F3FF><bold>✈ ғʟɪɢʜᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴇɴᴀʙʟᴇᴅ ғʟɪɢʜᴛ ᴍᴏᴅᴇ ғᴏʀ <color:#E7B85C>%player%</color>."
+    disabled-other: "<gradient:#6EDBFF:#A7F3FF><bold>✈ ғʟɪɢʜᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴅɪѕᴀʙʟᴇᴅ ғʟɪɢʜᴛ ᴍᴏᴅᴇ ғᴏʀ <color:#E7B85C>%player%</color>."
+    enabled-other-network: "<gradient:#6EDBFF:#A7F3FF><bold>✈ ғʟɪɢʜᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴇɴᴛ ғʟɪɢʜᴛ <color:#7BD88F>ᴇɴᴀʙʟᴇ</color> ғᴏʀ <color:#E7B85C>%player%</color> ᴀᴄʀᴏѕѕ ɴᴇᴛᴡᴏʀᴋ."
+    disabled-other-network: "<gradient:#6EDBFF:#A7F3FF><bold>✈ ғʟɪɢʜᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴇɴᴛ ғʟɪɢʜᴛ <color:#FF4D5A>ᴅɪѕᴀʙʟᴇ</color> ғᴏʀ <color:#E7B85C>%player%</color> ᴀᴄʀᴏѕѕ ɴᴇᴛᴡᴏʀᴋ."
+    toggled-other-network: "<gradient:#6EDBFF:#A7F3FF><bold>✈ ғʟɪɢʜᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴇɴᴛ ғʟɪɢʜᴛ <color:#E7B85C>ᴛᴏɢɢʟᴇ</color> ғᴏʀ <color:#E7B85C>%player%</color> ᴀᴄʀᴏѕѕ ɴᴇᴛᴡᴏʀᴋ."
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # INVULNERABILITY & GOD MODE (/god)
+  # ────────────────────────────────────────────────────────────────────────────
+  god:
+    enabled-self: "<gradient:#FFD166:#FFB347><bold>⚡ ɢᴏᴅᴍᴏᴅᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɢᴏᴅ ᴍᴏᴅᴇ <color:#7BD88F>ᴇɴᴀʙʟᴇᴅ</color>. ʏᴏᴜ ᴀʀᴇ ɴᴏᴡ ɪɴᴠᴜʟɴᴇʀᴀʙʟᴇ."
+    disabled-self: "<gradient:#FFD166:#FFB347><bold>⚡ ɢᴏᴅᴍᴏᴅᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɢᴏᴅ ᴍᴏᴅᴇ <color:#FF4D5A>ᴅɪѕᴀʙʟᴇᴅ</color>."
+    enabled-other: "<gradient:#FFD166:#FFB347><bold>⚡ ɢᴏᴅᴍᴏᴅᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴇɴᴀʙʟᴇᴅ ɢᴏᴅ ᴍᴏᴅᴇ ғᴏʀ <color:#E7B85C>%player%</color>."
+    disabled-other: "<gradient:#FFD166:#FFB347><bold>⚡ ɢᴏᴅᴍᴏᴅᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴅɪѕᴀʙʟᴇᴅ ɢᴏᴅ ᴍᴏᴅᴇ ғᴏʀ <color:#E7B85C>%player%</color>."
+    enabled-other-network: "<gradient:#FFD166:#FFB347><bold>⚡ ɢᴏᴅᴍᴏᴅᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴇɴᴛ ɢᴏᴅ ᴍᴏᴅᴇ <color:#7BD88F>ᴇɴᴀʙʟᴇ</color> ғᴏʀ <color:#E7B85C>%player%</color> ᴀᴄʀᴏѕѕ ɴᴇᴛᴡᴏʀᴋ."
+    disabled-other-network: "<gradient:#FFD166:#FFB347><bold>⚡ ɢᴏᴅᴍᴏᴅᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴇɴᴛ ɢᴏᴅ ᴍᴏᴅᴇ <color:#FF4D5A>ᴅɪѕᴀʙʟᴇ</color> ғᴏʀ <color:#E7B85C>%player%</color> ᴀᴄʀᴏѕѕ ɴᴇᴛᴡᴏʀᴋ."
+    toggled-other-network: "<gradient:#FFD166:#FFB347><bold>⚡ ɢᴏᴅᴍᴏᴅᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴇɴᴛ ɢᴏᴅ ᴍᴏᴅᴇ <color:#E7B85C>ᴛᴏɢɢʟᴇ</color> ғᴏʀ <color:#E7B85C>%player%</color> ᴀᴄʀᴏѕѕ ɴᴇᴛᴡᴏʀᴋ."
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # HEALTH RESTORATION (/heal)
+  # ────────────────────────────────────────────────────────────────────────────
+  heal:
+    healed-self: "<gradient:#7BD88F:#B9FBC0><bold>✚ ʜᴇᴀʟᴛʜ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ғᴜʟʟʏ ʜᴇᴀʟᴇᴅ ᴀɴᴅ ʀᴇғʀᴇѕʜᴇᴅ."
+    healed-other: "<gradient:#7BD88F:#B9FBC0><bold>✚ ʜᴇᴀʟᴛʜ</bold></gradient> <dark_gray>» <color:#D8D0C3>ғᴜʟʟʏ ʜᴇᴀʟᴇᴅ ᴀɴᴅ ʀᴇғʀᴇѕʜᴇᴅ <color:#E7B85C>%player%</color>."
+    healed-other-network: "<gradient:#7BD88F:#B9FBC0><bold>✚ ʜᴇᴀʟᴛʜ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴇɴᴛ ғᴜʟʟ ʜᴇᴀʟ ғᴏʀ <color:#E7B85C>%player%</color> ᴀᴄʀᴏѕѕ ɴᴇᴛᴡᴏʀᴋ."
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # HUNGER SATISFACTION (/feed)
+  # ────────────────────────────────────────────────────────────────────────────
+  feed:
+    fed-self: "<gradient:#FFB347:#FFCC80><bold>🍖 ғᴏᴏᴅ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜʀ ʜᴜɴɢᴇʀ ʜᴀѕ ʙᴇᴇɴ ғᴜʟʟʏ ѕᴀᴛɪѕғɪᴇᴅ."
+    fed-other: "<gradient:#FFB347:#FFCC80><bold>🍖 ғᴏᴏᴅ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴀᴛɪѕғɪᴇᴅ <color:#E7B85C>%player%</color>''ѕ ʜᴜɴɢᴇʀ."
+    fed-other-network: "<gradient:#FFB347:#FFCC80><bold>🍖 ғᴏᴏᴅ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴇɴᴛ ғᴇᴇᴅ ғᴏʀ <color:#E7B85C>%player%</color> ᴀᴄʀᴏѕѕ ɴᴇᴛᴡᴏʀᴋ."
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # SUICIDE (/suicide)
+  # ────────────────────────────────────────────────────────────────────────────
+  suicide:
+    died: "<gradient:#FF4D5A:#FF9A9A><bold>☠ ᴅᴇᴀᴛʜ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴛᴏᴏᴋ ʏᴏᴜʀ ᴏᴡɴ ʟɪғᴇ."
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # INVENTORY CLEARING (/clear, /ci, /clean, /clearinventory)
+  # ────────────────────────────────────────────────────────────────────────────
+  clear:
+    usage: "<gradient:#FFD166:#FFB347><bold>⚠ ᴜѕᴀɢᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>/%label% <color:#E7B85C>[player|*] [item|**|armor] [amount]</color>"
+    cleared-self: "<gradient:#7BD88F:#B9FBC0><bold>✔ ɪɴᴠᴇɴᴛᴏʀʏ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜʀ ɪɴᴠᴇɴᴛᴏʀʏ ʜᴀѕ ʙᴇᴇɴ ᴄʟᴇᴀʀᴇᴅ. <dark_gray>(%count% ɪᴛᴇᴍѕ ʀᴇᴍᴏᴠᴇᴅ)</dark_gray>"
+    cleared-self-armor: "<gradient:#7BD88F:#B9FBC0><bold>✔ ɪɴᴠᴇɴᴛᴏʀʏ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜʀ ɪɴᴠᴇɴᴛᴏʀʏ ᴀɴᴅ ᴀʀᴍᴏʀ ʜᴀᴠᴇ ʙᴇᴇɴ ᴄʟᴇᴀʀᴇᴅ. <dark_gray>(%count% ɪᴛᴇᴍѕ ʀᴇᴍᴏᴠᴇᴅ)</dark_gray>"
+    cleared-other: "<gradient:#7BD88F:#B9FBC0><bold>✔ ɪɴᴠᴇɴᴛᴏʀʏ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴄʟᴇᴀʀᴇᴅ <color:#E7B85C>%player%</color>''ѕ ɪɴᴠᴇɴᴛᴏʀʏ. <dark_gray>(%count% ɪᴛᴇᴍѕ ʀᴇᴍᴏᴠᴇᴅ)</dark_gray>"
+    cleared-other-network: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ɴᴇᴛᴡᴏʀᴋ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴇɴᴛ ɪɴᴠᴇɴᴛᴏʀʏ ᴄʟᴇᴀʀ ғᴏʀ <color:#E7B85C>%player%</color> ᴀᴄʀᴏѕѕ ɴᴇᴛᴡᴏʀᴋ."
+    cleared-all: "<gradient:#7BD88F:#B9FBC0><bold>✔ ɪɴᴠᴇɴᴛᴏʀʏ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴄʟᴇᴀʀᴇᴅ ɪɴᴠᴇɴᴛᴏʀɪᴇѕ ғᴏʀ <color:#E7B85C>%count%</color> ᴏɴʟɪɴᴇ ᴘʟᴀʏᴇʀѕ."
+    cleared-item-self: "<gradient:#7BD88F:#B9FBC0><bold>✔ ɪɴᴠᴇɴᴛᴏʀʏ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʀᴇᴍᴏᴠᴇᴅ <color:#E7B85C>%amount%x %item%</color> ғʀᴏᴍ ʏᴏᴜʀ ɪɴᴠᴇɴᴛᴏʀʏ."
+    cleared-item-other: "<gradient:#7BD88F:#B9FBC0><bold>✔ ɪɴᴠᴇɴᴛᴏʀʏ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʀᴇᴍᴏᴠᴇᴅ <color:#E7B85C>%amount%x %item%</color> ғʀᴏᴍ <color:#E7B85C>%player%</color>''ѕ ɪɴᴠᴇɴᴛᴏʀʏ."
+    cleared-item-other-network: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ɴᴇᴛᴡᴏʀᴋ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴇɴᴛ ʀᴇᴍᴏᴠᴀʟ ᴏғ <color:#E7B85C>%amount%x %item%</color> ғᴏʀ <color:#E7B85C>%player%</color> ᴀᴄʀᴏѕѕ ɴᴇᴛᴡᴏʀᴋ."
+    no-items-found: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɴᴏ ᴍᴀᴛᴄʜɪɴɢ ɪᴛᴇᴍѕ ғᴏᴜɴᴅ ᴛᴏ ᴄʟᴇᴀʀ."
+    exempt: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘʟᴀʏᴇʀ <color:#E7B85C>%player%</color> ɪѕ ᴇxᴇᴍᴘᴛ ғʀᴏᴍ ʜᴀᴠɪɴɢ ɪɴᴠᴇɴᴛᴏʀʏ ᴄʟᴇᴀʀᴇᴅ."
+    invalid-item: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɪɴᴠᴀʟɪᴅ ɪᴛᴇᴍ ɴᴀᴍᴇ <color:#E7B85C>%item%</color>."
+    invalid-amount: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɪɴᴠᴀʟɪᴅ ᴀᴍᴏᴜɴᴛ <color:#E7B85C>%amount%</color>. <dark_gray>(ᴍᴜѕᴛ ʙᴇ ᴀ ᴘᴏѕɪᴛɪᴠᴇ ɴᴜᴍʙᴇʀ)</dark_gray>"
+    confirm-prompt: "<gradient:#FFD166:#FFB347><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛʏᴘᴇ <color:#E7B85C>/%label% confirm</color> ᴛᴏ ᴄᴏɴғɪʀᴍ ᴄʟᴇᴀʀɪɴɢ ʏᴏᴜʀ ɪɴᴠᴇɴᴛᴏʀʏ."
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # VANISH CONTROLS (/vanish, /v)
+  # ────────────────────────────────────────────────────────────────────────────
+  vanish:
+    enabled-self: "<gradient:#6EDBFF:#A7F3FF><bold>👻 ᴠᴀɴɪѕʜ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴠᴀɴɪѕʜ ᴍᴏᴅᴇ <color:#7BD88F>ᴇɴᴀʙʟᴇᴅ</color>. ʏᴏᴜ ᴀʀᴇ ɴᴏᴡ ɪɴᴠɪѕɪʙʟᴇ."
+    disabled-self: "<gradient:#6EDBFF:#A7F3FF><bold>👻 ᴠᴀɴɪѕʜ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴠᴀɴɪѕʜ ᴍᴏᴅᴇ <color:#FF4D5A>ᴅɪѕᴀʙʟᴇᴅ</color>. ʏᴏᴜ ᴀʀᴇ ɴᴏᴡ ᴠɪѕɪʙʟᴇ."
+    enabled-other: "<gradient:#6EDBFF:#A7F3FF><bold>👻 ᴠᴀɴɪѕʜ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴇɴᴀʙʟᴇᴅ ᴠᴀɴɪѕʜ ғᴏʀ <color:#E7B85C>%player%</color>."
+    disabled-other: "<gradient:#6EDBFF:#A7F3FF><bold>👻 ᴠᴀɴɪѕʜ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴅɪѕᴀʙʟᴇᴅ ᴠᴀɴɪѕʜ ғᴏʀ <color:#E7B85C>%player%</color>."
+    staff-notify-on: "<dark_gray>[<gradient:#6EDBFF:#A7F3FF>ᴠᴀɴɪѕʜ</gradient>]</dark_gray> <color:#E7B85C>%player%</color> <color:#7BD88F>ᴠᴀɴɪѕʜᴇᴅ</color>."
+    staff-notify-off: "<dark_gray>[<gradient:#6EDBFF:#A7F3FF>ᴠᴀɴɪѕʜ</gradient>]</dark_gray> <color:#E7B85C>%player%</color> <color:#FF4D5A>ᴜɴᴠᴀɴɪѕʜᴇᴅ</color>."
+    pickup-enabled: "<gradient:#7BD88F:#B9FBC0><bold>✦ ᴠᴀɴɪѕʜ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɪᴛᴇᴍ ᴘɪᴄᴋᴜᴘ <color:#7BD88F>ᴇɴᴀʙʟᴇᴅ</color>."
+    pickup-disabled: "<gradient:#FF4D5A:#FF9A9A><bold>✦ ᴠᴀɴɪѕʜ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɪᴛᴇᴍ ᴘɪᴄᴋᴜᴘ <color:#FF4D5A>ᴅɪѕᴀʙʟᴇᴅ</color>."
+    actionbar: "<gradient:#6EDBFF:#A7F3FF>👻 ʏᴏᴜ ᴀʀᴇ ᴄᴜʀʀᴇɴᴛʟʏ ᴠᴀɴɪѕʜᴇᴅ</gradient>"
+    fake-join-format: "<dark_gray>[<color:#7BD88F>+</color>]</dark_gray> <color:#D8D0C3>%player%</color>"
+    fake-quit-format: "<dark_gray>[<color:#FF4D5A>-</color>]</dark_gray> <color:#D8D0C3>%player%</color>"
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # ONLINE / PLAYER LIST (/online, /list, /who)
+  # ────────────────────────────────────────────────────────────────────────────
+  online:
+    header: "<newline><gradient:#00d2ff:#3a7bd5><bold>FriendlyCore Online</bold></gradient> <dark_gray>(<color:#7BD88F>%online%</color><dark_gray>/</dark_gray><color:#D8D0C3>%max%</color>)</dark_gray>"
+    group-layout: "<color:#00d2ff><bold>%group_display%</bold></color> <dark_gray>(<color:#7BD88F>%count%</color>):</dark_gray> "
+    separator: "<dark_gray>, </dark_gray>"
+    footer: "<newline>"
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# COMMAND, GUI AND ADMIN MESSAGES
+# ──────────────────────────────────────────────────────────────────────────────
+usage-item-armor-amount: "Usage: /%label% <player|*> [item|**|armor] [amount]"
+this-command-can-only-be-executed: "This command can only be executed by in-game players."
+usage: "Usage: /%label% <player>"
+usage-on-off: "Usage: /%label% <player> [on|off]"
+usage-player: "Usage: /%label% <mode> [player]"
+console-cannot-toggle-gamemode-for-itself: "Console cannot toggle gamemode for itself."
+usage-2: "Usage: /%label% <mode> <player>"
+invsee-title-editable: "<dark_gray><gold>%player%'s Inventory <green>(Editable)"
+invsee-title-read-only: "<dark_gray><gold>%player%'s Inventory <red>(Read-Only)"
+armor-equipment: "<dark_gray>--- Armor & Equipment ---"
+local: "<yellow>%player% <gray>(Local)"
+console-must-specify-a-player-name: "Console must specify a player name: /%label% <speed> <player>"
+usage-3: "Usage: /%label% <player> <targetPlayer|x y z>"
+usage-world: "Usage: /%label% <player> <x> <y> <z> [world]"
+only-players-can-toggle-vanish-on: "&cOnly players can toggle vanish on themselves. Usage: /%label% <player> [on|off]"
+console-usage-on: "&cConsole usage: /%label% <player> on"
+console-usage-off: "&cConsole usage: /%label% <player> off"
+console-usage: "&cConsole usage: /%label% <player>"
+only-players-can-toggle-pickup-mode: "&cOnly players can toggle pickup mode."
+only-players-can-trigger-fake-join: "&cOnly players can trigger fake join."
+only-players-can-trigger-fake-quit: "&cOnly players can trigger fake quit."
+total-vanished-players: "&bTotal vanished players: %vanished_count%"
+disposal-items-will-be-destroyed: "<dark_red>Disposal <gray>(Items will be destroyed)"
+server: "<yellow>%player% <gray>(Server: <aqua>%target_server%<gray>)"
+remote-s-ender-chest: "<dark_gray>[Remote] <light_purple>%player%'s Ender Chest"
+
+# Shared GUI, input and fallback text
+vanish-load-failed-kick: "Unable to load vanish state. Please reconnect."

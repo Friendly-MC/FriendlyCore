@@ -1,0 +1,21 @@
+title: "ᴀᴜᴄᴛɪᴏɴs » Preview"
+rows: 5
+
+items:
+  item:
+    slot: 4
+
+  filler:
+    slot: [0, 1, 2, 3, 5, 6, 7, 8, 36, 37, 38, 39, 41, 42, 43, 44]
+    material: "BLACK_STAINED_GLASS_PANE"
+    name: " "
+
+  back:
+    slot: 40
+    material: "ARROW"
+    name: "#E63A35ʙᴀᴄᴋ"
+    lore:
+      - "&fClick to return"
+    actions:
+      - "[BACK]"
+    sound: click

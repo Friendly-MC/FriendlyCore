@@ -1,0 +1,1674 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                     ✦ FRIENDLY CORE - TEAMS MESSAGES ✦                       ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+misc-prefix:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>"
+  display-type: CHAT
+  enabled: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# INFORMATIONAL & STATUS NOTIFICATIONS
+# Placeholders: %limit%, %player%, %team%, %team_tag%, %team_name%, %name%, %tag%,
+#               %max%, %time%, %target%, %role%, %color%, %home%
+# ──────────────────────────────────────────────────────────────────────────────
+info-conversion-success:
+  text: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴄᴏɴᴠᴇʀѕɪᴏɴ ѕᴜᴄᴄᴇѕѕғᴜʟ. ʀᴇѕᴛᴀʀᴛ ѕᴇʀᴠᴇʀ ᴛᴏ ғɪɴᴀʟɪᴢᴇ."
+  display-type: CHAT
+  enabled: true
+
+info-max-ally:
+  text: "<gradient:#FFB703:#E7B85C><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴍᴀxɪᴍᴜᴍ ᴀʟʟɪᴀɴᴄᴇ ʟɪᴍɪᴛ ɪѕ <color:#E7B85C>%limit%<color:#D8D0C3>."
+  display-type: CHAT
+  enabled: true
+
+info-player-team:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍѕ</bold></gradient> <dark_gray>» <color:#E7B85C>%player% <color:#D8D0C3>ɪѕ ɪɴ ᴛᴇᴀᴍ <color:#6EDBFF>[%team_tag%]</color> <dark_gray>(%team_name%)</dark_gray>."
+  display-type: CHAT
+  enabled: true
+
+info-unally-success:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴀʟʟɪᴀɴᴄᴇ ʜᴀѕ ʙᴇᴇɴ ᴅɪѕѕᴏʟᴠᴇᴅ."
+  display-type: CHAT
+  enabled: true
+
+info-use-disband-command:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴜѕᴇ <color:#E7B85C>/teamadmin delete <team></color> ᴛᴏ ᴅᴇʟᴇᴛᴇ ᴀ ᴛᴇᴀᴍ."
+  display-type: CHAT
+  enabled: true
+
+info-team-disbanded:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜʀ ᴛᴇᴀᴍ ʜᴀѕ ʙᴇᴇɴ ᴅɪѕʙᴀɴᴅᴇᴅ."
+  display-type: CHAT
+  enabled: true
+
+info-got-ally-removed:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇᴀᴍ <color:#E7B85C>[%team%]</color> ʜᴀѕ ʀᴇᴠᴏᴋᴇᴅ ᴛʜᴇɪʀ ᴀʟʟɪᴀɴᴄᴇ."
+  display-type: CHAT
+  enabled: true
+
+info-you-ally-removed:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʀᴇᴠᴏᴋᴇᴅ ᴀʟʟɪᴀɴᴄᴇ ᴡɪᴛʜ <color:#E7B85C>[%team%]</color>."
+  display-type: CHAT
+  enabled: true
+
+info-team-name-changed:
+  text: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇᴀᴍ ɴᴀᴍᴇ ᴄʜᴀɴɢᴇᴅ ᴛᴏ <color:#E7B85C>%name%<color:#D8D0C3>."
+  display-type: CHAT
+  enabled: true
+
+info-team-tag-changed:
+  text: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇᴀᴍ ᴛᴀɢ ᴄʜᴀɴɢᴇᴅ ᴛᴏ <color:#6EDBFF>[%tag%]</color>."
+  display-type: CHAT
+  enabled: true
+
+info-chat-team-name:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛʏᴘᴇ ᴛʜᴇ ɴᴇᴡ ᴛᴇᴀᴍ ɴᴀᴍᴇ ɪɴ ᴄʜᴀᴛ <dark_gray>(ᴍᴀx %max% ᴄʜᴀʀѕ, ''cancel'' ᴛᴏ ᴀʙᴏʀᴛ)</dark_gray>:"
+  display-type: CHAT
+  enabled: true
+
+info-chat-team-tag:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛʏᴘᴇ ᴛʜᴇ ɴᴇᴡ ᴛᴇᴀᴍ ᴛᴀɢ ɪɴ ᴄʜᴀᴛ <dark_gray>(ᴍᴀx %max% ᴄʜᴀʀѕ, ''cancel'' ᴛᴏ ᴀʙᴏʀᴛ)</dark_gray>:"
+  display-type: CHAT
+  enabled: true
+
+info-chat-add-ally:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛʏᴘᴇ ᴛʜᴇ ᴏᴡɴᴇʀ ɴᴀᴍᴇ ᴏғ ᴛʜᴇ ᴛᴇᴀᴍ ᴛᴏ ᴀʟʟʏ <dark_gray>(''cancel'' ᴛᴏ ᴀʙᴏʀᴛ)</dark_gray>:"
+  display-type: CHAT
+  enabled: true
+
+info-teleporting:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛɪɴɢ ɪɴ <color:#E7B85C>%time%<color:#D8D0C3>. ᴅᴏɴ''ᴛ ᴍᴏᴠᴇ."
+  display-type: CHAT
+  enabled: true
+
+info-already-teleporting:
+  text: "<gradient:#FFB703:#E7B85C><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ᴛᴇʟᴇᴘᴏʀᴛɪɴɢ."
+  display-type: CHAT
+  enabled: true
+
+info-teleportation-cancel:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛ ᴄᴀɴᴄᴇʟᴇᴅ ʙᴇᴄᴀᴜѕᴇ ʏᴏᴜ ᴍᴏᴠᴇᴅ."
+  display-type: CHAT
+  enabled: true
+
+info-teleported-home:
+  text: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ ᴛᴏ ᴛᴇᴀᴍ ʜᴏᴍᴇ."
+  display-type: CHAT
+  enabled: true
+
+info-set-home:
+  text: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇᴀᴍ ʜᴏᴍᴇ ʟᴏᴄᴀᴛɪᴏɴ ᴜᴘᴅᴀᴛᴇᴅ."
+  display-type: CHAT
+  enabled: true
+
+info-in-your-team:
+  text: "<gradient:#FFB703:#E7B85C><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛʜɪѕ ᴘʟᴀʏᴇʀ ɪѕ ᴀʟʀᴇᴀᴅʏ ɪɴ ʏᴏᴜʀ ᴛᴇᴀᴍ."
+  display-type: CHAT
+  enabled: true
+
+info-not-in-your-team:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛʜɪѕ ᴘʟᴀʏᴇʀ ɪѕ ɴᴏᴛ ɪɴ ʏᴏᴜʀ ᴛᴇᴀᴍ."
+  display-type: CHAT
+  enabled: true
+
+info-invite-player:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛʏᴘᴇ ᴛʜᴇ ᴘʟᴀʏᴇʀ ɴᴀᴍᴇ ᴛᴏ ɪɴᴠɪᴛᴇ <dark_gray>(''cancel'' ᴛᴏ ᴀʙᴏʀᴛ)</dark_gray>:"
+  display-type: CHAT
+  enabled: true
+
+info-cancelled:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴀᴄᴛɪᴏɴ ᴄᴀɴᴄᴇʟᴇᴅ."
+  display-type: CHAT
+  enabled: true
+
+info-kicked-him:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʀᴇᴍᴏᴠᴇᴅ <color:#E7B85C>%player%</color> ғʀᴏᴍ ᴛʜᴇ ᴛᴇᴀᴍ."
+  display-type: CHAT
+  enabled: true
+
+info-got-kicked:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴡᴇʀᴇ ʀᴇᴍᴏᴠᴇᴅ ғʀᴏᴍ ʏᴏᴜʀ ᴛᴇᴀᴍ."
+  display-type: CHAT
+  enabled: true
+
+info-no-perm:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴘᴇʀᴍɪѕѕɪᴏɴ ᴛᴏ ᴜѕᴇ ᴛʜɪѕ ᴄᴏᴍᴍᴀɴᴅ."
+  display-type: CHAT
+  enabled: true
+
+info-left-team:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ʟᴇғᴛ ʏᴏᴜʀ ᴛᴇᴀᴍ."
+  display-type: CHAT
+  enabled: true
+
+info-create-team:
+  text: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇᴀᴍ ᴄʀᴇᴀᴛᴇᴅ ѕᴜᴄᴄᴇѕѕғᴜʟʟʏ."
+  display-type: CHAT
+  enabled: true
+
+info-ally-invite-sent:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴇɴᴛ ᴀʟʟɪᴀɴᴄᴇ ɪɴᴠɪᴛᴀᴛɪᴏɴ ᴛᴏ <color:#E7B85C>%player%<color:#D8D0C3>."
+  display-type: CHAT
+  enabled: true
+
+info-ally-invite-received:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʀᴇᴄᴇɪᴠᴇᴅ ᴀʟʟɪᴀɴᴄᴇ ɪɴᴠɪᴛᴀᴛɪᴏɴ ғʀᴏᴍ <color:#E7B85C>%player%<color:#D8D0C3>."
+  display-type: CHAT
+  enabled: true
+
+info-ally-accept-invite:
+  text: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴀᴄᴄᴇᴘᴛᴇᴅ ᴀʟʟɪᴀɴᴄᴇ ɪɴᴠɪᴛᴀᴛɪᴏɴ ғʀᴏᴍ <color:#E7B85C>%player%<color:#D8D0C3>."
+  display-type: CHAT
+  enabled: true
+
+info-ally-refuse-invite:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴅᴇᴄʟɪɴᴇᴅ ᴀʟʟɪᴀɴᴄᴇ ɪɴᴠɪᴛᴀᴛɪᴏɴ ғʀᴏᴍ <color:#E7B85C>%player%<color:#D8D0C3>."
+  display-type: CHAT
+  enabled: true
+
+info-ally-invite-accepted:
+  text: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#E7B85C>%player% <color:#D8D0C3>ᴀᴄᴄᴇᴘᴛᴇᴅ ʏᴏᴜʀ ᴀʟʟɪᴀɴᴄᴇ ɪɴᴠɪᴛᴀᴛɪᴏɴ."
+  display-type: CHAT
+  enabled: true
+
+info-ally-invite-refused:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#E7B85C>%player% <color:#D8D0C3>ᴅᴇᴄʟɪɴᴇᴅ ʏᴏᴜʀ ᴀʟʟɪᴀɴᴄᴇ ɪɴᴠɪᴛᴀᴛɪᴏɴ."
+  display-type: CHAT
+  enabled: true
+
+info-invite-sent:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴇɴᴛ ᴛᴇᴀᴍ ɪɴᴠɪᴛᴀᴛɪᴏɴ ᴛᴏ <color:#E7B85C>%player%<color:#D8D0C3>."
+  display-type: CHAT
+  enabled: true
+
+info-invite-received:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍ ɪɴᴠɪᴛᴇ</bold></gradient> <dark_gray>» <color:#6EDBFF>%player%<color:#D8D0C3> ɪɴᴠɪᴛᴇᴅ ʏᴏᴜ ᴛᴏ ᴊᴏɪɴ ᴛʜᴇɪʀ ᴛᴇᴀᴍ.\n<dark_gray>   ➜ <click:run_command:'/team accept %player%'><hover:show_text:'<color:#8DE969>ᴀᴄᴄᴇᴘᴛ ᴛᴇᴀᴍ ɪɴᴠɪᴛᴀᴛɪᴏɴ'><color:#8DE969><bold>[✔ ᴀᴄᴄᴇᴘᴛ]</bold></color></hover></click> <dark_gray>• <click:run_command:'/team deny %player%'><hover:show_text:'<color:#FF4D5A>ᴅᴇɴʏ ᴛᴇᴀᴍ ɪɴᴠɪᴛᴀᴛɪᴏɴ'><color:#FF4D5A><bold>[✘ ᴅᴇɴʏ]</bold></color></hover></click>"
+  display-type: CHAT
+  enabled: true
+
+info-accept-invite:
+  text: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴀᴄᴄᴇᴘᴛᴇᴅ ᴛᴇᴀᴍ ɪɴᴠɪᴛᴀᴛɪᴏɴ ғʀᴏᴍ <color:#E7B85C>%player%<color:#D8D0C3>."
+  display-type: CHAT
+  enabled: true
+
+info-refuse-invite:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴅᴇᴄʟɪɴᴇᴅ ᴛᴇᴀᴍ ɪɴᴠɪᴛᴀᴛɪᴏɴ ғʀᴏᴍ <color:#E7B85C>%player%<color:#D8D0C3>."
+  display-type: CHAT
+  enabled: true
+
+info-invite-accepted:
+  text: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#E7B85C>%player% <color:#D8D0C3>ᴀᴄᴄᴇᴘᴛᴇᴅ ʏᴏᴜʀ ɪɴᴠɪᴛᴀᴛɪᴏɴ ᴀɴᴅ ᴊᴏɪɴᴇᴅ."
+  display-type: CHAT
+  enabled: true
+
+info-invite-refused:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#E7B85C>%player% <color:#D8D0C3>ᴅᴇᴄʟɪɴᴇᴅ ʏᴏᴜʀ ᴛᴇᴀᴍ ɪɴᴠɪᴛᴀᴛɪᴏɴ."
+  display-type: CHAT
+  enabled: true
+
+info-you-promoted:
+  text: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘʀᴏᴍᴏᴛᴇᴅ <color:#E7B85C>%target%</color> ᴛᴏ <color:#8DE969>%role%</color>."
+  display-type: CHAT
+  enabled: true
+
+info-you-demoted:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴅᴇᴍᴏᴛᴇᴅ <color:#E7B85C>%target%</color> ᴛᴏ <color:#FFB703>%role%</color>."
+  display-type: CHAT
+  enabled: true
+
+info-promoted:
+  text: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ᴘʀᴏᴍᴏᴛᴇᴅ ᴛᴏ <color:#8DE969>%role%</color>."
+  display-type: CHAT
+  enabled: true
+
+info-demoted:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ᴅᴇᴍᴏᴛᴇᴅ ᴛᴏ <color:#FFB703>%role%</color>."
+  display-type: CHAT
+  enabled: true
+
+info-teammsg-toggled:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇᴀᴍ ᴄʜᴀᴛ ᴍᴏᴅᴇ: <color:#8DE969>ᴇɴᴀʙʟᴇᴅ<color:#D8D0C3>."
+  display-type: CHAT
+  enabled: true
+
+info-teammsg-untoggled:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇᴀᴍ ᴄʜᴀᴛ ᴍᴏᴅᴇ: <color:#FF4D5A>ᴅɪѕᴀʙʟᴇᴅ<color:#D8D0C3>."
+  display-type: CHAT
+  enabled: true
+
+info-allymsg-toggled:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴀʟʟʏ ᴄʜᴀᴛ ᴍᴏᴅᴇ: <color:#8DE969>ᴇɴᴀʙʟᴇᴅ<color:#D8D0C3>."
+  display-type: CHAT
+  enabled: true
+
+info-allymsg-untoggled:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴀʟʟʏ ᴄʜᴀᴛ ᴍᴏᴅᴇ: <color:#FF4D5A>ᴅɪѕᴀʙʟᴇᴅ<color:#D8D0C3>."
+  display-type: CHAT
+  enabled: true
+
+info-spy-toggled:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇᴀᴍ ᴄʜᴀᴛ ѕᴘʏ: <color:#8DE969>ᴇɴᴀʙʟᴇᴅ<color:#D8D0C3>."
+  display-type: CHAT
+  enabled: true
+
+info-spy-untoggled:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇᴀᴍ ᴄʜᴀᴛ ѕᴘʏ: <color:#FF4D5A>ᴅɪѕᴀʙʟᴇᴅ<color:#D8D0C3>."
+  display-type: CHAT
+  enabled: true
+
+info-team-color-changed:
+  text: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇᴀᴍ ᴄᴏʟᴏʀ ᴜᴘᴅᴀᴛᴇᴅ ᴛᴏ %color%%name%<color:#D8D0C3>."
+  display-type: CHAT
+  enabled: true
+
+info-home-deleted:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴅᴇʟᴇᴛᴇᴅ ᴛᴇᴀᴍ ʜᴏᴍᴇ <color:#E7B85C>%home%<color:#D8D0C3>."
+  display-type: CHAT
+  enabled: true
+
+info-chat-home-name:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛʏᴘᴇ ᴀ ɴᴀᴍᴇ ғᴏʀ ᴛʜɪѕ ʜᴏᴍᴇ <dark_gray>(ᴍᴀx %max% ᴄʜᴀʀѕ, ''cancel'' ᴛᴏ ᴀʙᴏʀᴛ)</dark_gray>:"
+  display-type: CHAT
+  enabled: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ERROR & VALIDATION NOTIFICATIONS
+# Placeholders: %player%, %team_tag%, %time%, %home%, %max%, %min%
+# ──────────────────────────────────────────────────────────────────────────────
+error-team-not-found:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇᴀᴍ ɴᴏᴛ ғᴏᴜɴᴅ."
+  display-type: CHAT
+  enabled: true
+
+error-admin-cant-ally:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴀᴅᴍɪɴɪѕᴛʀᴀᴛᴏʀѕ ᴄᴀɴɴᴏᴛ ᴀʟʟʏ ᴛᴇᴀᴍѕ ᴅɪʀᴇᴄᴛʟʏ."
+  display-type: CHAT
+  enabled: true
+
+error-teams-not-allied:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛʜᴇѕᴇ ᴛᴇᴀᴍѕ ᴀʀᴇ ɴᴏᴛ ᴀʟʟɪᴇᴅ."
+  display-type: CHAT
+  enabled: true
+
+error-no-allies:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜʀ ᴛᴇᴀᴍ ᴅᴏᴇѕ ɴᴏᴛ ʜᴀᴠᴇ ᴀɴʏ ᴀʟʟɪᴇѕ."
+  display-type: CHAT
+  enabled: true
+
+error-name-is-illegal:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴘᴇᴄɪғɪᴇᴅ ᴛᴇᴀᴍ ɴᴀᴍᴇ ɪѕ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ."
+  display-type: CHAT
+  enabled: true
+
+error-tag-is-illegal:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴘᴇᴄɪғɪᴇᴅ ᴛᴇᴀᴍ ᴛᴀɢ ɪѕ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ."
+  display-type: CHAT
+  enabled: true
+
+error-cant-disband:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴄᴀɴɴᴏᴛ ᴅɪѕʙᴀɴᴅ ᴛᴇᴀᴍ ᴡʜɪʟᴇ ᴛᴇᴀᴍ ᴇɴᴅᴇʀᴄʜᴇѕᴛ ᴄᴏɴᴛᴀɪɴѕ ɪᴛᴇᴍѕ."
+  display-type: CHAT
+  enabled: true
+
+error-member-limit:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇᴀᴍ ᴍᴇᴍʙᴇʀ ʟɪᴍɪᴛ ʀᴇᴀᴄʜᴇᴅ."
+  display-type: CHAT
+  enabled: true
+
+error-already-in-your-team:
+  text: "<gradient:#FFB703:#E7B85C><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛʜɪѕ ᴘʟᴀʏᴇʀ ɪѕ ᴀʟʀᴇᴀᴅʏ ɪɴ ʏᴏᴜʀ ᴛᴇᴀᴍ."
+  display-type: CHAT
+  enabled: true
+
+error-too-long:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴘᴇᴄɪғɪᴇᴅ ᴛᴇxᴛ ɪѕ ᴛᴏᴏ ʟᴏɴɢ."
+  display-type: CHAT
+  enabled: true
+
+error-name-already-exists:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴀ ᴛᴇᴀᴍ ᴡɪᴛʜ ᴛʜᴀᴛ ɴᴀᴍᴇ ᴀʟʀᴇᴀᴅʏ ᴇxɪѕᴛѕ."
+  display-type: CHAT
+  enabled: true
+
+error-tag-already-exists:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴀ ᴛᴇᴀᴍ ᴡɪᴛʜ ᴛʜᴀᴛ ᴛᴀɢ ᴀʟʀᴇᴀᴅʏ ᴇxɪѕᴛѕ."
+  display-type: CHAT
+  enabled: true
+
+error-invalid-characters:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇxᴛ ᴄᴏɴᴛᴀɪɴѕ ɪɴᴠᴀʟɪᴅ ᴄʜᴀʀᴀᴄᴛᴇʀѕ."
+  display-type: CHAT
+  enabled: true
+
+error-invalid-player:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘʟᴀʏᴇʀ ɴᴏᴛ ғᴏᴜɴᴅ."
+  display-type: CHAT
+  enabled: true
+
+error-no-self-invite:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ɪɴᴠɪᴛᴇ ʏᴏᴜʀѕᴇʟғ."
+  display-type: CHAT
+  enabled: true
+
+error-no-team:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴄᴜʀʀᴇɴᴛʟʏ ɪɴ ᴀ ᴛᴇᴀᴍ."
+  display-type: CHAT
+  enabled: true
+
+error-target-no-team:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴀʀɢᴇᴛ ᴘʟᴀʏᴇʀ ᴅᴏᴇѕ ɴᴏᴛ ʜᴀᴠᴇ ᴀ ᴛᴇᴀᴍ."
+  display-type: CHAT
+  enabled: true
+
+error-no-home:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜʀ ᴛᴇᴀᴍ ʜᴀѕ ɴᴏᴛ ѕᴇᴛ ᴀ ʜᴏᴍᴇ ʟᴏᴄᴀᴛɪᴏɴ."
+  display-type: CHAT
+  enabled: true
+
+error-home-too-high:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʜᴏᴍᴇ ʟᴏᴄᴀᴛɪᴏɴ ʏ ᴄᴏᴏʀᴅɪɴᴀᴛᴇ ɪѕ ᴛᴏᴏ ʜɪɢʜ."
+  display-type: CHAT
+  enabled: true
+
+error-not-owner:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴏɴʟʏ ᴛʜᴇ ᴛᴇᴀᴍ ʟᴇᴀᴅᴇʀ ᴄᴀɴ ᴅᴏ ᴛʜɪѕ."
+  display-type: CHAT
+  enabled: true
+
+error-not-allowed:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴘᴇʀᴍɪѕѕɪᴏɴ ғᴏʀ ᴛʜɪѕ."
+  display-type: CHAT
+  enabled: true
+
+error-target-not-allowed:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛʜɪѕ ᴀᴄᴛɪᴏɴ ᴄᴀɴɴᴏᴛ ʙᴇ ᴘᴇʀғᴏʀᴍᴇᴅ ᴏɴ ᴛᴀʀɢᴇᴛ."
+  display-type: CHAT
+  enabled: true
+
+error-already-ally:
+  text: "<gradient:#FFB703:#E7B85C><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜʀ ᴛᴇᴀᴍѕ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ᴀʟʟɪᴇᴅ."
+  display-type: CHAT
+  enabled: true
+
+error-already-team:
+  text: "<gradient:#FFB703:#E7B85C><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ɪɴ ᴀ ᴛᴇᴀᴍ."
+  display-type: CHAT
+  enabled: true
+
+error-no-such-invite:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɴᴏ ᴘᴇɴᴅɪɴɢ ɪɴᴠɪᴛᴀᴛɪᴏɴ ғᴏᴜɴᴅ."
+  display-type: CHAT
+  enabled: true
+
+error-no-self-promoting:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴘʀᴏᴍᴏᴛᴇ ʏᴏᴜʀѕᴇʟғ."
+  display-type: CHAT
+  enabled: true
+
+error-no-self-demoting:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴅᴇᴍᴏᴛᴇ ʏᴏᴜʀѕᴇʟғ."
+  display-type: CHAT
+  enabled: true
+
+error-no-self-kicking:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴋɪᴄᴋ ʏᴏᴜʀѕᴇʟғ <dark_gray>(/team leave)</dark_gray>."
+  display-type: CHAT
+  enabled: true
+
+error-cant-promote:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴘʀᴏᴍᴏᴛᴇ ᴛʜɪѕ ᴘʟᴀʏᴇʀ ғᴜʀᴛʜᴇʀ."
+  display-type: CHAT
+  enabled: true
+
+error-cant-demote:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴅᴇᴍᴏᴛᴇ ᴛʜɪѕ ᴘʟᴀʏᴇʀ ғᴜʀᴛʜᴇʀ."
+  display-type: CHAT
+  enabled: true
+
+error-cant-kick:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴋɪᴄᴋ ᴛʜɪѕ ᴘʟᴀʏᴇʀ."
+  display-type: CHAT
+  enabled: true
+
+error-not-enough-money:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɪɴѕᴜғғɪᴄɪᴇɴᴛ ғᴜɴᴅѕ ᴛᴏ ᴄᴏᴍᴘʟᴇᴛᴇ ᴛʜɪѕ ᴀᴄᴛɪᴏɴ."
+  display-type: CHAT
+  enabled: true
+
+error-already-sent:
+  text: "<gradient:#FFB703:#E7B85C><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴀɴ ɪɴᴠɪᴛᴀᴛɪᴏɴ ʜᴀѕ ᴀʟʀᴇᴀᴅʏ ʙᴇᴇɴ ѕᴇɴᴛ ᴛᴏ ᴛʜɪѕ ᴘʟᴀʏᴇʀ."
+  display-type: CHAT
+  enabled: true
+
+error-admin-team-disbanded:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇᴀᴍ <color:#E7B85C>''%team_tag%''</color> ᴡᴀѕ ғᴏʀᴄᴇғᴜʟʟʏ ᴅɪѕʙᴀɴᴅᴇᴅ."
+  display-type: CHAT
+  enabled: true
+
+error-invalid-convertor:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɪɴᴠᴀʟɪᴅ ᴄᴏɴᴠᴇʀᴛᴇʀ."
+  display-type: CHAT
+  enabled: true
+
+error-conversion-unsuccessful:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴅᴀᴛᴀ ᴄᴏɴᴠᴇʀѕɪᴏɴ ғᴀɪʟᴇᴅ."
+  display-type: CHAT
+  enabled: true
+
+error-invalid-command:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴜɴᴋɴᴏᴡɴ ᴄᴏᴍᴍᴀɴᴅ. ᴜѕᴇ <color:#E7B85C>/team help</color>."
+  display-type: CHAT
+  enabled: true
+
+error-color-no-permission:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴘᴇʀᴍɪѕѕɪᴏɴ ғᴏʀ ᴛʜɪѕ ᴛᴇᴀᴍ ᴄᴏʟᴏʀ."
+  display-type: CHAT
+  enabled: true
+
+error-team-create-cooldown:
+  text: "<gradient:#FFD166:#FFB347><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴜѕᴇ ᴛʜᴀᴛ ᴄᴏᴍᴍᴀɴᴅ ғᴏʀ <color:#E7B85C>%time%ѕ<color:#D8D0C3>."
+  display-type: CHAT
+  enabled: true
+
+error-tag-change-cooldown:
+  text: "<gradient:#FFD166:#FFB347><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴜѕᴇ ᴛʜᴀᴛ ᴄᴏᴍᴍᴀɴᴅ ғᴏʀ <color:#E7B85C>%time%ѕ<color:#D8D0C3>."
+  display-type: CHAT
+  enabled: true
+
+error-home-not-found:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɴᴏ ᴛᴇᴀᴍ ʜᴏᴍᴇ ɴᴀᴍᴇᴅ <color:#E7B85C>''%home%''</color> ғᴏᴜɴᴅ."
+  display-type: CHAT
+  enabled: true
+
+error-home-limit:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇᴀᴍ ʜᴀѕ ʀᴇᴀᴄʜᴇᴅ ɪᴛѕ ᴍᴀxɪᴍᴜᴍ ʜᴏᴍᴇ ʟɪᴍɪᴛ <dark_gray>(<color:#E7B85C>%max%</color>)</dark_gray>."
+  display-type: CHAT
+  enabled: true
+
+error-home-name-invalid:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɪɴᴠᴀʟɪᴅ ʜᴏᴍᴇ ɴᴀᴍᴇ <dark_gray>(ᴍᴀx %max% ᴄʜᴀʀѕ)</dark_gray>."
+  display-type: CHAT
+  enabled: true
+
+error-not-enough-members:
+  text: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜʀ ᴛᴇᴀᴍ ɴᴇᴇᴅѕ ᴀᴛ ʟᴇᴀѕᴛ <color:#E7B85C>%min%</color> ᴍᴇᴍʙᴇʀѕ."
+  display-type: CHAT
+  enabled: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# CHAT FORMATS & PLACEHOLDERS
+# Placeholders: %player%, %message%, %team%, %rank%, %team_tag%, %team_balance%,
+#               %kills%, %deaths%, %time%
+# ──────────────────────────────────────────────────────────────────────────────
+misc-empty-team-placeholder:
+  text: "ɴᴏɴᴇ"
+  display-type: CHAT
+  enabled: true
+
+misc-teammsg-format:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍ</bold></gradient> <dark_gray>» <color:#E7B85C>%player%<dark_gray>: <color:#D8D0C3>%message%"
+  display-type: CHAT
+  enabled: true
+
+misc-teammsg-spy-format:
+  text: "<dark_gray>[<color:#FF4D5A>ѕᴘʏ</color>] <gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍ</bold></gradient> <dark_gray>» <color:#E7B85C>%player%<dark_gray>: <color:#D8D0C3>%message%"
+  display-type: CHAT
+  enabled: true
+
+misc-allymsg-format:
+  text: "<dark_gray>[<color:#8DE969>%team%</color>] <gradient:#7BD88F:#B9FBC0><bold>ᴀʟʟʏ</bold></gradient> <dark_gray>» <color:#E7B85C>%player%<dark_gray>: <color:#D8D0C3>%message%"
+  display-type: CHAT
+  enabled: true
+
+misc-allymsg-spy-format:
+  text: "<dark_gray>[<color:#FF4D5A>ѕᴘʏ</color>] [<color:#8DE969>%team%</color>] <gradient:#7BD88F:#B9FBC0><bold>ᴀʟʟʏ</bold></gradient> <dark_gray>» <color:#E7B85C>%player%<dark_gray>: <color:#D8D0C3>%message%"
+  display-type: CHAT
+  enabled: true
+
+misc-leaderboard-papi-format:
+  text: "<color:#6EDBFF>#%rank%</color> <color:#D8D0C3>[%team_tag%]</color> <dark_gray>• <color:#8DE969>$%team_balance%</color> <dark_gray>• <color:#8A8A8A>ᴋ:<color:#6EDBFF>%kills%</color> ᴅ:<color:#FF4D5A>%deaths%</color>"
+  display-type: CHAT
+  enabled: true
+
+misc-has-team-papi:
+  text: "ʏᴇѕ"
+  display-type: CHAT
+  enabled: true
+
+misc-no-team-papi:
+  text: "ɴᴏ"
+  display-type: CHAT
+  enabled: true
+
+misc-no-role-papi:
+  text: "ɴᴏɴᴇ"
+  display-type: CHAT
+  enabled: true
+
+misc-no-ally-papi:
+  text: "ɴᴏɴᴇ"
+  display-type: CHAT
+  enabled: true
+
+misc-teleporting:
+  text: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛɪɴɢ ɪɴ <color:#E7B85C>%time%<color:#D8D0C3>. ᴅᴏɴ''ᴛ ᴍᴏᴠᴇ."
+  display-type: CHAT
+  enabled: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# HELP MENUS & INSPECTION OVERVIEW
+# Placeholders: %team_name%, %team_tag%, %team_score%, %team_bank%, %team_kills%,
+#               %team_deaths%, %team_members%
+# ──────────────────────────────────────────────────────────────────────────────
+misc-help-admin:
+  text:
+    - "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍ ѕᴛᴀғғ</bold></gradient> <dark_gray>• <color:#8A8A8A>ᴀᴅᴍɪɴ ɢᴜɪᴅᴇ"
+    - " <dark_gray>• <color:#E7B85C>/teamadmin delete <team> <dark_gray>» <color:#D8D0C3>ғᴏʀᴄᴇ ᴅᴇʟᴇᴛᴇ ᴀ ᴛᴇᴀᴍ"
+    - " <dark_gray>• <color:#E7B85C>/teamadmin inspect <team> <dark_gray>» <color:#D8D0C3>ᴠɪᴇᴡ ᴄᴏᴍᴘʟᴇᴛᴇ ᴛᴇᴀᴍ ᴅᴀᴛᴀ"
+    - " <dark_gray>• <color:#E7B85C>/teamadmin check <player> <dark_gray>» <color:#D8D0C3>ᴄʜᴇᴄᴋ ᴘʟᴀʏᴇʀ''ѕ ᴛᴇᴀᴍ"
+    - " <dark_gray>• <color:#E7B85C>/teamadmin enderchest <team> <dark_gray>» <color:#D8D0C3>ᴏᴘᴇɴ ᴛᴇᴀᴍ ᴇɴᴅᴇʀᴄʜᴇѕᴛ"
+    - " <dark_gray>• <color:#E7B85C>/teamadmin unally <t1> <t2> <dark_gray>» <color:#D8D0C3>ᴅɪѕѕᴏʟᴠᴇ ᴀʟʟɪᴀɴᴄᴇ"
+    - " <dark_gray>• <color:#E7B85C>/teamadmin spy <dark_gray>» <color:#D8D0C3>ᴛᴏɢɢʟᴇ ᴛᴇᴀᴍ ᴄʜᴀᴛ ѕᴘʏ"
+  display-type: CHAT
+  enabled: true
+
+misc-help:
+  text:
+    - "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍѕ</bold></gradient> <dark_gray>• <color:#8A8A8A>ᴄᴏᴍᴍᴀɴᴅ ɢᴜɪᴅᴇ"
+    - " <dark_gray>• <color:#E7B85C>/team <dark_gray>» <color:#D8D0C3>ᴏᴘᴇɴ ᴛᴇᴀᴍ ᴏᴠᴇʀᴠɪᴇᴡ ɢᴜɪ"
+    - " <dark_gray>• <color:#E7B85C>/team create <tag> <dark_gray>» <color:#D8D0C3>ᴄʀᴇᴀᴛᴇ ᴀ ɴᴇᴡ ᴛᴇᴀᴍ"
+    - " <dark_gray>• <color:#E7B85C>/team invite <player> <dark_gray>» <color:#D8D0C3>ɪɴᴠɪᴛᴇ ᴘʟᴀʏᴇʀ ᴛᴏ ᴛᴇᴀᴍ"
+    - " <dark_gray>• <color:#E7B85C>/team accept <player> <dark_gray>» <color:#D8D0C3>ᴀᴄᴄᴇᴘᴛ ᴛᴇᴀᴍ ɪɴᴠɪᴛᴀᴛɪᴏɴ"
+    - " <dark_gray>• <color:#E7B85C>/team deny <player> <dark_gray>» <color:#D8D0C3>ᴅᴇᴄʟɪɴᴇ ᴛᴇᴀᴍ ɪɴᴠɪᴛᴀᴛɪᴏɴ"
+    - " <dark_gray>• <color:#E7B85C>/team leave <dark_gray>» <color:#D8D0C3>ʟᴇᴀᴠᴇ ᴄᴜʀʀᴇɴᴛ ᴛᴇᴀᴍ"
+    - " <dark_gray>• <color:#E7B85C>/team home [name] <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛ ᴛᴏ ᴛᴇᴀᴍ ʜᴏᴍᴇ"
+    - " <dark_gray>• <color:#E7B85C>/team sethome [name] <dark_gray>» <color:#D8D0C3>ѕᴇᴛ ᴛᴇᴀᴍ ʜᴏᴍᴇ"
+    - " <dark_gray>• <color:#E7B85C>/team bank <dark_gray>» <color:#D8D0C3>ᴏᴘᴇɴ ᴛᴇᴀᴍ ʙᴀɴᴋ ɢᴜɪ"
+    - " <dark_gray>• <color:#E7B85C>/team enderchest <dark_gray>» <color:#D8D0C3>ᴏᴘᴇɴ ѕʜᴀʀᴇᴅ ᴇɴᴅᴇʀᴄʜᴇѕᴛ"
+    - " <dark_gray>• <color:#E7B85C>/team stats <dark_gray>» <color:#D8D0C3>ᴏᴘᴇɴ ᴛᴇᴀᴍ ѕᴛᴀᴛѕ ᴍᴇɴᴜ"
+    - " <dark_gray>• <color:#E7B85C>/team leaderboard <dark_gray>» <color:#D8D0C3>ᴠɪᴇᴡ ᴛᴇᴀᴍ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅѕ"
+    - " <dark_gray>• <color:#E7B85C>/team chat <msg> <dark_gray>» <color:#D8D0C3>ѕᴇɴᴅ ᴛᴇᴀᴍ ᴄʜᴀᴛ ᴍᴇѕѕᴀɢᴇ"
+    - " <dark_gray>• <color:#E7B85C>/team allychat <msg> <dark_gray>» <color:#D8D0C3>ѕᴇɴᴅ ᴀʟʟʏ ᴄʜᴀᴛ ᴍᴇѕѕᴀɢᴇ"
+  display-type: CHAT
+  enabled: true
+
+info-team-inspect:
+  text:
+    - "<gradient:#6EDBFF:#A7F3FF><bold>👥 ᴛᴇᴀᴍ ɪɴѕᴘᴇᴄᴛɪᴏɴ:</bold></gradient> <color:#E7B85C>%team_name%</color> <color:#6EDBFF>[%team_tag%]</color>"
+    - " <dark_gray>› <color:#8A8A8A>ѕᴄᴏʀᴇ: <color:#6EDBFF>%team_score%"
+    - " <dark_gray>› <color:#8A8A8A>ʙᴀɴᴋ ʙᴀʟᴀɴᴄᴇ: <color:#8DE969>$%team_bank%"
+    - " <dark_gray>› <color:#8A8A8A>ᴋɪʟʟѕ / ᴅᴇᴀᴛʜѕ: <color:#6EDBFF>%team_kills% <dark_gray>/ <color:#FF4D5A>%team_deaths%"
+    - " <dark_gray>› <color:#8A8A8A>ᴍᴇᴍʙᴇʀѕ: <color:#D8D0C3>%team_members%"
+  display-type: CHAT
+  enabled: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# COMMAND, GUI AND ADMIN MESSAGES (placeholders are listed inline as %name%)
+# ──────────────────────────────────────────────────────────────────────────────
+your-team-has-been-disbanded:
+  text: "<red>Your team <yellow>%team_tag%</yellow> has been disbanded."
+  display-type: CHAT
+  enabled: true
+
+you-joined-team:
+  text: "<green>You joined team <yellow>%team_tag%</yellow>!"
+  display-type: CHAT
+  enabled: true
+
+joined-the-team:
+  text: "<green>%player% joined the team!"
+  display-type: CHAT
+  enabled: true
+
+you-left-or-were-removed-from-team:
+  text: "<red>You left or were removed from team <yellow>%team_tag%</yellow>."
+  display-type: CHAT
+  enabled: true
+
+your-team-role-was-updated-to:
+  text: "<green>Your team role was updated to <yellow>%role%</yellow>!"
+  display-type: CHAT
+  enabled: true
+
+you-do-not-have-permission-to-execute:
+  text: "<gradient:#ff5252:#ff1744><bold>ERROR</bold></gradient> <dark_gray>»</dark_gray> <gray>You do not have permission to execute team admin commands.</gray>"
+  display-type: CHAT
+  enabled: true
+
+use-teamadmin-delete:
+  text: "<gradient:#ff5252:#ff1744><bold>USAGE</bold></gradient> <dark_gray>»</dark_gray> <gray>Use <#00d2ff>/teamadmin delete <team></#00d2ff></gray>"
+  display-type: CHAT
+  enabled: true
+
+team-not-found:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS ADMIN</bold></gradient> <dark_gray>»</dark_gray> <gray>Team <#ff5252>'%input%'</#ff5252> not found.</gray>"
+  display-type: CHAT
+  enabled: true
+
+use-teamadmin-inspect:
+  text: "<gradient:#ff5252:#ff1744><bold>USAGE</bold></gradient> <dark_gray>»</dark_gray> <gray>Use <#00d2ff>/teamadmin inspect <team></#00d2ff></gray>"
+  display-type: CHAT
+  enabled: true
+
+admin-inspect-header:
+  text: "<gradient:#00d2ff:#3a7bd5><bold>Team Inspection:</bold></gradient> <white><bold>%team_display_name%</bold></white> <dark_gray>[<#00d2ff>%team_tag%<dark_gray>]</dark_gray>"
+  display-type: CHAT
+  enabled: true
+
+admin-inspect-uuid:
+  text: " <dark_gray>›</dark_gray> <gray>UUID:</gray> <dark_gray>%uuid%</dark_gray>"
+  display-type: CHAT
+  enabled: true
+
+admin-inspect-leader:
+  text: " <dark_gray>›</dark_gray> <gray>Leader:</gray> <white>%player%</white> <dark_gray>(%uuid%)</dark_gray>"
+  display-type: CHAT
+  enabled: true
+
+admin-inspect-bank-balance:
+  text: " <dark_gray>›</dark_gray> <gray>Bank Balance:</gray> <#00e676>$%bank_balance%</#00e676>"
+  display-type: CHAT
+  enabled: true
+
+admin-inspect-color-key:
+  text: " <dark_gray>›</dark_gray> <gray>Color Key:</gray> <white>%color_key%</white>"
+  display-type: CHAT
+  enabled: true
+
+admin-inspect-members:
+  text: " <dark_gray>›</dark_gray> <gray>Members (%member_count%):</gray>"
+  display-type: CHAT
+  enabled: true
+
+admin-inspect-allies:
+  text: " <dark_gray>›</dark_gray> <gray>Allies (%ally_count%):</gray> <white>%allies%</white>"
+  display-type: CHAT
+  enabled: true
+
+use-teamadmin-check:
+  text: "<gradient:#ff5252:#ff1744><bold>USAGE</bold></gradient> <dark_gray>»</dark_gray> <gray>Use <#00d2ff>/teamadmin check <player></#00d2ff></gray>"
+  display-type: CHAT
+  enabled: true
+
+is-in-team:
+  text: "<gradient:#00d2ff:#3a7bd5><bold>TEAMS ADMIN</bold></gradient> <dark_gray>»</dark_gray> <gray><white>%player%</white> is in team <#00d2ff>[%team_tag%]</#00d2ff> <dark_gray>(%team_display_name%)</dark_gray>.</gray>"
+  display-type: CHAT
+  enabled: true
+
+is-not-in-any-team:
+  text: "<gradient:#ffa726:#fb8c00><bold>TEAMS ADMIN</bold></gradient> <dark_gray>»</dark_gray> <gray><white>%player%</white> is not in any team.</gray>"
+  display-type: CHAT
+  enabled: true
+
+must-be-a-player-to-view-enderchests:
+  text: "<gradient:#ff5252:#ff1744><bold>ERROR</bold></gradient> <dark_gray>»</dark_gray> <gray>Must be a player to view EnderChests.</gray>"
+  display-type: CHAT
+  enabled: true
+
+use-teamadmin-enderchest:
+  text: "<gradient:#ff5252:#ff1744><bold>USAGE</bold></gradient> <dark_gray>»</dark_gray> <gray>Use <#00d2ff>/teamadmin enderchest <team></#00d2ff></gray>"
+  display-type: CHAT
+  enabled: true
+
+the-team-enderchest-is-currently-in-use:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS ADMIN</bold></gradient> <dark_gray>»</dark_gray> <gray>The team Enderchest is currently in use by another player or server.</gray>"
+  display-type: CHAT
+  enabled: true
+
+use-teamadmin-unally:
+  text: "<gradient:#ff5252:#ff1744><bold>USAGE</bold></gradient> <dark_gray>»</dark_gray> <gray>Use <#00d2ff>/teamadmin unally <team1> <team2></#00d2ff></gray>"
+  display-type: CHAT
+  enabled: true
+
+one-or-both-teams-not-found:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS ADMIN</bold></gradient> <dark_gray>»</dark_gray> <gray>One or both teams not found.</gray>"
+  display-type: CHAT
+  enabled: true
+
+alliance-revoked-between-and:
+  text: "<gradient:#00e676:#00b0ff><bold>TEAMS ADMIN</bold></gradient> <dark_gray>»</dark_gray> <gray>Alliance revoked between <white>[%team_tag%]</white> and <white>[%team_tag_2%]</white>.</gray>"
+  display-type: CHAT
+  enabled: true
+
+only-players-can-toggle-spy-mode:
+  text: "<gradient:#ff5252:#ff1744><bold>ERROR</bold></gradient> <dark_gray>»</dark_gray> <gray>Only players can toggle spy mode.</gray>"
+  display-type: CHAT
+  enabled: true
+
+teams-configuration-and-menus-reloaded-successfully:
+  text: "<gradient:#00e676:#00b0ff><bold>TEAMS ADMIN</bold></gradient> <dark_gray>»</dark_gray> <gray>Teams configuration and menus reloaded successfully.</gray>"
+  display-type: CHAT
+  enabled: true
+
+friendlyteams-admin-staff-commands:
+  text: "<gradient:#00d2ff:#3a7bd5><bold>FriendlyTeams Admin</bold></gradient> <dark_gray>•</dark_gray> <gray>Staff Commands</gray>"
+  display-type: CHAT
+  enabled: true
+
+teamadmin-delete-forcefully-delete-team:
+  text: " <#00d2ff>/teamadmin delete <team></#00d2ff> <dark_gray>─</dark_gray> <gray>Forcefully delete team</gray>"
+  display-type: CHAT
+  enabled: true
+
+teamadmin-inspect-inspect-team-details:
+  text: " <#00d2ff>/teamadmin inspect <team></#00d2ff> <dark_gray>─</dark_gray> <gray>Inspect team details</gray>"
+  display-type: CHAT
+  enabled: true
+
+teamadmin-check-check-player-s-team:
+  text: " <#00d2ff>/teamadmin check <player></#00d2ff> <dark_gray>─</dark_gray> <gray>Check player's team</gray>"
+  display-type: CHAT
+  enabled: true
+
+teamadmin-enderchest-view-team-enderchest:
+  text: " <#00d2ff>/teamadmin enderchest <team></#00d2ff> <dark_gray>─</dark_gray> <gray>View team enderchest</gray>"
+  display-type: CHAT
+  enabled: true
+
+teamadmin-unally-break-alliance:
+  text: " <#00d2ff>/teamadmin unally <team1> <team2></#00d2ff> <dark_gray>─</dark_gray> <gray>Break alliance</gray>"
+  display-type: CHAT
+  enabled: true
+
+teamadmin-spy-toggle-team-chat-spy:
+  text: " <#00d2ff>/teamadmin spy</#00d2ff> <dark_gray>─</dark_gray> <gray>Toggle team chat spy</gray>"
+  display-type: CHAT
+  enabled: true
+
+teamadmin-convert-convert-legacy-zelteams-data:
+  text: " <#00d2ff>/teamadmin convert</#00d2ff> <dark_gray>─</dark_gray> <gray>Convert legacy ZelTeams data</gray>"
+  display-type: CHAT
+  enabled: true
+
+teamadmin-reload-reload-configurations:
+  text: " <#00d2ff>/teamadmin reload</#00d2ff> <dark_gray>─</dark_gray> <gray>Reload configurations</gray>"
+  display-type: CHAT
+  enabled: true
+
+this-command-can-only-be-executed-by:
+  text: "<red>This command can only be executed by players."
+  display-type: CHAT
+  enabled: true
+
+alliances-are-disabled:
+  text: "<red>Alliances are disabled."
+  display-type: CHAT
+  enabled: true
+
+the-team-bank-feature-is-currently-disabled:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>The team bank feature is currently disabled.</gray>"
+  display-type: CHAT
+  enabled: true
+
+the-team-enderchest-feature-is-currently-disabled:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>The team enderchest feature is currently disabled.</gray>"
+  display-type: CHAT
+  enabled: true
+
+unknown-team-color-use-a-configured-color:
+  text: "<red>Unknown team color. Use a configured color or /team color #RRGGBB."
+  display-type: CHAT
+  enabled: true
+
+team-color-set-to:
+  text: "<green>Team color set to <yellow>%input%"
+  display-type: CHAT
+  enabled: true
+
+you-do-not-have-permission-to-use:
+  text: "<red>You do not have permission to use that team color."
+  display-type: CHAT
+  enabled: true
+
+use-team-create:
+  text: "<gradient:#ff5252:#ff1744><bold>USAGE</bold></gradient> <dark_gray>»</dark_gray> <gray>Use <#00d2ff>/team create <tag></#00d2ff></gray>"
+  display-type: CHAT
+  enabled: true
+
+you-must-wait-s-before-creating-another:
+  text: "<gradient:#ffa726:#fb8c00><bold>COOLDOWN</bold></gradient> <dark_gray>»</dark_gray> <gray>You must wait <#ffa726>%remaining%s</#ffa726> before creating another team.</gray>"
+  display-type: CHAT
+  enabled: true
+
+invalid-tag-tag-must-be-alphanumeric-and:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Invalid tag! Tag must be alphanumeric and under <#ffa726>%tag_max_length%</#ffa726> characters.</gray>"
+  display-type: CHAT
+  enabled: true
+
+you-do-not-have-permission-to-rename:
+  text: "<red>You do not have permission to rename this team."
+  display-type: CHAT
+  enabled: true
+
+team-name-updated:
+  text: "<green>Team name updated."
+  display-type: CHAT
+  enabled: true
+
+cannot-rename-this-team-check-your-permissions:
+  text: "<red>Cannot rename this team. Check your permissions and use a name up to %name_max_length% visible characters without banned words."
+  display-type: CHAT
+  enabled: true
+
+team-rename-cancelled:
+  text: "<gray>Team rename cancelled."
+  display-type: CHAT
+  enabled: true
+
+you-are-the-leader-disband-the-team:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>You are the leader! Disband the team or transfer ownership before leaving.</gray>"
+  display-type: CHAT
+  enabled: true
+
+use-team-invite:
+  text: "<gradient:#ff5252:#ff1744><bold>USAGE</bold></gradient> <dark_gray>»</dark_gray> <gray>Use <#00d2ff>/team invite <player></#00d2ff></gray>"
+  display-type: CHAT
+  enabled: true
+
+you-do-not-have-permission-to-invite:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>You do not have permission to invite members.</gray>"
+  display-type: CHAT
+  enabled: true
+
+that-player-is-already-in-a-team:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>That player is already in a team.</gray>"
+  display-type: CHAT
+  enabled: true
+
+the-team-invite-could-not-be-sent:
+  text: "<red>The team invite could not be sent."
+  display-type: CHAT
+  enabled: true
+
+invite-from-team-not-found:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Invite from team not found.</gray>"
+  display-type: CHAT
+  enabled: true
+
+joined-team:
+  text: "<gradient:#00e676:#00b0ff><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Joined team <#00e676>[%team_tag%]</#00e676>!</gray>"
+  display-type: CHAT
+  enabled: true
+
+failed-joining-team-or-team-no-longer:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Failed joining team or team no longer exists.</gray>"
+  display-type: CHAT
+  enabled: true
+
+formed-alliance-with-team:
+  text: "<gradient:#00e676:#00b0ff><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Formed alliance with team <#00e676>[%team_tag%]</#00e676>!</gray>"
+  display-type: CHAT
+  enabled: true
+
+failed-forming-alliance-limit-reached-or-team:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Failed forming alliance (limit reached or team no longer exists).</gray>"
+  display-type: CHAT
+  enabled: true
+
+you-must-be-in-a-team-to:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>You must be in a team to accept an ally invite.</gray>"
+  display-type: CHAT
+  enabled: true
+
+declined-invite-from:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Declined invite from <#ff5252>[%team_tag%]</#ff5252>.</gray>"
+  display-type: CHAT
+  enabled: true
+
+use-team-kick:
+  text: "<gradient:#ff5252:#ff1744><bold>USAGE</bold></gradient> <dark_gray>»</dark_gray> <gray>Use <#00d2ff>/team kick <player></#00d2ff></gray>"
+  display-type: CHAT
+  enabled: true
+
+you-do-not-have-permission-to-kick:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>You do not have permission to kick members.</gray>"
+  display-type: CHAT
+  enabled: true
+
+use-team-promote:
+  text: "<gradient:#ff5252:#ff1744><bold>USAGE</bold></gradient> <dark_gray>»</dark_gray> <gray>Use <#00d2ff>/team promote <player></#00d2ff></gray>"
+  display-type: CHAT
+  enabled: true
+
+you-do-not-have-permission-to-promote:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>You do not have permission to promote members.</gray>"
+  display-type: CHAT
+  enabled: true
+
+member-promoted:
+  text: "<gradient:#00e676:#00b0ff><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Promoted <white>%player%</white>!</gray>"
+  display-type: CHAT
+  enabled: true
+
+use-team-demote:
+  text: "<gradient:#ff5252:#ff1744><bold>USAGE</bold></gradient> <dark_gray>»</dark_gray> <gray>Use <#00d2ff>/team demote <player></#00d2ff></gray>"
+  display-type: CHAT
+  enabled: true
+
+you-do-not-have-permission-to-demote:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>You do not have permission to demote members.</gray>"
+  display-type: CHAT
+  enabled: true
+
+member-demoted:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Demoted <white>%player%</white>!</gray>"
+  display-type: CHAT
+  enabled: true
+
+info-profile-header:
+  text: "<gradient:#00d2ff:#3a7bd5><bold>Team Profile:</bold></gradient> <white><bold>%team_display_name%</bold></white> <dark_gray>[<#00d2ff>%team_tag%<dark_gray>]</dark_gray>"
+  display-type: CHAT
+  enabled: true
+
+info-profile-leader:
+  text: " <dark_gray>›</dark_gray> <gray>Leader:</gray> <white>%player%</white>"
+  display-type: CHAT
+  enabled: true
+
+info-profile-score:
+  text: " <dark_gray>›</dark_gray> <gray>Score & Rank:</gray> <#00d2ff>%team_score%</#00d2ff> <dark_gray>(Rank #%team_rank%)</dark_gray>"
+  display-type: CHAT
+  enabled: true
+
+use-team-ally:
+  text: "<gradient:#ff5252:#ff1744><bold>USAGE</bold></gradient> <dark_gray>»</dark_gray> <gray>Use <#00d2ff>/team ally <add|remove> <team></#00d2ff></gray>"
+  display-type: CHAT
+  enabled: true
+
+target-team-not-found:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Target team not found.</gray>"
+  display-type: CHAT
+  enabled: true
+
+the-ally-request-could-not-be-sent:
+  text: "<red>The ally request could not be sent. Check your permission and both teams' ally limits."
+  display-type: CHAT
+  enabled: true
+
+ally-request-sent-to:
+  text: "<gradient:#00e676:#00b0ff><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Ally request sent to <white>[%team_tag%]</white>!</gray>"
+  display-type: CHAT
+  enabled: true
+
+alliance-broken-with:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Alliance broken with <white>[%team_tag%]</white>.</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-home-is-not-set:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Team home <#ff5252>'%home%'</#ff5252> is not set.</gray>"
+  display-type: CHAT
+  enabled: true
+
+use-team-deposit:
+  text: "<gradient:#ff5252:#ff1744><bold>USAGE</bold></gradient> <dark_gray>»</dark_gray> <gray>Use <#00d2ff>/team deposit <amount></#00d2ff></gray>"
+  display-type: CHAT
+  enabled: true
+
+economy-is-not-enabled:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Economy is not enabled.</gray>"
+  display-type: CHAT
+  enabled: true
+
+invalid-money-amount:
+  text: "<gradient:#ff5252:#ff1744><bold>ERROR</bold></gradient> <dark_gray>»</dark_gray> <gray>Invalid money amount: <#ff5252>%input%</#ff5252></gray>"
+  display-type: CHAT
+  enabled: true
+
+amount-must-be-greater-than-0:
+  text: "<gradient:#ff5252:#ff1744><bold>ERROR</bold></gradient> <dark_gray>»</dark_gray> <gray>Amount must be greater than 0.</gray>"
+  display-type: CHAT
+  enabled: true
+
+use-team-withdraw:
+  text: "<gradient:#ff5252:#ff1744><bold>USAGE</bold></gradient> <dark_gray>»</dark_gray> <gray>Use <#00d2ff>/team withdraw <amount></#00d2ff></gray>"
+  display-type: CHAT
+  enabled: true
+
+you-do-not-have-permission-to-withdraw:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>You do not have permission to withdraw from the team bank.</gray>"
+  display-type: CHAT
+  enabled: true
+
+friendlyteams-command-guide:
+  text: "<gradient:#00d2ff:#3a7bd5><bold>FriendlyTeams</bold></gradient> <dark_gray>•</dark_gray> <gray>Command Guide</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-open-team-overview-gui:
+  text: " <#00d2ff>/team</#00d2ff> <dark_gray>─</dark_gray> <gray>Open team overview GUI</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-create-create-a-new-team:
+  text: " <#00d2ff>/team create <tag></#00d2ff> <dark_gray>─</dark_gray> <gray>Create a new team</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-rename-open-the-team-name-editor:
+  text: " <#00d2ff>/team rename</#00d2ff> <dark_gray>─</dark_gray> <gray>Open the team name editor</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-disband-disband-your-team:
+  text: " <#00d2ff>/team disband</#00d2ff> <dark_gray>─</dark_gray> <gray>Disband your team</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-leave-leave-your-current-team:
+  text: " <#00d2ff>/team leave</#00d2ff> <dark_gray>─</dark_gray> <gray>Leave your current team</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-invite-invite-player-to-team:
+  text: " <#00d2ff>/team invite <player></#00d2ff> <dark_gray>─</dark_gray> <gray>Invite player to team</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-accept-accept-team-invitation:
+  text: " <#00d2ff>/team accept <player></#00d2ff> <dark_gray>─</dark_gray> <gray>Accept team invitation</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-deny-decline-team-invitation:
+  text: " <#00d2ff>/team deny <player></#00d2ff> <dark_gray>─</dark_gray> <gray>Decline team invitation</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-mailbox-open-invites-mailbox:
+  text: " <#00d2ff>/team mailbox</#00d2ff> <dark_gray>─</dark_gray> <gray>Open invites mailbox</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-kick-remove-member-from-team:
+  text: " <#00d2ff>/team kick <player></#00d2ff> <dark_gray>─</dark_gray> <gray>Remove member from team</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-promote-demote-manage-team-roles:
+  text: " <#00d2ff>/team promote|demote <player></#00d2ff> <dark_gray>─</dark_gray> <gray>Manage team roles</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-home-name-teleport-to-team-home:
+  text: " <#00d2ff>/team home [name]</#00d2ff> <dark_gray>─</dark_gray> <gray>Teleport to team home</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-sethome-name-set-a-team-home:
+  text: " <#00d2ff>/team sethome [name]</#00d2ff> <dark_gray>─</dark_gray> <gray>Set a team home</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-bank-open-team-bank-gui:
+  text: " <#00d2ff>/team bank</#00d2ff> <dark_gray>─</dark_gray> <gray>Open team bank GUI</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-deposit-deposit-into-team-bank:
+  text: " <#00d2ff>/team deposit <amount></#00d2ff> <dark_gray>─</dark_gray> <gray>Deposit into team bank</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-withdraw-withdraw-from-team-bank:
+  text: " <#00d2ff>/team withdraw <amount></#00d2ff> <dark_gray>─</dark_gray> <gray>Withdraw from team bank</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-ec-open-shared-enderchest:
+  text: " <#00d2ff>/team ec</#00d2ff> <dark_gray>─</dark_gray> <gray>Open shared EnderChest</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-top-view-team-leaderboards:
+  text: " <#00d2ff>/team top</#00d2ff> <dark_gray>─</dark_gray> <gray>View team leaderboards</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-info-tag-view-team-profile:
+  text: " <#00d2ff>/team info [tag]</#00d2ff> <dark_gray>─</dark_gray> <gray>View team profile</gray>"
+  display-type: CHAT
+  enabled: true
+
+unknown-team-shortcut-command:
+  text: "<red>Unknown team shortcut command."
+  display-type: CHAT
+  enabled: true
+
+your-team-has-no-homes-set-use:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Your team has no homes set. Use <#00d2ff>/tsethome [name]</#00d2ff> to set one.</gray>"
+  display-type: CHAT
+  enabled: true
+
+economy-is-not-enabled-2:
+  text: "<red>Economy is not enabled."
+  display-type: CHAT
+  enabled: true
+
+amount-must-be-greater-than-0-2:
+  text: "<red>Amount must be greater than 0."
+  display-type: CHAT
+  enabled: true
+
+invalid-amount:
+  text: "<red>Invalid amount: %input%"
+  display-type: CHAT
+  enabled: true
+
+you-do-not-have-permission-to-withdraw-2:
+  text: "<red>You do not have permission to withdraw from the team bank."
+  display-type: CHAT
+  enabled: true
+
+invalid-tag-or-tag-contains-banned-keywords:
+  text: "<red>Invalid tag or tag contains banned keywords."
+  display-type: CHAT
+  enabled: true
+
+the-team-homes-feature-is-disabled:
+  text: "<red>The team homes feature is disabled."
+  display-type: CHAT
+  enabled: true
+
+renamed-team-home-to:
+  text: "<gradient:#00e676:#00b0ff><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Renamed team home to <#00e676>%new_name%</#00e676>!</gray>"
+  display-type: CHAT
+  enabled: true
+
+you-cannot-manage-this-member:
+  text: "<red>You cannot manage this member."
+  display-type: CHAT
+  enabled: true
+
+gui-member-promoted:
+  text: "<green>Promoted %player%!"
+  display-type: CHAT
+  enabled: true
+
+gui-member-demoted:
+  text: "<yellow>Demoted %player%."
+  display-type: CHAT
+  enabled: true
+
+that-player-is-already-in-a-team-2:
+  text: "<red>That player is already in a team."
+  display-type: CHAT
+  enabled: true
+
+the-team-alliances-feature-is-disabled:
+  text: "<red>The team alliances feature is disabled."
+  display-type: CHAT
+  enabled: true
+
+alliance-broken-with-2:
+  text: "<red>Alliance broken with %team_tag%"
+  display-type: CHAT
+  enabled: true
+
+you-do-not-have-permission-to-invite-2:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>You do not have permission to invite allies.</gray>"
+  display-type: CHAT
+  enabled: true
+
+your-team-has-reached-the-maximum-ally:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Your team has reached the maximum ally limit (%max_allies%).</gray>"
+  display-type: CHAT
+  enabled: true
+
+you-cannot-ally-with-your-own-team:
+  text: "<red>You cannot ally with your own team."
+  display-type: CHAT
+  enabled: true
+
+that-team-has-reached-their-maximum-ally:
+  text: "<red>That team has reached their maximum ally limit."
+  display-type: CHAT
+  enabled: true
+
+joined-team-2:
+  text: "<green>Joined team <yellow>%team_tag%</yellow>!"
+  display-type: CHAT
+  enabled: true
+
+failed-joining-team-or-team-is-full:
+  text: "<red>Failed joining team or team is full/disbanded."
+  display-type: CHAT
+  enabled: true
+
+allied-with-team:
+  text: "<green>Allied with team <yellow>%team_tag%</yellow>!"
+  display-type: CHAT
+  enabled: true
+
+failed-forming-alliance-limit-reached-or-team-2:
+  text: "<red>Failed forming alliance (limit reached or team disbanded)."
+  display-type: CHAT
+  enabled: true
+
+you-must-be-in-a-team-to-2:
+  text: "<red>You must be in a team to accept an ally invite."
+  display-type: CHAT
+  enabled: true
+
+invite-declined:
+  text: "<red>Invite declined."
+  display-type: CHAT
+  enabled: true
+
+you-do-not-have-permission-to-change:
+  text: "<red>You do not have permission to change the team color."
+  display-type: CHAT
+  enabled: true
+
+you-do-not-have-access-to-any:
+  text: "<red>You do not have access to any team colors."
+  display-type: CHAT
+  enabled: true
+
+use-a-hex-color-in-the-format:
+  text: "<red>Use a hex color in the format #RRGGBB."
+  display-type: CHAT
+  enabled: true
+
+you-do-not-have-permission-to-use-2:
+  text: "<red>You do not have permission to use a custom team color."
+  display-type: CHAT
+  enabled: true
+
+custom-team-color-updated:
+  text: "<green>Custom team color updated."
+  display-type: CHAT
+  enabled: true
+
+team-color-updated-to:
+  text: "<green>Team color updated to %color_code%%team_name%"
+  display-type: CHAT
+  enabled: true
+
+you-do-not-have-permission-to-toggle:
+  text: "<red>You do not have permission to toggle friendly fire."
+  display-type: CHAT
+  enabled: true
+
+you-do-not-have-permission-to-change-2:
+  text: "<red>You do not have permission to change the team tag."
+  display-type: CHAT
+  enabled: true
+
+team-tag-changed-to:
+  text: "<green>Team tag changed to: <yellow>%new_tag%</yellow>"
+  display-type: CHAT
+  enabled: true
+
+invalid-tag-or-tag-already-taken:
+  text: "<red>Invalid tag or tag already taken."
+  display-type: CHAT
+  enabled: true
+
+the-team-leaderboard-feature-is-disabled:
+  text: "<red>The team leaderboard feature is disabled."
+  display-type: CHAT
+  enabled: true
+
+the-team-vault-feature-is-disabled:
+  text: "<red>The team vault feature is disabled."
+  display-type: CHAT
+  enabled: true
+
+you-do-not-have-permission-to-access:
+  text: "<red>You do not have permission to access the team Enderchest."
+  display-type: CHAT
+  enabled: true
+
+your-team-needs-at-least-members-to:
+  text: "<red>Your team needs at least %min_members_enderchest% members to access the Enderchest."
+  display-type: CHAT
+  enabled: true
+
+please-wait-for-inventory-synchronization-to-finish:
+  text: "<red>Please wait for inventory synchronization to finish."
+  display-type: CHAT
+  enabled: true
+
+the-team-enderchest-is-currently-in-use-2:
+  text: "<red>The team Enderchest is currently in use on another server."
+  display-type: CHAT
+  enabled: true
+
+friendly-fire-is-disabled-for-your-team:
+  text: "<red>Friendly fire is disabled for your team!"
+  display-type: CHAT
+  enabled: true
+
+friendly-fire-is-disabled-between-allied-teams:
+  text: "<red>Friendly fire is disabled between allied teams!"
+  display-type: CHAT
+  enabled: true
+
+interaction-timed-out:
+  text: "<red>Interaction timed out."
+  display-type: CHAT
+  enabled: true
+
+team-creation-is-unavailable-the-name-is:
+  text: "<red>Team creation is unavailable, the name is invalid, or the creation cooldown is active."
+  display-type: CHAT
+  enabled: true
+
+teams-are-still-loading-please-try-again:
+  text: "<red>Teams are still loading. Please try again shortly."
+  display-type: CHAT
+  enabled: true
+
+the-required-team-payment-is-unavailable:
+  text: "<red>The required team payment is unavailable."
+  display-type: CHAT
+  enabled: true
+
+you-could-not-pay-the-required-team:
+  text: "<red>You could not pay the required team fee of $%amount%."
+  display-type: CHAT
+  enabled: true
+
+delivered-your-pending-team-payment-of:
+  text: "<green>Delivered your pending team payment of $%amount%."
+  display-type: CHAT
+  enabled: true
+
+the-team-vault-could-not-be-loaded:
+  text: "<red>The team vault could not be loaded safely. Contact an administrator."
+  display-type: CHAT
+  enabled: true
+
+your-team-needs-at-least-members-to-2:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Your team needs at least <#ffa726>%min_members_home%</#ffa726> members to use homes.</gray>"
+  display-type: CHAT
+  enabled: true
+
+you-do-not-have-permission-to-set:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>You do not have permission to set team homes.</gray>"
+  display-type: CHAT
+  enabled: true
+
+invalid-home-name-use-letters-numbers-only:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Invalid home name. Use letters/numbers only (max 16 chars).</gray>"
+  display-type: CHAT
+  enabled: true
+
+home-location-y-coordinate-exceeds-maximum-allowed:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Home location Y coordinate (<white>%team_y%</white>) exceeds maximum allowed Y level of <#ffa726>%max_y_level%</#ffa726>.</gray>"
+  display-type: CHAT
+  enabled: true
+
+team-has-reached-its-maximum-home-limit:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Team has reached its maximum home limit of <#ffa726>%max_homes%</#ffa726>.</gray>"
+  display-type: CHAT
+  enabled: true
+
+you-do-not-have-permission-to-use-3:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>You do not have permission to use team homes.</gray>"
+  display-type: CHAT
+  enabled: true
+
+you-do-not-have-permission-to-delete:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>You do not have permission to delete team homes.</gray>"
+  display-type: CHAT
+  enabled: true
+
+the-team-tag-change-cooldown-is-still:
+  text: "<red>The team tag change cooldown is still active."
+  display-type: CHAT
+  enabled: true
+
+you-received-a-team-invite-from-use:
+  text: "<green>You received a team invite from <yellow>%team_tag%</yellow>! Use <yellow>/team accept %team_tag%</yellow> or <yellow>/team mailbox</yellow>."
+  display-type: CHAT
+  enabled: true
+
+the-world-for-this-team-home-is:
+  text: "<gradient:#ff5252:#ff1744><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>The world for this team home is not loaded.</gray>"
+  display-type: CHAT
+  enabled: true
+
+connecting-to-server-for-team-home:
+  text: "<gradient:#00e676:#00b0ff><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Connecting to server <white>%target_server%</white> for team home <#00e676>%home%</#00e676>...</gray>"
+  display-type: CHAT
+  enabled: true
+
+teleporting-in-s-do-not-move:
+  text: "<gray>Teleporting in <green>%remaining_seconds%s</green>... Do not move."
+  display-type: CHAT
+  enabled: true
+
+teleporting-in-s-don-t-move-or:
+  text: "<gradient:#00d2ff:#3a7bd5><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Teleporting in <#00e676>%remaining_seconds%s</#00e676>... <dark_gray>(Don't move or take damage)</dark_gray></gray>"
+  display-type: CHAT
+  enabled: true
+
+a-team-migration-is-already-in-progress:
+  text: "<gradient:#ff5252:#ff1744><bold>ERROR</bold></gradient> <dark_gray>»</dark_gray> <gray>A team migration is already in progress.</gray>"
+  display-type: CHAT
+  enabled: true
+
+scanning-for-zelteams-data:
+  text: "<gradient:#00d2ff:#3a7bd5><bold>TEAMS MIGRATION</bold></gradient> <dark_gray>»</dark_gray> <gray>Scanning for ZelTeams data...</gray>"
+  display-type: CHAT
+  enabled: true
+
+migration-error:
+  text: "<gradient:#ff5252:#ff1744><bold>ERROR</bold></gradient> <dark_gray>»</dark_gray> <gray>%err%</gray>"
+  display-type: CHAT
+  enabled: true
+
+found-source:
+  text: "<gradient:#00d2ff:#3a7bd5><bold>TEAMS MIGRATION</bold></gradient> <dark_gray>»</dark_gray> <gray>Found source: <aqua>%path%</aqua></gray>"
+  display-type: CHAT
+  enabled: true
+
+loaded-teams-into-memory-cache:
+  text: "<gradient:#00e676:#00b0ff><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Loaded <aqua>%size%</aqua> teams into memory cache.</gray>"
+  display-type: CHAT
+  enabled: true
+
+teams-migration-completed:
+  text: "<gradient:#00e676:#00b0ff><bold>✔ TEAMS MIGRATION COMPLETED</bold></gradient>"
+  display-type: CHAT
+  enabled: true
+
+total-teams-imported:
+  text: " <gray>• Total teams imported: <green>%teams_migrated%</green></gray>"
+  display-type: CHAT
+  enabled: true
+
+total-player-records:
+  text: " <gray>• Total player records: <aqua>%players_migrated%</aqua></gray>"
+  display-type: CHAT
+  enabled: true
+
+time-taken-ms:
+  text: " <gray>• Time taken: <yellow>%elapsed%ms</yellow></gray>"
+  display-type: CHAT
+  enabled: true
+
+sqlite-error:
+  text: "<gradient:#ff5252:#ff1744><bold>ERROR</bold></gradient> <dark_gray>»</dark_gray> <gray>SQLite error: %error%</gray>"
+  display-type: CHAT
+  enabled: true
+
+connected-to-zelteams-mysql-database:
+  text: " <gray>• Connected to ZelTeams MySQL database...</gray>"
+  display-type: CHAT
+  enabled: true
+
+mysql-error:
+  text: "<gradient:#ff5252:#ff1744><bold>ERROR</bold></gradient> <dark_gray>»</dark_gray> <gray>MySQL error: %error%</gray>"
+  display-type: CHAT
+  enabled: true
+
+migrated-teams:
+  text: " <gray>• Migrated <yellow>%teams_migrated%</yellow> teams...</gray>"
+  display-type: CHAT
+  enabled: true
+
+migrated-player-stats:
+  text: " <gray>• Migrated <yellow>%players_migrated%</yellow> player stats...</gray>"
+  display-type: CHAT
+  enabled: true
+
+
+bank-limit-exceeded:
+  text: "<red>The team bank limit would be exceeded."
+  display-type: CHAT
+  enabled: true
+
+bank-deposit-failed:
+  text: "<red>The deposit could not be completed."
+  display-type: CHAT
+  enabled: true
+
+bank-insufficient-funds:
+  text: "<red>The team bank does not have enough funds."
+  display-type: CHAT
+  enabled: true
+
+bank-withdraw-failed:
+  text: "<red>The withdrawal could not be completed."
+  display-type: CHAT
+  enabled: true
+
+bank-deposited:
+  text: "<gradient:#00e676:#00b0ff><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Deposited <#00e676>$%amount%</#00e676> to team bank. <dark_gray>(Bank: <#00e676>$%bank%</#00e676>)</dark_gray></gray>"
+  display-type: CHAT
+  enabled: true
+
+bank-withdrew:
+  text: "<gradient:#00e676:#00b0ff><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Withdrew <#00e676>$%amount%</#00e676> from team bank. <dark_gray>(Bank: <#00e676>$%bank%</#00e676>)</dark_gray></gray>"
+  display-type: CHAT
+  enabled: true
+
+info-profile-members:
+  text: " <dark_gray>›</dark_gray> <gray>Members (%member_count%):</gray> <white>%members%</white>"
+  display-type: CHAT
+  enabled: true
+
+admin-inspect-friendly-fire-enabled:
+  text: " <dark_gray>›</dark_gray> <gray>Friendly Fire:</gray> <#00e676>Enabled</#00e676>"
+  display-type: CHAT
+  enabled: true
+
+admin-inspect-friendly-fire-disabled:
+  text: " <dark_gray>›</dark_gray> <gray>Friendly Fire:</gray> <#ff5252>Disabled</#ff5252>"
+  display-type: CHAT
+  enabled: true
+
+admin-inspect-member-line:
+  text: "   <dark_gray>•</dark_gray> <white>%player%</white> <dark_gray>[%role%]</dark_gray>"
+  display-type: CHAT
+  enabled: true
+
+misc-default-role:
+  text: "Member"
+  display-type: CHAT
+  enabled: true
+
+friendly-fire-enabled:
+  text: "<green>Friendly fire set to: <green>Enabled"
+  display-type: CHAT
+  enabled: true
+
+friendly-fire-disabled:
+  text: "<green>Friendly fire set to: <red>Disabled"
+  display-type: CHAT
+  enabled: true
+
+gui-back:
+  text: "<red>Back"
+  display-type: CHAT
+  enabled: true
+
+gui-confirm-name:
+  text: "<green><bold>CONFIRM</bold></green>"
+  display-type: CHAT
+  enabled: true
+
+gui-confirm-lore:
+  text: "<gray>Click to confirm action."
+  display-type: CHAT
+  enabled: true
+
+gui-cancel-name:
+  text: "<red><bold>CANCEL</bold></red>"
+  display-type: CHAT
+  enabled: true
+
+gui-cancel-lore:
+  text: "<gray>Click to cancel."
+  display-type: CHAT
+  enabled: true
+
+misc-unknown-member:
+  text: "A member"
+  display-type: CHAT
+  enabled: true
+
+mailbox-ally-invite-received:
+  text: "<green>You received a team ally invite from <yellow>%team_tag%</yellow>! Use <yellow>/team mailbox</yellow>."
+  display-type: CHAT
+  enabled: true
+
+mailbox-team-invite-received:
+  text: "<green>You received a team invite from <yellow>%team_tag%</yellow>! Use <yellow>/team mailbox</yellow>."
+  display-type: CHAT
+  enabled: true
+
+team-disbanded-by-actor:
+  text: "<green>Team %team_tag% has been disbanded. Any bank payout is saved for its owner."
+  display-type: CHAT
+  enabled: true
+
+team-disband-failed:
+  text: "<red>The team could not be disbanded. Close its vault and check storage."
+  display-type: CHAT
+  enabled: true
+prompt-create-team-tag:
+  text: "<green>Enter the team tag in chat (or type 'cancel'):"
+  display-type: CHAT
+  enabled: true
+
+prompt-new-home-name:
+  text: "<gradient:#00d2ff:#3a7bd5><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Type a name for your new home in chat <dark_gray>(or 'cancel')</dark_gray>:</gray>"
+  display-type: CHAT
+  enabled: true
+
+prompt-invite-player:
+  text: "<green>Enter player username to invite:"
+  display-type: CHAT
+  enabled: true
+
+prompt-ally-team-tag:
+  text: "<green>Enter the tag of the team to ally with:"
+  display-type: CHAT
+  enabled: true
+
+prompt-custom-color:
+  text: "<green>Enter a hex color like #12ABEF (or type 'cancel'):"
+  display-type: CHAT
+  enabled: true
+
+prompt-change-team-tag:
+  text: "<green>Enter the new team tag in chat (or type 'cancel'):"
+  display-type: CHAT
+  enabled: true
+
+prompt-rename-home:
+  text: "<gradient:#00d2ff:#3a7bd5><bold>TEAMS</bold></gradient> <dark_gray>»</dark_gray> <gray>Type the new name for home <white>'%home%'</white> in chat <dark_gray>(or 'cancel')</dark_gray>:</gray>"
+  display-type: CHAT
+  enabled: true
+
+left-the-team:
+  text: "<red>%player% left the team."
+  display-type: CHAT
+  enabled: true

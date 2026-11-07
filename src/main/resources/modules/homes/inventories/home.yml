@@ -1,0 +1,106 @@
+# ######################################################
+#                       HOME GUI                       #
+# ######################################################
+
+title: "&0⏵ Home | Page: %page%"
+enabled-multiple-pages: true
+
+# # -> DO NOT PUT anything instead of #
+# - -> means nothing
+# h -> the home, make sure to ALWAYS leave an empty space under h (an -)
+layout:
+  - "---------"
+  - "--hhhhh--"
+  - "---------"
+  - "---------"
+
+# Only works for tp-home-bed
+colored-beds:
+  # If enabled, it will override the current tp-home-bed material
+  enabled: true
+  list:
+    - "WHITE_BED"
+    - "ORANGE_BED"
+    - "MAGENTA_BED"
+    - "LIGHT_BLUE_BED"
+    - "YELLOW_BED"
+    - "LIME_BED"
+    - "PINK_BED"
+    - "GRAY_BED"
+    - "LIGHT_GRAY_BED"
+    - "CYAN_BED"
+    - "PURPLE_BED"
+    - "BLUE_BED"
+    - "BROWN_BED"
+    - "GREEN_BED"
+    - "RED_BED"
+    - "BLACK_BED"
+
+home_rename: "<gray>Type the new home name in chat (type <red>cancel</red> to abort):"
+home_rename_actionbar: "<yellow>Type new home name in chat..."
+
+items:
+  # Arrows (Next & Previous) Start
+  previous-page-slot: 27
+  next-page-slot: 35
+  previous-page:
+    name: '#E13E3EPrevious Page'
+    lore:
+      - '&8ᴛᴇᴀᴍ'
+      - ''
+      - '#E13E3EInformation'
+      - '#E13E3E| &fClick on this item to'
+      - '#E13E3E| &fnavigate to the previous page.'
+      - ''
+      - '&e♯ Click &f to Continue'
+    material: RED_STAINED_GLASS_PANE
+  next-page:
+    name: '#63E781Next Page'
+    lore:
+      - '&8ᴛᴇᴀᴍ'
+      - ''
+      - '#63E781Information'
+      - '#63E781| &fClick here to head'
+      - '#63E781| &fto the next page.'
+      - ''
+      - '&e♯ Click &f to Continue'
+    material: LIME_STAINED_GLASS_PANE
+  # Arrows (Next & Previous) End
+
+  no-perm-bed:
+    name: '&4ɴᴏ ᴘᴇʀᴍɪssɪᴏɴ'
+    lore:
+      - '&fYou need a higher rank for this home'
+    material: "RED_BED"
+  no-perm:
+    name: '&4ɴᴏ ᴘᴇʀᴍɪssɪᴏɴ'
+    lore:
+      - '&fYou need a higher rank for this home'
+    material: "RED_DYE"
+
+  no-home-bed:
+    name: '&7ɴᴏ ʜᴏᴍᴇ sᴇᴛ'
+    lore:
+      - '&7- &fClick to create a home'
+    material: "LIGHT_GRAY_BED"
+  no-home:
+    name: '&7ɴᴏ ʜᴏᴍᴇ sᴇᴛ'
+    lore:
+      - '&fClick to create a home'
+    material: "GRAY_DYE"
+
+  tp-home-bed:
+    name: '&9ʜome %home%'
+    lore:
+      - '&fClick to teleport to your home'
+    material: "LIGHT_BLUE_BED"
+  delete-home:
+    name: '&9ʜome %home%'
+    lore:
+      - '&fClick to delete this home'
+    material: "BLUE_DYE"
+
+  blank:
+    name: '&e'
+    material: BLACK_STAINED_GLASS_PANE
+    symbol: '-'

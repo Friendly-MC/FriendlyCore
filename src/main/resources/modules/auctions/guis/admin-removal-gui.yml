@@ -1,0 +1,76 @@
+title: "ᴀᴜᴄᴛɪᴏɴs » Admin Removal"
+rows: 5
+type: CHEST
+
+items:
+  filler:
+    slot: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14, 17, 18, 21, 23, 26, 27, 30, 31, 32, 35, 36, 37, 38, 39, 41, 42, 43, 44]
+    material: "BLACK_STAINED_GLASS_PANE"
+    name: " "
+
+  item:
+    slot: 22
+
+  remove-1:
+    slot: [10, 19, 28]
+    material: "RED_STAINED_GLASS_PANE"
+    name: "#FC0000Remove Silently"
+    lore:
+      - "&8▪ &cRemoves listing permanently"
+      - "&8▪ &7Item sent to your inventory"
+      - "&8▪ &8No notification sent"
+      - ""
+      - "&fClick to remove"
+    actions:
+      - "[SOUND] ui.button.click|1|1"
+    sound: click
+
+  remove-2:
+    slot: [11, 20, 29]
+    material: "ORANGE_STAINED_GLASS_PANE"
+    name: "#E63A35Remove and Notify"
+    lore:
+      - "&8▪ &cRemoves listing permanently"
+      - "&8▪ &7Item sent to your inventory"
+      - "&8▪ &aNotifies seller in chat"
+      - ""
+      - "&fClick to remove"
+    actions:
+      - "[SOUND] ui.button.click|1|1"
+    sound: click
+
+  remove-3:
+    slot: [15, 24, 33]
+    material: "LIME_STAINED_GLASS_PANE"
+    name: "#00FC00Cancel Silently"
+    lore:
+      - "&8▪ &aReturns item to seller's expired queue"
+      - "&8▪ &8No notification sent"
+      - ""
+      - "&fClick to cancel"
+    actions:
+      - "[SOUND] ui.button.click|1|1"
+    sound: click
+
+  remove-4:
+    slot: [16, 25, 34]
+    material: "YELLOW_STAINED_GLASS_PANE"
+    name: "#FFD700Cancel and Notify"
+    lore:
+      - "&8▪ &aReturns item to seller's expired queue"
+      - "&8▪ &aNotifies seller in chat"
+      - ""
+      - "&fClick to cancel"
+    actions:
+      - "[SOUND] ui.button.click|1|1"
+    sound: click
+
+  back:
+    slot: 40
+    material: "ARROW"
+    name: "#E63A35ʙᴀᴄᴋ"
+    lore:
+      - "&fClick to return"
+    actions:
+      - "[BACK]"
+    sound: click

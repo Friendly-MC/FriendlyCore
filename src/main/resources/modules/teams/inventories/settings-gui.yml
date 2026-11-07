@@ -1,0 +1,64 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                     ✦ TEAMS - TEAM SETTINGS MENU GUI ✦                       ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+inventory:
+  title: '&b✹ &7Settings Menu'
+  disposition:
+  - b--tcf---
+values:
+  toggle-off-material: RED_WOOL
+  toggle-off-word: disable
+  toggle-on-material: GREEN_WOOL
+  toggle-on-word: enable
+items:
+  blank:
+    name: '&e'
+    material: LIGHT_GRAY_STAINED_GLASS_PANE
+    symbol: '-'
+  back:
+    name: '&c&l« Go Back'
+    lore:
+    - '&7Return to the team menu.'
+    material: SPECTRAL_ARROW
+    actions:
+      left-click: go_back
+    symbol: b
+  tag:
+    name: '&b&lTeam Tag'
+    lore:
+    - '&7The short identifier shown next'
+    - '&7to your team everywhere.'
+    - '&8'
+    - '&7Current: &f%team_tag%'
+    - '&8'
+    - '&e➜ Click to change your tag.'
+    material: NAME_TAG
+    actions:
+      left-click: settag
+    symbol: t
+  color:
+    name: '&d&lTeam Color'
+    lore:
+    - '&7Pick the color that represents'
+    - '&7your team.'
+    - '&8'
+    - '&e➜ Click to choose a color.'
+    material: CYAN_DYE
+    actions:
+      left-click: open_color
+    symbol: c
+  friendly-fire:
+    name: '&6&lFriendly Fire'
+    lore:
+    - '&7Whether teammates can damage'
+    - '&7each other.'
+    - '&8'
+    - '&e➜ Click to %toggle% it.'
+    material: GREEN_WOOL
+    actions:
+      left-click: friendly_fire
+    symbol: f
+version: 4

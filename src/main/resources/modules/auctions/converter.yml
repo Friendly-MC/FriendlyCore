@@ -1,0 +1,29 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║              AXAUCTIONS → FRIENDLYCORE AUCTION MIGRATION                     ║
+# ║                                                                              ║
+# ║  Copy these values from AxAuctions/config.yml → database.                    ║
+# ║  If AxAuctions is still installed, blank MySQL user/password fields          ║
+# ║  are filled from that plugin's config automatically.                         ║
+# ║                                                                              ║
+# ║  Command: /ahadmin convert axauctions                                        ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# h2, mysql
+type: mysql
+prefix: axauctions
+
+# you only need to touch these when using mysql
+address: 127.0.0.1
+port: 3306
+database: auctions
+username: ''
+password: ''
+
+# Used when type is h2. Path is relative to the server plugins folder unless absolute.
+# AxAuctions stores this as plugins/AxAuctions/data.mv.db
+h2-file: AxAuctions/data
+
+# FriendlyCore auctions are Vault-only. Non-Vault AxAuctions listings are skipped
+# Currency metadata must explicitly identify Vault; unknown currencies are skipped.

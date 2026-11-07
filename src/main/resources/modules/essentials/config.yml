@@ -1,0 +1,75 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                         ✦ ESSENTIALS CONFIG ✦                                ║
+# ║         Core Admin Utilities, Teleportation, and Player Controls             ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# Enable or disable the Essentials module entirely
+enabled: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# PLAYER SPEED SETTINGS (/speed, /flyspeed, /walkspeed)
+# ──────────────────────────────────────────────────────────────────────────────
+speed:
+  # Maximum allowable flight speed factor for non-exempt players (1.0 is standard Bukkit maximum)
+  max-fly-speed: 1.0
+  # Maximum allowable walk speed factor for non-exempt players (1.0 is standard Bukkit maximum)
+  max-walk-speed: 1.0
+
+# ──────────────────────────────────────────────────────────────────────────────
+# TELEPORTATION & SAFETY VALIDATION
+# ──────────────────────────────────────────────────────────────────────────────
+teleport:
+  # Maximum coordinate boundary permitted for manual coordinate teleportation (/tp x y z)
+  max-coord: 30000000
+
+# ──────────────────────────────────────────────────────────────────────────────
+# CROSS-SERVER SYNCHRONIZATION
+# ──────────────────────────────────────────────────────────────────────────────
+cross-server:
+  # Forward administrative player actions across the network when Redis is enabled
+  # (/time and /weather sync only when run with the "network" argument)
+  enabled: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# INVENTORY CLEARING (/clear, /ci, /clean)
+# ──────────────────────────────────────────────────────────────────────────────
+clearinventory:
+  # Automatically strip equipped armor when running /clear without explicit item arguments
+  clear-armor-by-default: false
+  # Require players to confirm when clearing their own inventory
+  confirm-self-clear: false
+  # Timeout in seconds before an unconfirmed self-clear request expires
+  confirm-timeout-seconds: 10
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ONLINE / PLAYER LIST (/online, /list, /who)
+# ──────────────────────────────────────────────────────────────────────────────
+online:
+  # Enable LuckPerms rank-based grouping and sorting
+  group-by-luckperms: true
+  # Display network-wide player totals when Redis cross-server is active
+  show-network-total: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# VANISH SETTINGS (/vanish, /v)
+# ──────────────────────────────────────────────────────────────────────────────
+vanish:
+  # Save runtime vanish states; normal rejoining resets the player to visible.
+  # FriendlyCore server transfers preserve vanish using Redis (matching server IDs required).
+  save-state-on-quit: true
+  # Silently inspect containers (chests, barrels, shulkers, ender chests) without sounds/animation
+  silent-container-open: true
+  # Prevent mob targeting and hostility towards vanished players
+  prevent-mob-target: true
+  # Prevent sculk sensors and wardens from picking up vibrations from vanished players
+  prevent-sculk-sensors: true
+  # Grant infinite night vision while vanished
+  grant-night-vision: true
+  # Deduct vanished player count from server MOTD list ping and remove from player sample
+  hide-from-server-ping: true
+  # Broadcast staff alerts when a player vanishes or unvanishes
+  staff-alerts: true
+  # Display periodic action bar reminder while vanished
+  actionbar-reminder: true

@@ -1,0 +1,79 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                    ✦ TEAMS - PLAYER STATS MENU GUI ✦                         ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+inventory:
+  title: '&0⏵ Team | Statistics [%page% %total%]'
+  disposition:
+  - '*'
+  - '*'
+  - '*'
+  - p---b---n
+  rows: 4
+values:
+  kills: '%value% Kills'
+  deaths: '%value% Deaths'
+  blocks-broken: '%value% Blocks Broken'
+  blocks-placed: '%value% Blocks Placed'
+  level: '%value% Levels'
+  mobs_killed: '%value% Mobs Killed'
+  money: $%value%
+  playtime: '%value% Playtime'
+  player-head-material: PLAYER_HEAD
+  player-head-title: '&#67F17B%player%'
+  player-head-owner: '%player%'
+  player-head-lore:
+  - '&8ᴛᴇᴀᴍ'
+  - ''
+  - '&#67F17BInformation:'
+  - '&#67F17B| &fPlayer has &#67F17B%value%.'
+items:
+  blank:
+    name: '&e'
+    material: BLACK_STAINED_GLASS_PANE
+    symbol: '-'
+  back:
+    name: '&#EA2F2FBack'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#EA2F2FInformation'
+    - '&#EA2F2F| &fClick on this item to'
+    - '&#EA2F2F| &fgo back to the main menu.'
+    - ''
+    - '&e♯ Click &f to Continue'    
+    material: globe_banner_pattern
+    actions:
+      left-click: go_back
+    symbol: b
+  next-page:
+    name: '&#63E781Next Page'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#63E781Information'
+    - '&#63E781| &fClick here to head'
+    - '&#63E781| &fto the next page.'
+    - ''
+    - '&e♯ Click &f to Continue'   
+    material: LIME_STAINED_GLASS_PANE
+    actions:
+      left-click: to_next_page
+    symbol: n
+  previous-page:
+    name: '&#E13E3EPrevious Page'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#E13E3EInformation'
+    - '&#E13E3E| &fClick on this item to'
+    - '&#E13E3E| &fnavigate to the previous page.'
+    - ''
+    - '&e♯ Click &f to Continue'   
+    material: RED_STAINED_GLASS_PANE
+    actions:
+      left-click: to_previous_page
+    symbol: p
+version: 0

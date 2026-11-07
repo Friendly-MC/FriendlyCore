@@ -1,0 +1,84 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                       ✦ TEAMS - MEMBERS MENU GUI ✦                           ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+inventory:
+  title: '&0⏵ Teams | Members [%page% %total%]'
+  disposition:
+  - '----o----'
+  - '*'
+  - p---b---n
+  # Number of rows reserved for member entries
+  rows: 2
+values:
+  empty-slot-name: '&e♯ Click &f to Invite'
+  empty-slot-material: GREEN_STAINED_GLASS_PANE
+  empty-slot-click-type: left-click
+  empty-slot-action: invite_player
+  member-item-name: '&b%player% &8(&7%role%&8)'
+  member-item-material: PLAYER_HEAD
+  member-item-variant-name: '&a%player%'
+  member-item-variant-material: PLAYER_HEAD
+  member-item-variant-lore:
+  - '&c'
+  - '&cRight click&7 to demote this player to &c%demote_role%&7.'
+  - '&aLeft click&7 to promote this player to &a%promote_role%&7.'
+items:
+  blank:
+    name: '&e'
+    material: BLACK_STAINED_GLASS_PANE
+    symbol: '-'
+  owner:
+    name: '&#67F17B%player%'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#67F17BInformation:'
+    - '&#67F17B| &fThis player is the leader.'    
+    material: PLAYER_HEAD
+    symbol: o
+  back:
+    name: '&#EA2F2FBack'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#EA2F2FInformation'
+    - '&#EA2F2F| &fClick on this item to'
+    - '&#EA2F2F| &fgo back to the main menu.'
+    - ''
+    - '&e♯ Click &f to Continue'       
+    material: globe_banner_pattern
+    actions:
+      left-click: go_back
+    symbol: b
+  next-page:
+    name: '&#63E781Next Page'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#63E781Information'
+    - '&#63E781| &fClick here to head'
+    - '&#63E781| &fto the next page.'
+    - ''
+    - '&e♯ Click &f to Continue'   
+    material: LIME_STAINED_GLASS_PANE
+    actions:
+      left-click: to_next_page
+    symbol: n
+  previous-page:
+    name: '&#E13E3EPrevious Page'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#E13E3EInformation'
+    - '&#E13E3E| &fClick on this item to'
+    - '&#E13E3E| &fnavigate to the previous page.'
+    - ''
+    - '&e♯ Click &f to Continue'   
+    material: RED_STAINED_GLASS_PANE
+    actions:
+      left-click: to_previous_page
+    symbol: p
+version: 0

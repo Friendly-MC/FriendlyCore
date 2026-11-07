@@ -1,0 +1,24 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                  ✦ FRIENDLY CORE - JOIN/QUIT MESSAGES ✦                      ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+joinquit:
+  # Command feedback
+  toggled-on: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴊᴏɪɴ ᴀɴᴅ ǫᴜɪᴛ ᴍᴇѕѕᴀɢᴇѕ <color:#8DE969>ᴇɴᴀʙʟᴇᴅ<color:#D8D0C3>."
+  toggled-off: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴊᴏɪɴ ᴀɴᴅ ǫᴜɪᴛ ᴍᴇѕѕᴀɢᴇѕ <color:#FF4D5A>ᴅɪѕᴀʙʟᴇᴅ<color:#D8D0C3>."
+  reloaded: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴊᴏɪɴ/ǫᴜɪᴛ ᴄᴏɴғɪɢѕ ʀᴇʟᴏᴀᴅᴇᴅ ɪɴ <color:#E7B85C>%time%ᴍѕ<color:#D8D0C3>."
+
+  # Stats
+  stats-header: "<gradient:#6EDBFF:#A7F3FF><bold>🌐 ɴᴇᴛᴡᴏʀᴋ ѕᴛᴀᴛɪѕᴛɪᴄѕ</bold></gradient>"
+  stats-unique: " <dark_gray>› <color:#8A8A8A>ᴜɴɪǫᴜᴇ ᴊᴏɪɴѕ: <color:#8DE969>%unique_joins%"
+  stats-network-online: " <dark_gray>› <color:#8A8A8A>ɴᴇᴛᴡᴏʀᴋ ᴏɴʟɪɴᴇ: <color:#6EDBFF>%network_online%"
+  stats-local-online: " <dark_gray>› <color:#8A8A8A>ʟᴏᴄᴀʟ ᴏɴʟɪɴᴇ: <color:#6EDBFF>%local_online%"
+  stats-status: " <dark_gray>› <color:#8A8A8A>ᴍᴏᴅᴜʟᴇ ѕᴛᴀᴛᴜѕ: %status%"
+
+  # Help Menu
+  help-header: "<gradient:#6EDBFF:#A7F3FF><bold>🌐 ᴊᴏɪɴ & ǫᴜɪᴛ</bold></gradient> <dark_gray>• <color:#8A8A8A>ᴄᴏᴍᴍᴀɴᴅ ɢᴜɪᴅᴇ"
+  help-toggle: " <dark_gray>• <color:#E7B85C>/joinquit toggle <dark_gray>» <color:#D8D0C3>ᴛᴏɢɢʟᴇ ᴊᴏɪɴ/ǫᴜɪᴛ ᴍᴇѕѕᴀɢᴇѕ"
+  help-stats: " <dark_gray>• <color:#E7B85C>/joinquit stats <dark_gray>» <color:#D8D0C3>ᴠɪᴇᴡ ɴᴇᴛᴡᴏʀᴋ ѕᴛᴀᴛѕ"
+  help-reload: " <dark_gray>• <color:#E7B85C>/joinquit reload <dark_gray>» <color:#D8D0C3>ʀᴇʟᴏᴀᴅ ᴄᴏɴғɪɢᴜʀᴀᴛɪᴏɴ"

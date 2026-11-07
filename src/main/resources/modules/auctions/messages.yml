@@ -1,0 +1,206 @@
+prefix: "<gradient:#E63A35:#FF6B6B><b>Auctions</b></gradient> &7» "
+
+help:
+  - " "
+  - "<gradient:#E63A35:#FF6B6B><b>Auctions</b></gradient> &7Help"
+  - " #E63A35➤ &f/ah &7| &fOpen auction menu"
+  - " #E63A35➤ &f/ah open <menu> &7| &fOpen menu"
+  - " #E63A35➤ &f/ah view &7| &fView your auctions"
+  - " #E63A35➤ &f/ah view [player] &7| &fView auctions of a player"
+  - " #E63A35➤ &f/ah sell <price> [amount] &7| &fSell item"
+  - " #E63A35➤ &f/ah search [text] &7| &fSearch auctions"
+  - " #E63A35➤ &f/ah history &7| &fCheck sell and buy history"
+  - " #E63A35➤ &f/ahadmin &7| #E63A35Admin commands"
+  - " "
+
+admin-help:
+  - " "
+  - "<gradient:#E63A35:#FF6B6B><b>Auctions</b></gradient> &7Admin"
+  - " #E63A35➤ &f/ahadmin reload &7| &fReload plugin"
+  - " #E63A35➤ &f/ahadmin forceopen <player> [menu] &7| &fForcefully opens menu"
+  - " #E63A35➤ &f/ahadmin history [player] &7| &fOpen history GUI"
+  - " #E63A35➤ &f/ahadmin limit give/set/take/reset <player> <amount> &7| &fManage player limit"
+  - " #E63A35➤ &f/ahadmin convert <plugin> &7| &fConvert from another plugin"
+  - " "
+
+reload:
+  success: "&aPlugin configurations successfully reloaded!"
+  failed: "&cFailed to reload the &f%file% &cconfiguration file, check console for details!"
+
+item-lore:
+  - "%lore%"
+  - ""
+  - "&8▪ &7Price: #E63A35$%price%"
+  - "&8▪ &7Seller: &f%seller%"
+  - "&8▪ &7Expires in: &7%expires%"
+  - ""
+  - "&eClick to purchase!"
+  - "%container%"
+
+item-lore-own:
+  - "%lore%"
+  - ""
+  - "&8▪ &7Price: #E63A35$%price%"
+  - "&8▪ &7Expires in: &7%expires%"
+  - ""
+  - "&cClick to cancel listing!"
+  - "%container%"
+
+item-lore-expired:
+  - "%lore%"
+  - ""
+  - "&8▪ &7Price: #E63A35$%price%"
+  - "&8▪ &7Deletion in: &7%deletion%"
+  - ""
+  - "&eClick to reclaim item!"
+  - "%container%"
+
+item-lore-staff:
+  - "%lore%"
+  - ""
+  - "&8▪ &7Price: #E63A35$%price%"
+  - "&8▪ &7Seller: &f%seller%"
+  - "&8▪ &7Expires in: &7%expires%"
+  - ""
+  - "&eClick to purchase!"
+  - "&cShift-click for admin removal!"
+  - "%container%"
+
+history-item-lore:
+  - "%lore%"
+  - ""
+  - "&8▪ &7Seller: &f%seller%"
+  - "&8▪ &7Buyer: &f%buyer%"
+  - "&8▪ &7Price: #E63A35$%price%"
+  - "&8▪ &7Sold: &7%time%"
+  - "%container%"
+
+history-admin-item-lore:
+  - "%lore%"
+  - ""
+  - "&8▪ &7Seller: &f%seller%"
+  - "&8▪ &7Buyer: &f%buyer%"
+  - "&8▪ &7Price: #E63A35$%price%"
+  - "&8▪ &7Sold: &7%time%"
+  - ""
+  - "&eClick to clone item!"
+  - "%container%"
+
+deleted-gui-item-lore:
+  - "%lore%"
+  - ""
+  - "&8▪ &7Seller: &f%seller%"
+  - "&8▪ &7Price: #E63A35$%price%"
+  - "&8▪ &7Deleted: &7%time%"
+  - "%container%"
+
+deleted-gui-admin-item-lore:
+  - "%lore%"
+  - ""
+  - "&8▪ &7Seller: &f%seller%"
+  - "&8▪ &7Price: #E63A35$%price%"
+  - "&8▪ &7Deleted: &7%time%"
+  - ""
+  - "&eClick to recover item!"
+  - "%container%"
+
+container: "&7Right-click to &fview contents"
+
+time:
+  second: "s"
+  minute: "m"
+  hour: "h"
+  day: "d"
+
+sorting:
+  newest: "Newest"
+  oldest: "Oldest"
+  cheapest: "Lowest Price"
+  priciest: "Highest Price"
+
+sell:
+  limit-reached: "&cYou have reached your active listing limit! &7(%current%/%limit%)"
+  no-item: "&cHold an item in your hand to list it!"
+  price-too-low: "&cThe listing price must be at least &f$%amount%&c!"
+  price-too-high: "&cThe listing price cannot exceed &f$%amount%&c!"
+  invalid-price: "&cPlease specify a valid price greater than 0!"
+  success: "&aSuccessfully listed &f%amount%x %item% &afor &f$%price%&a!"
+  action-bar-broadcast: "#E63A35%player% &7listed &f%amount%x %item% &7for #E63A35$%price%&7! &8(/ah)"
+  chat-broadcast: ""
+
+buy:
+  not-enough-money: "&cYou do not have enough money to purchase this item!"
+  item-not-found: "&cThis item is no longer available!"
+  inventory-full: "&cYour inventory is full!"
+  success: "&aSuccessfully purchased &f%amount%x %item% &afor &f$%price%&a!"
+  notify-seller: "#E63A35%player% &7purchased your &f%amount%x %item% &7for #E63A35$%price%&7!"
+  notify-seller-action-bar: "#E63A35%player% &7bought your &f%amount%x %item% &7for #E63A35$%price%&7!"
+  action-bar-purchase: "#E63A35%player% &7bought &f%amount%x %item% &7from &f%seller% &7for #E63A35$%price%&7!"
+  action-bar-broadcast: ""
+  chat-purchase: ""
+  payout-received: "&aYou received &f$%price% &7(%reason%)&a!"
+  refunded: "&7The purchase did not go through, so &f$%price% &7was refunded to you."
+
+admin-action:
+  cancelled: "&cYour auction listing for &f%amount%x %item% &cwas cancelled by &f%staff% &cat &f%date%&c!"
+  removed: "&cYour auction listing for &f%amount%x %item% &cwas removed by &f%staff% &cat &f%date%&c!"
+  cancelled-info: "&aSuccessfully cancelled the auction listing!"
+  removed-info: "&aSuccessfully removed the auction listing!"
+  failed: "&cFailed to remove auction item! It may have already been purchased or removed."
+  take-item: "&aThe item has been placed in your inventory!"
+
+my-items:
+  removed: "&aSuccessfully cancelled the auction listing!"
+  expired: "&7Your &f%amount%x %item% &7expired at &8%date%&7!"
+  deleted: "&cYour &f%amount%x %item% &cwas deleted at &8%date%&c!"
+  failed: "&cFailed to cancel auction item! It may have already been purchased."
+
+limit-changed: "&aChanged &f%player%&a's listing limit to &f%amount%&a!"
+date-format: "yyyy. MM. dd HH:mm:ss"
+limit-bypass-icon: "∞"
+expired: "Expired"
+blacklisted: "&cThis item is blacklisted and cannot be listed on the auction house!"
+oversized: "&cThis item is too large to be listed on the auction house!"
+converting: "&aStarted data converter, check console for details!"
+
+data-not-loaded: "&cYour data is still loading, please wait a moment!"
+
+input:
+  sign:
+    - ""
+    - "-----------"
+    - "Write in the first"
+    - "line to search!"
+  anvil:
+    title: "&0Search Here"
+    item:
+      material: PAPER
+      glow: true
+      name: "&fSearch Here"
+      lore:
+        - "#E63A35↑ Enter search query"
+  chat:
+    - "#E63A35Enter your search query in chat &7(type &ccancel &7to stop)"
+
+commands:
+  invalid-command: "&cInvalid command or subcommand!"
+  no-permission: "&cYou do not have permission to use this command!"
+  player-only: "&cThis command can only be executed by players!"
+  invalid-selector: "&cInvalid player selector!"
+
+safety: "&cThis feature has been temporarily disabled for safety reasons."
+
+version: 15
+economy-unavailable: "&cAuction trading is unavailable: no Vault economy provider is registered."
+
+# ──────────────────────────────────────────────────────────────────────────────
+# COMMAND, GUI AND ADMIN MESSAGES
+# ──────────────────────────────────────────────────────────────────────────────
+category-filter: "&7Category filter"
+click-to-select: "&fClick to select"
+category-selected: "#00FC00✔ Selected"
+category-name: "#E63A35%cat_name%"
+log-action: "&8▪ &7Action: #E63A35%display_name_value%"
+actor: "&8▪ &7Actor: &f%actor%"
+date: "&8▪ &7Date: &8%date_str%"
+details: "&8▪ &7Details: &f%extra%"

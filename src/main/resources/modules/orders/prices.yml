@@ -1,0 +1,10 @@
+# Flat Legacy Prices mapping (Material name : base unit price)
+prices:
+  DIAMOND: 100.0
+  EMERALD: 50.0
+  GOLD_INGOT: 25.0
+  IRON_INGOT: 10.0
+  NETHERITE_INGOT: 1000.0
+  COAL: 2.0
+  OAK_LOG: 5.0
+  STONE: 1.0

@@ -1,0 +1,97 @@
+title: "ᴀᴜᴄᴛɪᴏɴs » Categories"
+rows: 5
+type: CHEST
+
+items:
+  filler:
+    slot: [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 42, 43, 44]
+    material: "BLACK_STAINED_GLASS_PANE"
+    name: " "
+
+  all:
+    slot: 4
+    material: "NETHER_STAR"
+    name: "#E63A35ᴀʟʟ ɪᴛᴇᴍs"
+    lore:
+      - "&8▪ &7Show all active listings"
+      - ""
+      - "&fClick to select"
+    actions:
+      - "[CATEGORY] all"
+      - "[MENU] main"
+    sound: click
+
+  tools:
+    slot: 20
+    material: "IRON_PICKAXE"
+    name: "#E63A35ᴛᴏᴏʟs"
+    lore:
+      - "&8▪ &7Pickaxes, axes, shovels, hoes"
+      - ""
+      - "&fClick to select"
+    actions:
+      - "[CATEGORY] tools"
+      - "[MENU] main"
+    sound: click
+
+  weapons:
+    slot: 21
+    material: "NETHERITE_SWORD"
+    name: "#E63A35ᴡᴇᴀᴘᴏɴs"
+    lore:
+      - "&8▪ &7Swords, bows, shields, combat"
+      - ""
+      - "&fClick to select"
+    actions:
+      - "[CATEGORY] weapons"
+      - "[MENU] main"
+    sound: click
+
+  armors:
+    slot: 22
+    material: "DIAMOND_CHESTPLATE"
+    name: "#E63A35ᴀʀᴍᴏʀ"
+    lore:
+      - "&8▪ &7Helmets, chestplates, leggings, boots"
+      - ""
+      - "&fClick to select"
+    actions:
+      - "[CATEGORY] armors"
+      - "[MENU] main"
+    sound: click
+
+  minerals:
+    slot: 23
+    material: "DIAMOND"
+    name: "#E63A35ᴍɪɴᴇʀᴀʟs"
+    lore:
+      - "&8▪ &7Ores, ingots, diamonds, emeralds"
+      - ""
+      - "&fClick to select"
+    actions:
+      - "[CATEGORY] minerals"
+      - "[MENU] main"
+    sound: click
+
+  custom:
+    slot: 24
+    material: "DRAGON_EGG"
+    name: "#E63A35ᴄᴜsᴛᴏᴍ"
+    lore:
+      - "&8▪ &7Special and custom items"
+      - ""
+      - "&fClick to select"
+    actions:
+      - "[CATEGORY] custom"
+      - "[MENU] main"
+    sound: click
+
+  back:
+    slot: 40
+    material: "ARROW"
+    name: "#E63A35ʙᴀᴄᴋ"
+    lore:
+      - "&fClick to return"
+    actions:
+      - "[BACK]"
+    sound: click

@@ -1,0 +1,34 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                      ✦ TPA ADMIN SETTINGS MENU ✦                             ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+admin-setting-inventory:
+  name: "&8✦ #00d2ffᴀᴅᴍɪɴ sᴇᴛᴛɪɴɢs &8✦"
+  rows: 3
+
+  safe-teleport-settings-icon:
+    enabled:
+      slot: 13
+      material: LIME_STAINED_GLASS_PANE
+      display-name: "&7Safe Teleport &8» &a&lENABLED"
+      lore:
+        - "&7Enables automatic safety verification."
+        - "&7Validates landing block, surrounding hazards,"
+        - "&7and finds the safest nearby spot."
+        - ""
+        - "<#a8ff78>➜ Left-click to toggle"
+        - "<#78ffd6>➜ Right-click to configure checks"
+
+    disabled:
+      slot: 13
+      material: RED_STAINED_GLASS_PANE
+      display-name: "&7Safe Teleport &8» &c&lDISABLED"
+      lore:
+        - "&7Enables automatic safety verification."
+        - "&7Validates landing block, surrounding hazards,"
+        - "&7and finds the safest nearby spot."
+        - ""
+        - "<#a8ff78>➜ Left-click to toggle"
+        - "<#78ffd6>➜ Right-click to configure checks"

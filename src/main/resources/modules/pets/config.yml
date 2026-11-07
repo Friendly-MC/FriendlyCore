@@ -1,0 +1,119 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                             ✦ PETS MODULE ✦                                  ║
+# ║         Interactive Companions, Cosmetic Follow Displays & Buffs             ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# GENERAL SETTINGS
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Automatically unequip each pet when its activation requirements
+# are no longer met (e.g. losing permission, entering blacklisted regions/worlds)
+# Passive effect conditions are refreshed even when automatic unequipping is off.
+auto-deactivate-on-condition-fail: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# FLOATING PET ENTITY & DISPLAY
+# ──────────────────────────────────────────────────────────────────────────────
+pet-entity:
+  # Enable rendering the visual pet companion following the player in the world
+  enabled: true
+
+  # Visible at night: native mobs/armor stands get a glowing outline;
+  # item displays render at full brightness. Daylight restores normal rendering.
+  # This does not illuminate terrain or place light blocks. Outlines show through walls.
+  # Checked once per second using each owner's current world time.
+  night-glow: true
+
+  # Followers tick every server tick; old update-interval-ticks values are ignored.
+  # Stationary companions still suppress unchanged position updates.
+
+  # Keep the pet visible in combat but move it farther behind the player. A
+  # two-tick interpolation bridges input gaps while staying behind the camera.
+  combat-positioning:
+    enabled: true
+    back-offset: 1.25
+    teleport-duration: 2
+
+  # Turning uses current yaw with one-tick client interpolation, avoiding 20 Hz snapping.
+  # Sharp-turn camera clearance eases in and out rather than jumping up/back.
+  # Running and jumping continue using normal smooth interpolation.
+  camera-safety:
+    enabled: true
+    sharp-turn-threshold: 35
+    hold-ticks: 4
+    back-offset: 1.75
+    height-boost: 0.35
+    # Also used for ordinary turns (1-5 ticks); legacy 0 is raised to 1 for smoothness.
+    teleport-duration: 1
+
+  # Display the floating holographic nameplate above the pet
+  show-hologram: true
+
+  # Display name format for the pet's nameplate (Supports MiniMessage & legacy color codes)
+  # Compact labels avoid overlapping nameplates for two pets.
+  # %pet_short% uses a pet's display-name (or a readable pet ID).
+  # %player% and %pet% remain available for custom formats.
+  name: "&f%pet_short%"
+
+  # Minimum separation between two companions, in blocks (at least 1.5).
+  # They occupy mirrored left/right positions behind the owner.
+  # Increase this for wider models or longer labels.
+  pair-spacing: 2.1
+
+  # Relative offset coordinates (in blocks) from the owner's position
+  location-x-offset: 0.75
+  # Head/item height above standing eye level; native mobs default to -1.35
+  # (feet + 0.27 blocks). Override entity-y-offset in an individual pet file.
+  location-y-offset: 0.75
+  location-z-offset: 0.75
+
+  # Enable floating vertical hover/bobbing animation
+  bobbing: true
+
+  # Amplitude/intensity of the vertical hover movement
+  bobbing-intensity: 0.15
+
+  # Continuous spinning rotation (false = pet dynamically faces the owner's look direction)
+  rotation: false
+
+  # Rotation speed in degrees per tick when continuous spinning is enabled
+  rotation-intensity: 20
+
+  # Facing damping after turn input stops (0.05-1.0). Active turns always use current yaw.
+  facing-response: 0.65
+
+  # Player-head item models face opposite the entity's yaw; 180 corrects them
+  # so the visible pet face points in the same direction as its owner.
+  facing-yaw-offset: 180
+
+  # Head/item scale. Native mobs default to 0.5; per-pet entity-scale overrides both.
+  scale: 1.0
+
+  # Modern 1.19.4+ ItemDisplay entity rendering options (smooth interpolation & client rendering)
+  item-display:
+    # Use modern ItemDisplay entities for smoother movement and client interpolation
+    enabled: true
+
+    # Interpolation for changes to the item's transformation (scale/rotation).
+    # Position smoothing uses movement-interpolation-ticks below.
+    teleport-duration: 2
+
+    # Position interpolation bridges short gaps between player movement packets.
+    # Values below 2 are raised to 2; increase to 3 for more smoothing.
+    movement-interpolation-ticks: 2
+
+    # Occasional playful animation behaviors (tilting, bouncing, playful idle emotes)
+    playful-animations:
+      enabled: true
+      # Percentage chance (1-100) per idle animation cycle to execute playful motion
+      chance: 25
+
+# ──────────────────────────────────────────────────────────────────────────────
+# PET MENU LAYOUT & NAVIGATION (/pets)
+# ──────────────────────────────────────────────────────────────────────────────
+# The collection uses an inset 28-slot gallery with two equipped pets in row 6.
+# Configure title, page size and footer
+# labels/materials in inventories/pets.yml.

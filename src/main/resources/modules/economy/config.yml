@@ -1,0 +1,90 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                          ✦ ECONOMY MODULE ✦                                  ║
+# ║                  High-Performance Vault Economy Provider                     ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# VAULT ECONOMY PROVIDER
+# ──────────────────────────────────────────────────────────────────────────────
+vault-provider:
+  # Register FriendlyCore as the active Vault economy service provider
+  enabled: true
+
+  # Currency nomenclature and symbols
+  currency-symbol: "$"
+  currency-singular: "dollar"
+  currency-plural: "dollars"
+
+  # Starting account balance credited to players upon their first join
+  starting-balance: 0.0
+
+  # Whether Vault format() queries should output compact suffixes (e.g., 10.5K) instead of full decimal numbers
+  use-short-scale: false
+
+# ──────────────────────────────────────────────────────────────────────────────
+# NUMBER FORMATTING & SCALING
+# ──────────────────────────────────────────────────────────────────────────────
+format:
+  # Number of decimal places rendered in balance displays (e.g., 2 -> 1,234.50)
+  decimal-places: 2
+
+  # Large number scale abbreviations for formatted balance strings
+  thousands: "K"
+  millions: "M"
+  billions: "B"
+  trillions: "T"
+  quadrillions: "Q"
+  quintillions: "QT"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# PLAYER PAYMENTS (/pay)
+# ──────────────────────────────────────────────────────────────────────────────
+payment:
+  # Minimum allowable transfer amount per transaction
+  minimum-amount: 1.0
+
+  # Anti-spam cooldown in seconds between payment transfers
+  cooldown-seconds: 1
+
+  # Send an actionbar summary on successful transactions
+  actionbar:
+    enabled: true
+
+  # Sound effects played during transactions (Bukkit Sound names)
+  sound:
+    send: "ENTITY_PLAYER_LEVELUP"
+    receive: "ENTITY_PLAYER_LEVELUP"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# BALTOP LEADERBOARD GUI (/baltop)
+# ──────────────────────────────────────────────────────────────────────────────
+baltop:
+  # Title of the baltop GUI menu (Placeholders: %page%, %max_page%)
+  inventory-title: "Leaderboard %page%/%max_page%"
+
+  # Item display name for each ranked player entry (Placeholders: %player%, %rank%)
+  player-display-name: "%player% &7(#%rank%)"
+
+  # Lore description on player skull entries (Placeholders: %money%, %money_formatted%)
+  player-lore:
+    - "&fMoney: &7$%money%"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# TRANSACTION HISTORY GUI (/payhistory)
+# ──────────────────────────────────────────────────────────────────────────────
+payhistory:
+  # Title of the transaction history GUI menu (Placeholders: %page%, %max_page%)
+  inventory-title: "Pay History %page%/%max_page%"
+
+  # Item lore detailing individual transactions
+  # Placeholders: %type%, %amount_formatted%, %date%, %from%, %to%, %transaction_id%
+  transaction-lore:
+    - ""
+    - "&fStatus: %type%"
+    - "&fAmount: %amount_formatted%"
+    - "&fDate: &7%date%"
+    - "&fFrom: &7%from%"
+    - "&fTo: &7%to%"
+    - "&fTransaction ID: &b#&b%transaction_id%"

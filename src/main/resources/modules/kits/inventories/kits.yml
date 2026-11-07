@@ -1,0 +1,53 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                          ✦ KITS GUI MENUS ✦                                  ║
+# ║              Fully Compatible with PlayerKits2 Inventory Layout              ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+inventories:
+  # ────────────────────────────────────────────────────────────────────────────
+  # Main Kits Selection Menu
+  # ────────────────────────────────────────────────────────────────────────────
+  main_inventory:
+    slots: 45
+    title: "<gradient:#7BD88F:#B9FBC0><bold>📦 ᴋɪᴛѕ</bold></gradient>"
+
+    # Kit item placement
+    10:
+      type: "kit: starter"
+    12:
+      type: "kit: pvp"
+
+    # Decorative Border Glass
+    0-8;36-44;9;17;18;26;27;35:
+      item:
+        id: "GRAY_STAINED_GLASS_PANE"
+        name: " "
+
+    # Close Menu Button
+    40:
+      item:
+        id: "BARRIER"
+        name: "<gradient:#FF4D5A:#FF9A9A><bold>✖ ᴄʟᴏѕᴇ ᴍᴇɴᴜ</bold></gradient>"
+        lore:
+          - "<color:#D8D0C3>ᴄʟɪᴄᴋ ᴛᴏ ᴇxɪᴛ ᴛʜᴇ ᴋɪᴛѕ ᴍᴇɴᴜ.</color>"
+      actions:
+        - "close_inventory"
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # Kit Preview Menu (/kit preview <name>)
+  # The bottom row is reserved for navigation controls. Per-item preview_slot
+  # values may use only slots 0-44 in this 54-slot inventory; duplicate or invalid
+  # values fall back to the next free content slot without replacing another item.
+  # ────────────────────────────────────────────────────────────────────────────
+  preview_inventory:
+    slots: 54
+    title: "<gradient:#7BD88F:#B9FBC0><bold>👁 ᴘʀᴇᴠɪᴇᴡ</bold></gradient> <dark_gray>» <color:#E7B85C>%kit%</color>"
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # Buy / Unlock Requirements Menu
+  # ────────────────────────────────────────────────────────────────────────────
+  buy_requirements_inventory:
+    slots: 27
+    title: "<gradient:#7BD88F:#B9FBC0><bold>✦ ᴜɴʟᴏᴄᴋ ᴋɪᴛ</bold></gradient> <dark_gray>» <color:#E7B85C>%kit%</color>"

@@ -1,0 +1,97 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                     ✦ FRIENDLY CORE - SETTINGS CONFIG ✦                      ║
+# ║                   Player Preferences & Interactive Menus                     ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# USER INTERFACE SETTINGS
+# ──────────────────────────────────────────────────────────────────────────────
+ui:
+  # Preferred UI mode for settings menus:
+  # - AUTO      : Automatically detects client capabilities:
+  #               * Bedrock Edition (Geyser / Floodgate) -> Native Bedrock Forms
+  #               * Modern Java 1.21.6+                 -> Native Minecraft Dialogs
+  #               * Legacy Java Clients                 -> Interactive 27-Slot Chest GUI
+  # - DIALOG    : Forces native Java dialog forms where supported
+  # - BEDROCK   : Forces Bedrock forms for Bedrock clients
+  # - CHEST_GUI : Uses standard chest inventory menus for all players
+  # - CHAT      : Displays an interactive text-based chat interface with clickable buttons
+  default-mode: AUTO
+
+  # Title displayed across chest GUI headers, dialog windows, and form menus
+  title: "<gradient:#6EDBFF:#A7F3FF><bold>⚙ ѕᴇᴛᴛɪɴɢѕ</bold></gradient>"
+
+  # Sound effects played when toggling preferences on and off
+  sounds:
+    enable:
+      sound: BLOCK_NOTE_BLOCK_PLING
+      volume: 1.0
+      pitch: 2.0
+    disable:
+      sound: BLOCK_NOTE_BLOCK_BASS
+      volume: 1.0
+      pitch: 0.8
+
+# ──────────────────────────────────────────────────────────────────────────────
+# DEFAULT PREFERENCE STATES
+# Initial setting states applied to new players when they first join the server
+# ──────────────────────────────────────────────────────────────────────────────
+defaults:
+  scoreboard: true
+  chat: true
+  tpa: true
+  private-messages: true
+  night-vision: false
+  pay-alerts: true
+  sounds: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SETTING DEFINITIONS & PERMISSIONS
+# Configure individual toggleable settings, their icons, labels, and permissions.
+# Set permission to "" to allow all players to toggle that setting freely.
+# ──────────────────────────────────────────────────────────────────────────────
+settings:
+  scoreboard:
+    enabled: true
+    permission: ""
+    icon: OAK_SIGN
+    name: "<color:#E7B85C><bold>Scoreboard"
+    description: "Toggle sidebar scoreboard visibility"
+  chat:
+    enabled: true
+    permission: ""
+    icon: WRITABLE_BOOK
+    name: "<color:#E7B85C><bold>Global Chat"
+    description: "Toggle visibility of public chat messages"
+  tpa:
+    enabled: true
+    permission: "friendlycore.tpa"
+    icon: ENDER_PEARL
+    name: "<color:#E7B85C><bold>Teleport Requests"
+    description: "Accept or deny incoming teleport requests"
+  private-messages:
+    enabled: true
+    permission: ""
+    icon: PAPER
+    name: "<color:#E7B85C><bold>Private Messages"
+    description: "Allow or block direct /msg whispers"
+  night-vision:
+    enabled: true
+    permission: "friendlycore.nightvision"
+    icon: GOLDEN_CARROT
+    name: "<color:#E7B85C><bold>Night Vision"
+    description: "Toggle infinite night vision"
+  pay-alerts:
+    enabled: true
+    permission: ""
+    icon: EMERALD
+    name: "<color:#E7B85C><bold>Pay Alerts"
+    description: "Receive notifications when sent money"
+  sounds:
+    enabled: true
+    permission: ""
+    icon: JUKEBOX
+    name: "<color:#E7B85C><bold>UI Sounds"
+    description: "Toggle menu and interaction sound effects"

@@ -1,0 +1,86 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                     ✦ FRIENDLY CORE - HOMES CONFIG ✦                         ║
+# ║                 Custom Home Limits, Teleport Warmups & GUI                   ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# General Settings & Teleport Warmup
+# ──────────────────────────────────────────────────────────────────────────────
+
+# When enabled, prompts players with an interactive confirmation GUI before deleting a home
+enable-confirmation-gui: true
+
+# Warmup countdown delay in seconds before teleporting (set to 0 for instant teleportation)
+teleport-time: 5
+
+# Maximum movement distance in blocks allowed during warmup before the teleport is cancelled
+cancel-on-move-threshold: 0.5
+
+# Combat cooldown in seconds required before teleporting (set to 0 to disable combat checking)
+combat-delay: 5
+
+# Maximum Y-level coordinate allowed when setting a home (prevents setting homes on the Nether roof)
+height-limit: 255
+
+# Disables all subcommands for /home (such as /home rename or /home help)
+disable-subcommands: false
+
+# Prevents players from renaming existing homes via commands or GUI menus
+disable-home-renaming: false
+
+# Send feedback and notification messages to player chat
+allow-chat-messages: true
+
+# Send real-time status updates and countdown timers to the player's action bar
+allow-actionbar-messages: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# World Restrictions & Interactions
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Worlds where players are restricted from setting new homes
+blacklisted_worlds:
+  - "spawn"
+
+# Automatically create or update home #1 whenever a player interacts with or sleeps in a bed
+set-home-on-bed-interact: false
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Economy Integration (Vault)
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Economy transaction costs for home operations using Vault (set to 0.0 for free)
+economy:
+  set-home-cost: 0.0
+  teleport-cost: 0.0
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Permissions & Rank Limits
+# ──────────────────────────────────────────────────────────────────────────────
+
+permissions:
+  # When enabled, excess homes are automatically removed if a player loses a rank or permission
+  remove-home-after-lose-perm: true
+
+  # Permission node that bypasses the teleport warmup delay for instant teleports
+  cooldown-bypass: "home.no-cooldown"
+
+  # Permission node required to open and use the Home GUI menu
+  home-gui: "home.use"
+
+  # Permission node granting access to staff administrative commands and remote home management
+  home-admin: "home.admin"
+
+  # Home limits assigned by permission group
+  # Format: "<group-name>:<permission-node>:<max-homes>"
+  # Dynamic numerical permission nodes are also supported:
+  #   - home.limit.<number>
+  #   - modernhome.limit.<number>
+  #   - friendlycore.homes.limit.<number>
+  home-limits:
+    - "default:home.default:1"
+    - "vip:home.vip:5"
+    - "mvp:home.mvp:10"
+    - "legend:home.legend:15"

@@ -1,0 +1,100 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                             ✦ KING PET ✦                                     ║
+# ║             Supreme Combat Companion with Legendary Buffs                    ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# Display name of the King pet
+name: "§x§F§F§C§F§0§0§lᴋ§x§F§F§C§8§0§0§lɪ§x§F§F§C§0§0§0§lɴ§x§F§F§B§9§0§0§lɢ §x§F§F§A§A§0§0§lᴘ§x§F§F§A§2§0§0§lᴇ§x§F§F§9§B§0§0§lᴛ &e👑"
+
+# Lore description displayed in GUI tooltips
+description: "&7An advanced warrior pet providing enhanced speed and strength."
+
+# Effects list displayed in GUI lore
+effects-description:
+  - "&8» &7Speed II"
+  - "&8» &7Strength II"
+  - "&8» &7Fire Resistance I"
+  - "&8» &7Haste II"
+  - "&8» &7Water Breathing I"
+  - "&8» &7Luck I"
+
+# Passive potion effects granted while this pet is active
+effects:
+  - id: potion_effect
+    args:
+      effect: SPEED
+      level: 2
+      duration: -1
+    triggers:
+      - static
+      - spawn_pet
+  - id: potion_effect
+    args:
+      effect: STRENGTH
+      level: 2
+      duration: -1
+    triggers:
+      - static
+      - spawn_pet
+  - id: potion_effect
+    args:
+      effect: FIRE_RESISTANCE
+      level: 1
+      duration: -1
+    triggers:
+      - static
+      - spawn_pet
+  - id: potion_effect
+    args:
+      effect: HASTE
+      level: 2
+      duration: -1
+    triggers:
+      - static
+      - spawn_pet
+  - id: potion_effect
+    args:
+      effect: WATER_BREATHING
+      level: 1
+      duration: -1
+    triggers:
+      - static
+      - spawn_pet
+  - id: potion_effect
+    args:
+      effect: LUCK
+      level: 1
+      duration: -1
+    triggers:
+      - static
+      - spawn_pet
+
+# Floating companion skull texture and GUI menu icon
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmY3N2Q5ZjFkZWI5NTMwYzhmY2ZkODhhYzk3ZTFiYWQ3NTVkNTEyZDBkZmZkMjdiMjAxNzExMTk1ZGVlMWI1YyJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmY3N2Q5ZjFkZWI5NTMwYzhmY2ZkODhhYzk3ZTFiYWQ3NTVkNTEyZDBkZmZkMjdiMjAxNzExMTk1ZGVlMWI1YyJ9fX0=
+
+# Trigger and activation requirements
+conditions: []
+activate-conditions: []
+
+# Physical consumable spawn egg item
+spawn-egg:
+  enabled: true
+  item: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmY3N2Q5ZjFkZWI5NTMwYzhmY2ZkODhhYzk3ZTFiYWQ3NTVkNTEyZDBkZmZkMjdiMjAxNzExMTk1ZGVlMWI1YyJ9fX0=
+  name: "§x§F§F§C§F§0§0§lᴋ§x§F§F§C§8§0§0§lɪ§x§F§F§C§0§0§0§lɴ§x§F§F§B§9§0§0§lɢ §x§F§F§A§A§0§0§lᴘ§x§F§F§A§2§0§0§lᴇ§x§F§F§9§B§0§0§lᴛ &e👑"
+  lore:
+    - ""
+    - "&7Speed II"
+    - "&7Strength II"
+    - "&7Fire Resistance I"
+    - "&7Haste II"
+    - "&7Water Breathing I"
+    - "&7Luck I"
+    - ""
+    - "&fPlace on the ground to"
+    - "&funlock the §x§F§F§C§F§0§0§lᴋ§x§F§F§C§8§0§0§lɪ§x§F§F§C§0§0§0§lɴ§x§F§F§B§9§0§0§lɢ §x§F§F§A§A§0§0§lᴘ§x§F§F§A§2§0§0§lᴇ§x§F§F§9§B§0§0§lᴛ &e👑"
+  craftable: false
+  recipe: []
+  withdrawable: true

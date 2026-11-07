@@ -1,0 +1,60 @@
+title: "ᴏʀᴅᴇʀs » ɴᴇᴡ ᴏʀᴅᴇʀ"
+
+items:
+  cancel:
+    name: "&c<b>ᴄᴀɴᴄᴇʟ</b>"
+    lore:
+      - "&7Return to previous menu"
+    material: "RED_STAINED_GLASS_PANE"
+    slot: 10
+    customModelData: -1
+    sound: click
+
+  current_item:
+    name: "#E63A35{currentAmount} &f{currentItem}"
+    lore:
+      - "#E63A35${currentPrice_short} &feach"
+      - ""
+      - "#E63A35${totalPrice_short} &7Total Escrow"
+    material: STONE
+    slot: 12
+    customModelData: -1
+    sound: click
+
+  amount:
+    name: "<gradient:#E63A35:#FF6B6B><b>ᴀᴍᴏᴜɴᴛ</b></gradient>"
+    lore:
+      - "&7Quantity: #E63A35{currentAmount}x"
+      - ""
+      - "&eClick to edit amount"
+    material: "CHEST"
+    slot: 13
+    customModelData: -1
+    sound: click
+
+  price:
+    name: "<gradient:#E63A35:#FF6B6B><b>ᴘʀɪᴄᴇ</b></gradient>"
+    lore:
+      - "&7Price: #E63A35${currentPrice} &feach"
+      - ""
+      - "&eClick to edit price"
+    material: "EMERALD"
+    slot: 14
+    customModelData: -1
+    sound: click
+
+  confirm:
+    name: "&a<b>ᴄᴏɴғɪʀᴍ ᴏʀᴅᴇʀ</b>"
+    lore:
+      - "&7Total Cost: &a${totalPrice}"
+      - ""
+      - "&aClick to create order!"
+    material: "LIME_STAINED_GLASS_PANE"
+    slot: 16
+    customModelData: -1
+    sound: click
+
+  filler:
+    name: " "
+    material: BLACK_STAINED_GLASS_PANE
+    slot: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 15, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]

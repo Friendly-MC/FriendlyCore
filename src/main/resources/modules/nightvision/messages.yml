@@ -1,0 +1,44 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                   ✦ NIGHT VISION MODULE LOCALIZATION ✦                       ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+no-permission: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴘᴇʀᴍɪѕѕɪᴏɴ ᴛᴏ ᴜѕᴇ ᴛʜɪѕ ᴄᴏᴍᴍᴀɴᴅ."
+players-only: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛʜɪѕ ᴄᴏᴍᴍᴀɴᴅ ᴄᴀɴ ᴏɴʟʏ ʙᴇ ᴜѕᴇᴅ ʙʏ ᴘʟᴀʏᴇʀѕ."
+player-not-found: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘʟᴀʏᴇʀ <color:#E7B85C>%player% <color:#D8D0C3>ᴡᴀѕ ɴᴏᴛ ғᴏᴜɴᴅ."
+
+toggled-on: "<gradient:#6EDBFF:#A7F3FF><bold>ɴɪɢʜᴛ ᴠɪѕɪᴏɴ</bold></gradient> <dark_gray>» <color:#8DE969>ɴɪɢʜᴛ ᴠɪѕɪᴏɴ ᴇɴᴀʙʟᴇᴅ."
+toggled-off: "<gradient:#6EDBFF:#A7F3FF><bold>ɴɪɢʜᴛ ᴠɪѕɪᴏɴ</bold></gradient> <dark_gray>» <color:#FF4D5A>ɴɪɢʜᴛ ᴠɪѕɪᴏɴ ᴅɪѕᴀʙʟᴇᴅ."
+
+already-on: "<gradient:#FFB703:#E7B85C><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɴɪɢʜᴛ ᴠɪѕɪᴏɴ ɪѕ ᴀʟʀᴇᴀᴅʏ ᴇɴᴀʙʟᴇᴅ."
+already-off: "<gradient:#FFB703:#E7B85C><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɴɪɢʜᴛ ᴠɪѕɪᴏɴ ɪѕ ᴀʟʀᴇᴀᴅʏ ᴅɪѕᴀʙʟᴇᴅ."
+
+toggled-on-other: "<gradient:#6EDBFF:#A7F3FF><bold>ɴɪɢʜᴛ ᴠɪѕɪᴏɴ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴇɴᴀʙʟᴇᴅ ɴɪɢʜᴛ ᴠɪѕɪᴏɴ ғᴏʀ <color:#E7B85C>%player%<color:#D8D0C3>."
+toggled-off-other: "<gradient:#6EDBFF:#A7F3FF><bold>ɴɪɢʜᴛ ᴠɪѕɪᴏɴ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴅɪѕᴀʙʟᴇᴅ ɴɪɢʜᴛ ᴠɪѕɪᴏɴ ғᴏʀ <color:#E7B85C>%player%<color:#D8D0C3>."
+
+target-toggled-on: "<gradient:#6EDBFF:#A7F3FF><bold>ɴɪɢʜᴛ ᴠɪѕɪᴏɴ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɴɪɢʜᴛ ᴠɪѕɪᴏɴ ᴇɴᴀʙʟᴇᴅ ʙʏ <color:#E7B85C>%sender%<color:#D8D0C3>."
+target-toggled-off: "<gradient:#6EDBFF:#A7F3FF><bold>ɴɪɢʜᴛ ᴠɪѕɪᴏɴ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɴɪɢʜᴛ ᴠɪѕɪᴏɴ ᴅɪѕᴀʙʟᴇᴅ ʙʏ <color:#E7B85C>%sender%<color:#D8D0C3>."
+
+target-already-on: "<gradient:#FFB703:#E7B85C><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#E7B85C>%player% <color:#D8D0C3>ᴀʟʀᴇᴀᴅʏ ʜᴀѕ ɴɪɢʜᴛ ᴠɪѕɪᴏɴ ᴇɴᴀʙʟᴇᴅ."
+target-already-off: "<gradient:#FFB703:#E7B85C><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#E7B85C>%player% <color:#D8D0C3>ᴀʟʀᴇᴀᴅʏ ʜᴀѕ ɴɪɢʜᴛ ᴠɪѕɪᴏɴ ᴅɪѕᴀʙʟᴇᴅ."
+
+status-self: "<gradient:#6EDBFF:#A7F3FF><bold>ɴɪɢʜᴛ ᴠɪѕɪᴏɴ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜʀ ɴɪɢʜᴛ ᴠɪѕɪᴏɴ ѕᴛᴀᴛᴜѕ: %status%"
+status-other: "<gradient:#6EDBFF:#A7F3FF><bold>ɴɪɢʜᴛ ᴠɪѕɪᴏɴ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɴɪɢʜᴛ ᴠɪѕɪᴏɴ ѕᴛᴀᴛᴜѕ ғᴏʀ <color:#E7B85C>%player%<color:#D8D0C3>: %status%"
+
+reloaded: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɴɪɢʜᴛ ᴠɪѕɪᴏɴ ʀᴇʟᴏᴀᴅᴇᴅ ɪɴ <color:#E7B85C>%time%ᴍѕ<color:#D8D0C3>."
+reload-failed: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ғᴀɪʟᴇᴅ ᴛᴏ ʀᴇʟᴏᴀᴅ ɴɪɢʜᴛ ᴠɪѕɪᴏɴ ᴄᴏɴғɪɢ."
+
+# Action Bar Notifications
+actionbar-on: "<gradient:#6EDBFF:#A7F3FF><bold>ɴɪɢʜᴛ ᴠɪѕɪᴏɴ</bold></gradient> <dark_gray>» <color:#8DE969>ᴇɴᴀʙʟᴇᴅ"
+actionbar-off: "<gradient:#6EDBFF:#A7F3FF><bold>ɴɪɢʜᴛ ᴠɪѕɪᴏɴ</bold></gradient> <dark_gray>» <color:#FF4D5A>ᴅɪѕᴀʙʟᴇᴅ"
+
+# Help Menu Format
+help-header: "<gradient:#6EDBFF:#A7F3FF><bold>ɴɪɢʜᴛ ᴠɪѕɪᴏɴ</bold></gradient> <dark_gray>• <color:#8A8A8A>ᴄᴏᴍᴍᴀɴᴅ ɢᴜɪᴅᴇ"
+help-footer: "<dark_gray>─────────────────────────────────────────</dark_gray>"
+help-lines:
+  - "<gradient:#6EDBFF:#A7F3FF><bold>ɴɪɢʜᴛ ᴠɪѕɪᴏɴ</bold></gradient> <dark_gray>• <color:#8A8A8A>ᴄᴏᴍᴍᴀɴᴅ ɢᴜɪᴅᴇ"
+  - " <dark_gray>• <color:#E7B85C>/nv <dark_gray>» <color:#D8D0C3>ᴛᴏɢɢʟᴇ ɴɪɢʜᴛ ᴠɪѕɪᴏɴ"
+  - " <dark_gray>• <color:#E7B85C>/nv on <dark_gray>» <color:#D8D0C3>ᴇɴᴀʙʟᴇ ɴɪɢʜᴛ ᴠɪѕɪᴏɴ"
+  - " <dark_gray>• <color:#E7B85C>/nv off <dark_gray>» <color:#D8D0C3>ᴅɪѕᴀʙʟᴇ ɴɪɢʜᴛ ᴠɪѕɪᴏɴ"
+  - " <dark_gray>• <color:#E7B85C>/nv status <dark_gray>» <color:#D8D0C3>ᴄʜᴇᴄᴋ ɴɪɢʜᴛ ᴠɪѕɪᴏɴ ѕᴛᴀᴛᴜѕ"

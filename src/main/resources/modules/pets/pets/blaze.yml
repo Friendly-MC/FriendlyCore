@@ -1,0 +1,16 @@
+name: "&6Blaze"
+display-name: "&6&lBLAZE PET &f(Lvl. 1)"
+description: "&7A miniature fiery companion."
+entity-type: BLAZE
+entity-scale: 0.5
+entity-y-offset: -1.35
+icon: blaze_spawn_egg
+effects-description: []
+effects: []
+conditions: []
+activate-conditions: []
+spawn-egg:
+  enabled: true
+  item: blaze_spawn_egg
+  name: "&6Blaze &fPet Spawn Egg"
+  withdrawable: true

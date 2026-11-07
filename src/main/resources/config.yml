@@ -1,0 +1,166 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                           ✦ FRIENDLY CORE ✦                                  ║
+# ║                       High-Performance Core Suite                            ║
+# ║                                                                              ║
+# ║  • Paper & Folia Multi-Threaded Engine Support                               ║
+# ║  • Adventure MiniMessage & Modern RGB Gradient Styling                       ║
+# ║  • Optimized Async Database Architecture (SQLite & MySQL HikariCP)           ║
+# ║  • Redis Multi-Server Synchronization & Cross-Server Pub/Sub                 ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# GENERAL SETTINGS
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Toggle verbose console logging for troubleshooting and internal event tracing
+debug: false
+
+# Global plugin chat prefix prepended to core system messages
+# Fully supports Adventure MiniMessage formatting (<gradient:#start:#end>, <#hex>, <bold>)
+prefix: "<gradient:#00d2ff:#3a7bd5><bold>FriendlyCore</bold></gradient> <dark_gray>»</dark_gray> <gray>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# FEATURE MODULES
+# ──────────────────────────────────────────────────────────────────────────────
+# Toggle individual sub-systems on or off.
+# Disabled modules do not register listeners, tasks, or command executors,
+# saving server memory and CPU cycles.
+afk:
+  enabled: true
+  # Must match the backend name registered on Velocity / BungeeCord.
+  server-id: "afk"
+  warmup-seconds: 3
+  cooldown-seconds: 3
+
+modules:
+  # High-performance Vault economy provider, /pay transactions, and /baltop leaderboards
+  economy: true
+
+  # Advanced kit creation, claims, cooldowns, and GUI preview management
+  kits: true
+
+  # Custom 3x3 mining drills and tree choppers with leaf-break physics
+  tools: true
+
+  # Combat killstreaks, kill/death titles, and battle sound effects
+  pvp: true
+
+  # Spawn teleportation suite with movement checks, beacon buffs, and mob spawn control
+  spawn: true
+
+  # Smooth TPA and TPA-Here teleportation with safe destination validation
+  tpa: true
+
+  # High-speed pre-cached Random Teleportation (RTP) with action bar countdowns
+  rtp: true
+
+  # Infinite night vision toggle with Geyser / Bedrock HUD optimizations
+  nightvision: true
+
+  # Complete Teams system with roles, team bank, shared homes, Ender Chests, and GUIs
+  teams: true
+
+  # Visual bed-anchored home management system with cross-server sync support
+  homes: true
+
+  # Customizable join/quit announcements. Set false to hide vanilla join/quit messages too.
+  joinquit: true
+
+  # Core administration toolset (/gm, /invsee, /ec, /speed, /time, /weather, /fly, /god, /heal, /feed)
+  essentials: true
+
+  # High-performance level-less EcoPets companion system with 3D models and network sync
+  pets: true
+
+  # Modern chat suite with anti-spam, caps filter, chat item/inv links, and mentions
+  chat: true
+
+  # Multi-provider player settings (Minecraft 1.21.6+ native dialogs, Bedrock forms, and chest GUIs)
+  settings: false
+
+  # EXPERIMENTAL: Internal auction marketplace. Keep disabled when using AxAuctions or another auction plugin.
+  auctions: false
+
+  # EXPERIMENTAL: Internal buy-orders marketplace. Keep disabled when using DonutOrder or another orders plugin.
+  orders: false
+
+# ──────────────────────────────────────────────────────────────────────────────
+# DATABASE & STORAGE
+# ──────────────────────────────────────────────────────────────────────────────
+database:
+  # Storage backend to use: 'sqlite' (local file storage) or 'mysql' (remote database)
+  type: sqlite
+
+  # MySQL connection parameters (used only when type is set to 'mysql')
+  mysql:
+    host: "localhost"
+    port: 3306
+    database: "friendlycore"
+    username: "root"
+    password: ""
+    use-ssl: false
+    # JDBC network timeouts in milliseconds, separate from pool acquisition timeout
+    connect-timeout-ms: 5000
+    socket-timeout-ms: 30000
+
+    # HikariCP high-performance connection pool configuration
+    pool:
+      # Maximum number of simultaneous database connections
+      maximum-pool-size: 10
+      # Minimum number of idle connections maintained in the pool
+      minimum-idle: 2
+      # Maximum wait time in milliseconds for an available connection before timing out
+      connection-timeout: 30000
+      # Maximum connection lifespan in milliseconds before being recycled (30 minutes default)
+      max-lifetime: 1800000
+      # Check idle connections every minute; must be below max-lifetime (0 disables)
+      keepalive-time: 60000
+
+# ──────────────────────────────────────────────────────────────────────────────
+# REDIS CROSS-SERVER INFRASTRUCTURE
+# ──────────────────────────────────────────────────────────────────────────────
+redis:
+  # Enable cross-server synchronization across network proxies (Velocity / BungeeCord)
+  enabled: false
+
+  # Redis server connection credentials
+  host: "127.0.0.1"
+  port: 6379
+  password: ""
+  ssl: false
+  timeout: 2000
+
+  # Unique identifier for this server instance within your proxy network
+  server-id: "server-1"
+
+  # Security and validation rules for cross-server packets
+  security:
+    # Shared secret key used for HMAC message signing (minimum 32 random characters recommended).
+    # Must be identical on every connected server. Redis startup fails if empty while enabled.
+    shared-secret: "PUT_UR_SECRET_HERE"
+    # Maximum acceptable clock skew in seconds for message validation
+    max-clock-skew-seconds: 30
+    # Maximum allowed packet payload size in bytes (256 KiB default) to prevent oversized payloads
+    max-message-bytes: 262144
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # PUBSUB CHANNELS
+  # ────────────────────────────────────────────────────────────────────────────
+  channels:
+    balance-update: "friendlycore:balance_update"
+    cross-server-pay: "friendlycore:cross_pay"
+    transaction-push: "friendlycore:transaction_push"
+    baltop-sync: "friendlycore:baltop_sync"
+    sync: "friendlycore:cross_sync"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# PERFORMANCE & OPTIMIZATION
+# ──────────────────────────────────────────────────────────────────────────────
+optimization:
+  # Frequency in seconds to asynchronously flush queued player data to database storage
+  save-interval-seconds: 60
+
+  # Duration in seconds to keep /baltop leaderboard rankings cached in memory
+  baltop-cache-seconds: 30

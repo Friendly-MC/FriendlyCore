@@ -1,0 +1,50 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                        ✦ SPAWN MODULE LOCALIZATION ✦                         ║
+# ║                     Clean, Modern & Premium MiniMessage                      ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# COMMAND & TELEPORTATION NOTIFICATIONS
+# Placeholders: %server%, %world%, %x%, %y%, %z%, %seconds%, %player%
+# ──────────────────────────────────────────────────────────────────────────────
+spawn-set: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴘᴀᴡɴ ѕᴇᴛ ᴏɴ ѕᴇʀᴠᴇʀ <color:#E7B85C>%server%</color> ɪɴ <color:#E7B85C>%world%</color> <dark_gray>(%x%, %y%, %z%)</dark_gray>."
+spawn-not-set: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴘᴀᴡɴ ʟᴏᴄᴀᴛɪᴏɴ ɪѕ ɴᴏᴛ ѕᴇᴛ ʏᴇᴛ. ᴄᴏɴᴛᴀᴄᴛ ᴀɴ ᴀᴅᴍɪɴɪѕᴛʀᴀᴛᴏʀ."
+teleporting: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛɪɴɢ ᴛᴏ ѕᴘᴀᴡɴ ɪɴ <color:#E7B85C>%seconds%</color>. ᴅᴏɴ'ᴛ ᴍᴏᴠᴇ."
+teleport-success: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ ᴛᴏ ѕᴘᴀᴡɴ."
+teleport-cross-server: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛɪɴɢ ᴛᴏ ѕᴘᴀᴡɴ..."
+cross-server-failed: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ғᴀɪʟᴇᴅ ᴛᴏ ᴄᴏɴɴᴇᴄᴛ ᴛᴏ ѕᴘᴀᴡɴ ѕᴇʀᴠᴇʀ <color:#E7B85C>%server%</color>."
+teleport-other: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ <color:#E7B85C>%player%</color> ᴛᴏ ѕᴘᴀᴡɴ."
+teleport-cancelled-move: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛ ᴄᴀɴᴄᴇʟᴇᴅ ʙᴇᴄᴀᴜѕᴇ ʏᴏᴜ ᴍᴏᴠᴇᴅ."
+teleport-cancelled-damage: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛ ᴄᴀɴᴄᴇʟᴇᴅ ʙᴇᴄᴀᴜѕᴇ ʏᴏᴜ ᴛᴏᴏᴋ ᴅᴀᴍᴀɢᴇ."
+cooldown: "<gradient:#FFD166:#FFB347><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴜѕᴇ ᴛʜᴀᴛ ᴄᴏᴍᴍᴀɴᴅ ғᴏʀ <color:#E7B85C>%seconds%ѕ<color:#D8D0C3>."
+last-location-remote: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʀᴇᴛᴜʀɴɪɴɢ ʏᴏᴜ ᴛᴏ <color:#E7B85C>%server%</color>..."
+last-location-returning: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʀᴇѕᴛᴏʀɪɴɢ ʏᴏᴜʀ ʟᴀѕᴛ ʟᴏᴄᴀᴛɪᴏɴ..."
+
+# ──────────────────────────────────────────────────────────────────────────────
+# FIRST-JOIN WELCOME NOTIFICATIONS
+# Placeholders: %player%, %unique_joins%
+# ──────────────────────────────────────────────────────────────────────────────
+first-join-broadcast: "<gradient:#ffd32a:#ff9f1a><bold>WELCOME</bold></gradient> <dark_gray>»</dark_gray> <gray>Welcome <white><bold>%player%</bold></white> to the server! <dark_gray>(<#ffd32a>#%unique_joins%</#ffd32a>)</dark_gray></gray>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# TELEGRAM COMMUNITY PROMOTION (/telegram)
+# Placeholders: %player%, %handle%
+# ──────────────────────────────────────────────────────────────────────────────
+telegram:
+  title: "\n <#0099FF>✈ <bold>TELEGRAM</bold>"
+  message:
+    - ""
+    - " <gray>Hey <white><bold>%player%</bold></white>! Want to support the server or get ranks & perks?</gray>"
+    - " <gray>Contact server administration directly on Telegram.</gray>"
+    - ""
+    - " <#ffd32a>★ <gray>Telegram Community:</gray> <#0099FF><underlined><click:open_url:'https://t.me/%handle%'>@%handle%</click></underlined></#0099FF>"
+    - ""
+
+# ──────────────────────────────────────────────────────────────────────────────
+# COMMAND, GUI AND ADMIN MESSAGES
+# ──────────────────────────────────────────────────────────────────────────────
+this-command-can-only-be-executed: "This command can only be executed by in-game players."
+usage-spawn: "Usage: /spawn <player>"
+this-command-can-only-be-executed-2: "This command can only be executed by players."

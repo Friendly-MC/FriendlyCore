@@ -1,0 +1,16 @@
+name: "&bAllay"
+display-name: "&b&lALLAY PET &f(Lvl. 1)"
+description: "&7A small floating companion."
+entity-type: ALLAY
+entity-scale: 0.5
+entity-y-offset: -1.35
+icon: allay_spawn_egg
+effects-description: []
+effects: []
+conditions: []
+activate-conditions: []
+spawn-egg:
+  enabled: true
+  item: allay_spawn_egg
+  name: "&bAllay &fPet Spawn Egg"
+  withdrawable: true

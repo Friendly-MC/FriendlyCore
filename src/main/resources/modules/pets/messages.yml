@@ -1,0 +1,105 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                     ✦ FRIENDLY CORE - PETS MESSAGES ✦                        ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# GENERAL & COMMAND FEEDBACK
+# ──────────────────────────────────────────────────────────────────────────────
+messages:
+  prefix: "<gradient:#FFB703:#E7B85C><bold>✦ ᴘᴇᴛѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>"
+  no-permission: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴘᴇʀᴍɪѕѕɪᴏɴ ᴛᴏ ᴅᴏ ᴛʜɪѕ!"
+  not-player: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛʜɪѕ ᴄᴏᴍᴍᴀɴᴅ ᴍᴜѕᴛ ʙᴇ ʀᴜɴ ʙʏ ᴀ ᴘʟᴀʏᴇʀ!"
+  invalid-command: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴜɴᴋɴᴏᴡɴ ѕᴜʙᴄᴏᴍᴍᴀɴᴅ! ᴛʏᴘᴇ <color:#E7B85C>/ecopets</color> ғᴏʀ ʜᴇʟᴘ."
+  reloaded: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴄᴏɴғɪɢᴜʀᴀᴛɪᴏɴ ʀᴇʟᴏᴀᴅᴇᴅ ɪɴ <color:#E7B85C>%time%ᴍѕ</color>. ʟᴏᴀᴅᴇᴅ <color:#E7B85C>%count%</color> ᴘᴇᴛѕ."
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # ADMIN & TARGET VALIDATION
+  # ────────────────────────────────────────────────────────────────────────────
+  needs-player: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴍᴜѕᴛ ѕᴘᴇᴄɪғʏ ᴀ ᴘʟᴀʏᴇʀ!"
+  needs-pet: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴍᴜѕᴛ ѕᴘᴇᴄɪғʏ ᴀ ᴘᴇᴛ!"
+  invalid-player: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘʟᴀʏᴇʀ ᴡᴀѕ ɴᴏᴛ ғᴏᴜɴᴅ ᴏɴʟɪɴᴇ."
+  invalid-pet: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɪɴᴠᴀʟɪᴅ ᴘᴇᴛ ѕᴘᴇᴄɪғɪᴇᴅ!"
+  already-has-pet: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘʟᴀʏᴇʀ ᴀʟʀᴇᴀᴅʏ ᴏᴡɴѕ ᴛʜɪѕ ᴘᴇᴛ!"
+  doesnt-have-pet: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴅᴏ ɴᴏᴛ ᴏᴡɴ ᴛʜɪѕ ᴘᴇᴛ!"
+  gave-pet: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴜᴄᴄᴇѕѕғᴜʟʟʏ ɢᴀᴠᴇ <color:#E7B85C>%player%</color> ᴛʜᴇ <color:#E7B85C>%pet%</color> ᴘᴇᴛ!"
+  took-pet: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴜᴄᴄᴇѕѕғᴜʟʟʏ ᴛᴏᴏᴋ <color:#E7B85C>%player%</color>''ѕ <color:#E7B85C>%pet%</color> ᴘᴇᴛ!"
+  gave-pet-egg: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴜᴄᴄᴇѕѕғᴜʟʟʏ ɢᴀᴠᴇ <color:#E7B85C>%player%</color> ᴛʜᴇ <color:#E7B85C>%pet%</color> ᴘᴇᴛ ᴇɢɢ!"
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # PET SPAWNING & ACTIVATION
+  # ────────────────────────────────────────────────────────────────────────────
+  cannot-spawn-pet: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴀʟʀᴇᴀᴅʏ ʜᴀᴠᴇ ᴛʜɪѕ ᴘᴇᴛ ᴜɴʟᴏᴄᴋᴇᴅ!"
+  pets-loading: "<gradient:#FFB703:#E7B85C><bold>✦ ᴘᴇᴛѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜʀ ᴘᴇᴛѕ ᴀʀᴇ ѕᴛɪʟʟ ʟᴏᴀᴅɪɴɢ. ᴛʀʏ ᴀɢᴀɪɴ ɪɴ ᴀ ᴍᴏᴍᴇɴᴛ."
+  pet-spawned: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ʜᴀᴠᴇ ᴜɴʟᴏᴄᴋᴇᴅ ᴛʜᴇ <color:#E7B85C>%pet%</color> ᴘᴇᴛ! ᴜѕᴇ <color:#E7B85C>/pets</color> ᴛᴏ ᴀᴄᴛɪᴠᴀᴛᴇ ɪᴛ!"
+  pet-already-active: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴀʟʀᴇᴀᴅʏ ʜᴀᴠᴇ ᴛʜɪѕ ᴘᴇᴛ ᴀᴄᴛɪᴠᴇ!"
+  pet-slots-full: "&eBoth pet slots are full. Open /pets and unequip a pet first."
+  no-pet-active: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴀɴ ᴀᴄᴛɪᴠᴇ ᴘᴇᴛ!"
+  activated-pet: "<gradient:#7BD88F:#B9FBC0><bold>✦ ᴘᴇᴛѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴀᴄᴛɪᴠᴀᴛᴇᴅ <color:#E7B85C>%pet%</color> ᴘᴇᴛ!"
+  deactivated-pet: "<gradient:#FFB703:#E7B85C><bold>✦ ᴘᴇᴛѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴅᴇᴀᴄᴛɪᴠᴀᴛᴇᴅ <color:#E7B85C>%pet%</color> ᴘᴇᴛ."
+  cannot-activate-pet: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴅᴏ ɴᴏᴛ ᴍᴇᴇᴛ ᴛʜᴇ ʀᴇǫᴜɪʀᴇᴍᴇɴᴛѕ ᴛᴏ ᴀᴄᴛɪᴠᴀᴛᴇ <color:#E7B85C>%pet%</color>!"
+  pet-auto-deactivated: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜʀ <color:#E7B85C>%pet%</color> ᴘᴇᴛ ᴡᴀѕ ᴅᴇᴀᴄᴛɪᴠᴀᴛᴇᴅ ᴀѕ ʏᴏᴜ ɴᴏ ʟᴏɴɢᴇʀ ᴍᴇᴇᴛ ʀᴇǫᴜɪʀᴇᴍᴇɴᴛѕ!"
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # PET WITHDRAWAL & INVENTORY INTERACTIONS
+  # ────────────────────────────────────────────────────────────────────────────
+  no-active-pet-to-withdraw: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ʜᴀᴠᴇ ɴᴏ ᴀᴄᴛɪᴠᴇ ᴘᴇᴛ ᴛᴏ ᴡɪᴛʜᴅʀᴀᴡ!"
+  pet-not-withdrawable: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛʜɪѕ ᴘᴇᴛ ᴄᴀɴɴᴏᴛ ʙᴇ ᴡɪᴛʜᴅʀᴀᴡɴ!"
+  cannot-afford-withdraw: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴀғғᴏʀᴅ ᴛᴏ ᴡɪᴛʜᴅʀᴀᴡ ᴛʜɪѕ ᴘᴇᴛ!"
+  inventory-full: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜʀ ɪɴᴠᴇɴᴛᴏʀʏ ɪѕ ғᴜʟʟ! ᴍᴀᴋᴇ ѕᴘᴀᴄᴇ ʙᴇғᴏʀᴇ ᴡɪᴛʜᴅʀᴀᴡɪɴɢ ʏᴏᴜʀ ᴘᴇᴛ."
+  withdraw-failed: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜʀ ᴘᴇᴛ ᴄᴏᴜʟᴅ ɴᴏᴛ ʙᴇ ᴡɪᴛʜᴅʀᴀᴡɴ. ɴᴏᴛʜɪɴɢ ᴡᴀѕ ᴄʜᴀʀɢᴇᴅ."
+  pet-withdrawn: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴡɪᴛʜᴅʀᴇᴡ ʏᴏᴜʀ <color:#E7B85C>%pet%</color> ᴘᴇᴛ ɪɴᴛᴏ ᴀɴ ᴇɢɢ!"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# GUI MENU LOCALIZATION
+# ──────────────────────────────────────────────────────────────────────────────
+menu:
+  title: "<gradient:#FFB703:#E7B85C><bold>Pets</bold></gradient> <dark_gray>(%page%/%max_page%)"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# COMMAND, GUI AND ADMIN MESSAGES
+# ──────────────────────────────────────────────────────────────────────────────
+ecopets-commands: "&e&lEcoPets Commands:"
+ecopets-reload-reload-pets-and-configs: "&7/ecopets reload &8- &7Reload pets and configs"
+ecopets-give-unlock-a-pet-for: "&7/ecopets give <player> <pet> &8- &7Unlock a pet for player"
+ecopets-take-revoke-a-pet-from: "&7/ecopets take <player> <pet> &8- &7Revoke a pet from player"
+ecopets-giveegg-amount-give-spawn-egg: "&7/ecopets giveegg <player> <pet> [amount] &8- &7Give spawn egg items"
+ecopets-activate-force-activate-a-pet: "&7/ecopets activate <player> <pet> &8- &7Force-activate a pet on player"
+ecopets-deactivate-force-deactivate-a-player: "&7/ecopets deactivate <player> &8- &7Force-deactivate a player's pet"
+ecopets-migrate-import-configs-from-old: "&7/ecopets migrate &8- &7Import configs from old EcoPets folder"
+usage-ecopets-give: "&cUsage: /ecopets give <player> <pet>"
+usage-ecopets-take: "&cUsage: /ecopets take <player> <pet>"
+usage-ecopets-giveegg-amount: "&cUsage: /ecopets giveegg <player> <pet> [amount]"
+this-pet-has-spawn-eggs-disabled: "&cThis pet has spawn eggs disabled!"
+usage-ecopets-activate: "&cUsage: /ecopets activate <player> <pet>"
+both-pet-slots-are-full-deactivate: "&eBoth pet slots are full. Deactivate a pet first."
+equipped-for: "&aEquipped %pet_name% for %player%"
+could-not-save-this-pet-check: "&cCould not save this pet. Check the server log and try again."
+usage-ecopets-deactivate: "&cUsage: /ecopets deactivate <player>"
+deactivated-active-pet-for: "&aDeactivated active pet for %player%"
+convert-this-pet-into-a-tradeable: "&7Convert this pet into a tradeable egg."
+it-will-leave-your-collection: "&7It will leave your collection."
+withdraw-pet: "&fWithdraw pet"
+click-to-receive-the-spawn-egg: "#62D4C1Click to receive the spawn egg"
+keep-pet: "&fKeep pet"
+return-to-your-collection: "&7Return to your collection."
+migrate-a-pet-migration-is-already-in: "<gradient:#ff5252:#ff1744><bold>ERROR</bold></gradient> <dark_gray>»</dark_gray> <gray>A pet migration is already in progress.</gray>"
+migrate-starting-complete-ecopets-eco-data-migration: "<gradient:#00e676:#00b0ff><bold>PETS MIGRATION</bold></gradient> <dark_gray>»</dark_gray> <gray>Starting complete EcoPets & eco data migration...</gray>"
+migrate-pets-migration-completed: "<gradient:#00e676:#00b0ff><bold>✔ PETS MIGRATION COMPLETED</bold></gradient>"
+migrate-pet-configs-imported: " <gray>• Pet configs imported: <green>%configs_migrated%</green></gray>"
+migrate-player-records-migrated: " <gray>• Player records migrated: <aqua>%players_migrated%</aqua></gray>"
+migrate-time-taken-ms: " <gray>• Time taken: <yellow>%elapsed%ms</yellow></gray>"
+migrate-ecopets-folder-not-found-skipping-pet: "<gradient:#ffa726:#fb8c00><bold>WARNING</bold></gradient> <dark_gray>»</dark_gray> <gray>EcoPets folder not found. Skipping pet config migration.</gray>"
+migrate-migrated-pet-config: " <gray>• Migrated pet config: <aqua>%src_file_name%</aqua></gray>"
+migrate-eco-folder-not-found-skipping-player: "<gradient:#ffa726:#fb8c00><bold>WARNING</bold></gradient> <dark_gray>»</dark_gray> <gray>eco folder not found. Skipping player pet data migration.</gray>"
+migrate-reading-eco-player-database-from: " <gray>• Reading eco player database from: <aqua>%data_file_name%</aqua>...</gray>"
+migrate-migrated-player-pet-records: " <gray>• Migrated <yellow>%count%</yellow> player pet records...</gray>"
+migrate-failed-parsing-eco-data-yml: "<gradient:#ff5252:#ff1744><bold>ERROR</bold></gradient> <dark_gray>»</dark_gray> <gray>Failed parsing eco data.yml: %error%</gray>"
+migrate-connected-to-eco-mysql-database-migrating: " <gray>• Connected to eco MySQL database. Migrating player pet records...</gray>"
+
+# Shared GUI, input and fallback text
+pet-equipped-for: "&aEquipped %pet_name_formatted% for %player%"
+pet-equip-failed: "&eCould not equip this pet. Check its requirements and available slots."
+withdraw-cost: "&7Cost: &f%cost%"
+withdraw-cost-free: "Free"

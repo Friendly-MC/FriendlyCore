@@ -1,0 +1,145 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                     ✦ TEAMS - MAIN TEAM MENU GUI ✦                           ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+inventory:
+  title: '&0⏵ Teams Menu'
+  disposition:
+  - '---------'
+  - -iamhxtc-
+  - '---------'
+  disposition-alternative:
+  - '---------'
+  - '---i-c---'
+  - '---------'
+values:
+  leave-team-material: RED_STAINED_GLASS_PANE
+  create-team-material: LIME_STAINED_GLASS_PANE
+  leave-team-title: '&#F53737Leave Team'
+  create-team-title: '&#87EA7CCreate Team'
+  leave-team-lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#F53737Information' 
+    - '&#F53737| &fClick on this item to'
+    - '&#F53737| &fleave your team.'
+    - ''
+    - '&e♯ Click &f to Continue'
+  create-team-lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#87EA7CInformation' 
+    - '&#87EA7C| &fClick on this item to'
+    - '&#87EA7C| &fcreate a new team.'
+    - ''
+    - '&e♯ Click &f to Continue'
+items:
+  team-settings:
+    name: '&#7CB9EATeam Settings'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#7CB9EA| &fClick on this item to'
+    - '&#7CB9EA| &fopen settings menu.'
+    - ''
+    - '&e♯ Click &f to Continue'
+    material: trial_key
+    actions:
+      left-click: open_settings
+    symbol: x
+  create-team:
+    name: '%title%'
+    material: GREEN_BED
+    actions:
+      left-click: create_or_leave_team
+    symbol: c
+  blank:
+    name: '&e'
+    material: BLACK_STAINED_GLASS_PANE
+    symbol: '-'
+  members:
+    name: '&#EAB320Teams Members'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#EAB320| &fClick on this item to'
+    - '&#EAB320| &flist all the members'
+    - ''
+    - '&e♯ Click &f to Continue'
+    material: piglin_head
+    actions:
+      left-click: show_members
+    symbol: m
+  team-enderchest:
+    name: '&#9863E7Team Enderchest'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#9863E7| &fClick on this item to'
+    - '&#9863E7| &faccess the team chest. '
+    - ''
+    - '&e♯ Click &f to Continue'
+    material: ENDER_CHEST
+    actions:
+      left-click: show_team_enderchest
+    symbol: t
+  team-home:
+    name: '&#4498DBTeam Homes'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#4498DB| &fClick on this item to'
+    - '&#4498DB| &fteleport your team home.'
+    - ''
+    - '&e♯ Click &f to Continue'
+    material: light_blue_bed
+    actions:
+      left-click: open_home_menu
+    symbol: h
+  invites:
+    name: '&#CFA433Team Invites'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#CFA433| &fClick on this item to view'
+    - '&#CFA433| &fthe invites you receive.'
+    - ''
+    - '&e♯ Click &f to Continue'
+    material: BELL
+    actions:
+      left-click: show_invites
+    symbol: i
+  bank:
+    name: '&e&lTEAM BANK'
+    lore:
+    - '&7Click on this item to'
+    - '&7open the bank.'
+    material: GOLD_INGOT
+    actions:
+      left-click: open_team_bank
+    symbol: b
+  stats:
+    name: '&e&lTEAM STATS'
+    lore:
+    - '&7Click on this item to'
+    - '&7view stats.'
+    material: CLOCK
+    actions:
+      left-click: show_stats
+    symbol: s
+  allies:
+    name: '&#CF7E33Team Allies'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#CF7E33| &fClick on this item to'
+    - '&#CF7E33| &fview allies.'
+    - ''
+    - '&e♯ Click &f to Continue'
+    material: SHIELD
+    actions:
+      left-click: show_allies
+    symbol: a
+version: 2

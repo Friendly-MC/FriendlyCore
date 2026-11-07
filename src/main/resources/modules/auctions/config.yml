@@ -1,0 +1,128 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                    ✦ AUCTIONS MODULE (EXPERIMENTAL) ✦                         ║
+# ║          Disabled by default; incompatible with other auction plugins.       ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# PRICING (VAULT ONLY)
+# ──────────────────────────────────────────────────────────────────────────────
+
+prefix: "<gradient:#E63A35:#FF6B6B><b>Auctions</b></gradient> &7» "
+
+# Minimum allowable listing price for auction items
+min-price: 10.0
+
+# Maximum allowable listing price (-1.0 for unlimited)
+max-price: -1.0
+
+# Compact short price format (e.g. 1k, 10k, 1.5M, 1B)
+short-price-format: false
+use-short-prices-in-gui: false
+
+# Menu opened by /ah: main, category, my-items, expired, history, or deleted
+default-menu: "main"
+
+# All purchases use Vault. Sellers receive the full listing price.
+
+# Queue seller earnings until the seller joins. When false, Vault is asked to
+# credit offline sellers immediately and the durable queue is kept as fallback.
+only-give-money-on-join: false
+
+# Delay queued payouts after the seller is online so synced Vault providers can load.
+delay-money-give-seconds: 3
+
+# ──────────────────────────────────────────────────────────────────────────────
+# EXPIRATION & RETENTION
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Duration in seconds before an active market listing expires and moves to the expired recovery queue
+# Default: 86400 seconds (24 hours)
+item-expire-time: 86400
+
+# Duration in seconds an expired item stays in the recovery queue before moving to deleted archives
+# Default: 604800 seconds (7 days)
+item-deletion-time: 604800
+
+# ──────────────────────────────────────────────────────────────────────────────
+# LISTING LIMITS & PERMISSIONS
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Default maximum number of concurrent active listings a player can have on the market
+# Permissions:
+#   friendlycore.auctions.limit.<number> - Set custom listing capacity (e.g. limit.10 for 10 listings)
+#   friendlycore.auctions.limit.bypass   - Remove listing limits completely
+default-listing-limit: 1
+
+# ──────────────────────────────────────────────────────────────────────────────
+# CONFIRMATION MENUS & INTERACTION
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Require players to confirm their purchase in a confirmation GUI before finalizing transactions
+auction-purchase-confirmation: true
+
+# Allow players to shift-click or toggle off purchase confirmation screens
+allow-confirmation-skipping: false
+
+# Require a confirmation GUI when players list an item with /ah sell
+auction-listing-confirmation: false
+
+# Display server-wide global purchase/sale history instead of only the player's personal history
+show-global-history: false
+
+# Keep expired listings in My Items when false; use a separate Expired Items menu when true
+separate-expired-items: false
+
+# Maximum history rows loaded per view (-1 for unlimited)
+max-history-length: -1
+
+# AxAuctions-compatible display patterns
+timer-format: 1
+date-format: "yyyy/MM/dd HH:mm:ss"
+
+# Minimum delay between auction GUI actions, matching AxAuctions' duplicate-click guard
+gui-refresh-cooldown-milliseconds: 100
+
+# Kept for configuration compatibility; FriendlyCore uses its shared bounded async executor
+gui-loading-threads: 2
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SEARCH & INPUT SETTINGS
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Input mode for market search: SIGN, ANVIL, or CHAT
+# Default: sign
+search-mode: "sign"
+
+# Completely disable sign GUI input (falls back to chat if true)
+disable-sign-input: false
+
+# ──────────────────────────────────────────────────────────────────────────────
+# DATA INTEGRITY & ANTI-EXPLOIT LIMITS
+# ──────────────────────────────────────────────────────────────────────────────
+# Maximum serialized NBT data size in bytes allowed for listed items.
+# Protects the server from oversized book data, complex NBT crash items, and save stalls.
+content-limit-bytes:
+  item: 5000
+  shulker: 20000
+  bundle: 20000
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ITEM BLACKLIST
+# ──────────────────────────────────────────────────────────────────────────────
+# AxAuctions-compatible item-builder rules. Every defined field in a rule must match.
+# Names support exact, prefix (name*), suffix (*name), and contains (*name*) matching.
+blacklist-items:
+  - custom-model-data: 100
+    material: BARRIER
+    name: "*Some custom item*"
+  - custom-model-data: 150
+    material: BARRIER
+    name: "*Another custom item*"
+
+# Optional FriendlyCore extensions for broad material/name/lore blocking.
+blacklist:
+  materials: []
+  names: []
+  lores: []

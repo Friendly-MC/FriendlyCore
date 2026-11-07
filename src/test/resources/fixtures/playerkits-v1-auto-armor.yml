@@ -1,0 +1,28 @@
+Kits:
+  legacy:
+    cooldown: '3600'
+    one_time: 'true'
+    auto_armor: 'true'
+    Items:
+      '1':
+        id: DIAMOND_BOOTS
+        amount: '2'
+        preview_slot: '5'
+      '2':
+        id: SHIELD
+        amount: '16'
+        offhand: 'true'
+      '3':
+        id: CARVED_PUMPKIN
+        amount: '1'
+        equipment_slot: helmet
+      '4':
+        id: ELYTRA
+        amount: 1
+  explicit_without_auto_armor:
+    auto_armor: false
+    Items:
+      '1':
+        id: STONE
+        amount: '3'
+        equipment-slot: chestplate

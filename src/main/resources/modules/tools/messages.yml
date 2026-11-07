@@ -1,0 +1,26 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                        ✦ TOOLS MODULE LOCALIZATION ✦                         ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# General chat prefix for tools module messages
+prefix: "<gradient:#6EDBFF:#A7F3FF><bold>⛏ ᴛᴏᴏʟѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# TOOL COMMAND & ACTION NOTIFICATIONS
+# Placeholders: %type%, %player%, %seconds%
+# ──────────────────────────────────────────────────────────────────────────────
+given-drill: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɢɪᴠᴇɴ <color:#8DE969>%type% 3x3 ᴅʀɪʟʟ</color> ᴛᴏ <color:#E7B85C>%player%</color>."
+given-chopper: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɢɪᴠᴇɴ <color:#8DE969>%type% ᴛʀᴇᴇ ᴄʜᴏᴘᴘᴇʀ</color> ᴛᴏ <color:#E7B85C>%player%</color>."
+cooldown: "<gradient:#FFD166:#FFB347><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴜѕᴇ ᴛʜᴀᴛ ᴛᴏᴏʟ ғᴏʀ <color:#E7B85C>%seconds%ѕ<color:#D8D0C3>."
+no-permission: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴘᴇʀᴍɪѕѕɪᴏɴ ᴛᴏ ᴜѕᴇ ᴛʜɪѕ ᴄᴜѕᴛᴏᴍ ᴛᴏᴏʟ."
+
+# ──────────────────────────────────────────────────────────────────────────────
+# COMMAND, GUI AND ADMIN MESSAGES
+# ──────────────────────────────────────────────────────────────────────────────
+usage-tools-give: "Usage: /tools give <player> <drill|chopper> <material>"
+usage-tools-give-3: "&cUsage: /tools give <player> <drill|chopper> <material>"
+invalid-material: "&cInvalid material: %input%"
+tool-type-must-be-drill-or: "&cTool type must be 'drill' or 'chopper'."
+usage-tools-give-2: "<red>Usage: /tools [give <player> <drill|chopper> <material>]"

@@ -1,0 +1,33 @@
+# ######################################################
+#           FriendlyCore - Homes Sound Effects         #
+# ######################################################
+
+# When an error occurs
+error:
+  sound: ENTITY_VILLAGER_NO
+  volume: 1.0
+  pitch: 1.0
+
+# When opening the home GUI
+ui-open:
+  sound: BLOCK_NOTE_BLOCK_PLING
+  volume: 1.0
+  pitch: 1.0
+
+# When clicking a button in the UI
+ui-click:
+  sound: UI_BUTTON_CLICK
+  volume: 1.0
+  pitch: 1.0
+
+# When successfully teleported
+teleported:
+  sound: BLOCK_NOTE_BLOCK_PLING
+  volume: 1.0
+  pitch: 1.0
+
+# Warmup countdown tick sound
+timer:
+  sound: BLOCK_NOTE_BLOCK_PLING
+  volume: 1.0
+  pitch: 2.0

@@ -1,0 +1,45 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                     ✦ TEAMS - CONFIRMATION MENU GUI ✦                        ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+inventory:
+  title: '&0⏵ Team | Confirm: %reason%'
+  disposition:
+  - '---b-c'
+
+values:
+  kick-reason: Kick %player%
+  create-reason: Create new team
+  set-tag-reason: 'Set tag: %tag%'
+  leave-reason: Quit your team
+  delete-ally: Break alliance?
+items:
+  confirm:
+    name: '&#87EA7CConfirm'
+    lore:
+    - '&8ᴛᴇᴀᴍs'
+    - ''
+    - '&#87EA7CInformation'
+    - '&#87EA7C| &fClick to confirm the action.'
+    - ''
+    - '&e♯ Click &f to Continue'
+    material: LIME_STAINED_GLASS_PANE
+    actions:
+      left-click: confirm
+    symbol: c
+  cancel:
+    name: '&#EA5A5ACancel'
+    lore:
+    - '&8ᴛᴇᴀᴍs'
+    - ''
+    - '&#EA5A5AInformation'
+    - '&#EA5A5A| &fClick to confirm the action.'
+    - ''
+    - '&e♯ Click &f to Continue'
+    material: RED_STAINED_GLASS_PANE
+    actions:
+      left-click: cancel
+    symbol: b
+version: 0

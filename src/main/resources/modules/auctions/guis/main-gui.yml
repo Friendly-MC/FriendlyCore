@@ -1,0 +1,90 @@
+title: "ᴀᴜᴄᴛɪᴏɴs ({current_page}/{max_page})"
+rows: 6
+page-size: 45
+auto-update-ticks: -1
+
+items:
+  back:
+    name: "#E63A35ʙᴀᴄᴋ"
+    lore:
+      - "&fClick to go to the previous page"
+    material: "ARROW"
+    slot: 45
+    actions:
+      - "[PAGE] previous"
+    sound: click
+
+  filler:
+    name: " "
+    material: "BLACK_STAINED_GLASS_PANE"
+    slot: [46, 52]
+
+  sort:
+    name: "#E63A35sᴏʀᴛ"
+    material: "CAULDRON"
+    selected_color: "#E63A35"
+    unselected_color: "&f"
+    bullet_icon: "▪ "
+    slot: 47
+    actions:
+      - "[SORTING]"
+    sound: click
+
+  filter:
+    name: "#E63A35ғɪʟᴛᴇʀ"
+    material: "HOPPER"
+    slot: 48
+    lore:
+      - "&8▪ &7Category: &f%selected_category%"
+      - ""
+      - "&fClick to select category"
+    actions:
+      - "[MENU] category"
+    sound: click
+
+  main:
+    name: "#E63A35ᴀᴜᴄᴛɪᴏɴs"
+    lore:
+      - "&fClick to refresh"
+    material: "MAP"
+    slot: 49
+    actions:
+      - "[REFRESH]"
+    sound: click
+
+  search:
+    name: "#E63A35sᴇᴀʀᴄʜ"
+    material: "OAK_SIGN"
+    slot: 50
+    lore:
+      - "&8▪ &7Filter: &f%search%"
+      - ""
+      - "&fClick to search"
+      - "&fShift-click to clear"
+    actions:
+      - "[SEARCH]"
+    sound: click
+
+  your_items:
+    name: "#E63A35ʏᴏᴜʀ ɪᴛᴇᴍs"
+    material: "CHEST"
+    slot: 51
+    lore:
+      - "&8▪ &7Listed: &f%sell_count%/%sell_limit%"
+      - "&8▪ &7Sold: &f%items_sold% &8($%money_made%)"
+      - "&8▪ &7Bought: &f%items_purchased% &8($%money_spent%)"
+      - ""
+      - "&fClick to view your items"
+    actions:
+      - "[MENU] my-items"
+    sound: click
+
+  next:
+    name: "#E63A35ɴᴇxᴛ"
+    lore:
+      - "&fClick to go to the next page"
+    material: "ARROW"
+    slot: 53
+    actions:
+      - "[PAGE] next"
+    sound: click

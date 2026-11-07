@@ -1,0 +1,75 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                       ✦ TEAMS - MAILBOX MENU GUI ✦                           ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+inventory:
+  title: '&0⏵ Team | MailBox [%page% %total%]'
+  disposition:
+  - '*'
+  - '*'
+  - '*'
+  - p---b---n
+  rows: 4
+values:
+  team-invite-material: PLAYER_HEAD
+  ally-invite-title: '&#5CFC66%player% Proposed Alliance'
+  team-invite-title: '&#5CFC66%player% Invited You'
+  ally-invite-material: PLAYER_HEAD
+  team-invite-lore:
+  - '&#5CFC66%date%'
+  - '&fLeft Click to &#5CFC66accept the invite.'
+  - '&fRight Click to &cdecline the invite.'
+  ally-invite-lore:
+  - '&#5CFC66%date%'
+  - '&fLeft Click to &#5CFC66accept the invite.'
+  - '&fRight Click to &cdecline the invite.'
+items:
+  blank:
+    name: '&e'
+    material: BLACK_STAINED_GLASS_PANE
+    symbol: '-'
+  back:
+    name: '&#EA2F2FBack'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#EA2F2FInformation'
+    - '&#EA2F2F| &fClick on this item to'
+    - '&#EA2F2F| &fgo back to the main menu.'
+    - ''
+    - '&e♯ Click &f to Continue'       
+    material: globe_banner_pattern
+    actions:
+      left-click: go_back
+    symbol: b
+  next-page:
+    name: '&#63E781Next Page'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#63E781Information'
+    - '&#63E781| &fClick here to head'
+    - '&#63E781| &fto the next page.'
+    - ''
+    - '&e♯ Click &f to Continue'   
+    material: LIME_STAINED_GLASS_PANE
+    actions:
+      left-click: to_next_page
+    symbol: n
+  previous-page:
+    name: '&#E13E3EPrevious Page'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#E13E3EInformation'
+    - '&#E13E3E| &fClick on this item to'
+    - '&#E13E3E| &fnavigate to the previous page.'
+    - ''
+    - '&e♯ Click &f to Continue'   
+    material: RED_STAINED_GLASS_PANE
+    actions:
+      left-click: to_previous_page
+    symbol: p
+version: 0

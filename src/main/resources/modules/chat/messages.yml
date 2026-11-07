@@ -1,0 +1,100 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                     ✦ FRIENDLY CORE - CHAT MESSAGES ✦                        ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# GENERAL SYSTEM MESSAGES
+# ──────────────────────────────────────────────────────────────────────────────
+general:
+  no-permission: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴘᴇʀᴍɪѕѕɪᴏɴ ᴛᴏ ᴇxᴇᴄᴜᴛᴇ ᴛʜɪѕ ᴄᴏᴍᴍᴀɴᴅ."
+  player-not-found: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘʟᴀʏᴇʀ <color:#E7B85C>%player%</color> ᴡᴀѕ ɴᴏᴛ ғᴏᴜɴᴅ ᴏɴʟɪɴᴇ."
+  player-only: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛʜɪѕ ᴄᴏᴍᴍᴀɴᴅ ᴄᴀɴ ᴏɴʟʏ ʙᴇ ᴜѕᴇᴅ ʙʏ ᴘʟᴀʏᴇʀѕ."
+  usage: "<gradient:#FFD166:#FFB347><bold>⚠ ᴜѕᴀɢᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>/%usage%"
+  error: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴀɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ ᴡʜɪʟᴇ ᴘʀᴏᴄᴇѕѕɪɴɢ ʏᴏᴜʀ ʀᴇǫᴜᴇѕᴛ."
+  reload-success: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴄʜᴀᴛ ᴄᴏɴғɪɢᴜʀᴀᴛɪᴏɴ ᴀɴᴅ ғɪʟᴛᴇʀѕ ʀᴇʟᴏᴀᴅᴇᴅ ѕᴜᴄᴄᴇѕѕғᴜʟʟʏ!"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ITEM & INVENTORY PREVIEW RENDERS
+# ──────────────────────────────────────────────────────────────────────────────
+renders:
+  item-expired: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛʜᴇ ʀᴇǫᴜᴇѕᴛᴇᴅ ɪɴᴠᴇɴᴛᴏʀʏ/ɪᴛᴇᴍ ᴘʀᴇᴠɪᴇᴡ ʜᴀѕ ᴇxᴘɪʀᴇᴅ."
+  no-item-in-hand: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ѕʜᴏᴡ ᴀɪʀ ɪɴ ᴄʜᴀᴛ!"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# CHAT PING & MENTION NOTIFICATIONS
+# ──────────────────────────────────────────────────────────────────────────────
+chat-ping:
+  disabled: "<gradient:#FFD166:#FFB347><bold>✦ ᴄʜᴀᴛ ᴘɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴡɪʟʟ ɴᴏ ʟᴏɴɢᴇʀ ʀᴇᴄᴇɪᴠᴇ ᴍᴇɴᴛɪᴏɴ ᴘɪɴɢѕ/ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴѕ."
+  enabled: "<gradient:#7BD88F:#B9FBC0><bold>✦ ᴄʜᴀᴛ ᴘɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴡɪʟʟ ɴᴏᴡ ʀᴇᴄᴇɪᴠᴇ ᴍᴇɴᴛɪᴏɴ ᴘɪɴɢѕ/ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴѕ."
+
+# ──────────────────────────────────────────────────────────────────────────────
+# PUBLIC CHAT VISIBILITY TOGGLE (/chattoggle)
+# ──────────────────────────────────────────────────────────────────────────────
+chat-toggle:
+  no-chatting: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴄʜᴀᴛ ᴡʜɪʟᴇ ʏᴏᴜ ʜᴀᴠᴇ ᴘᴜʙʟɪᴄ ᴄʜᴀᴛ ᴛᴏɢɢʟᴇᴅ ᴏғғ!"
+  disabled: "<gradient:#FFD166:#FFB347><bold>✦ ᴄʜᴀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴡɪʟʟ ɴᴏ ʟᴏɴɢᴇʀ ѕᴇᴇ ᴘᴜʙʟɪᴄ ᴄʜᴀᴛ."
+  enabled: "<gradient:#7BD88F:#B9FBC0><bold>✦ ᴄʜᴀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴡɪʟʟ ɴᴏᴡ ѕᴇᴇ ᴘᴜʙʟɪᴄ ᴄʜᴀᴛ ᴀɢᴀɪɴ."
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SERVER-WIDE CHAT MUTING (/mutechat)
+# ──────────────────────────────────────────────────────────────────────────────
+chat-mute:
+  message-cancelled: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴄʜᴀᴛ ᴡʜɪʟᴇ ѕᴇʀᴠᴇʀ ᴄʜᴀᴛ ɪѕ ᴍᴜᴛᴇᴅ!"
+  muted: "<gradient:#FFD166:#FFB347><bold>✦ ᴄʜᴀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ʜᴀᴠᴇ ᴍᴜᴛᴇᴅ ѕᴇʀᴠᴇʀ ᴄʜᴀᴛ."
+  un-muted: "<gradient:#7BD88F:#B9FBC0><bold>✦ ᴄʜᴀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ʜᴀᴠᴇ ᴜɴᴍᴜᴛᴇᴅ ѕᴇʀᴠᴇʀ ᴄʜᴀᴛ."
+  mute-broadcast: "<newline><gradient:#FF4D5A:#FF9A9A><bold>🛡 ѕᴇʀᴠᴇʀ ᴄʜᴀᴛ ᴍᴜᴛᴇᴅ</bold></gradient><newline><color:#D8D0C3>ᴄʜᴀᴛ ʜᴀѕ ʙᴇᴇɴ ᴍᴜᴛᴇᴅ ʙʏ <color:#E7B85C>%player%</color>.<newline>"
+  un-mute-broadcast: "<newline><gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴇʀᴠᴇʀ ᴄʜᴀᴛ ᴜɴᴍᴜᴛᴇᴅ</bold></gradient><newline><color:#D8D0C3>ᴄʜᴀᴛ ʜᴀѕ ʙᴇᴇɴ ᴜɴᴍᴜᴛᴇᴅ ʙʏ <color:#E7B85C>%player%</color>.<newline>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# CHAT CLEAR BROADCAST (/clearchat)
+# ──────────────────────────────────────────────────────────────────────────────
+chat-clear:
+  broadcast: "<newline><gradient:#00d2ff:#3a7bd5><bold>✦ ᴄʜᴀᴛ ᴄʟᴇᴀʀᴇᴅ</bold></gradient><newline><color:#D8D0C3>ᴄʜᴀᴛ ʜᴀѕ ʙᴇᴇɴ ᴄʟᴇᴀʀᴇᴅ ʙʏ <color:#E7B85C>%player%</color>.<newline>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# FILTER VIOLATIONS & COOLDOWN NOTICES
+# ──────────────────────────────────────────────────────────────────────────────
+chat-filter:
+  cooldown: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘʟᴇᴀѕᴇ ᴡᴀɪᴛ <color:#E7B85C>%seconds%ѕ</color> ʙᴇғᴏʀᴇ ѕᴇɴᴅɪɴɢ ᴀɴᴏᴛʜᴇʀ ᴍᴇѕѕᴀɢᴇ."
+  similar: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘʟᴇᴀѕᴇ ᴀᴠᴏɪᴅ ʀᴇᴘᴇᴀᴛɪɴɢ ᴛʜᴇ ѕᴀᴍᴇ ᴏʀ ѕɪᴍɪʟᴀʀ ᴍᴇѕѕᴀɢᴇ!"
+  filtered: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜʀ ᴍᴇѕѕᴀɢᴇ ᴡᴀѕ ᴄᴀɴᴄᴇʟʟᴇᴅ ᴅᴜᴇ ᴛᴏ ᴘʀᴏʜɪʙɪᴛᴇᴅ ᴄᴏɴᴛᴇɴᴛ."
+  message-too-long: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜʀ ᴍᴇѕѕᴀɢᴇ ɪѕ ᴛᴏᴏ ʟᴏɴɢ ᴀɴᴅ ᴡᴀѕ ᴄᴀɴᴄᴇʟʟᴇᴅ."
+  message-empty: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘʟᴇᴀѕᴇ ᴇɴᴛᴇʀ ᴀ ᴍᴇѕѕᴀɢᴇ ᴛᴏ ѕᴇɴᴅ."
+  chars-flood: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘʟᴇᴀѕᴇ ᴀᴠᴏɪᴅ ѕᴘᴀᴍᴍɪɴɢ ʀᴇᴘᴇᴛɪᴛɪᴠᴇ ᴄʜᴀʀᴀᴄᴛᴇʀѕ!"
+  staff-alert: "<dark_gray>[<gradient:#FF4D5A:#FF9A9A><bold>ғɪʟᴛᴇʀ</bold></gradient>]</dark_gray> <color:#E7B85C>%player%</color> <dark_gray>»</dark_gray> <color:#FF9A9A>%message%</color> <dark_gray>(<color:#E7B85C>ᴘᴏɪɴᴛѕ: %points%</color>)</dark_gray>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# PRIVATE MESSAGING & SOCIAL SPY (/msg, /tell, /r, /spymsg)
+# ──────────────────────────────────────────────────────────────────────────────
+private-messages:
+  self: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ѕᴇɴᴅ ᴘʀɪᴠᴀᴛᴇ ᴍᴇѕѕᴀɢᴇѕ ᴛᴏ ʏᴏᴜʀѕᴇʟғ!"
+  target-closed: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#E7B85C>%player%</color> <color:#D8D0C3>ʜᴀѕ ᴅɪѕᴀʙʟᴇᴅ ᴘʀɪᴠᴀᴛᴇ ᴍᴇѕѕᴀɢᴇѕ."
+  target-ignored-you: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴍᴇѕѕᴀɢᴇ <color:#E7B85C>%player%</color>."
+  no-reply-target: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ʜᴀᴠᴇ ɴᴏ ᴏɴᴇ ᴛᴏ ʀᴇᴘʟʏ ᴛᴏ."
+  spying-enabled: "<gradient:#7BD88F:#B9FBC0><bold>👁 ѕᴘʏ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴏᴄɪᴀʟ ѕᴘʏ <color:#7BD88F>ᴇɴᴀʙʟᴇᴅ</color>. ʏᴏᴜ ᴀʀᴇ ɴᴏᴡ ᴍᴏɴɪᴛᴏʀɪɴɢ ᴘʀɪᴠᴀᴛᴇ ᴍᴇѕѕᴀɢᴇѕ."
+  spying-disabled: "<gradient:#FFD166:#FFB347><bold>👁 ѕᴘʏ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴏᴄɪᴀʟ ѕᴘʏ <color:#FFD166>ᴅɪѕᴀʙʟᴇᴅ</color>."
+
+# ──────────────────────────────────────────────────────────────────────────────
+# PLAYER IGNORE MANAGEMENT (/ignore, /ignoreall)
+# ──────────────────────────────────────────────────────────────────────────────
+ignore:
+  already-ignored: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ɪɢɴᴏʀɪɴɢ <color:#E7B85C>%player%</color>!"
+  cannot-ignore-self: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ɪɢɴᴏʀᴇ ʏᴏᴜʀѕᴇʟғ!"
+  cannot-ignore-staff: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ɪɢɴᴏʀᴇ ѕᴛᴀғғ ᴍᴇᴍʙᴇʀѕ!"
+  ignored-success: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴀʀᴇ ɴᴏᴡ ɪɢɴᴏʀɪɴɢ <color:#E7B85C>%player%</color>."
+  unignored-success: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ʜᴀᴠᴇ ᴜɴɪɢɴᴏʀᴇᴅ <color:#E7B85C>%player%</color>."
+  not-ignored: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ɪɢɴᴏʀɪɴɢ <color:#E7B85C>%player%</color>!"
+  ignore-all-enabled: "<gradient:#FFD166:#FFB347><bold>✦ ɪɢɴᴏʀᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴀʀᴇ ɴᴏᴡ ɪɢɴᴏʀɪɴɢ ᴘʀɪᴠᴀᴛᴇ ᴍᴇѕѕᴀɢᴇѕ ғʀᴏᴍ ᴇᴠᴇʀʏᴏɴᴇ."
+  ignore-all-disabled: "<gradient:#7BD88F:#B9FBC0><bold>✦ ɪɢɴᴏʀᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴ ɴᴏᴡ ʀᴇᴄᴇɪᴠᴇ ᴘʀɪᴠᴀᴛᴇ ᴍᴇѕѕᴀɢᴇѕ ᴀɢᴀɪɴ."
+  unignore-all-success: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ʜᴀᴠᴇ ᴄʟᴇᴀʀᴇᴅ ʏᴏᴜʀ ɪɢɴᴏʀᴇ ʟɪѕᴛ."
+  unignore-all-empty: "<gradient:#FFD166:#FFB347><bold>✦ ɪɢɴᴏʀᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜʀ ɪɢɴᴏʀᴇ ʟɪѕᴛ ɪѕ ᴀʟʀᴇᴀᴅʏ ᴇᴍᴘᴛʏ."
+
+# ──────────────────────────────────────────────────────────────────────────────
+# STAFF CHAT COMMUNICATIONS (/staffchat, /sc)
+# ──────────────────────────────────────────────────────────────────────────────
+staff-chat:
+  toggled-on: "<gradient:#7BD88F:#B9FBC0><bold>🛡 ѕᴛᴀғғ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴛᴀғғ ᴄʜᴀᴛ ᴛᴏɢɢʟᴇᴅ <color:#7BD88F>ᴏɴ</color>. ᴀʟʟ ʏᴏᴜʀ ᴍᴇѕѕᴀɢᴇѕ ᴡɪʟʟ ʙᴇ ѕᴇɴᴛ ᴛᴏ ѕᴛᴀғғ."
+  toggled-off: "<gradient:#FFD166:#FFB347><bold>🛡 ѕᴛᴀғғ</bold></gradient> <dark_gray>» <color:#D8D0C3>ѕᴛᴀғғ ᴄʜᴀᴛ ᴛᴏɢɢʟᴇᴅ <color:#FFD166>ᴏғғ</color>."
+  no-message: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘʟᴇᴀѕᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴍᴇѕѕᴀɢᴇ ғᴏʀ ѕᴛᴀғғ ᴄʜᴀᴛ."

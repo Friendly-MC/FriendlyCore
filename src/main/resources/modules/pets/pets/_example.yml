@@ -1,0 +1,70 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                       ✦ PET TEMPLATE CONFIGURATION ✦                         ║
+# ║                  Example Reference for Custom Pet Creation                   ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+# NOTE: The pet identifier matches the file name without extension (e.g. tiger.yml -> ID 'tiger').
+# Files prefixed with an underscore (like _example.yml) are ignored during startup.
+
+# Display name of the pet (Supports MiniMessage, Hex colors, and legacy color codes)
+name: "&6Tiger"
+# Optional shorter menu/nameplate label. Omit it to preserve name and its colors.
+# display-name: "&6Tiger"
+
+# Brief lore description displayed in GUI tooltips
+description: "&8&oDeals bonus melee damage to enemies"
+
+# Feature bullet points displayed under the Effects section in the pet menu
+effects-description:
+  - "&8» &8Gives a &a+15%&8 bonus to melee damage"
+
+# Active pet effects and trigger conditions
+# Available triggers: static, spawn_pet, melee_attack, bow_attack, take_damage, mine_block
+effects:
+  - id: damage_multiplier
+    args:
+      multiplier: 1.15
+    triggers:
+      - melee_attack
+
+# Runtime conditions required for passive effects to trigger
+conditions: [ ]
+
+# Prerequisites required for a player to activate and summon this pet
+activate-conditions: [ ]
+
+# Floating companion entity skin (Base64 skull value or item:MATERIAL)
+# Optional native animated companion: entity-type: ALLAY or BLAZE.
+# Omit entity-type (or use DISPLAY) to keep the head/item renderer.
+# Native defaults: entity-scale: 0.5, entity-y-offset: -1.35.
+# entity-y-offset is measured from the owner's standing eye height (feet + 1.62).
+# Scale/height overrides also work on head/item pets; see config.yml for pair-spacing.
+# Native pets retain vanilla idle animations; AI, gravity and interactions are disabled.
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTA5NWZjYzFlM2Q3Y2JkMzUwZjE5YjM4OTQ5OGFiOGJiOTZjNjVhZDE4NWQzNDU5MjA2N2E3ZDAzM2FjNDhkZSJ9fX0="
+
+# Item representation displayed inside pet GUI menus
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTA5NWZjYzFlM2Q3Y2JkMzUwZjE5YjM4OTQ5OGFiOGJiOTZjNjVhZDE4NWQzNDU5MjA2N2E3ZDAzM2FjNDhkZSJ9fX0=
+
+# Physical consumable spawn egg configuration
+spawn-egg:
+  # Whether physical spawn egg items exist for this pet
+  enabled: true
+  # Base item material and visual flags
+  item: blaze_spawn_egg unbreaking:1 hide_enchants
+  name: "&6Tiger&f Pet Spawn Egg"
+  lore:
+    - ""
+    - "&8&oPlace on the ground to"
+    - "&8&ounlock the &r&6Tiger&8&o pet!"
+  # Crafting recipe options
+  craftable: false
+  recipe: [ ]
+  # Whether players can withdraw an active pet back into a physical spawn egg
+  withdrawable: true
+  # Economy withdrawal fee configuration
+  withdraw-price:
+    enabled: false
+    type: coins
+    value: 0
+    display: "Free"

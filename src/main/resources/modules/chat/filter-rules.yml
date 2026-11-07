@@ -1,0 +1,52 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                           ✦ FILTER RULES ✦                                   ║
+# ║  Blacklisted words and custom regex patterns with infraction points          ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# WORD FILTER CATEGORIES
+# ──────────────────────────────────────────────────────────────────────────────
+# Each category defines a list of blacklisted words and the points assigned per violation
+rules:
+  swearing:
+    points: 3
+    words:
+      - fuck
+      - cock
+      - dickhead
+      - dick
+      - moron
+      - shit
+      - penis
+      - bitch
+      - ass
+      - cunt
+      - bastard
+      - dumbass
+      - stfu
+      - wanker
+  racism:
+    points: 10
+    words:
+      - nigga
+      - nigger
+      - retard
+      - faggot
+      - chink
+      - kike
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ADVANCED PATTERNS & REGULAR EXPRESSIONS
+# ──────────────────────────────────────────────────────────────────────────────
+# Advanced regex matching for prohibited Unicode symbols, hateful glyphs, and character groups
+advanced:
+  unicode:
+    points: 10
+    regexes:
+      - "[\u5350\u534D]" # Swastika symbols
+  currency:
+    points: 1
+    regexes:
+      - "[$\u17DB]" # $ and \u17DB (Khmer riel)

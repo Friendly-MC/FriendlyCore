@@ -1,0 +1,138 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                         ✦ PVP MODULE LOCALIZATION ✦                          ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# Global message prefix used for PVP notifications
+prefix: "<gradient:#FF4D5A:#FF9A9A><bold>⚔ ᴄᴏᴍʙᴀᴛ</bold></gradient> <dark_gray>•</dark_gray> "
+
+# ──────────────────────────────────────────────────────────────────────────────
+# COMBAT TAGGING & LOGOUT NOTIFICATIONS
+# ──────────────────────────────────────────────────────────────────────────────
+combat:
+  tagged: "<color:#D8D0C3>ʏᴏᴜ ᴀʀᴇ ɴᴏᴡ ɪɴ ᴄᴏᴍʙᴀᴛ ᴡɪᴛʜ <color:#E7B85C>%opponent%</color>! <color:#FF4D5A>ᴅᴏ ɴᴏᴛ ʟᴏɢ ᴏᴜᴛ!</color></color>"
+  untagged: "<color:#8DE969>✔ ʏᴏᴜ ᴀʀᴇ ɴᴏ ʟᴏɴɢᴇʀ ɪɴ ᴄᴏᴍʙᴀᴛ. ʏᴏᴜ ᴍᴀʏ ɴᴏᴡ sᴀғᴇʟʏ ʟᴏɢ ᴏᴜᴛ.</color>"
+  actionbar: "&fCombat: #FF0000%time%s"
+  bossbar: "<gradient:#FF4D5A:#FF9A9A><bold>⚔ ᴄᴏᴍʙᴀᴛ</bold></gradient> <dark_gray>•</dark_gray> <white>%time%s</white> <dark_gray>(vs <color:#E7B85C>%opponent%</color>)</dark_gray>"
+  command-blocked: "<color:#FF4D5A>✘ ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴡʜɪʟᴇ ɪɴ ᴄᴏᴍʙᴀᴛ!</color>"
+  fly-disabled: "<color:#FF4D5A>✘ ғʟɪɢʜᴛ ʜᴀs ʙᴇᴇɴ ᴅɪsᴀʙʟᴇᴅ ᴅᴜᴇ ᴛᴏ ᴄᴏᴍʙᴀᴛ!</color>"
+  elytra-disabled: "<color:#FF4D5A>✘ ᴇʟʏᴛʀᴀ ɢʟɪᴅɪɴɢ ɪs ᴅɪsᴀʙʟᴇᴅ ᴡʜɪʟᴇ ɪɴ ᴄᴏᴍʙᴀᴛ!</color>"
+  combat-logged-broadcast: "<color:#FF4D5A>☠ <color:#E7B85C>%player%</color> ʟᴏɢɢᴇᴅ ᴏᴜᴛ ᴡʜɪʟᴇ ɪɴ ᴄᴏᴍʙᴀᴛ ᴀɴᴅ ᴡᴀs sʟᴀɪɴ!</color>"
+  npc-spawned-broadcast: "<color:#FF4D5A>⚠ <color:#E7B85C>%player%</color> ʟᴏɢɢᴇᴅ ᴏᴜᴛ ɪɴ ᴄᴏᴍʙᴀᴛ! ᴀ ᴄᴏᴍʙᴀᴛ ʟᴏɢɢᴇʀ ɴᴘᴄ ʜᴀs ʙᴇᴇɴ sᴘᴀᴡɴᴇᴅ!</color>"
+  npc-slain-broadcast: "<color:#FF4D5A>☠ <color:#E7B85C>%player%'s</color> ᴄᴏᴍʙᴀᴛ ʟᴏɢɢᴇʀ ɴᴘᴄ ᴡᴀs sʟᴀɪɴ ʙʏ <white>%killer%</white>!</color>"
+  npc-died-broadcast: "<color:#FF4D5A>☠ <color:#E7B85C>%player%'s</color> ᴄᴏᴍʙᴀᴛ ʟᴏɢɢᴇʀ ɴᴘᴄ ᴡᴀs ᴋɪʟʟᴇᴅ!</color>"
+  npc-rejoined: "<color:#8DE969>✔ ʏᴏᴜ ʀᴇᴊᴏɪɴᴇᴅ ᴀɴᴅ ʀᴇᴛᴜʀɴᴇᴅ ᴛᴏ ʏᴏᴜʀ ᴄᴏᴍʙᴀᴛ ʟᴏɢɢᴇʀ ɴᴘᴄ!</color>"
+  slain-while-offline: "<color:#FF4D5A>☠ ʏᴏᴜʀ ᴄᴏᴍʙᴀᴛ ʟᴏɢɢᴇʀ ɴᴘᴄ ᴡᴀs sʟᴀɪɴ ᴡʜɪʟᴇ ʏᴏᴜ ᴡᴇʀᴇ ᴏғғʟɪɴᴇ!</color>"
+  status-in-combat: "<color:#D8D0C3>ʏᴏᴜ ᴀʀᴇ ᴄᴜʀʀᴇɴᴛʟʏ ɪɴ ᴄᴏᴍʙᴀᴛ ғᴏʀ <color:#FF4D5A>%time%s</color>.</color>"
+  status-safe: "<color:#8DE969>✔ ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴄᴜʀʀᴇɴᴛʟʏ ɪɴ ᴄᴏᴍʙᴀᴛ.</color>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# NEWBIE PROTECTION NOTIFICATIONS
+# ──────────────────────────────────────────────────────────────────────────────
+newbie:
+  bossbar: "<gradient:#7BD88F:#B9FBC0><bold>✦ ɴᴇᴡʙɪᴇ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ</bold></gradient> <dark_gray>•</dark_gray> <white>%time% remaining</white>"
+  granted: "<color:#8DE969>✦ ɴᴇᴡʙɪᴇ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ᴇɴᴀʙʟᴇᴅ ғᴏʀ <color:#E7B85C>%time%s</color>. ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴅᴀᴍᴀɢᴇ ᴏʀ ʙᴇ ᴅᴀᴍᴀɢᴇᴅ ʙʏ ᴘʟᴀʏᴇʀs.</color>"
+  expired: "<color:#E7B85C>⚠ ʏᴏᴜʀ ɴᴇᴡʙɪᴇ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ʜᴀs ᴇxᴘɪʀᴇᴅ. ᴘᴠᴘ ɪs ɴᴏᴡ ᴀᴄᴛɪᴠᴇ!</color>"
+  disabled-self: "<color:#E7B85C>⚠ ʏᴏᴜ ʜᴀᴠᴇ ᴅɪsᴀʙʟᴇᴅ ʏᴏᴜʀ ɴᴇᴡʙɪᴇ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ.</color>"
+  disabled-attack: "<color:#FF4D5A>⚠ ʏᴏᴜʀ ɴᴇᴡʙɪᴇ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ᴡᴀs ʀᴇᴍᴏᴠᴇᴅ ʙᴇᴄᴀᴜsᴇ ʏᴏᴜ ᴀᴛᴛᴀᴄᴋᴇᴅ ᴀ ᴘʟᴀʏᴇʀ!</color>"
+  blocked-attack-them: "<color:#FF4D5A>✘ ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴀᴛᴛᴀᴄᴋ ᴏᴛʜᴇʀ ᴘʟᴀʏᴇʀs ᴡʜɪʟᴇ ʏᴏᴜ ʜᴀᴠᴇ ɴᴇᴡʙɪᴇ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ!</color>"
+  blocked-attack-by-them: "<color:#FF4D5A>✘ <color:#E7B85C>%target%</color> ʜᴀs ɴᴇᴡʙɪᴇ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ᴀɴᴅ ᴄᴀɴɴᴏᴛ ʙᴇ ʜᴀʀᴍᴇᴅ!</color>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SAFEZONE BARRIERS & BORDER WARNINGS
+# ──────────────────────────────────────────────────────────────────────────────
+barriers:
+  knockback-title: "<gradient:#FF4D5A:#FF9A9A><bold>⛔ sᴛᴏᴘ!</bold></gradient>"
+  knockback-subtitle: "<color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴇɴᴛᴇʀ ᴀ sᴀғᴇᴢᴏɴᴇ ᴡʜɪʟᴇ ɪɴ ᴄᴏᴍʙᴀᴛ!</color>"
+  knockback-message: "<color:#FF4D5A>✘ ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴇɴᴛᴇʀ ᴀ sᴀғᴇᴢᴏɴᴇ ᴡʜɪʟᴇ ᴄᴏᴍʙᴀᴛ ᴛᴀɢɢᴇᴅ!</color>"
+  crystal-anchor-blocked-safezone: "<color:#FF4D5A>✘ ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴜsᴇ ᴇɴᴅ ᴄʀʏsᴛᴀls ᴏʀ ʀᴇsᴘᴀᴡɴ ᴀɴᴄʜᴏʀs ɪɴ ᴏʀ ɴᴇᴀʀ ᴀ sᴀғᴇᴢᴏɴᴇ!</color>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ITEM COOLDOWNS & COMBAT RESTRICTIONS
+# ──────────────────────────────────────────────────────────────────────────────
+cooldowns:
+  item-on-cooldown: "<color:#FF4D5A>⏳ <color:#E7B85C>%item%</color> ɪs ᴏɴ ᴄᴏᴏʟᴅᴏᴡɴ! ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ <white>%time%s</white>.</color>"
+
+blocker:
+  item-blocked: "<color:#FF4D5A>✘ <color:#E7B85C>%item%</color> ɪs ʙʟᴏᴄᴋᴇᴅ ᴡʜɪʟᴇ ɪɴ ᴄᴏᴍʙᴀᴛ!</color>"
+  potion-blocked: "<color:#FF4D5A>✘ <color:#E7B85C>%potion%</color> ᴘᴏᴛɪᴏɴs ᴀʀᴇ ʙʟᴏᴄᴋᴇᴅ!</color>"
+  totem-blocked: "<color:#FF4D5A>✘ ᴛᴏᴛᴇᴍs ᴀʀᴇ ʙʟᴏᴄᴋᴇᴅ ᴡʜɪʟᴇ ɪɴ ᴄᴏᴍʙᴀᴛ!</color>"
+  eat-blocked: "<color:#FF4D5A>✘ ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴇᴀᴛ ᴡʜɪʟᴇ ɪɴ ᴄᴏᴍʙᴀᴛ!</color>"
+  firework-blocked: "<color:#FF4D5A>✘ ғɪʀᴇᴡᴏʀᴋs ᴀʀᴇ ʙʟᴏᴄᴋᴇᴅ ᴡʜɪʟᴇ ɪɴ ᴄᴏᴍʙᴀᴛ!</color>"
+  firework-power-limited: "<color:#FF4D5A>✘ ғɪʀᴇᴡᴏʀᴋ ᴘᴏᴡᴇʀ <white>%power%</white> ɪs ᴛᴏᴏ ʜɪɢʜ ɪɴ ᴄᴏᴍʙᴀᴛ!</color>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ECONOMY REWARDS & PENALTIES
+# ──────────────────────────────────────────────────────────────────────────────
+economy:
+  refund-failed: "<color:#FF4D5A>A PvP payment failed and %amount% could not be refunded. Please contact an administrator.</color>"
+  kill-reward: "<color:#8DE969>✔ ʏᴏᴜ ᴇᴀʀɴᴇᴅ <color:#E7B85C>%amount%</color> ғᴏʀ ᴅᴇғᴇᴀᴛɪɴɢ <white>%victim%</white>!</color>"
+  kill-steal-killer: "<color:#8DE969>✔ ʏᴏᴜ sᴛᴏʟᴇ <color:#E7B85C>%amount%</color> ғʀᴏᴍ <white>%victim%</white>!</color>"
+  kill-steal-victim: "<color:#FF4D5A>✘ ʏᴏᴜ ʟᴏsᴛ <color:#E7B85C>%amount%</color> sᴛᴏʟᴇɴ ʙʏ <white>%killer%</white>!</color>"
+  death-penalty: "<color:#FF4D5A>✘ ʏᴏᴜ ʟᴏsᴛ <color:#E7B85C>%amount%</color> ᴜᴘᴏɴ ᴅᴇᴀᴛʜ.</color>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ADMIN BYPASS CONTROLS
+# ──────────────────────────────────────────────────────────────────────────────
+pvp:
+  bypass-enabled-self: "<color:#8DE969>✔ ʏᴏᴜ ʜᴀᴠᴇ <bold>ᴇɴᴀʙʟᴇᴅ</bold> ᴄᴏᴍʙᴀᴛ ᴛᴀɢ ʙʏᴘᴀss.</color>"
+  bypass-disabled-self: "<color:#E7B85C>⚠ ʏᴏᴜ ʜᴀᴠᴇ <bold>ᴅɪsᴀʙʟᴇᴅ</bold> ᴄᴏᴍʙᴀᴛ ᴛᴀɢ ʙʏᴘᴀss.</color>"
+  bypass-enabled-other: "<color:#8DE969>✔ ᴇɴᴀʙʟᴇᴅ ᴄᴏᴍʙᴀᴛ ᴛᴀɢ ʙʏᴘᴀss ғᴏʀ <color:#E7B85C>%target%</color>.</color>"
+  bypass-disabled-other: "<color:#E7B85C>⚠ ᴅɪsᴀʙʟᴇᴅ ᴄᴏᴍʙᴀᴛ ᴛᴀɢ ʙʏᴘᴀss ғᴏʀ <color:#E7B85C>%target%</color>.</color>"
+  untagged-other: "<color:#8DE969>✔ sᴜᴄᴄᴇssғᴜʟʟʏ ᴜɴᴛᴀɢɢᴇᴅ <color:#E7B85C>%target%</color> ғʀᴏᴍ ᴄᴏᴍʙᴀᴛ.</color>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# PVP TOGGLE STATUS (/pvp toggle)
+# ──────────────────────────────────────────────────────────────────────────────
+pvp-toggle:
+  combat-blocked: "<color:#FF4D5A>✘ You cannot disable PvP while in combat.</color>"
+  enabled: "<color:#8DE969>✔ ʏᴏᴜʀ ᴘᴠᴘ ᴍᴏᴅᴇ ɪs ɴᴏᴡ <bold>ᴇɴᴀʙʟᴇᴅ</bold>.</color>"
+  disabled: "<color:#E7B85C>⚠ ʏᴏᴜʀ ᴘᴠᴘ ᴍᴏᴅᴇ ɪs ɴᴏᴡ <bold>ᴅɪsᴀʙʟᴇᴅ</bold>.</color>"
+  cooldown: "<color:#FF4D5A>⏳ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ <white>%time%s</white> ʙᴇғᴏʀᴇ ᴛᴏɢɢʟɪɴɢ ᴘᴠᴘ ᴀɢᴀɪɴ.</color>"
+  target-pvp-disabled: "<color:#FF4D5A>✘ <color:#E7B85C>%target%</color> ʜᴀs ᴘᴠᴘ ᴅɪsᴀʙʟᴇᴅ!</color>"
+  self-pvp-disabled: "<color:#FF4D5A>✘ ʏᴏᴜ ʜᴀᴠᴇ ᴘᴠᴘ ᴅɪsᴀʙʟᴇᴅ! ᴜsᴇ <white>/pvp toggle</white> ᴛᴏ ᴇɴᴀʙʟᴇ.</color>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# KILL & DEATH TITLE ANNOUNCEMENTS
+# ──────────────────────────────────────────────────────────────────────────────
+titles:
+  kill-title: "<gradient:#7BD88F:#B9FBC0><bold>✔ ᴠɪᴄᴛᴏʀʏ</bold></gradient>"
+  kill-subtitle: "<color:#D8D0C3>ᴅᴇғᴇᴀᴛᴇᴅ <color:#E7B85C>%victim% <dark_gray>• <color:#D8D0C3>ѕᴛʀᴇᴀᴋ: <color:#8DE969>%streak%"
+  death-title: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ʏᴏᴜ ᴅɪᴇᴅ</bold></gradient>"
+  death-subtitle: "<color:#D8D0C3>ѕʟᴀɪɴ ʙʏ <color:#E7B85C>%killer%"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# GENERAL COMMANDS & PVP STATS
+# ──────────────────────────────────────────────────────────────────────────────
+commands:
+  no-permission: "<color:#FF4D5A>✘ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴘᴇʀᴍɪssɪᴏɴ ᴛᴏ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.</color>"
+  player-not-found: "<color:#FF4D5A>✘ ᴘʟᴀʏᴇʀ ɴᴏᴛ ғᴏᴜɴᴅ ᴏʀ ᴏғғʟɪɴᴇ.</color>"
+  reloaded: "<color:#8DE969>✔ ᴘᴠᴘ ᴍᴏᴅᴜʟᴇ ᴄᴏɴғɪɢᴜʀᴀᴛɪᴏɴ ʀᴇʟᴏᴀᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ.</color>"
+  stats-header: "<gradient:#FF4D5A:#FF9A9A><bold>⚔ ᴘᴠᴘ sᴛᴀᴛɪsᴛɪᴄs</bold></gradient> <dark_gray>•</dark_gray> <white>%player%</white>"
+  stats-kills: "<color:#D8D0C3>ᴛᴏᴛᴀʟ ᴋɪʟʟs: <color:#8DE969>%kills%</color></color>"
+  stats-deaths: "<color:#D8D0C3>ᴛᴏᴛᴀʟ ᴅᴇᴀᴛʜs: <color:#FF4D5A>%deaths%</color></color>"
+  stats-kd: "<color:#D8D0C3>ᴋ/ᴅ ʀᴀᴛɪᴏ: <color:#E7B85C>%kd%</color></color>"
+  stats-streak: "<color:#D8D0C3>ᴄᴜʀʀᴇɴᴛ sᴛʀᴇᴀᴋ: <color:#8DE969>%streak%</color> <dark_gray>(ʜɪɢʜᴇsᴛ: <color:#E7B85C>%highest_streak%</color>)</dark_gray></color>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# COMMAND, GUI AND ADMIN MESSAGES
+# ──────────────────────────────────────────────────────────────────────────────
+usage-combattag-untag: "Usage: /combattag untag <player>"
+usage-combattag-player-untag: "Usage: /combattag [player|untag]"
+this-command-can-only-be-executed: "This command can only be executed by players."
+usage-pvp-newbie-off: "Usage: /pvp newbie [off]"
+usage-pvp-stats: "Usage: /pvp stats <player>"
+usage-pvp-tag: "Usage: /pvp tag <player>"
+usage-pvp-bypass-on-off: "Usage: /pvp bypass <player> [on|off]"
+usage-pvp-untag: "Usage: /pvp untag <player>"
+pvp-commands: "<gradient:#FF4D5A:#FF9A9A><bold>⚔ PvP Commands</bold></gradient>"
+pvp-toggle-toggle-your-pvp-combat: "<color:#E7B85C>/pvp toggle</color> <dark_gray>-</dark_gray> <gray>Toggle your PvP combat mode</gray>"
+pvp-stats-player-view-pvp-statistics: "<color:#E7B85C>/pvp stats [player]</color> <dark_gray>-</dark_gray> <gray>View PvP statistics</gray>"
+pvp-tag-player-check-combat-status: "<color:#E7B85C>/pvp tag [player]</color> <dark_gray>-</dark_gray> <gray>Check combat status</gray>"
+pvp-newbie-off-check-or-disable: "<color:#E7B85C>/pvp newbie [off]</color> <dark_gray>-</dark_gray> <gray>Check or disable newbie protection</gray>"
+pvp-untag-remove-combat-tag-from: "<color:#E7B85C>/pvp untag <player></color> <dark_gray>-</dark_gray> <gray>Remove combat tag from a player</gray>"
+pvp-bypass-player-on-off-toggle: "<color:#E7B85C>/pvp bypass [player] [on|off]</color> <dark_gray>-</dark_gray> <gray>Toggle admin combat tag bypass</gray>"
+pvp-reload-reload-pvp-configuration: "<color:#E7B85C>/pvp reload</color> <dark_gray>-</dark_gray> <gray>Reload PvP configuration</gray>"
+friendly-fire-is-disabled-for-your: "<red>Friendly fire is disabled for your team!"
+friendly-fire-is-disabled-between-allied: "<red>Friendly fire is disabled between allied teams!"

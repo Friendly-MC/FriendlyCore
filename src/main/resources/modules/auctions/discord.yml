@@ -1,0 +1,39 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                     ✦ AUCTIONS DISCORD INTEGRATION ✦                         ║
+# ║                   Discord Webhook Marketplace Broadcasts                     ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# WEBHOOK CONFIGURATION
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Enable or disable Discord webhook announcements for auction events
+enabled: false
+
+# Discord channel webhook URL (e.g. https://discord.com/api/webhooks/...)
+webhook-url: ""
+
+# ──────────────────────────────────────────────────────────────────────────────
+# EVENT EMBED TEMPLATES
+# ──────────────────────────────────────────────────────────────────────────────
+# Available placeholders:
+#   {seller} - Display name of the seller
+#   {buyer}  - Display name of the purchaser
+#   {item}   - Formatted item name
+#   {price}  - Listing sale price
+events:
+  # Sent when a new item is listed for sale on the market
+  auction-start:
+    enabled: true
+    title: "📦 New Auction Listed!"
+    description: "**{seller}** has listed **{item}** for **{price}** in the auction house."
+    color: "#00FF88"
+
+  # Sent when an item listing is successfully purchased
+  auction-buy:
+    enabled: true
+    title: "💰 Auction Sold!"
+    description: "**{buyer}** bought **{item}** from **{seller}** for **{price}**."
+    color: "#FFAA00"

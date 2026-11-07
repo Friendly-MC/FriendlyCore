@@ -1,0 +1,67 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                     ✦ TEAMS - LEADERBOARD MENU GUI ✦                         ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+inventory:
+  title: '&0⏵ Teams | Leaderboard [%page% %max%]'
+  disposition: '----l----'
+  rows: 6
+settings:
+  max-loaded-elements: 32
+items:
+  blank:
+    name: '&e'
+    material: BLACK_STAINED_GLASS_PANE
+  team:
+    name: '&#67F17B%rank% &7⏵ &f%team_tag%'
+    lore:
+    - '&7'
+    - '&a🔥 &fScore: &#67F17B%team_score%&7'
+    - '&a'
+    - '&a✔ &fName: &#67F17B%team_name%'
+    - '&e💰 &fBank: &#67F17B%team_bank%$&7'
+    - '&#F50C0C🗡 &fKills: &#67F17B%team_kills%'
+    - '&6☠ &fDeaths: &#67F17B%team_deaths%'
+    - '&9👪 &fMembers: &#67F17B%team_members%'
+    material: PLAYER_HEAD
+  next-page:
+    name: '&#63E781Next Page'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#63E781Information'
+    - '&#63E781| &fClick here to head'
+    - '&#63E781| &fto the next page.'
+    - ''
+    - '&e♯ Click &f to Continue'
+    material: LIME_STAINED_GLASS_PANE
+    actions:
+      left-click: next
+  previous-page:
+    name: '&#E13E3EPrevious Page'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#E13E3EInformation'
+    - '&#E13E3E| &fClick on this item to'
+    - '&#E13E3E| &fnavigate to the previous page.'
+    - ''
+    - '&e♯ Click &f to Continue'
+    material: RED_STAINED_GLASS_PANE
+    actions:
+      left-click: previous
+  back:
+    name: '&#EA2F2FBack'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#EA2F2FInformation'
+    - '&#EA2F2F| &fClick on this item to'
+    - '&#EA2F2F| &fgo back to the main menu.'
+    - ''
+    - '&e♯ Click &f to Continue'
+    material: globe_banner_pattern
+    actions:
+      left-click: goback

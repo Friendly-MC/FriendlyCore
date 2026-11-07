@@ -1,0 +1,465 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                         ✦ TPA MODULE LOCALIZATION ✦                          ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SYSTEM & CONFIGURATION NOTIFICATIONS
+# Placeholders: %ms%
+# ──────────────────────────────────────────────────────────────────────────────
+config-reload:
+  enabled: true
+  type: chat
+  message: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴄᴏɴғɪɢᴜʀᴀᴛɪᴏɴ ʀᴇʟᴏᴀᴅᴇᴅ ɪɴ <color:#E7B85C>%ms%ᴍѕ<color:#D8D0C3>."
+  sound:
+    enabled: true
+    key: entity.experience_orb.pickup
+    volume: 1.0
+    pitch: 1.0
+
+# ──────────────────────────────────────────────────────────────────────────────
+# TELEPORT REQUEST DISPATCH & INCOMING PROMPTS
+# Placeholders: %player%
+# ──────────────────────────────────────────────────────────────────────────────
+user-not-found:
+  enabled: true
+  type: chat
+  message: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘʟᴀʏᴇʀ <color:#E7B85C>%player% <color:#D8D0C3>ᴡᴀѕ ɴᴏᴛ ғᴏᴜɴᴅ ᴏɴʟɪɴᴇ."
+  sound:
+    enabled: true
+    key: entity.villager.no
+    volume: 1.0
+    pitch: 1.0
+
+self-teleport:
+  enabled: true
+  type: chat
+  message: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ѕᴇɴᴅ ᴀ ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛ ᴛᴏ ʏᴏᴜʀѕᴇʟғ."
+  sound:
+    enabled: true
+    key: entity.villager.no
+    volume: 1.0
+    pitch: 1.0
+
+non-valid-request:
+  enabled: true
+  type: chat
+  message: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴀ ᴘᴇɴᴅɪɴɢ ʀᴇǫᴜᴇѕᴛ."
+  sound:
+    enabled: true
+    key: entity.villager.no
+    volume: 1.0
+    pitch: 1.0
+
+teleport-countdown:
+  enabled: true
+  type: chat
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛɪɴɢ ɪɴ <color:#E7B85C>%time%<color:#D8D0C3>. ᴅᴏɴ''ᴛ ᴍᴏᴠᴇ."
+  sound:
+    enabled: false
+
+teleport-countdown-actionbar:
+  enabled: true
+  type: actionbar
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛɪɴɢ ɪɴ <color:#E7B85C>%time%<color:#D8D0C3>. ᴅᴏɴ''ᴛ ᴍᴏᴠᴇ."
+  sound:
+    enabled: false
+
+teleport-cancelled:
+  enabled: true
+  type: chat
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘᴇɴᴅɪɴɢ ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛ ᴄᴀɴᴄᴇʟᴇᴅ."
+  sound:
+    enabled: false
+
+no-requests-found:
+  enabled: true
+  type: chat
+  message: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴀɴʏ ᴘᴇɴᴅɪɴɢ ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛѕ."
+  sound:
+    enabled: false
+
+accepted-teleport:
+  enabled: true
+  type: chat
+  message: "<gradient:#FF6B6B:#E7B85C><bold>ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#8DE969>ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛ ᴀᴄᴄᴇᴘᴛᴇᴅ."
+  sound:
+    enabled: true
+    key: entity.villager.yes
+    volume: 1.0
+    pitch: 1.0
+
+receive-request:
+  enabled: true
+  type: chat
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#6EDBFF>%player%<color:#D8D0C3> ᴡᴀɴᴛѕ ᴛᴏ ᴛᴇʟᴇᴘᴏʀᴛ ᴛᴏ ʏᴏᴜ.\n<dark_gray>   ➜ <click:run_command:'/tpaccept %player%'><hover:show_text:'<color:#8DE969>ᴀᴄᴄᴇᴘᴛ ᴛʜɪѕ ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛ'><color:#8DE969><bold>[✔ ᴀᴄᴄᴇᴘᴛ]</bold></color></hover></click> <dark_gray>• <click:run_command:'/tpdeny %player%'><hover:show_text:'<color:#FF4D5A>ᴅᴇɴʏ ᴛʜɪѕ ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛ'><color:#FF4D5A><bold>[✘ ᴅᴇɴʏ]</bold></color></hover></click>"
+  sound:
+    enabled: true
+    key: entity.experience_orb.pickup
+    volume: 1.0
+    pitch: 1.0
+
+receive-here-request:
+  enabled: true
+  type: chat
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#6EDBFF>%player%<color:#D8D0C3> ᴡᴀɴᴛѕ ʏᴏᴜ ᴛᴏ ᴛᴇʟᴇᴘᴏʀᴛ ᴛᴏ ᴛʜᴇᴍ.\n<dark_gray>   ➜ <click:run_command:'/tpaccept %player%'><hover:show_text:'<color:#8DE969>ᴀᴄᴄᴇᴘᴛ ᴛʜɪѕ ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛ'><color:#8DE969><bold>[✔ ᴀᴄᴄᴇᴘᴛ]</bold></color></hover></click> <dark_gray>• <click:run_command:'/tpdeny %player%'><hover:show_text:'<color:#FF4D5A>ᴅᴇɴʏ ᴛʜɪѕ ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛ'><color:#FF4D5A><bold>[✘ ᴅᴇɴʏ]</bold></color></hover></click>"
+  sound:
+    enabled: true
+    key: entity.experience_orb.pickup
+    volume: 1.0
+    pitch: 1.0
+
+sent-request:
+  enabled: true
+  type: chat
+  message: "<gradient:#FF6B6B:#E7B85C><bold>ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʀᴇǫᴜᴇѕᴛ ѕᴇɴᴛ ᴛᴏ <color:#E7B85C>%player%<color:#D8D0C3>."
+  sound:
+    enabled: true
+    key: entity.experience_orb.pickup
+    volume: 1.0
+    pitch: 1.0
+
+sent-here-request:
+  enabled: true
+  type: chat
+  message: "<gradient:#FF6B6B:#E7B85C><bold>ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴘᴀ-ʜᴇʀᴇ ʀᴇǫᴜᴇѕᴛ ѕᴇɴᴛ ᴛᴏ <color:#E7B85C>%player%<color:#D8D0C3>."
+  sound:
+    enabled: true
+    key: entity.experience_orb.pickup
+    volume: 1.0
+    pitch: 1.0
+
+cancelled-request:
+  enabled: true
+  type: chat
+  message: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#FF4D5A>ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛ ᴅᴇɴɪᴇᴅ."
+  sound:
+    enabled: false
+
+cancelled-request-sender:
+  enabled: true
+  type: chat
+  message: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#E7B85C>%player% <color:#D8D0C3>ᴅᴇɴɪᴇᴅ ʏᴏᴜʀ ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛ."
+  sound:
+    enabled: false
+
+# ──────────────────────────────────────────────────────────────────────────────
+# PREFERENCE TOGGLES & AUTOMATION
+# Placeholders: %player%
+# ──────────────────────────────────────────────────────────────────────────────
+tpa-toggle-on:
+  enabled: true
+  type: chat
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴀʀᴇ ɴᴏᴡ ᴀᴜᴛᴏ-ᴀᴄᴄᴇᴘᴛɪɴɢ ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛѕ."
+  sound:
+    enabled: true
+    key: entity.villager.yes
+    volume: 1.0
+    pitch: 1.0
+
+tpa-toggle-off:
+  enabled: true
+  type: chat
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴀʀᴇ ɴᴏ ʟᴏɴɢᴇʀ ᴀᴜᴛᴏ-ᴀᴄᴄᴇᴘᴛɪɴɢ ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛѕ."
+  sound:
+    enabled: true
+    key: entity.villager.yes
+    volume: 1.0
+    pitch: 1.0
+
+block-tpa-request:
+  enabled: true
+  type: chat
+  message: "<gradient:#FFD166:#FFE8A3><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#E7B85C>%player% <color:#D8D0C3>ɪѕ ɴᴏᴛ ᴀᴄᴄᴇᴘᴛɪɴɢ ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛѕ."
+  sound:
+    enabled: true
+    key: entity.villager.no
+    volume: 1.0
+    pitch: 1.0
+
+tpa-here-toggle-on:
+  enabled: true
+  type: chat
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴀʀᴇ ɴᴏᴡ ᴀᴄᴄᴇᴘᴛɪɴɢ ᴛᴘᴀ-ʜᴇʀᴇ ʀᴇǫᴜᴇѕᴛѕ."
+  sound:
+    enabled: true
+    key: entity.villager.yes
+    volume: 1.0
+    pitch: 1.0
+
+tpa-here-toggle-off:
+  enabled: true
+  type: chat
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴀʀᴇ ɴᴏ ʟᴏɴɢᴇʀ ᴀᴄᴄᴇᴘᴛɪɴɢ ᴛᴘᴀ-ʜᴇʀᴇ ʀᴇǫᴜᴇѕᴛѕ."
+  sound:
+    enabled: true
+    key: entity.villager.yes
+    volume: 1.0
+    pitch: 1.0
+
+block-tphere-request:
+  enabled: true
+  type: chat
+  message: "<gradient:#FFD166:#FFE8A3><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#E7B85C>%player% <color:#D8D0C3>ɪѕ ɴᴏᴛ ᴀᴄᴄᴇᴘᴛɪɴɢ ᴛᴘᴀ-ʜᴇʀᴇ ʀᴇǫᴜᴇѕᴛѕ."
+  sound:
+    enabled: true
+    key: entity.villager.no
+    volume: 1.0
+    pitch: 1.0
+
+request-cooldown:
+  enabled: true
+  type: chat
+  message: "<gradient:#FFD166:#FFB347><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴜѕᴇ ᴛʜᴀᴛ ᴄᴏᴍᴍᴀɴᴅ ғᴏʀ <color:#E7B85C>%seconds%ѕ<color:#D8D0C3>."
+  sound:
+    enabled: true
+    key: entity.villager.no
+    volume: 1.0
+    pitch: 1.0
+
+cancel-requests:
+  enabled: true
+  type: chat
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴀʟʟ ᴘᴇɴᴅɪɴɢ ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛѕ ᴡᴇʀᴇ ᴄᴀɴᴄᴇʟʟᴇᴅ."
+  sound:
+    enabled: false
+
+cancel-requests-failed:
+  enabled: true
+  type: chat
+  message: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ʜᴀᴠᴇ ɴᴏ ᴀᴄᴛɪᴠᴇ ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛѕ ᴛᴏ ᴄᴀɴᴄᴇʟ."
+  sound:
+    enabled: true
+    key: entity.villager.no
+    volume: 1.0
+    pitch: 1.0
+
+tpa-gui-toggle-on:
+  enabled: true
+  type: chat
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴄᴏɴғɪʀᴍᴀᴛɪᴏɴ ɢᴜɪ <color:#8DE969>ᴇɴᴀʙʟᴇᴅ<color:#D8D0C3>."
+  sound:
+    enabled: true
+    key: entity.villager.yes
+    volume: 1.0
+    pitch: 1.0
+
+tpa-gui-toggle-off:
+  enabled: true
+  type: chat
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴄᴏɴғɪʀᴍᴀᴛɪᴏɴ ɢᴜɪ <color:#FF4D5A>ᴅɪѕᴀʙʟᴇᴅ<color:#D8D0C3>."
+  sound:
+    enabled: true
+    key: entity.villager.yes
+    volume: 1.0
+    pitch: 1.0
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ACTIONBAR NOTIFICATIONS
+# Placeholders: %player%
+# ──────────────────────────────────────────────────────────────────────────────
+tpa-request-sender-actionbar:
+  enabled: true
+  type: actionbar
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʀᴇǫᴜᴇѕᴛ ѕᴇɴᴛ ᴛᴏ <color:#E7B85C>%player%<color:#D8D0C3>."
+  sound:
+    enabled: false
+
+tpa-here-request-sender-actionbar:
+  enabled: true
+  type: actionbar
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴘᴀ-ʜᴇʀᴇ ʀᴇǫᴜᴇѕᴛ ѕᴇɴᴛ ᴛᴏ <color:#E7B85C>%player%<color:#D8D0C3>."
+  sound:
+    enabled: false
+
+tpa-request-requester-actionbar:
+  enabled: true
+  type: actionbar
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#6EDBFF>%player%<color:#D8D0C3> ᴡᴀɴᴛѕ ᴛᴏ ᴛᴇʟᴇᴘᴏʀᴛ ᴛᴏ ʏᴏᴜ."
+  sound:
+    enabled: false
+
+tpa-here-request-requester-actionbar:
+  enabled: true
+  type: actionbar
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#6EDBFF>%player%<color:#D8D0C3> ᴡᴀɴᴛѕ ʏᴏᴜ ᴛᴏ ᴛᴇʟᴇᴘᴏʀᴛ ᴛᴏ ᴛʜᴇᴍ."
+  sound:
+    enabled: false
+
+teleport-movement-cancellation-action-bar:
+  enabled: true
+  type: actionbar
+  message: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛ ᴄᴀɴᴄᴇʟᴇᴅ ʙᴇᴄᴀᴜѕᴇ ʏᴏᴜ ᴍᴏᴠᴇᴅ."
+  sound:
+    enabled: false
+
+tpa-toggle-on-actionbar:
+  enabled: true
+  type: actionbar
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#8DE969>ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛѕ ᴇɴᴀʙʟᴇᴅ."
+  sound:
+    enabled: false
+
+tpa-here-toggle-on-actionbar:
+  enabled: true
+  type: actionbar
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#8DE969>ᴛᴘᴀ-ʜᴇʀᴇ ʀᴇǫᴜᴇѕᴛѕ ᴇɴᴀʙʟᴇᴅ."
+  sound:
+    enabled: false
+
+tpa-toggle-off-actionbar:
+  enabled: true
+  type: actionbar
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#FF4D5A>ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛѕ ᴅɪѕᴀʙʟᴇᴅ."
+  sound:
+    enabled: false
+
+tpa-here-toggle-off-actionbar:
+  enabled: true
+  type: actionbar
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#FF4D5A>ᴛᴘᴀ-ʜᴇʀᴇ ʀᴇǫᴜᴇѕᴛѕ ᴅɪѕᴀʙʟᴇᴅ."
+  sound:
+    enabled: false
+
+tpa-here-accept:
+  enabled: true
+  type: chat
+  message: "<gradient:#FF6B6B:#E7B85C><bold>ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#E7B85C>%player% <color:#D8D0C3>ᴀᴄᴄᴇᴘᴛᴇᴅ ʏᴏᴜʀ ᴛᴘᴀ-ʜᴇʀᴇ ʀᴇǫᴜᴇѕᴛ."
+  sound:
+    enabled: true
+    key: entity.villager.yes
+    volume: 1.0
+    pitch: 1.0
+
+tpa-here-accept-actionbar:
+  enabled: true
+  type: actionbar
+  message: "<gradient:#FF6B6B:#E7B85C><bold>ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#E7B85C>%player% <color:#D8D0C3>ᴀᴄᴄᴇᴘᴛᴇᴅ ʏᴏᴜʀ ᴛᴘᴀ-ʜᴇʀᴇ ʀᴇǫᴜᴇѕᴛ."
+  sound:
+    enabled: false
+
+tp-auto-on:
+  enabled: true
+  type: chat
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴀʀᴇ ɴᴏᴡ ᴀᴜᴛᴏ-ᴀᴄᴄᴇᴘᴛɪɴɢ ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛѕ."
+  sound:
+    enabled: true
+    key: entity.villager.yes
+    volume: 1.0
+    pitch: 1.0
+
+tp-auto-off:
+  enabled: true
+  type: chat
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴀʀᴇ ɴᴏ ʟᴏɴɢᴇʀ ᴀᴜᴛᴏ-ᴀᴄᴄᴇᴘᴛɪɴɢ ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛѕ."
+  sound:
+    enabled: true
+    key: entity.villager.yes
+    volume: 1.0
+    pitch: 1.0
+
+tp-auto-on-action-bar:
+  enabled: true
+  type: actionbar
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#8DE969>ᴀᴜᴛᴏ-ᴛᴇʟᴇᴘᴏʀᴛ ᴇɴᴀʙʟᴇᴅ."
+  sound:
+    enabled: false
+
+tp-auto-off-action-bar:
+  enabled: true
+  type: actionbar
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#FF4D5A>ᴀᴜᴛᴏ-ᴛᴇʟᴇᴘᴏʀᴛ ᴅɪѕᴀʙʟᴇᴅ."
+  sound:
+    enabled: false
+
+# ──────────────────────────────────────────────────────────────────────────────
+# RESTRICTIONS, CHECKS & BULK OPERATIONS
+# Placeholders: %player%, %count%, %limit%
+# ──────────────────────────────────────────────────────────────────────────────
+teleport-fail-safe:
+  enabled: true
+  type: chat
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛʜᴇ ᴅᴇѕᴛɪɴᴀᴛɪᴏɴ ɪѕ ᴜɴѕᴀғᴇ. ᴛᴇʟᴇᴘᴏʀᴛ ᴄᴀɴᴄᴇʟᴇᴅ."
+  sound:
+    enabled: true
+    key: entity.villager.no
+    volume: 1.0
+    pitch: 1.0
+
+already-sent-request:
+  enabled: true
+  type: chat
+  message: "<gradient:#FFB703:#E7B85C><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴀʟʀᴇᴀᴅʏ ѕᴇɴᴛ <color:#E7B85C>%player%<color:#D8D0C3> ᴀ ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛ."
+  sound:
+    enabled: true
+    key: entity.villager.no
+    volume: 1.0
+    pitch: 1.0
+
+tphereall-success:
+  enabled: true
+  type: chat
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛɪɴɢ ᴀʟʟ ᴘʟᴀʏᴇʀѕ... <color:#E7B85C>(%count%)"
+  sound:
+    enabled: true
+    key: entity.villager.yes
+    volume: 1.0
+    pitch: 1.0
+
+force-teleported:
+  enabled: true
+  type: chat
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛɪɴɢ ᴛᴏ <color:#E7B85C>%player%<color:#D8D0C3>."
+  sound:
+    enabled: false
+
+no-players-online:
+  enabled: true
+  type: chat
+  message: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɴᴏ ᴏᴛʜᴇʀ ᴘʟᴀʏᴇʀѕ ᴀʀᴇ ᴄᴜʀʀᴇɴᴛʟʏ ᴏɴʟɪɴᴇ."
+  sound:
+    enabled: true
+    key: entity.villager.no
+    volume: 1.0
+    pitch: 1.0
+
+tpaall-sent:
+  enabled: true
+  type: chat
+  message: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛ ʀᴇǫᴜᴇѕᴛ ѕᴇɴᴛ ᴛᴏ ᴀʟʟ ᴘʟᴀʏᴇʀѕ... <color:#E7B85C>(%count%)"
+  sound:
+    enabled: true
+    key: entity.experience_orb.pickup
+    volume: 1.0
+    pitch: 1.0
+
+blacklisted-world:
+  enabled: true
+  type: chat
+  message: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛᴀᴛɪᴏɴ ɪѕ ᴅɪѕᴀʙʟᴇᴅ ɪɴ ᴛʜɪѕ ᴡᴏʀʟᴅ."
+  sound:
+    enabled: true
+    key: entity.villager.no
+    volume: 1.0
+    pitch: 1.0
+
+blacklisted-region:
+  enabled: true
+  type: chat
+  message: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛᴀᴛɪᴏɴ ɪѕ ʙʟᴏᴄᴋᴇᴅ ɪɴ ᴛʜɪѕ ʀᴇɢɪᴏɴ."
+  sound:
+    enabled: true
+    key: entity.villager.no
+    volume: 1.0
+    pitch: 1.0
+
+daily-limit-reached:
+  enabled: true
+  type: chat
+  message: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ʜᴀᴠᴇ ʀᴇᴀᴄʜᴇᴅ ʏᴏᴜʀ ᴅᴀɪʟʏ ᴛᴇʟᴇᴘᴏʀᴛ ʟɪᴍɪᴛ <dark_gray>(<color:#E7B85C>%limit%<color:#D8D0C3>)."
+  sound:
+    enabled: true
+    key: entity.villager.no
+    volume: 1.0
+    pitch: 1.0

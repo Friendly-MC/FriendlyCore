@@ -1,0 +1,117 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                          ✦ CHAT FILTER ✦                                     ║
+# ║  Anti-spam, anti-flood, similarity, and automated punishment thresholds      ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# PRIVATE MESSAGES FILTERING
+# ──────────────────────────────────────────────────────────────────────────────
+# Controls whether automated filter rules apply to private messages (/msg, /tell, /r)
+private-messages:
+  # When true, private messages bypass blacklist/content rules only.
+  # Cooldown, similarity, caps, length, and repeated-character protections remain active.
+  disable-filter: false
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SIMILARITY & REPETITION DETECTION
+# ──────────────────────────────────────────────────────────────────────────────
+# Compares newly sent messages against the player's recent chat history to block spam
+similarity-check:
+  enabled: true
+  # Similarity threshold from 0.0 to 1.0 (e.g., 0.80 = 80% character match triggers a block)
+  threshold: 0.80
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ANTI-FLOOD & CHARACTER SPAM
+# ──────────────────────────────────────────────────────────────────────────────
+# Prevents oversized messages and elongated repetitive characters (e.g. "heyyyyyy")
+anti-flood:
+  enabled: true
+  # Maximum allowed character count per chat message
+  max-length-message: 120
+  # Maximum consecutive identical characters allowed before the message is flagged
+  max-repeated-characters: 4
+  # Notify online staff members whenever a flood violation is intercepted
+  broadcast-staff: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ANTI-CAPS PROTECTION
+# ──────────────────────────────────────────────────────────────────────────────
+# Limits excessive uppercase letter usage across chat messages
+anti-caps:
+  enabled: true
+  # Maximum number of uppercase letters permitted in a single message
+  max-caps: 5
+
+# ──────────────────────────────────────────────────────────────────────────────
+# CHAT COOLDOWN (SLOWMODE)
+# ──────────────────────────────────────────────────────────────────────────────
+# Enforces a waiting period between consecutive messages from the same player
+cooldown-messages:
+  enabled: true
+  # Cooldown duration in seconds
+  seconds: 3
+
+# ──────────────────────────────────────────────────────────────────────────────
+# CHAT FILTER RULES & ACTIONS
+# ──────────────────────────────────────────────────────────────────────────────
+# Core filtering engine behavior for matched blacklist words and expressions
+chat-rules:
+  enabled: true
+  # Use stricter pattern matching (may increase CPU overhead on heavy traffic)
+  use-aggressive-regexes: false
+  # Character used to mask detected profanity when messages are censored rather than blocked
+  replace-with: "*"
+  # Completely block the message from being sent if a rule is triggered
+  cancel-message: true
+  # Dispatch an alert to staff with the violation details and current infraction points
+  alert-staff: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# DEFAULT ADVERTISEMENT & PATTERN FILTERS
+# ──────────────────────────────────────────────────────────────────────────────
+# Built-in heuristic filters for common advertisement vectors and symbols
+default-rules:
+  # Block numeric IP addresses (e.g., 192.168.1.1 or custom port notations)
+  block-ips: true
+  # Block standard web URLs (http://, https://, www)
+  block-url: true
+  # Block domain names (e.g., myserver.net, discord.gg/xyz)
+  block-domains: true
+  # Block formatted telephone numbers
+  block-phone-numbers: true
+  # Block all non-standard Unicode characters and symbols
+  block-all-unicodes: false
+
+# ──────────────────────────────────────────────────────────────────────────────
+# INFRACTION POINTS & AUTOMATED PUNISHMENTS
+# ──────────────────────────────────────────────────────────────────────────────
+# Accumulates violation points and triggers console commands when thresholds are met
+actions-and-points:
+  enabled: true
+  # Infraction points awarded per detected violation type
+  points-when-flag-ip-rule: 3
+  points-when-flag-url-rule: 3
+  points-when-flag-domain-rule: 3
+  points-when-flag-phone-rule: 3
+  points-when-flag-unicode-rule: 1
+
+  # Automatically decay and reset accumulated points after clean behavior
+  reset-points:
+    enabled: true
+    # Time in minutes since the player's last infraction before points reset to zero
+    after-last-infraction-minutes: 10
+
+  # Punishment triggers executed when a player reaches or exceeds specified point totals
+  # Supports placeholder %player% in command strings
+  actions-when-points-reached:
+    mute_1h:
+      points-required: 30
+      commands-to-execute:
+        - "mute %player% 1h Automated Chat Infraction"
+    ban_1d:
+      points-required: 60
+      commands-to-execute:
+        - "ban %player% 1d Excessive Chat Toxicity"

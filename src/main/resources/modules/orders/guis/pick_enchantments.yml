@@ -1,0 +1,43 @@
+title: "ᴏʀᴅᴇʀs » ᴘɪᴄᴋ ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛs"
+
+items:
+  back:
+    name: "#E63A35« ʙᴀᴄᴋ"
+    lore:
+      - "&7Return to previous page"
+    material: "ARROW"
+    slot: 45
+    customModelData: -1
+    sound: click
+
+  next:
+    name: "#E63A35ɴᴇxᴛ »"
+    lore:
+      - "&7Go to next page"
+    material: "ARROW"
+    slot: 53
+    customModelData: -1
+    sound: click
+
+  cancel:
+    name: "&c<b>ᴄᴀɴᴄᴇʟ</b>"
+    lore:
+      - "&7Return to item selection"
+    material: "RED_STAINED_GLASS_PANE"
+    slot: 46
+    customModelData: -1
+    sound: click
+
+  confirm:
+    name: "&a<b>ᴄᴏɴғɪʀᴍ</b>"
+    lore:
+      - "&7Proceed with selected enchants"
+    material: "LIME_STAINED_GLASS_PANE"
+    slot: 52
+    customModelData: -1
+    sound: click
+
+  filler:
+    name: " "
+    material: BLACK_STAINED_GLASS_PANE
+    slot: [47, 48, 49, 50, 51]

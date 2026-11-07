@@ -1,0 +1,13 @@
+vanilla-items:
+  listed: true
+  exempt-non-solids: true
+  exempt:
+    - BEDROCK
+    - BARRIER
+    - STRUCTURE_BLOCK
+    - STRUCTURE_VOID
+    - COMMAND_BLOCK
+    - CHAIN_COMMAND_BLOCK
+    - REPEATING_COMMAND_BLOCK
+    - JIGSAW
+    - LIGHT

@@ -1,0 +1,78 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                         ✦ NIGHT VISION MODULE ✦                              ║
+# ║            Paper, Folia, Java & Bedrock / Geyser Full Compatibility          ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Potion Effect Properties
+# ──────────────────────────────────────────────────────────────────────────────
+potion:
+  # Potion amplifier (0 = level 1, perfectly bright night vision)
+  amplifier: 0
+
+  # Whether the effect lasts infinitely without timer ticking down
+  infinite-duration: true
+
+  # Duration in ticks if infinite-duration is false (12000 ticks = 10 minutes)
+  duration-ticks: 12000
+
+  # Ambient mode reduces beacon and status effect visual intensity
+  ambient: true
+
+  # Whether potion particle bubbles are emitted (false recommended for clean view)
+  particles: false
+
+  # Whether potion status icon is displayed on HUD (false keeps HUD clean)
+  icon: false
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Bedrock & Geyser Client Optimizations
+# ──────────────────────────────────────────────────────────────────────────────
+bedrock:
+  # Automatically strip all potion particle bubbles for Bedrock clients
+  strip-particles: true
+
+  # Force ambient mode on Bedrock to avoid mobile HUD icon clutter
+  force-ambient: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Lifecycle & State Handlers
+# ──────────────────────────────────────────────────────────────────────────────
+lifecycle:
+  # Automatically re-apply Night Vision when a player respawns after death
+  reapply-on-respawn: true
+
+  # Automatically restore Night Vision if cleared by milk buckets or beacons
+  keep-on-milk: true
+
+  # Worlds where Night Vision cannot be enabled (case-insensitive)
+  disabled-worlds:
+    - "horror_world"
+    - "minigame_dark"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Sound Effects Configuration
+# ──────────────────────────────────────────────────────────────────────────────
+sounds:
+  enabled: true
+  toggle-on:
+    name: "ENTITY_PLAYER_LEVELUP"
+    volume: 1.0
+    pitch: 1.0
+  toggle-off:
+    name: "BLOCK_FIRE_EXTINGUISH"
+    volume: 1.0
+    pitch: 1.2
+  reload:
+    name: "BLOCK_ANVIL_USE"
+    volume: 1.0
+    pitch: 1.0
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Action Bar Notifications
+# ──────────────────────────────────────────────────────────────────────────────
+actionbar:
+  # Send an action bar toast notification when night vision is toggled
+  enabled: true

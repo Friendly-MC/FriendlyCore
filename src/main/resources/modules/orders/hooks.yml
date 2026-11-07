@@ -1,0 +1,15 @@
+# Shop Integration Configuration
+# Available shop plugins:
+#   - None = Default
+#   - DonutWorth
+#   - ShopGUIPlus
+#   - EconomyShopGUI
+#   - ZShop
+#   - ExcellentShop
+shop: "None"
+
+# Currency Integration Configuration
+# Available currency plugins:
+#   - Vault (Uses FriendlyCore Economy / Vault provider)
+#   - SuperMobCoins
+currency: "Vault"

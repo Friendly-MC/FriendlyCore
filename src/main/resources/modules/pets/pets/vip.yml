@@ -1,0 +1,60 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                             ✦ VIP PET ✦                                      ║
+# ║              Tier-1 Combat Companion with Essential Buffs                    ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# Display name of the VIP pet
+name: "§x§0§0§B§7§F§F§lᴠ§x§1§9§C§3§F§E§lɪ§x§3§2§C§F§F§E§lᴘ §x§6§5§E§7§F§C§lᴘ§x§7§E§F§3§F§C§lᴇ§x§9§7§F§F§F§B§lᴛ"
+
+# Lore description displayed in GUI tooltips
+description: "&7An advanced warrior pet providing enhanced speed and strength."
+
+# Effects list displayed in GUI lore
+effects-description:
+  - "&8» &7Speed II"
+  - "&8» &7Strength II"
+
+# Passive potion effects granted while this pet is active
+effects:
+  - id: potion_effect
+    args:
+      effect: SPEED
+      level: 2
+      duration: -1
+    triggers:
+      - static
+      - spawn_pet
+  - id: potion_effect
+    args:
+      effect: STRENGTH
+      level: 2
+      duration: -1
+    triggers:
+      - static
+      - spawn_pet
+
+# Floating companion skull texture and GUI menu icon
+entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmYxZmEyNWE4NzM1N2M2ODQ3MWQ4OWY2MTg1YWYwMzhlYjk5Yzk3MGE4ZGVhMDI1ZDc3MGJjNWU2NWE2OGY4NyJ9fX0="
+icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmYxZmEyNWE4NzM1N2M2ODQ3MWQ4OWY2MTg1YWYwMzhlYjk5Yzk3MGE4ZGVhMDI1ZDc3MGJjNWU2NWE2OGY4NyJ9fX0=
+
+# Trigger and activation requirements
+conditions: []
+activate-conditions: []
+
+# Physical consumable spawn egg item
+spawn-egg:
+  enabled: true
+  item: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmYxZmEyNWE4NzM1N2M2ODQ3MWQ4OWY2MTg1YWYwMzhlYjk5Yzk3MGE4ZGVhMDI1ZDc3MGJjNWU2NWE2OGY4NyJ9fX0=
+  name: "§x§0§0§B§7§F§F§lᴠ§x§1§9§C§3§F§E§lɪ§x§3§2§C§F§F§E§lᴘ §x§6§5§E§7§F§C§lᴘ§x§7§E§F§3§F§C§lᴇ§x§9§7§F§F§F§B§lᴛ"
+  lore:
+    - ""
+    - "&7Speed II"
+    - "&7Strength II"
+    - ""
+    - "&fPlace on the ground to"
+    - "&funlock the §x§0§0§B§7§F§F§lᴠ§x§1§9§C§3§F§E§lɪ§x§3§2§C§F§F§E§lᴘ §x§6§5§E§7§F§C§lᴘ§x§7§E§F§3§F§C§lᴇ§x§9§7§F§F§F§B§lᴛ"
+  craftable: false
+  recipe: []
+  withdrawable: true

@@ -1,0 +1,44 @@
+title: "ᴀᴜᴄᴛɪᴏɴs » Confirm Purchase"
+rows: 5
+type: CHEST
+
+items:
+  filler:
+    slot: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14, 17, 18, 21, 23, 26, 27, 30, 31, 32, 35, 36, 37, 38, 39, 41, 42, 43, 44]
+    material: "BLACK_STAINED_GLASS_PANE"
+    name: " "
+
+  item:
+    slot: 22
+
+  confirm:
+    slot: [10, 11, 19, 20, 28, 29]
+    material: "LIME_STAINED_GLASS_PANE"
+    name: "#00FC00ᴄᴏɴғɪʀᴍ"
+    lore:
+      - "&fClick to confirm purchase"
+      - "&7(Price: $%price%)"
+    actions:
+      - "[SOUND] ui.button.click|1|1"
+    sound: click
+
+  cancel:
+    slot: [15, 16, 24, 25, 33, 34]
+    material: "RED_STAINED_GLASS_PANE"
+    name: "#FC0000ᴄᴀɴᴄᴇʟ"
+    lore:
+      - "&fClick to return"
+    actions:
+      - "[BACK]"
+      - "[SOUND] ui.button.click|1|1"
+    sound: click
+
+  back:
+    slot: 40
+    material: "ARROW"
+    name: "#E63A35ʙᴀᴄᴋ"
+    lore:
+      - "&fClick to return"
+    actions:
+      - "[BACK]"
+    sound: click

@@ -1,0 +1,32 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                      ✦ CHAT PLACEHOLDERS ✦                                   ║
+# ║  Custom keywords replaced with interactive MiniMessage text in chat          ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# Enable or disable custom chat placeholder replacements
+enabled: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# GLOBAL CHAT PLACEHOLDERS
+# ──────────────────────────────────────────────────────────────────────────────
+# Keywords replaced globally for all players in chat with clickable links/actions
+placeholders:
+  "[discord]": "<click:open_url:'https://discord.gg/friendlycore'><hover:show_text:'<#00d2ff><b>DISCORD SERVER</b><newline><gray>Click to join our community discord!</gray>'><#5865F2><b>[Discord]</b></hover></click>"
+  "[store]": "<click:open_url:'https://store.friendlycore.net'><hover:show_text:'<#ffb300><b>SERVER STORE</b><newline><gray>Click to visit the store!</gray>'><#FFA500><b>[Store]</b></hover></click>"
+  "[vote]": "<click:run_command:'/vote'><hover:show_text:'<#00e676><b>VOTE FOR REWARDS</b><newline><gray>Click to run /vote</gray>'><#00E676><b>[Vote]</b></hover></click>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# PERMISSION-BASED PLACEHOLDERS & EMOTES
+# ──────────────────────────────────────────────────────────────────────────────
+# Shortcuts that require a specific permission node to be parsed into symbols/styling
+placeholders-with-permission:
+  heart:
+    prefix: "<3"
+    parser: "<red>❤</red>"
+    permission: "friendlycore.chat.heart"
+  star:
+    prefix: "[*]"
+    parser: "<yellow>★</yellow>"
+    permission: "friendlycore.chat.star"

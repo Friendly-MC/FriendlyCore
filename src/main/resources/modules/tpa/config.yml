@@ -1,0 +1,83 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                             ✦ TPA MODULE ✦                                   ║
+# ║             Teleportation Requests, Safety Checks & Limits                   ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# TELEPORTATION TIMINGS & SAFETY MECHANICS
+# ──────────────────────────────────────────────────────────────────────────────
+# Teleport warmup countdown in seconds before teleportation occurs (0 to disable)
+tpa-countdown-seconds: 5
+
+# Safe teleport feature: prevents players from teleport-trapping by checking
+# whether the destination is in mid-air, lava, water, void, or unsafe environments.
+safe-teleport: true
+safe-teleport-checks:
+  check-vehicle: true
+  check-nearby-entity: true
+  check-falling: true
+  check-water: true
+  check-sign: true
+
+# Whether to display a high-precision decimal countdown (e.g. 4.99s) on actionbars
+use-smooth-countdown: true
+
+# Daily teleport limit per player (-1 to disable limit)
+teleport-limitations: -1
+
+# Maximum distance in blocks player can walk before teleport warmup cancels
+allowed-walk-range: 1.0
+
+# Request cooldown in milliseconds between consecutive /tpa requests (30000ms = 30s)
+request-cooldown: 30000
+
+# ──────────────────────────────────────────────────────────────────────────────
+# REQUEST TIMEOUTS & GUI SETTINGS
+# ──────────────────────────────────────────────────────────────────────────────
+data:
+  # Timeout in seconds after which a pending TPA request automatically expires
+  clear-time: 120
+
+# Disable the confirmation GUI popup across the server (direct command execution)
+disable-tpa-gui: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# GUI DISPLAY VALUES & WORLD ICONS
+# ──────────────────────────────────────────────────────────────────────────────
+placeholders-values:
+  true: "Yes"
+  false: "No"
+
+# World display nicknames for GUI & messages
+world-nicknames:
+  world: "Overworld"
+  world_nether: "Nether"
+  world_the_end: "The End"
+
+# World icon materials in confirmation GUIs
+world-icons:
+  world: "GRASS_BLOCK"
+  world_nether: "NETHERRACK"
+  world_the_end: "END_STONE"
+
+# Worlds where teleportation is disabled
+blacklisted-worlds:
+  - "otherside"
+
+# WorldGuard regions where TPA is blocked
+world-guard:
+  blacklisted-regions: []
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SOUND EFFECTS CONFIGURATION
+# Adventure sound keys and Minecraft sound identifiers
+# ──────────────────────────────────────────────────────────────────────────────
+sounds:
+  accept-teleport: "entity.experience_orb.pickup"
+  count-down: "entity.enderman.teleport"
+  information-click: "block.tripwire.click_on"
+  error: "entity.villager.no"
+  tpa-receive: "entity.experience_orb.pickup"
+  tpaall: "entity.experience_orb.pickup"

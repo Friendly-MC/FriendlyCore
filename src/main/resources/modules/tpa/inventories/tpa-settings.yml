@@ -1,0 +1,30 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                     ✦ TPA PLAYER SETTINGS MENU ✦                             ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+teleport-setting-inventory:
+  name: "&8✦ #00d2ffᴛᴇʟᴇᴘᴏʀᴛ sᴇᴛᴛɪɴɢs &8✦"
+  rows: 3
+
+  show-inventory-icon:
+    enabled:
+      slot: 13
+      material: LIME_DYE
+      display-name: "&7Show Confirmation GUI &8» &a&lENABLED"
+      lore:
+        - "&7Opens confirmation inventory when sending"
+        - "&7or accepting a teleport request."
+        - ""
+        - "&eClick to toggle off"
+
+    disabled:
+      slot: 13
+      material: RED_DYE
+      display-name: "&7Show Confirmation GUI &8» &c&lDISABLED"
+      lore:
+        - "&7Opens confirmation inventory when sending"
+        - "&7or accepting a teleport request."
+        - ""
+        - "&eClick to toggle on"

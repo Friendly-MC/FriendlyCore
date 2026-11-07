@@ -1,0 +1,246 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                        ✦ TEAMS - BANK MENU GUI ✦                             ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+inventory:
+  title: '&0⏵ Team | Bank: $%money%'
+  disposition:
+  - ---------
+  - -abcdefg-
+  - -hijklmn-
+  - o---p----
+
+items:
+  blank:
+    name: '&e'
+    material: BLACK_STAINED_GLASS_PANE
+    symbol: '-'
+  explain:
+    name: '&#5FFC5C&lTeam Bank'
+    lore:
+    - '&8ᴛᴇᴀᴍ ʙᴀɴᴋ'
+    - ''
+    - '&#5FFC5CInformation:'
+    - '&#5FFC5C| &fTotal Bank: &#5FFC5C$%money%'
+    - '&#5FFC5C| &fExact: &#5FFC5C$%money_exact%'
+    - '&#5FFC5C| &fYour Balance: &#5FFC5C$%player_balance%'
+    - ''
+    - '&7Store and manage shared team'
+    - '&7funds for upgrades and perks.'
+    material: GOLD_BLOCK
+    actions:
+      left-click: explain
+    symbol: p
+  goback:
+    name: '&#EA2F2FBack'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#EA2F2FInformation'
+    - '&#EA2F2F| &fClick on this item to'
+    - '&#EA2F2F| &fgo back to the main menu.'
+    - ''
+    - '&e♯ Click &f to Continue'
+    material: globe_banner_pattern
+    actions:
+      left-click: go_back
+    symbol: o
+  add_1:
+    name: '&#87EA7C&lDeposit $1'
+    lore:
+    - '&8ᴛᴇᴀᴍ ʙᴀɴᴋ'
+    - ''
+    - '&#87EA7CInformation:'
+    - '&#87EA7C| &fClick to deposit &#87EA7C$1'
+    - '&#87EA7C| &finto the team bank.'
+    - ''
+    - '&e♯ Click &f to Deposit'
+    material: LIME_CANDLE
+    actions:
+      left-click: add_1
+    symbol: a
+  add_10:
+    name: '&#87EA7C&lDeposit $10'
+    lore:
+    - '&8ᴛᴇᴀᴍ ʙᴀɴᴋ'
+    - ''
+    - '&#87EA7CInformation:'
+    - '&#87EA7C| &fClick to deposit &#87EA7C$10'
+    - '&#87EA7C| &finto the team bank.'
+    - ''
+    - '&e♯ Click &f to Deposit'
+    material: LIME_CANDLE
+    actions:
+      left-click: add_10
+    symbol: b
+  add_100:
+    name: '&#87EA7C&lDeposit $100'
+    lore:
+    - '&8ᴛᴇᴀᴍ ʙᴀɴᴋ'
+    - ''
+    - '&#87EA7CInformation:'
+    - '&#87EA7C| &fClick to deposit &#87EA7C$100'
+    - '&#87EA7C| &finto the team bank.'
+    - ''
+    - '&e♯ Click &f to Deposit'
+    material: LIME_CANDLE
+    actions:
+      left-click: add_100
+    symbol: c
+  add_1000:
+    name: '&#87EA7C&lDeposit $1,000'
+    lore:
+    - '&8ᴛᴇᴀᴍ ʙᴀɴᴋ'
+    - ''
+    - '&#87EA7CInformation:'
+    - '&#87EA7C| &fClick to deposit &#87EA7C$1,000'
+    - '&#87EA7C| &finto the team bank.'
+    - ''
+    - '&e♯ Click &f to Deposit'
+    material: LIME_CANDLE
+    actions:
+      left-click: add_1000
+    symbol: d
+  add_10k:
+    name: '&#87EA7C&lDeposit $10K'
+    lore:
+    - '&8ᴛᴇᴀᴍ ʙᴀɴᴋ'
+    - ''
+    - '&#87EA7CInformation:'
+    - '&#87EA7C| &fClick to deposit &#87EA7C$10,000'
+    - '&#87EA7C| &finto the team bank.'
+    - ''
+    - '&e♯ Click &f to Deposit'
+    material: LIME_CANDLE
+    actions:
+      left-click: add_10k
+    symbol: e
+  add_100k:
+    name: '&#87EA7C&lDeposit $100K'
+    lore:
+    - '&8ᴛᴇᴀᴍ ʙᴀɴᴋ'
+    - ''
+    - '&#87EA7CInformation:'
+    - '&#87EA7C| &fClick to deposit &#87EA7C$100,000'
+    - '&#87EA7C| &finto the team bank.'
+    - ''
+    - '&e♯ Click &f to Deposit'
+    material: LIME_CANDLE
+    actions:
+      left-click: add_100k
+    symbol: f
+  add_1m:
+    name: '&#87EA7C&lDeposit $1M'
+    lore:
+    - '&8ᴛᴇᴀᴍ ʙᴀɴᴋ'
+    - ''
+    - '&#87EA7CInformation:'
+    - '&#87EA7C| &fClick to deposit &#87EA7C$1,000,000'
+    - '&#87EA7C| &finto the team bank.'
+    - ''
+    - '&e♯ Click &f to Deposit'
+    material: LIME_CANDLE
+    actions:
+      left-click: add_1m
+    symbol: g
+  take_1:
+    name: '&#F53737&lWithdraw $1'
+    lore:
+    - '&8ᴛᴇᴀᴍ ʙᴀɴᴋ'
+    - ''
+    - '&#F53737Information:'
+    - '&#F53737| &fClick to withdraw &#F53737$1'
+    - '&#F53737| &ffrom the team bank.'
+    - ''
+    - '&e♯ Click &f to Withdraw'
+    material: RED_CANDLE
+    actions:
+      left-click: take_1
+    symbol: h
+  take_10:
+    name: '&#F53737&lWithdraw $10'
+    lore:
+    - '&8ᴛᴇᴀᴍ ʙᴀɴᴋ'
+    - ''
+    - '&#F53737Information:'
+    - '&#F53737| &fClick to withdraw &#F53737$10'
+    - '&#F53737| &ffrom the team bank.'
+    - ''
+    - '&e♯ Click &f to Withdraw'
+    material: RED_CANDLE
+    actions:
+      left-click: take_10
+    symbol: i
+  take_100:
+    name: '&#F53737&lWithdraw $100'
+    lore:
+    - '&8ᴛᴇᴀᴍ ʙᴀɴᴋ'
+    - ''
+    - '&#F53737Information:'
+    - '&#F53737| &fClick to withdraw &#F53737$100'
+    - '&#F53737| &ffrom the team bank.'
+    - ''
+    - '&e♯ Click &f to Withdraw'
+    material: RED_CANDLE
+    actions:
+      left-click: take_100
+    symbol: j
+  take_1000:
+    name: '&#F53737&lWithdraw $1,000'
+    lore:
+    - '&8ᴛᴇᴀᴍ ʙᴀɴᴋ'
+    - ''
+    - '&#F53737Information:'
+    - '&#F53737| &fClick to withdraw &#F53737$1,000'
+    - '&#F53737| &ffrom the team bank.'
+    - ''
+    - '&e♯ Click &f to Withdraw'
+    material: RED_CANDLE
+    actions:
+      left-click: take_1000
+    symbol: k
+  take_10k:
+    name: '&#F53737&lWithdraw $10K'
+    lore:
+    - '&8ᴛᴇᴀᴍ ʙᴀɴᴋ'
+    - ''
+    - '&#F53737Information:'
+    - '&#F53737| &fClick to withdraw &#F53737$10,000'
+    - '&#F53737| &ffrom the team bank.'
+    - ''
+    - '&e♯ Click &f to Withdraw'
+    material: RED_CANDLE
+    actions:
+      left-click: take_10k
+    symbol: l
+  take_100k:
+    name: '&#F53737&lWithdraw $100K'
+    lore:
+    - '&8ᴛᴇᴀᴍ ʙᴀɴᴋ'
+    - ''
+    - '&#F53737Information:'
+    - '&#F53737| &fClick to withdraw &#F53737$100,000'
+    - '&#F53737| &ffrom the team bank.'
+    - ''
+    - '&e♯ Click &f to Withdraw'
+    material: RED_CANDLE
+    actions:
+      left-click: take_100k
+    symbol: m
+  take_1m:
+    name: '&#F53737&lWithdraw $1M'
+    lore:
+    - '&8ᴛᴇᴀᴍ ʙᴀɴᴋ'
+    - ''
+    - '&#F53737Information:'
+    - '&#F53737| &fClick to withdraw &#F53737$1,000,000'
+    - '&#F53737| &ffrom the team bank.'
+    - ''
+    - '&e♯ Click &f to Withdraw'
+    material: RED_CANDLE
+    actions:
+      left-click: take_1m
+    symbol: n
+version: 1

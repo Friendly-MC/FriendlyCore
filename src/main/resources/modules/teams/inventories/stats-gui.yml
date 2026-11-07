@@ -1,0 +1,144 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                     ✦ TEAMS - TEAM STATS MENU GUI ✦                          ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+inventory:
+  title: '&0⏵ Team | Statistics Menu'
+  disposition:
+  - '----s----'
+  - -vkdmpbt-
+  - '----c----'
+items:
+  blank:
+    name: '&e'
+    material: BLACK_STAINED_GLASS_PANE
+    symbol: '-'
+  kills:
+    name: '&#E13E3ETeam Kills'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#E13E3EInformation'
+    - '&#E13E3E| &fClick on this item to'
+    - '&#E13E3E| &fsee the kills of your team.'
+    - ''
+    - '&e♯ Click &f to Continue'   
+    material: DIAMOND_SWORD
+    actions:
+      left-click: kills
+    symbol: k
+  deaths:
+    name: '&#F56A0CTeam Deaths'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#F56A0CInformation'
+    - '&#F56A0C| &fClick on this item to'
+    - '&#F56A0C| &fsee the deaths of your team.'
+    - ''
+    - '&e♯ Click &f to Continue'  
+    material: SKELETON_SKULL
+    actions:
+      left-click: deaths
+    symbol: d
+  mobs-killed:
+    name: '&#31C948Teams Killed Mobs'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#31C948Information'
+    - '&#31C948| &fClick on this item to'
+    - '&#31C948| &fsee the killed mobs of your team.'
+    - ''
+    - '&e♯ Click &f to Continue'  
+    material: ZOMBIE_HEAD
+    actions:
+      left-click: mobs_killed
+    symbol: m
+  blocks-broken:
+    name: '&#4498DBTeam Broken Blocks'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#4498DBInformation'
+    - '&#4498DB| &fClick on this item to'
+    - '&#4498DB| &fsee the broken blocks of your team.'
+    - ''
+    - '&e♯ Click &f to Continue'  
+    material: DIAMOND_PICKAXE
+    actions:
+      left-click: blocks_broken
+    symbol: b
+  blocks-placed:
+    name: '&#FCD05CTeam Block Placed'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#FCD05CInformation'
+    - '&#FCD05C| &fClick on this item to'
+    - '&#FCD05C| &fsee the placed blocks of your team.'
+    - ''
+    - '&e♯ Click &f to Continue'  
+    material: DIRT
+    actions:
+      left-click: blocks_placed
+    symbol: p
+  money:
+    name: '&#5FFC5CTeam Money'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#5FFC5CInformation'
+    - '&#5FFC5C| &fClick on this item to'
+    - '&#5FFC5C| &fsee the money of your team.'
+    - ''
+    - '&e♯ Click &f to Continue'  
+    material: GOLD_INGOT
+    actions:
+      left-click: money
+    symbol: s
+  playtime:
+    name: '&#E065A7Team Playtime'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#E065A7Information'
+    - '&#E065A7| &fClick on this item to'
+    - '&#E065A7| &fsee the playtime of your team.'
+    - ''
+    - '&e♯ Click &f to Continue'  
+    material: CLOCK
+    actions:
+      left-click: playtime
+    symbol: t
+  level:
+    name: '&#9863E7Team Levels'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#9863E7Information'
+    - '&#9863E7| &fClick on this item to'
+    - '&#9863E7| &fsee the playtime of your team.'
+    - ''
+    - '&e♯ Click &f to Continue'  
+    material: experience_bottle
+    actions:
+      left-click: level
+    symbol: v
+  back:
+    name: '&#EA2F2FBack'
+    lore:
+    - '&8ᴛᴇᴀᴍ'
+    - ''
+    - '&#EA2F2FInformation'
+    - '&#EA2F2F| &fClick on this item to'
+    - '&#EA2F2F| &fgo back to the main menu.'
+    - ''
+    - '&e♯ Click &f to Continue'       
+    material: globe_banner_pattern
+    actions:
+      left-click: go_back
+    symbol: c
+version: 0

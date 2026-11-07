@@ -1,0 +1,252 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                            ✦ KITS MODULE ✦                                   ║
+# ║             Kit Definitions, Rewards, Behavior & Action Triggers             ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Global Kit Settings & Behavior
+# ──────────────────────────────────────────────────────────────────────────────
+settings:
+  # Whether items drop safely at player feet when inventory is full
+  drop-items-if-full-inventory: true
+
+  # Close the GUI inventory menu immediately after claiming a kit
+  close-inventory-on-claim: false
+
+  # Enable the interactive kit preview menu on right-click or /kit preview
+  kit-preview: true
+
+  # Require specific kit permissions before allowing players to preview a kit
+  kit-preview-requires-permission: false
+
+  # Kit automatically granted to new players on their first join ('none' to disable)
+  first-join-kit: "starter"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Kit Definitions
+# ──────────────────────────────────────────────────────────────────────────────
+# Structure:
+#   <kit-id>:
+#     name: "Display Name"
+#     cooldown: 3600               # Cooldown in seconds (0 for no cooldown)
+#     permission_required: false   # Whether custom permission is needed
+#     custom_permission: "perm"    # Custom permission node
+#     one_time: false              # Whether kit can only be claimed once
+#     auto_armor: true             # Infer equipment slots for legacy items without equipment_slot
+#     clear_inventory: false       # Clear inventory before giving kit items
+#     items:
+#       1:
+#         id: "ITEM_MATERIAL"
+#         amount: 1
+#         name: "<color>Item Name"
+#         lore: ["<gray>Lore line 1"]
+#         enchants: ["ENCHANTMENT;LEVEL"]
+#         color: 1752220           # RGB decimal for leather armor
+#         equipment_slot: "HEAD"   # HEAD, CHEST, LEGS, FEET, or OFF_HAND
+#         offhand: false            # Legacy alias; true is equivalent to equipment_slot: OFF_HAND
+#         preview_slot: 4           # Optional zero-based slot in the preview content area
+#     actions:
+#       claim:
+#         1:
+#           action: "playsound: SOUND_NAME;volume;pitch"
+#           execute_before_items: false
+#         2:
+#           action: "title: fadeIn;stay;fadeOut;<title>;<subtitle>"
+#         3:
+#           action: "firework: colors:RED,GOLD type:BURST fade:YELLOW power:0"
+#         4:
+#           action: "command: console;broadcast %player% claimed a kit!"
+#     display:
+#       default: ...               # Icon shown when available
+#       cooldown: ...              # Icon shown when on cooldown (%time% available)
+#       no_permission: ...         # Icon shown when locked
+# ──────────────────────────────────────────────────────────────────────────────
+# Equipment and preview behavior:
+# - equipment_slot is authoritative even when auto_armor is false. It also lets
+#   custom wearable items return to the exact slot captured by /kit create.
+# - For legacy configs without equipment_slot, auto_armor infers conventional
+#   helmets/heads, chestplates/elytra, leggings, and boots from the material id.
+# - An occupied equipment slot is not overwritten unless clear_inventory is true.
+#   The kit item then falls back to normal inventory storage. If storage is full,
+#   settings.drop-items-if-full-inventory decides whether it drops at the player's
+#   feet (true) or the whole claim is restored and rolled back without consuming
+#   cooldown/one-time state (false).
+# - preview_slot must be inside the preview's content area; the bottom control row
+#   is reserved. Invalid or duplicate values safely fall back to the next free slot.
+# ──────────────────────────────────────────────────────────────────────────────
+
+kits:
+  # ────────────────────────────────────────────────────────────────────────────
+  # Starter Kit (Basic Survival Gear)
+  # ────────────────────────────────────────────────────────────────────────────
+  starter:
+    name: "Starter"
+    cooldown: 3600
+    permission_required: false
+    one_time: false
+    auto_armor: true
+    clear_inventory: false
+    items:
+      1:
+        id: "STONE_SWORD"
+        amount: 1
+        name: "<gradient:#00d2ff:#3a7bd5><bold>Starter Sword</bold></gradient>"
+        enchants:
+          - "UNBREAKING;1"
+      2:
+        id: "STONE_PICKAXE"
+        amount: 1
+        name: "<gradient:#00d2ff:#3a7bd5><bold>Starter Pickaxe</bold></gradient>"
+      3:
+        id: "STONE_AXE"
+        amount: 1
+      4:
+        id: "BREAD"
+        amount: 16
+      5:
+        id: "LEATHER_HELMET"
+        amount: 1
+        color: 1752220
+      6:
+        id: "LEATHER_CHESTPLATE"
+        amount: 1
+        color: 1752220
+      7:
+        id: "LEATHER_LEGGINGS"
+        amount: 1
+        color: 1752220
+      8:
+        id: "LEATHER_BOOTS"
+        amount: 1
+        color: 1752220
+    actions:
+      claim:
+        1:
+          action: "playsound: ENTITY_PLAYER_LEVELUP;1;1"
+          execute_before_items: false
+        2:
+          action: "title: 10;40;10;<gradient:#00d2ff:#3a7bd5><bold>Kit Claimed!</bold></gradient>;<gray>You received the Starter Kit</gray>"
+          execute_before_items: false
+    display:
+      default:
+        id: "STONE_SWORD"
+        name: "<gradient:#00d2ff:#3a7bd5><bold>Starter Kit</bold></gradient>"
+        lore:
+          - "<gray>Essential equipment to begin your journey."
+          - ""
+          - "<dark_gray>▪</dark_gray> <gray>Cooldown: <#00d2ff>1 Hour</#00d2ff>"
+          - "<dark_gray>▪</dark_gray> <gray>Total Items: <#00d2ff>8 Items</#00d2ff>"
+          - ""
+          - "<#a8ff78>➜ Left-Click to claim"
+          - "<#78ffd6>➜ Right-Click to preview"
+      cooldown:
+        id: "GRAY_DYE"
+        name: "<red><bold>Starter Kit</bold></red>"
+        lore:
+          - "<gray>You have already claimed this kit."
+          - ""
+          - "<dark_gray>▪</dark_gray> <gray>Available in: <red>%time%</red>"
+  # ────────────────────────────────────────────────────────────────────────────
+  # PvP Kit (Duelist Battle Equipment)
+  # ────────────────────────────────────────────────────────────────────────────
+  pvp:
+    name: "PvP"
+    cooldown: 7200
+    permission_required: true
+    custom_permission: "friendlycore.kits.pvp"
+    one_time: false
+    auto_armor: true
+    items:
+      1:
+        id: "DIAMOND_SWORD"
+        amount: 1
+        name: "<gradient:#ff416c:#8a2387><bold>Duelist Blade</bold></gradient>"
+        enchants:
+          - "SHARPNESS;3"
+          - "UNBREAKING;2"
+      2:
+        id: "GOLDEN_APPLE"
+        amount: 8
+      3:
+        id: "IRON_HELMET"
+        amount: 1
+        enchants:
+          - "PROTECTION;2"
+      4:
+        id: "IRON_CHESTPLATE"
+        amount: 1
+        enchants:
+          - "PROTECTION;2"
+      5:
+        id: "IRON_LEGGINGS"
+        amount: 1
+        enchants:
+          - "PROTECTION;2"
+      6:
+        id: "IRON_BOOTS"
+        amount: 1
+        enchants:
+          - "PROTECTION;2"
+    actions:
+      claim:
+        1:
+          action: "playsound: ITEM_ARMOR_EQUIP_DIAMOND;1;1"
+        2:
+          action: "firework: colors:RED,GOLD type:BURST fade:YELLOW power:0"
+    display:
+      default:
+        id: "DIAMOND_SWORD"
+        name: "<gradient:#ff416c:#8a2387><bold>PvP Kit</bold></gradient>"
+        lore:
+          - "<gray>Full iron battle gear and diamond blade."
+          - ""
+          - "<dark_gray>▪</dark_gray> <gray>Cooldown: <#ff416c>2 Hours</#ff416c>"
+          - "<dark_gray>▪</dark_gray> <gray>Permission: <yellow>friendlycore.kits.pvp</yellow>"
+          - ""
+          - "<#a8ff78>➜ Left-Click to claim"
+          - "<#78ffd6>➜ Right-Click to preview"
+      no_permission:
+        id: "BARRIER"
+        name: "<red><bold>PvP Kit</bold> <dark_gray>(Locked)</dark_gray></red>"
+        lore:
+          - "<gray>You need permission to unlock this kit."
+          - "<gray>Required: <red>friendlycore.kits.pvp</red>"
+      cooldown:
+        id: "GRAY_DYE"
+        name: "<red><bold>PvP Kit</bold></red>"
+        lore:
+          - "<gray>Kit is currently on cooldown!"
+          - ""
+          - "<dark_gray>▪</dark_gray> <gray>Available in: <red>%time%</red>"
+  # ────────────────────────────────────────────────────────────────────────────
+  # Spawn Beacon Reward Kit (/fc givekit beacon <player>)
+  # ────────────────────────────────────────────────────────────────────────────
+  beacon:
+    name: "Beacon"
+    cooldown: 0
+    permission_required: false
+    one_time: false
+    auto_armor: false
+    items:
+      1:
+        id: "BEACON"
+        amount: 1
+    display:
+      default:
+        id: "BEACON"
+        name: "<gradient:#ffe259:#ffa751><bold>Spawn Beacon Kit</bold></gradient>"
+        lore:
+          - "<gray>Beacon reward obtained by breaking the"
+          - "<gray>interactive beacon at spawn."
+          - ""
+          - "<#a8ff78>➜ Left-Click to claim"
+          - "<#78ffd6>➜ Right-Click to preview"
+      cooldown:
+        id: "GRAY_DYE"
+        name: "<red><bold>Spawn Beacon Kit</bold></red>"
+        lore:
+          - "<gray>You have already claimed this kit."
+          - ""
+          - "<dark_gray>▪</dark_gray> <gray>Available in: <red>%time%</red>"

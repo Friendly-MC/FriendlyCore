@@ -1,0 +1,303 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                             ✦ RTP MODULE ✦                                   ║
+# ║              High-Performance Pre-Cached Random Teleportation                ║
+# ║                                                                              ║
+# ║  • Paper & Folia Multi-Threaded Chunk Load Optimizations                     ║
+# ║  • Spatial Player Dispersal & Anti-Clustering Spreading Engine               ║
+# ║  • Pre-Generation Safe Location Cache Queue (0ms Instant Teleport)           ║
+# ║  • Adventure MiniMessage Animated Actionbars & Transitions                   ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# GLOBAL TELEPORTATION SETTINGS
+# ──────────────────────────────────────────────────────────────────────────────
+settings:
+  # Hub servers detected from Spawn's hub-servers/configured spawn only forward RTP.
+  # Override detection explicitly for a forwarding-only lobby or a hub with local RTP:
+  # local-enabled: false
+  # Shared limit for cache, player and cross-server searches; excess requests fail quickly.
+  max-concurrent-searches: 4
+  search-timeout-seconds: 10
+  # Coordinate distribution boundary shape:
+  # - 'CIRCLE' : Radial / circular perimeter from center coordinates
+  # - 'SQUARE' : Rectangular / square bounding box
+  default-shape: "SQUARE"
+
+  # Default radius boundaries (in blocks) inherited by explicitly listed worlds
+  default-min-radius: 100
+  default-max-radius: 5000
+  default-center-x: 0
+  default-center-z: 0
+
+  # Maximum safe landing search attempts allowed per RTP request before giving up
+  max-attempts:
+    normal: 25
+    nether: 50
+    the_end: 35
+
+  # Teleportation warmup countdown in seconds (0 = instant)
+  warmup-seconds: 3
+
+  # Cooldown duration in seconds required between consecutive RTP uses
+  cooldown-seconds: 60
+
+  # Anti-spam cooldown in seconds applied when warmup is cancelled or search fails
+  cancel-cooldown-seconds: 3
+
+  # Cancel teleportation warmup if the player moves
+  cancel-on-move: true
+
+  # Movement tolerance threshold in blocks before cancelling warmup (0.5 allows head rotation/jitter)
+  move-threshold: 0.5
+
+  # Cancel teleportation warmup if the player takes damage from any source
+  cancel-on-damage: true
+
+  # Post-teleport grace period in seconds where the player is immune to fall & environmental damage
+  invulnerability-seconds: 5
+
+  # Smooth transition effect: applies brief darkness/blindness to mask chunk rendering lag
+  smooth-transition: true
+  transition-blindness-duration-ticks: 20
+
+  # Economy cost per RTP use. Cross-server RTP charges on arrival using the origin price.
+  # Failed charged landings queue a durable refund, collected by the next online economy session.
+  # Bypass permission: 'friendlycore.rtp.bypass.cost'
+  economy:
+    enabled: false
+    cost: 50.0
+    refund-on-cancel: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SPATIAL SPREADING & PLAYER DISPERSAL ENGINE
+# ──────────────────────────────────────────────────────────────────────────────
+# Intelligently disperses teleported players across the world to prevent base clustering
+# and avoid dropping players into active PvP skirmishes.
+spreading:
+  # Enable intelligent player dispersal across the map
+  enabled: true
+
+  # Minimum distance in blocks from any other online player in the target world
+  min-distance-from-players: 200.0
+
+  # Minimum distance in blocks between recent RTP landing locations to prevent clumping
+  min-distance-between-recent: 250.0
+
+  # Time in seconds to remember recently used landing coordinates
+  recent-cache-duration-seconds: 600
+
+  # Minimum distance in blocks away from the world spawn point / center
+  min-distance-from-spawn: 200.0
+
+  # Spatial coordinate distribution algorithm:
+  # - 'SECTOR_ROUND_ROBIN' : Cycles through angular compass sectors across consecutive RTP requests
+  # - 'GOLDEN_ANGLE'        : Uses Fibonacci low-discrepancy spiral sequence for maximal uniform spread
+  # - 'UNIFORM_RANDOM'      : Standard uniform random planar sampling
+  distribution-algorithm: "SECTOR_ROUND_ROBIN"
+
+  # Number of angular sectors when using 'SECTOR_ROUND_ROBIN' (e.g. 8 for N, NE, E, SE, S, SW, W, NW)
+  sector-count: 8
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SAFE LOCATION PRE-GENERATION CACHE
+# ──────────────────────────────────────────────────────────────────────────────
+# Maintains a queue of verified safe landing coordinates in memory for instant, zero-delay teleports.
+location-cache:
+  enabled: true
+
+  # Number of pre-verified safe locations maintained in memory per enabled world
+  cache-size: 20
+
+  # Refill check interval in seconds for background task to replenish consumed locations
+  refill-interval-seconds: 5
+
+  # Throttle delay in ticks between chunk validation queries to prevent server tick spikes
+  fill-throttle-ticks: 4
+
+  # Maximum number of worlds refilling their location caches simultaneously
+  max-parallel-workers: 2
+
+# ──────────────────────────────────────────────────────────────────────────────
+# VISUAL EFFECTS, ACTIONBARS, TITLES & SOUNDS
+# ──────────────────────────────────────────────────────────────────────────────
+effects:
+  # Animated actionbar progress displayed above the player hotbar
+  actionbar:
+    enabled: true
+    # Actionbar tick refresh rate (2 ticks = 10 updates per second for smooth countdown animations)
+    update-rate-ticks: 2
+
+  # Screen Titles & Subtitles (Supports Adventure MiniMessage)
+  titles:
+    enabled: true
+    # Suppress chat notification messages if on-screen titles are enabled
+    suppress-chat-messages: false
+
+    # Safe spot searching phase
+    searching:
+      enabled: false
+      fade-in-ticks: 5
+      stay-ticks: 30
+      fade-out-ticks: 5
+
+    # Warmup countdown phase
+    warmup:
+      enabled: true
+      fade-in-ticks: 2
+      stay-ticks: 20
+      fade-out-ticks: 5
+
+    # Successful teleport landing phase
+    success:
+      enabled: true
+      fade-in-ticks: 10
+      stay-ticks: 50
+      fade-out-ticks: 15
+
+    # Cancelled teleport phase (due to movement or damage)
+    cancelled:
+      enabled: true
+      fade-in-ticks: 5
+      stay-ticks: 35
+      fade-out-ticks: 10
+
+    # Failed teleport phase (no safe landing location found)
+    failed:
+      enabled: true
+      fade-in-ticks: 5
+      stay-ticks: 40
+      fade-out-ticks: 10
+
+  # Audio sound effects (Bukkit Sound names)
+  sounds:
+    warmup-tick: "ENTITY_TNT_PRIMED"
+    teleport-success: "ENTITY_GENERIC_EXPLODE"
+    teleport-cancel: "BLOCK_NOTE_BLOCK_BASS"
+    search-searching: "UI_BUTTON_CLICK"
+
+  # Visual particle effects (Bukkit Particle names)
+  particles:
+    warmup-enabled: true
+    warmup-particle: "PORTAL"
+    teleport-enabled: true
+    teleport-particle: "DRAGON_BREATH"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# PER-WORLD CONFIGURATION & BIOME BLACKLISTS
+# ──────────────────────────────────────────────────────────────────────────────
+worlds:
+  # Only explicitly listed, enabled worlds are searched. Unlisted worlds stay disabled.
+  world:
+    enabled: true
+    world-type: "NORMAL"
+    shape: "SQUARE"
+    distribution-algorithm: "SECTOR_ROUND_ROBIN"
+    min-radius: 250
+    max-radius: 6000
+    center-x: 0
+    center-z: 0
+    blacklisted-biomes:
+      - "OCEAN"
+      - "DEEP_OCEAN"
+      - "COLD_OCEAN"
+      - "FROZEN_OCEAN"
+      - "WARM_OCEAN"
+      - "LUKEWARM_OCEAN"
+      - "DEEP_COLD_OCEAN"
+      - "DEEP_FROZEN_OCEAN"
+      - "DEEP_LUKEWARM_OCEAN"
+
+  world_nether:
+    enabled: true
+    world-type: "NETHER"
+    shape: "SQUARE"
+    distribution-algorithm: "SECTOR_ROUND_ROBIN"
+    min-radius: 100
+    max-radius: 2000
+    center-x: 0
+    center-z: 0
+    blacklisted-biomes: []
+
+  world_the_end:
+    enabled: false
+    world-type: "THE_END"
+    shape: "SQUARE"
+    distribution-algorithm: "SECTOR_ROUND_ROBIN"
+    min-radius: 1000
+    max-radius: 5000
+    center-x: 0
+    center-z: 0
+    blacklisted-biomes: []
+    # Event mode for a small, static arena: every safe column is scanned once (on enable and
+    # /rtp reload) and handed out in shuffled order. No live searching, no spreading rules.
+    # The area must be pregenerated; ungenerated chunks are skipped. Check the size with /rtp status.
+    # Vanilla main island behind /worldborder set 275: min-radius 8 (off the exit portal),
+    # max-radius 121 (275 / 2 minus the 16-block border margin).
+    landing-pool: false
+    # Blocks a pool world may land on. END_STONE skips obsidian pillars and the bedrock portal.
+    allowed-ground:
+      - "END_STONE"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# HAZARDOUS BLOCKS & REGION BLACKLISTS
+# ──────────────────────────────────────────────────────────────────────────────
+# Blocks that are never considered safe landing platforms
+blacklisted-blocks:
+  - "LAVA"
+  - "WATER"
+  - "FIRE"
+  - "SOUL_FIRE"
+  - "MAGMA_BLOCK"
+  - "CACTUS"
+  - "SWEET_BERRY_BUSH"
+  - "CAMPFIRE"
+  - "SOUL_CAMPFIRE"
+  - "WITHER_ROSE"
+  - "POWDER_SNOW"
+  - "BEDROCK"
+  - "END_PORTAL"
+  - "END_PORTAL_FRAME"
+  - "NETHER_PORTAL"
+  - "VOID_AIR"
+  - "BARRIER"
+  - "LIGHT"
+  - "SEAGRASS"
+  - "TALL_SEAGRASS"
+  - "KELP"
+  - "KELP_PLANT"
+  - "POINTED_DRIPSTONE"
+  - "SCULK_SHRIEKER"
+  - "SCULK_SENSOR"
+  - "COBWEB"
+  - "ANVIL"
+  - "CHIPPED_ANVIL"
+  - "DAMAGED_ANVIL"
+
+# WorldGuard region names where players cannot land via RTP
+blacklisted-regions:
+  - "spawn"
+  - "pvp-arena"
+  - "warzone"
+  - "safezone"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# CROSS-SERVER TELEPORTATION
+# ──────────────────────────────────────────────────────────────────────────────
+# Enables random teleportation across multiple connected BungeeCord / Velocity backend servers.
+cross-server:
+  enabled: true
+  # Redis authorizes requests; proxy plugin messaging performs the handoff.
+  # Backend server target names registered on the proxy available for random routing
+  target-servers:
+    - "economy-a"
+    - "the-end"
+  # Destination: players released to land per second (0 = no pacing). The origin countdown starts
+  # when a player is released, so this staggers proxy joins during a rush.
+  arrivals-per-second: 0
+  # Destination: refuse new requests once online + queued + inbound players reach this (0 = no cap).
+  max-players: 0
+  # Origin: how long a request may wait for the destination. When the destination is paced,
+  # raise this on every origin server (500 players at 20/s need about 25s).
+  request-timeout-seconds: 15

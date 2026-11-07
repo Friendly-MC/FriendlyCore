@@ -1,0 +1,11 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                  ✦ PET WITHDRAWAL CONFIRMATION MENU ✦                        ║
+# ║                     Confirmation GUI Layout & Mask                           ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# Title of the confirmation dialog inventory
+title: "&0Withdraw pet"
+
+# Fixed three-row vanilla layout: gray frame, confirm 11, pet egg 13, keep pet 15.

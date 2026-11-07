@@ -1,0 +1,1538 @@
+name: FriendlyCore
+version: '${project.version}-dev+${git.total.commit.count}-${git.commit.id.abbrev}'
+main: dev.lyy.friendlycore.FriendlyCore
+api-version: '1.21.11'
+folia-supported: true
+description: All-in-One High-Performance Core Plugin
+authors: [ Lyy ]
+
+libraries:
+  - com.zaxxer:HikariCP:7.1.0
+  - org.xerial:sqlite-jdbc:3.53.4.0
+  - com.mysql:mysql-connector-j:9.7.0
+  - com.h2database:h2:2.1.214
+  - redis.clients:jedis:8.0.2
+
+softdepend:
+  - ViaVersion
+  - FriendlySync
+  - Worlds
+  - Vault
+  - PlaceholderAPI
+  - WorldGuard
+  - Lands
+  - AutoPickup
+  - MC-Data-Bridge
+  - MCDataBridge
+  - mc-data-bridge
+  - DataBridge
+  - floodgate
+  - Geyser-Spigot
+
+loadbefore:
+  - PvPManager
+  - AxAuctions
+  - AxKills
+  - AxMines
+  - DonutOrder
+  - ShopGUIPlus
+  - Shopkeepers
+  - ChestShop
+  - QuickShop
+  - ExcellentShop
+  - AuctionHouse
+  - EconomyShopGUI
+
+provides:
+  - Economy
+
+commands:
+  afk:
+    description: Connect to the AFK server after a cancellable warmup
+    permission: friendlycore.afk.use
+    usage: /<command>
+  friendlycore:
+    description: Main command for FriendlyCore management
+    aliases: [fc]
+    permission: friendlycore.use
+    usage: /<command> [reload|createkit|delkit|givekit|kitlist]
+  bal:
+    description: Check your balance or another player's balance
+    aliases: [balance, money]
+    permission: friendlycore.economy.bal
+    usage: /<command> [player]
+  baltop:
+    description: View the top wealthiest players on the server or network
+    aliases: [balancetop, moneytop, topbal]
+    permission: friendlycore.economy.baltop
+    usage: /<command> [page]
+  pay:
+    description: Send money to an online or network player
+    permission: friendlycore.economy.pay
+    usage: /<command> <player> <amount>
+  paytoggle:
+    description: Toggle whether you can receive payments from players
+    aliases: [togglepay, toggle]
+    permission: friendlycore.economy.paytoggle
+    usage: /<command>
+  payhistory:
+    description: View recent payment transactions
+    aliases: [transactionhistory, history]
+    permission: friendlycore.economy.payhistory
+    usage: /<command> [player]
+  economy:
+    description: Manage player balances and economy system
+    aliases: [eco]
+    permission: friendlycore.economy.admin
+    usage: /<command> <give|take|set|reset|see> <player|*> <amount>
+  payreload:
+    description: Reload economy and payment configurations
+    aliases: [ecoreload, swiftpayreload]
+    permission: friendlycore.economy.admin
+    usage: /<command>
+  tools:
+    description: Open the custom tools menu or give drills and choppers
+    aliases: [utools, unicorntools, customtools]
+    permission: friendlycore.tools.use
+    usage: /<command> [give <player> <drill|chopper> <material>]
+  kit:
+    description: Claim or preview an available kit
+    aliases: [kits, pk, playerkits, playerkits2]
+    permission: friendlycore.kits.use
+    usage: /<command> [kitname]
+  setspawn:
+    description: Set the global server spawn point
+    permission: friendlycore.spawn.set
+    usage: /<command>
+  spawn:
+    description: Teleport to the server spawn point
+    permission: friendlycore.spawn.use
+    usage: /<command> [player]
+  telegram:
+    description: View Telegram rank purchase info and links
+    permission: friendlycore.spawn.telegram
+    usage: /<command>
+  tpa:
+    description: Send a teleport request to a player
+    permission: donuttpa.tpa
+    usage: /<command> <player>
+  tpahere:
+    description: Send a teleport-here request to a player
+    permission: donuttpa.tphere
+    usage: /<command> <player>
+  tpaccept:
+    description: Accept a pending teleport request
+    aliases: [tpyes]
+    permission: donuttpa.accept
+    usage: /<command> [player]
+  tpdeny:
+    description: Deny a pending teleport request
+    aliases: [tpno]
+    permission: donuttpa.deny
+    usage: /<command> [player]
+  tpacancel:
+    description: Cancel outgoing teleport requests
+    aliases: [tpcancel]
+    permission: donuttpa.cancel
+    usage: /<command>
+  tpaall:
+    description: Send a teleport request to every online player
+    permission: donuttpa.tpaall
+    usage: /<command>
+  tphereall:
+    description: Forcibly teleport all online players to you
+    permission: donuttpa.tphereall
+    usage: /<command>
+  tpatoggle:
+    description: Toggle whether you can receive TPA requests
+    permission: donuttpa.toggle
+    usage: /<command>
+  tpaheretoggle:
+    description: Toggle whether you can receive TPHere requests
+    permission: donuttpa.toggle
+    usage: /<command>
+  tpauto:
+    description: Toggle auto-accepting teleport requests
+    permission: donuttpa.auto
+    usage: /<command>
+  tpaguitoggle:
+    description: Toggle whether confirmation GUI is opened on requests
+    permission: donuttpa.gui
+    usage: /<command>
+  tpasetting:
+    description: Open personal TPA settings menu
+    aliases: [tpasettings]
+    permission: donuttpa.setting
+    usage: /<command>
+  tpaadmin:
+    description: Open Admin Safe Teleport configuration menu
+    aliases: [crosstpa, donuttpa]
+    permission: donuttpa.admin
+    usage: /<command>
+  rtp:
+    description: Randomly teleport to a safe location
+    aliases: [wild, randomtp]
+    permission: friendlycore.rtp.use
+    usage: /<command> [world|server|player|reload|status]
+  nv:
+    description: Toggle or manage night vision
+    aliases: [nightvision]
+    permission: friendlycore.nightvision.use
+    usage: /<command> [toggle|on|off|status|reload|help] [player]
+  team:
+    description: Main command for team management
+    aliases: [teams, clan, clans, guild, t, f, faction, factions]
+    usage: /<command> [gui|create|disband|invite|accept|deny|home|sethome|bank|enderchest|info|top]
+  teamadmin:
+    description: Administrative commands for team management
+    aliases: [teamsadmin, clanadmin, ta]
+    permission: friendlycore.teams.admin
+    usage: /<command> [delete|inspect|check|enderchest|unally|spy|convert|reload]
+  teamchat:
+    description: Send a message to your team or toggle team chat
+    aliases: [tc]
+    usage: /<command> [message]
+  allychat:
+    description: Send a message to your allies or toggle ally chat
+    aliases: [ac]
+    usage: /<command> [message]
+  thome:
+    description: Teleport to a team home or open team homes menu
+    usage: /<command> [name]
+  tsethome:
+    description: Set a team home at current location
+    usage: /<command> [name]
+  tdelhome:
+    description: Delete a team home
+    usage: /<command> [name]
+  thomes:
+    description: Open team homes menu
+    usage: /<command>
+  tec:
+    description: Open shared team enderchest
+    usage: /<command>
+  tvault:
+    description: Open shared team enderchest
+    usage: /<command>
+  tbank:
+    description: Open team bank or deposit/withdraw funds
+    usage: /<command> [deposit|withdraw] [amount]
+  tstats:
+    description: View team or player stats
+    usage: /<command> [player]
+  ttop:
+    description: View team leaderboard
+    usage: /<command>
+  home:
+    description: Open homes GUI or teleport directly to a home
+    permission: friendlycore.homes.use
+    usage: /<command> [name|slot|help|rename]
+  homes:
+    description: Open homes GUI or teleport directly to a home
+    permission: friendlycore.homes.use
+    usage: /<command> [name|slot|help|rename]
+  sethome:
+    description: Set a new home location
+    permission: friendlycore.homes.use
+    usage: /<command> [slot] [name]
+  delhome:
+    description: Delete an existing home
+    permission: friendlycore.homes.use
+    usage: /<command> <slot|name>
+  ahome:
+    description: Admin commands for homes management
+    aliases: [adminhome, modernhome, modernhomes, mdhome, md]
+    permission: friendlycore.homes.admin
+    usage: /<command> [help|reload|see|osee|tp|otp|rename|delete|migrate]
+  joinquit:
+    description: Manage or toggle join and quit messages
+    aliases: [jq]
+    permission: friendlycore.joinquit.use
+    usage: /<command> [toggle|stats|reload]
+  togglejoinquit:
+    description: Quick toggle for personal join/quit chat notifications
+    aliases: [togglemessages, togglejq]
+    permission: friendlycore.joinquit.use
+    usage: /<command>
+  gamemode:
+    description: Change player game mode
+    aliases: [egamemode]
+    permission: friendlycore.gamemode
+    usage: /<command> <mode> [player]
+  gm:
+    description: Quick gamemode toggle or change
+    permission: friendlycore.gamemode
+    usage: /<command> <mode> [player]
+  gmc:
+    description: Set gamemode to creative
+    aliases: [egmc]
+    permission: friendlycore.gamemode.creative
+    usage: /<command> [player]
+  gms:
+    description: Set gamemode to survival
+    aliases: [egms]
+    permission: friendlycore.gamemode.survival
+    usage: /<command> [player]
+  gma:
+    description: Set gamemode to adventure
+    aliases: [egma]
+    permission: friendlycore.gamemode.adventure
+    usage: /<command> [player]
+  gmsp:
+    description: Set gamemode to spectator
+    aliases: [egmsp, gmspec]
+    permission: friendlycore.gamemode.spectator
+    usage: /<command> [player]
+  invsee:
+    description: View and modify player inventory across servers
+    aliases: [openinv, einvsee]
+    permission: friendlycore.invsee
+    usage: /<command> <player>
+  enderchest:
+    description: Open personal or other player's ender chest across servers
+    aliases: [echest, ender, eenderchest]
+    permission: friendlycore.enderchest
+    usage: /<command> [player]
+  ec:
+    description: Open personal or other player's ender chest
+    permission: friendlycore.enderchest
+    usage: /<command> [player]
+  speed:
+    description: Change movement or fly speed
+    aliases: [espeed]
+    permission: friendlycore.speed
+    usage: /<command> [fly|walk] <0..10> [player]
+  flyspeed:
+    description: Change flying speed
+    aliases: [fspeed, eflyspeed]
+    permission: friendlycore.speed.fly
+    usage: /<command> <0..10> [player]
+  walkspeed:
+    description: Change walking speed
+    aliases: [wspeed, ewalkspeed]
+    permission: friendlycore.speed.walk
+    usage: /<command> <0..10> [player]
+  time:
+    description: View or set world time across servers
+    aliases: [etime]
+    permission: friendlycore.time
+    usage: /<command> <set|add> <time> [world]
+  day:
+    description: Set time to day
+    aliases: [eday]
+    permission: friendlycore.time
+    usage: /<command> [world]
+  night:
+    description: Set time to night
+    aliases: [enight]
+    permission: friendlycore.time
+    usage: /<command> [world]
+  weather:
+    description: Set world weather across servers
+    aliases: [eweather]
+    permission: friendlycore.weather
+    usage: /<command> <sun|rain|storm> [duration] [world]
+  sun:
+    description: Set weather to clear sun
+    aliases: [esun]
+    permission: friendlycore.weather
+    usage: /<command> [duration] [world]
+  rain:
+    description: Set weather to rain
+    aliases: [erain]
+    permission: friendlycore.weather
+    usage: /<command> [duration] [world]
+  storm:
+    description: Set weather to storm
+    aliases: [estorm, thunder]
+    permission: friendlycore.weather
+    usage: /<command> [duration] [world]
+  tp:
+    description: Teleport to player or coordinates across servers
+    aliases: [teleport, etp]
+    permission: friendlycore.teleport
+    usage: /<command> <player> [destination|x y z] or /<command> <x> <y> <z> [world]
+  tppos:
+    description: Teleport to exact coordinates
+    aliases: [etppos]
+    permission: friendlycore.teleport.position
+    usage: /<command> <x> <y> <z> [world]
+  tphere:
+    description: Teleport target player to your location across servers
+    aliases: [etphere, s]
+    permission: friendlycore.teleport.here
+    usage: /<command> <player>
+  tpall:
+    description: Teleport all online players to your location
+    aliases: [etpall]
+    permission: friendlycore.teleport.all
+    usage: /<command> [network]
+  fly:
+    description: Toggle player flight mode
+    aliases: [efly]
+    permission: friendlycore.fly
+    usage: /<command> [player] [on|off]
+  god:
+    description: Toggle player invulnerability / god mode
+    aliases: [egod, godmode]
+    permission: friendlycore.god
+    usage: /<command> [player] [on|off]
+  heal:
+    description: Fully restore player health and extinguish fire
+    aliases: [eheal]
+    permission: friendlycore.heal
+    usage: /<command> [player]
+  feed:
+    description: Fully restore player hunger
+    aliases: [efeed, eat]
+    permission: friendlycore.feed
+    usage: /<command> [player]
+  craft:
+    description: Open virtual crafting table
+    aliases: [ecraft]
+    permission: friendlycore.workbench
+    usage: /<command>
+  workbench:
+    description: Open virtual crafting table
+    permission: friendlycore.workbench
+    usage: /<command>
+  wb:
+    description: Open virtual crafting table
+    permission: friendlycore.workbench
+    usage: /<command>
+  anvil:
+    description: Open virtual anvil
+    aliases: [eanvil]
+    permission: friendlycore.anvil
+    usage: /<command>
+  grindstone:
+    description: Open virtual grindstone
+    aliases: [egrindstone]
+    permission: friendlycore.grindstone
+    usage: /<command>
+  stonecutter:
+    description: Open virtual stonecutter
+    aliases: [estonecutter]
+    permission: friendlycore.stonecutter
+    usage: /<command>
+  smithingtable:
+    description: Open virtual smithing table
+    aliases: [smith, esmithingtable]
+    permission: friendlycore.smithingtable
+    usage: /<command>
+  loom:
+    description: Open virtual loom
+    aliases: [eloom]
+    permission: friendlycore.loom
+    usage: /<command>
+  cartographytable:
+    description: Open virtual cartography table
+    aliases: [cartography, ecartographytable]
+    permission: friendlycore.cartographytable
+    usage: /<command>
+  disposal:
+    description: Open virtual trash disposal inventory
+    aliases: [edisposal]
+    permission: friendlycore.disposal
+    usage: /<command>
+  trash:
+    description: Open virtual trash disposal inventory
+    permission: friendlycore.disposal
+    usage: /<command>
+  top:
+    description: Teleport to highest solid block above
+    aliases: [etop]
+    permission: friendlycore.top
+    usage: /<command>
+  bottom:
+    description: Teleport to lowest solid block
+    aliases: [ebottom]
+    permission: friendlycore.bottom
+    usage: /<command>
+  jump:
+    description: Teleport to block in line of sight
+    aliases: [j, ejump]
+    permission: friendlycore.jump
+    usage: /<command>
+  suicide:
+    description: Kill yourself
+    aliases: [esuicide]
+    permission: friendlycore.suicide
+    usage: /<command>
+  clearinventory:
+    description: Clear inventory or specific items from yourself or other players
+    aliases: [clear, ci, clean, eclear, eclean, clearinv]
+    permission: friendlycore.clearinventory
+    usage: /<command> [player|*] [item|**|armor] [amount]
+  vanish:
+    description: Toggle invisibility from other players and total cloaking
+    aliases: [v, evanish, hide]
+    permission: friendlycore.vanish.use
+    usage: /<command> [on|off|toggle|pickup|fakejoin|fakequit|status] [player]
+  v:
+    description: Toggle invisibility from other players and total cloaking
+    permission: friendlycore.vanish.use
+    usage: /<command> [on|off|toggle|pickup|fakejoin|fakequit|status] [player]
+  evanish:
+    description: Toggle invisibility from other players and total cloaking
+    permission: friendlycore.vanish.use
+    usage: /<command> [on|off|toggle|pickup|fakejoin|fakequit|status] [player]
+  online:
+    description: View online players grouped by rank with interactive tooltips
+    aliases: [list, who, playerlist, elist, eonline]
+    permission: friendlycore.online.use
+    usage: /<command> [group]
+  list:
+    description: View online players grouped by rank with interactive tooltips
+    permission: friendlycore.online.use
+    usage: /<command> [group]
+  who:
+    description: View online players grouped by rank with interactive tooltips
+    permission: friendlycore.online.use
+    usage: /<command> [group]
+  playerlist:
+    description: View online players grouped by rank with interactive tooltips
+    permission: friendlycore.online.use
+    usage: /<command> [group]
+  pets:
+    description: Open the pets GUI or manage your active pet
+    aliases: [pet, epets]
+    permission: friendlycore.pets.use
+    usage: /<command> [activate|deactivate|toggle|gui]
+  ecopets:
+    description: Admin management command for EcoPets
+    aliases: [epet, petadmin]
+    permission: friendlycore.pets.admin
+    usage: /<command> [reload|give|take|giveegg|activate|deactivate|migrate]
+  chat:
+    description: Main admin command for FriendlyCore Chat
+    aliases: [zelchat, friendlychat, chata]
+    permission: friendlycore.chat.admin
+    usage: /<command> [reload|similar|broadcast|mute|clear]
+  msg:
+    description: Send a private message to a player
+    aliases: [w, m]
+    usage: /<command> <player> <message>
+  tell:
+    description: Send a private message to a player
+    usage: /<command> <player> <message>
+  whisper:
+    description: Send a private message to a player
+    usage: /<command> <player> <message>
+  reply:
+    description: Reply to the last player who messaged you
+    aliases: [r]
+    usage: /<command> <message>
+  ignore:
+    description: Ignore messages and mentions from a player
+    usage: /<command> <player>
+  unignore:
+    description: Unignore a previously ignored player
+    usage: /<command> <player>
+  ignoreall:
+    description: Toggle blocking private messages from everyone
+    usage: /<command>
+  unignoreall:
+    description: Clear your entire ignore list
+    usage: /<command>
+  spymsg:
+    description: Toggle social spy for monitoring private messages
+    aliases: [socialspy, spy]
+    permission: friendlycore.chat.command.spymsg
+    usage: /<command>
+  staffchat:
+    description: Send message or toggle staff chat mode
+    aliases: [sc, adminchat]
+    permission: friendlycore.chat.command.staffchat
+    usage: /<command> [message]
+  chatping:
+    description: Toggle mention ping sound and title alerts
+    aliases: [pings, toggleping, togglepings]
+    usage: /<command>
+  chattoggle:
+    description: Toggle whether you can view and send public chat
+    aliases: [togglechat]
+    usage: /<command>
+  mutechat:
+    description: Mute or unmute public server chat
+    aliases: [mchat, silence]
+    permission: friendlycore.chat.command.mutechat
+    usage: /<command>
+  clearchat:
+    description: Clear public chat
+    aliases: [cc]
+    permission: friendlycore.chat.command.clearchat
+    usage: /<command>
+  chatinv:
+    description: Open preview GUI for chat item/inventory show
+    usage: /<command> <uuid>
+  settings:
+    description: Open personal settings menu or toggle preferences
+    aliases: [setting, options, pref, preferences]
+    permission: friendlycore.settings.use
+    usage: /<command> [toggle|set|get|gui|bedrock|dialog|chat|reload]
+  sb:
+    description: Toggle scoreboard display
+    aliases: [scoreboards, togglesb]
+    permission: friendlycore.settings.use
+    usage: /<command>
+  scoreboards:
+    description: Toggle scoreboard display
+    permission: friendlycore.settings.use
+    usage: /<command>
+  togglesb:
+    description: Toggle scoreboard display
+    permission: friendlycore.settings.use
+    usage: /<command>
+  toggletpa:
+    description: Toggle receiving teleport requests
+    permission: friendlycore.settings.use
+    usage: /<command>
+  togglepm:
+    description: Toggle receiving private messages
+    permission: friendlycore.settings.use
+    usage: /<command>
+  pvp:
+    description: PvP combat management, statistics, and toggles
+    aliases: [pvpstats, stats, pvptop, zelcombat]
+    permission: friendlycore.pvp.use
+    usage: /<command> [toggle|newbie|stats|tag|reload]
+  combattag:
+    description: Check combat tag status
+    aliases: [ct, tag]
+    permission: friendlycore.pvp.use
+    usage: /<command> [player]
+  newbie:
+    description: Manage newbie protection
+    aliases: [newbieprotection]
+    permission: friendlycore.pvp.use
+    usage: /<command> [off]
+  togglepvp:
+    description: Toggle your PvP combat mode
+    aliases: [pvptoggle]
+    permission: friendlycore.pvp.use
+    usage: /<command>
+  ah:
+    description: Open the auction house or manage listings
+    aliases: [auction, auctions, ahmarket, axah, auctionhouse, axauction, axauctionhouse]
+    usage: /<command> [sell|search|open|history|expired|myitems|help]
+  auction:
+    description: Open the auction house or manage listings
+    usage: /<command> [sell|search|open|history|expired|myitems|help]
+  auctions:
+    description: Open the auction house or manage listings
+    usage: /<command> [sell|search|open|history|expired|myitems|help]
+  ahadmin:
+    description: Administrative management command for the auction house
+    aliases: [aha, auctionadmin, auctionsadmin, axahadmin, auctionhouseadmin, axauctionadmin, axauctionhouseadmin]
+    usage: /<command> [reload|forceopen|history|deleted|logs|limit|convert]
+  aha:
+    description: Administrative management command for the auction house
+    usage: /<command> [reload|forceopen|history|deleted|logs|limit|convert]
+  order:
+    description: Open the buy-orders market or manage buy orders
+    aliases: [orders, dorder]
+    permission: friendlycore.orders.use
+    usage: /<command> [create|myorders|collect|togglenotifications|search]
+  orders:
+    description: Open the buy-orders market or manage buy orders
+    permission: friendlycore.orders.use
+    usage: /<command> [create|myorders|collect|togglenotifications|search]
+  dorder:
+    description: Open the buy-orders market or manage buy orders
+    permission: friendlycore.orders.use
+    usage: /<command> [create|myorders|collect|togglenotifications|search]
+  orderadmin:
+    description: Administrative management command for buy orders
+    aliases: [ordersadmin, dorderadmin]
+    permission: friendlycore.orders.admin
+    usage: /<command> [gui|reload|cancel <id>|delete <id>|convert]
+  ordersadmin:
+    description: Administrative management command for buy orders
+    permission: friendlycore.orders.admin
+    usage: /<command> [gui|reload|cancel <id>|delete <id>|convert]
+  dorderadmin:
+    description: Administrative management command for buy orders
+    permission: friendlycore.orders.admin
+    usage: /<command> [gui|reload|cancel <id>|delete <id>|convert]
+
+permissions:
+  friendlycore.afk.use:
+    description: Allows connecting to the AFK server
+    default: true
+  friendlycore.orders.use:
+    description: Allows accessing the buy orders marketplace
+    default: true
+  friendlycore.orders.create:
+    description: Allows creating buy orders
+    default: true
+  friendlycore.orders.admin:
+    description: Allows full administrative control of buy orders
+    default: op
+  friendlycore.auctions.use:
+    description: Allows accessing the auction house
+    default: true
+  friendlycore.auctions.sell:
+    description: Allows creating auction house listings
+    default: true
+  friendlycore.auctions.open:
+    description: Allows opening auction menus
+    default: true
+  friendlycore.auctions.search:
+    description: Allows searching auction listings
+    default: true
+  friendlycore.auctions.view:
+    description: Allows viewing another player's listings
+    default: true
+  friendlycore.auctions.history:
+    description: Allows viewing auction history
+    default: true
+  friendlycore.auctions.deleted:
+    description: Allows viewing personal deleted auctions
+    default: true
+  friendlycore.auctions.help:
+    description: Allows viewing auction help
+    default: true
+  friendlycore.auctions.limit.1:
+    description: Sets the default AxAuctions-compatible listing limit
+    default: true
+  friendlycore.auctions.admin:
+    description: Allows full administrative control of the auction house
+    default: op
+  friendlycore.auctions.limit.bypass:
+    description: Bypasses listing limit restrictions
+    default: op
+  friendlycore.auctions.history.admin.take:
+    description: Allows cloning items from transaction history
+    default: op
+  friendlycore.auctions.deleted.admin.take:
+    description: Allows restoring items from deleted archive
+    default: op
+  axauctions.use:
+    description: Alias permission for friendlycore.auctions.use
+    default: true
+  axauctions.sell:
+    description: Alias permission for friendlycore.auctions.sell
+    default: true
+  axauctions.open:
+    description: AxAuctions-compatible menu permission
+    default: true
+  axauctions.search:
+    description: AxAuctions-compatible search permission
+    default: true
+  axauctions.view:
+    description: AxAuctions-compatible listing-view permission
+    default: true
+  axauctions.history:
+    description: AxAuctions-compatible history permission
+    default: true
+  axauctions.deleted:
+    description: AxAuctions-compatible deleted-items permission
+    default: true
+  axauctions.help:
+    description: AxAuctions-compatible help permission
+    default: true
+  axauctions.limit.1:
+    description: AxAuctions-compatible default listing limit
+    default: true
+  axauctions.admin:
+    description: Alias permission for friendlycore.auctions.admin
+    default: op
+  axauctions.forceopen:
+    description: AxAuctions-compatible permission to open menus for another player
+    default: op
+  axauctions.history.admin:
+    description: AxAuctions-compatible permission to inspect global or player history
+    default: op
+  axauctions.history.admin.take:
+    description: AxAuctions-compatible permission to clone items from transaction history
+    default: op
+  axauctions.deleted.admin:
+    description: AxAuctions-compatible permission to inspect deleted archives
+    default: op
+  axauctions.deleted.admin.take:
+    description: AxAuctions-compatible permission to clone items from deleted archives
+    default: op
+  axauctions.logs.admin:
+    description: AxAuctions-compatible permission to inspect auction logs
+    default: op
+  axauctions.limit:
+    description: AxAuctions-compatible permission to edit player listing limits
+    default: op
+  axauctions.convert:
+    description: AxAuctions-compatible permission to run data conversion
+    default: op
+  axauctions.reload:
+    description: AxAuctions-compatible permission to reload auction configuration
+    default: op
+  friendlycore.settings.use:
+    description: Allows accessing player settings menu and toggles
+    default: true
+  friendlycore.settings.admin:
+    description: Allows reloading and administering player settings
+    default: op
+  friendlycore.chat.admin:
+    description: Allows full administrative control of chat
+    default: op
+  friendlycore.chat.command.spymsg:
+    description: Allows monitoring private messages
+    default: op
+  friendlycore.chat.command.staffchat:
+    description: Allows sending and viewing staff chat
+    default: op
+  friendlycore.chat.staffchat:
+    description: Allows sending and viewing staff chat
+    default: op
+  friendlycore.chat.staff.filtered:
+    description: Allows receiving staff alerts when messages are filtered
+    default: op
+  friendlycore.chat.command.mutechat:
+    description: Allows muting/unmuting server chat
+    default: op
+  friendlycore.chat.command.clearchat:
+    description: Allows clearing server chat
+    default: op
+  friendlycore.chat.renderitem:
+    description: Allows using [item] show in chat
+    default: true
+  friendlycore.chat.renderinventory:
+    description: Allows using [inv] show in chat
+    default: true
+  friendlycore.chat.renderenderchest:
+    description: Allows using [ec] show in chat
+    default: true
+  friendlycore.chat.parse.commands:
+    description: Allows using [/command] interactive replacer in chat
+    default: true
+  friendlycore.chat.bypass.ignore:
+    description: Allows sending private messages/mentions to players ignoring you
+    default: op
+  friendlycore.chat.bypass.chatmuted:
+    description: Allows speaking when chat is muted
+    default: op
+  friendlycore.chat.bypass.chattoggle:
+    description: Allows sending messages to players who toggled chat off
+    default: op
+  friendlycore.chat.bypass.cooldown:
+    description: Allows bypassing chat cooldown
+    default: op
+  friendlycore.chat.bypass.anticaps:
+    description: Allows bypassing anti-caps filter
+    default: op
+  friendlycore.chat.bypass.flood:
+    description: Allows bypassing anti-flood filter
+    default: op
+  friendlycore.chat.bypass.similarity:
+    description: Allows bypassing message similarity filter
+    default: op
+  friendlycore.chat.bypass.blacklist:
+    description: Allows bypassing blacklist rules and word filters
+    default: op
+  friendlycore.use:
+    description: Allows viewing /fc help; administrative subcommands require their own permissions
+    default: true
+  friendlycore.homes.use:
+    description: Allows using the homes GUI and basic player commands
+    default: true
+  home.use:
+    description: ModernHome alias for home.use
+    default: true
+  modernhome.use:
+    description: ModernHome compatibility alias
+    default: true
+  friendlycore.gamemode:
+    description: Allows changing game mode
+    default: op
+  friendlycore.gamemode.creative:
+    description: Allows switching to creative mode
+    default: op
+  friendlycore.gamemode.survival:
+    description: Allows switching to survival mode
+    default: op
+  friendlycore.gamemode.adventure:
+    description: Allows switching to adventure mode
+    default: op
+  friendlycore.gamemode.spectator:
+    description: Allows switching to spectator mode
+    default: op
+  friendlycore.gamemode.others:
+    description: Allows changing game mode for other players
+    default: op
+  friendlycore.invsee:
+    description: Allows inspecting player inventories
+    default: op
+  friendlycore.invsee.modify:
+    description: Allows editing items in other players' inventories
+    default: op
+  friendlycore.invsee.prevent:
+    description: Prevents others from inspecting your inventory
+    default: false
+  friendlycore.invsee.bypass:
+    description: Bypasses inventory inspection prevention
+    default: op
+  friendlycore.enderchest:
+    description: Allows opening personal ender chest
+    default: op
+  friendlycore.enderchest.others:
+    description: Allows opening other players' ender chests
+    default: op
+  friendlycore.enderchest.modify:
+    description: Allows modifying other players' ender chests
+    default: op
+  friendlycore.speed:
+    description: Allows changing movement or fly speed
+    default: op
+  friendlycore.speed.fly:
+    description: Allows changing fly speed
+    default: op
+  friendlycore.speed.walk:
+    description: Allows changing walk speed
+    default: op
+  friendlycore.speed.others:
+    description: Allows changing speed for other players
+    default: op
+  friendlycore.speed.bypass:
+    description: Bypasses max speed limits
+    default: op
+  friendlycore.time:
+    description: Allows changing world time
+    default: op
+  friendlycore.weather:
+    description: Allows changing world weather
+    default: op
+  friendlycore.teleport:
+    description: Allows teleporting to players and coordinates
+    default: op
+  friendlycore.teleport.others:
+    description: Allows teleporting other players
+    default: op
+  friendlycore.teleport.position:
+    description: Allows teleporting to specific coordinates
+    default: op
+  friendlycore.teleport.here:
+    description: Allows teleporting players to you
+    default: op
+  friendlycore.teleport.all:
+    description: Allows teleporting all players to you
+    default: op
+  friendlycore.fly:
+    description: Allows toggling flight mode
+    default: op
+  friendlycore.fly.others:
+    description: Allows toggling flight mode for others
+    default: op
+  friendlycore.god:
+    description: Allows toggling god mode
+    default: op
+  friendlycore.god.others:
+    description: Allows toggling god mode for others
+    default: op
+  friendlycore.heal:
+    description: Allows healing yourself
+    default: op
+  friendlycore.heal.others:
+    description: Allows healing other players
+    default: op
+  friendlycore.feed:
+    description: Allows satisfying hunger
+    default: op
+  friendlycore.feed.others:
+    description: Allows satisfying hunger for other players
+    default: op
+  friendlycore.workbench:
+    description: Allows opening virtual workbench
+    default: op
+  friendlycore.anvil:
+    description: Allows opening virtual anvil
+    default: op
+  friendlycore.grindstone:
+    description: Allows opening virtual grindstone
+    default: op
+  friendlycore.stonecutter:
+    description: Allows opening virtual stonecutter
+    default: op
+  friendlycore.smithingtable:
+    description: Allows opening virtual smithing table
+    default: op
+  friendlycore.loom:
+    description: Allows opening virtual loom
+    default: op
+  friendlycore.cartographytable:
+    description: Allows opening virtual cartography table
+    default: op
+  friendlycore.disposal:
+    description: Allows opening trash disposal
+    default: op
+  friendlycore.top:
+    description: Allows teleporting to highest block
+    default: op
+  friendlycore.bottom:
+    description: Allows teleporting to lowest block
+    default: op
+  friendlycore.jump:
+    description: Allows teleporting to block in line of sight
+    default: op
+  friendlycore.suicide:
+    description: Allows killing yourself
+    default: true
+  friendlycore.clearinventory:
+    description: Allows clearing your own inventory
+    default: op
+  friendlycore.clearinventory.others:
+    description: Allows clearing other players' inventories
+    default: op
+  friendlycore.clearinventory.all:
+    description: Allows clearing all players' inventories
+    default: op
+  friendlycore.clearinventory.armor:
+    description: Allows clearing equipped armor
+    default: op
+  friendlycore.clearinventory.bypass:
+    description: Prevents others from clearing your inventory
+    default: false
+  friendlycore.clearinventory.confirm.bypass:
+    description: Bypasses clear inventory confirmation prompt
+    default: op
+  friendlycore.vanish.use:
+    description: Allows toggling vanish on yourself
+    default: op
+  friendlycore.vanish.others:
+    description: Allows toggling vanish on other players
+    default: op
+  friendlycore.vanish.see:
+    description: Allows seeing vanished players
+    default: op
+  friendlycore.vanish.pickup:
+    description: Allows picking up items while vanished
+    default: op
+  friendlycore.vanish.damage:
+    description: Allows dealing and taking damage while vanished
+    default: op
+  friendlycore.vanish.pvp:
+    description: Allows engaging in PvP while vanished
+    default: op
+  friendlycore.vanish.silentchest:
+    description: Allows silent container opening while vanished
+    default: true
+  friendlycore.vanish.silentjoin:
+    description: Silences join message upon connection
+    default: op
+  friendlycore.vanish.fakejoin:
+    description: Allows broadcasting fake join messages
+    default: op
+  friendlycore.vanish.fakequit:
+    description: Allows broadcasting fake quit messages
+    default: op
+  friendlycore.online.use:
+    description: Allows viewing the online player list
+    default: true
+  friendlycore.list.use:
+    description: Compatibility permission for viewing online player list
+    default: true
+  friendlycore.sleepingignored:
+    description: Exempts player from sleep counter
+    default: op
+  essentials.clearinventory:
+    description: Compatibility permission for clearing own inventory
+    default: op
+  essentials.clearinventory.others:
+    description: Compatibility permission for clearing others' inventories
+    default: op
+  essentials.clearinventory.all:
+    description: Compatibility permission for clearing all inventories
+    default: op
+  essentials.clearinventory.multiple:
+    description: Compatibility permission for clearing multiple inventories
+    default: op
+  friendlycore.homes.admin:
+    description: Allows administrative home commands and bypasses
+    default: op
+  home.admin:
+    description: ModernHome alias for home.admin
+    default: op
+  modernhome.admin:
+    description: ModernHome admin compatibility alias
+    default: op
+  friendlycore.homes.nocooldown:
+    description: Bypasses home teleport warmup countdown
+    default: op
+  home.no-cooldown:
+    description: ModernHome alias for warmup bypass
+    default: op
+  home.nocooldown:
+    description: ModernHome alias for warmup bypass
+    default: op
+  modernhome.nocooldown:
+    description: ModernHome alias for warmup bypass
+    default: op
+  home.default:
+    description: Default ModernHome permission (1 home)
+    default: true
+  home.vip:
+    description: VIP ModernHome permission (5 homes)
+    default: false
+  home.mvp:
+    description: MVP ModernHome permission (10 homes)
+    default: false
+  home.legend:
+    description: Legend ModernHome permission (15 homes)
+    default: false
+  friendlycore.teams.admin:
+    description: Administrative access to Teams module
+    default: op
+  zelteams.admin:
+    description: ZelTeams compatibility admin permission
+    default: op
+  friendlycore.admin:
+    description: Full administrative access to FriendlyCore
+    default: op
+    children:
+      friendlycore.use: true
+      friendlycore.economy.admin: true
+      friendlycore.kits.admin: true
+      friendlycore.rtp.admin: true
+      friendlycore.nightvision.admin: true
+      friendlycore.homes.admin: true
+      friendlycore.tools.admin: true
+      friendlycore.teams.admin: true
+      friendlycore.pvp.admin: true
+      friendlycore.spawn.set: true
+      friendlycore.spawn.others: true
+      friendlycore.spawn.joinbypass: true
+      friendlycore.bypass.cooldown: true
+      friendlycore.bypass.warmup: true
+      swiftpay.admin: true
+      unicorntools.admin: true
+      nightvision.admin: true
+      donuttpa.admin: true
+      friendlycore.tpa.admin: true
+      friendlycore.joinquit.admin: true
+  friendlycore.joinquit.use:
+    description: Allows using /joinquit toggle and personal message preferences
+    default: true
+  friendlycore.joinquit.admin:
+    description: Administrative permission to reload join/quit module and view detailed stats
+    default: op
+  friendlycore.joinquit.silent:
+    description: Allows joining and quitting silently without public broadcast
+    default: op
+  friendlycore.joinquit.silent.join:
+    description: Allows joining silently without public broadcast
+    default: op
+  friendlycore.joinquit.silent.quit:
+    description: Allows quitting silently without public broadcast
+    default: op
+  friendlycore.joinquit.staffnotify:
+    description: Allows receiving discreet notifications when silent players join or quit
+    default: op
+  friendlycore.joinquit.group.owner:
+    description: Displays Owner join and quit format
+    default: op
+  friendlycore.joinquit.group.admin:
+    description: Displays Admin join and quit format
+    default: op
+  friendlycore.joinquit.group.vip:
+    description: Displays VIP join and quit format
+    default: false
+  friendlycore.economy.bal:
+    description: Allows checking own balance
+    default: true
+  friendlycore.economy.bal.other:
+    description: Allows checking other players' balances
+    default: op
+  friendlycore.economy.baltop:
+    description: Allows viewing baltop
+    default: true
+  friendlycore.economy.pay:
+    description: Allows sending payments
+    default: true
+  friendlycore.economy.paytoggle:
+    description: Allows toggling incoming payments
+    default: true
+  friendlycore.economy.paytoggle.bypass:
+    description: Allows sending payments to players who have paytoggle disabled
+    default: op
+  friendlycore.economy.payhistory:
+    description: Allows checking payment history
+    default: true
+  friendlycore.economy.admin:
+    description: Allows administrative economy commands
+    default: op
+  friendlycore.tools.use:
+    description: Allows using custom tools
+    default: true
+  friendlycore.tools.drill:
+    description: Allows using the 3x3x3 mining drill
+    default: true
+  friendlycore.tools.chopper:
+    description: Allows using the tree chopper
+    default: true
+  friendlycore.tools.admin:
+    description: Allows giving custom tools
+    default: op
+  friendlycore.kits.use:
+    description: Allows claiming kits
+    default: true
+  friendlycore.kits.admin:
+    description: Allows creating, deleting, and administering kits
+    default: op
+    children:
+      friendlycore.kits.bypass.cooldown: true
+      friendlycore.kits.bypass.onetime: true
+      friendlycore.kits.bypass.money: true
+      friendlycore.kits.bypass.requirements: true
+      playerkits.admin: true
+  friendlycore.kits.bypass.cooldown:
+    description: Allows bypassing kit cooldowns
+    default: op
+  friendlycore.kits.bypass.onetime:
+    description: Allows bypassing one-time kit restrictions
+    default: op
+  friendlycore.kits.bypass.money:
+    description: Allows bypassing kit purchase costs
+    default: op
+  friendlycore.kits.bypass.requirements:
+    description: Allows bypassing kit extra requirements
+    default: op
+
+  # PlayerKits2 Compatibility Permissions
+  playerkits.admin:
+    description: PlayerKits admin permission
+    default: op
+    children:
+      playerkits.bypass.cooldown: true
+      playerkits.bypass.onetime: true
+      playerkits.bypass.money: true
+      playerkits.bypass.requirements: true
+  playerkits.kit.*:
+    description: Permission for all PlayerKits kits
+    default: op
+  playerkits.bypass.cooldown:
+    description: Bypass kit cooldowns (PlayerKits2)
+    default: op
+  playerkits.bypass.onetime:
+    description: Bypass one-time claim limits (PlayerKits2)
+    default: op
+  playerkits.bypass.money:
+    description: Bypass kit purchase price (PlayerKits2)
+    default: op
+  playerkits.bypass.requirements:
+    description: Bypass kit extra requirements (PlayerKits2)
+    default: op
+  friendlycore.spawn.use:
+    description: Allows teleporting to spawn
+    default: true
+  friendlycore.spawn.set:
+    description: Allows setting the spawn location
+    default: op
+  friendlycore.spawn.others:
+    description: Allows teleporting other players to spawn
+    default: op
+  friendlycore.spawn.telegram:
+    description: Allows using the telegram command
+    default: true
+  friendlycore.spawn.joinbypass:
+    description: Bypasses forced join-spawn teleportation
+    default: op
+  friendlycore.bypass.cooldown:
+    description: Bypasses command cooldowns
+    default: op
+  friendlycore.bypass.warmup:
+    description: Bypasses teleport warmup delays
+    default: op
+  friendlycore.beacon.bypass:
+    description: Bypasses beacon reward cooldowns
+    default: op
+  friendlycore.gamemode.all:
+    description: Allows switching to all gamemodes
+    default: op
+  friendlycore.teams.teleport.bypass:
+    description: Bypasses team teleport cooldown and warmup
+    default: op
+  zelteams.teleport.bypass:
+    description: Legacy permission for team teleport bypass
+    default: op
+  friendlycore.teams.color.red:
+    description: Allows selecting the red team color
+    default: false
+  zelteams.color.red:
+    description: Legacy permission for the red team color
+    default: false
+  friendlycore.teams.color.dark_red:
+    description: Allows selecting the dark red team color
+    default: false
+  zelteams.color.dark_red:
+    description: Legacy permission for the dark red team color
+    default: false
+  friendlycore.teams.color.orange:
+    description: Allows selecting the orange team color
+    default: false
+  zelteams.color.orange:
+    description: Legacy permission for the orange team color
+    default: false
+  friendlycore.teams.color.yellow:
+    description: Allows selecting the yellow team color
+    default: false
+  zelteams.color.yellow:
+    description: Legacy permission for the yellow team color
+    default: false
+  friendlycore.teams.color.lime:
+    description: Allows selecting the lime team color
+    default: false
+  zelteams.color.lime:
+    description: Legacy permission for the lime team color
+    default: false
+  friendlycore.teams.color.green:
+    description: Allows selecting the green team color
+    default: false
+  zelteams.color.green:
+    description: Legacy permission for the green team color
+    default: false
+  friendlycore.teams.color.aqua:
+    description: Allows selecting the aqua team color
+    default: false
+  zelteams.color.aqua:
+    description: Legacy permission for the aqua team color
+    default: false
+  friendlycore.teams.color.cyan:
+    description: Allows selecting the cyan team color
+    default: false
+  zelteams.color.cyan:
+    description: Legacy permission for the cyan team color
+    default: false
+  friendlycore.teams.color.blue:
+    description: Allows selecting the blue team color
+    default: false
+  zelteams.color.blue:
+    description: Legacy permission for the blue team color
+    default: false
+  friendlycore.teams.color.purple:
+    description: Allows selecting the purple team color
+    default: false
+  zelteams.color.purple:
+    description: Legacy permission for the purple team color
+    default: false
+  friendlycore.teams.color.pink:
+    description: Allows selecting the pink team color
+    default: false
+  zelteams.color.pink:
+    description: Legacy permission for the pink team color
+    default: false
+  friendlycore.teams.color.white:
+    description: Allows selecting the white team color
+    default: false
+  zelteams.color.white:
+    description: Legacy permission for the white team color
+    default: false
+  friendlycore.teams.color.*:
+    description: Allows using all team colors
+    default: op
+  friendlycore.teams.color.custom:
+    description: Allows selecting a custom hex team color
+    default: false
+  friendlycore.teams.rename:
+    description: Allows choosing a custom team name with /team rename
+    default: false
+  friendlycore.teams.rename.format:
+    description: Allows cosmetic name formatting when custom team colors are permitted
+    default: false
+  zelteams.color.custom:
+    description: Legacy permission for custom hex team colors
+    default: false
+  zelteams.color.*:
+    description: Legacy permission for all team colors
+    default: op
+  friendlycore.kits.*:
+    description: Wildcard access to all kits
+    default: op
+
+  # UnicornTools Compatibility Permissions
+  unicorntools.admin:
+    description: UnicornTools admin permissions
+    default: op
+    children:
+      unicorntools.command.tools: true
+      unicorntools.command.give: true
+      unicorntools.use.drill: true
+      unicorntools.use.chopper: true
+      unicorntools.netherite: true
+  unicorntools.command.tools:
+    description: UnicornTools command tools
+    default: op
+  unicorntools.command.give:
+    description: UnicornTools command give
+    default: op
+  unicorntools.use.drill:
+    description: UnicornTools drill use
+    default: true
+  unicorntools.use.chopper:
+    description: UnicornTools chopper use
+    default: true
+  unicorntools.netherite:
+    description: UnicornTools netherite tools permission
+    default: op
+
+  # CrossTPA / DonutTPA Permissions
+  donuttpa.tpa:
+    description: Ability to send TPA requests
+    default: true
+  donuttpa.tphere:
+    description: Ability to send TPHere requests
+    default: true
+  donuttpa.tphereall:
+    description: Ability to forcibly teleport all online players
+    default: op
+  donuttpa.accept:
+    description: Ability to accept TPA requests
+    default: true
+  donuttpa.deny:
+    description: Ability to deny TPA requests
+    default: true
+  donuttpa.cancel:
+    description: Ability to cancel TPA requests
+    default: true
+  donuttpa.tpaall:
+    description: Ability to send a TPA request to every online player
+    default: op
+  donuttpa.toggle:
+    description: Ability to toggle getting TP requests
+    default: true
+  donuttpa.auto:
+    description: Ability to enable TPA auto
+    default: op
+  donuttpa.gui:
+    description: Ability to toggle gui
+    default: true
+  donuttpa.setting:
+    description: Ability to open TPA setting
+    default: true
+  donuttpa.admin:
+    description: Ability to reload and configure TPA plugin
+    default: op
+
+  # RTP Permissions
+  friendlycore.rtp.use:
+    description: Allows using the RTP command
+    default: true
+  friendlycore.rtp.world:
+    description: Allows targeting a specific world with RTP
+    default: true
+  friendlycore.rtp.server:
+    description: Allows cross-server RTP
+    default: true
+  friendlycore.rtp.others:
+    description: Allows teleporting other players randomly
+    default: op
+  friendlycore.rtp.spread:
+    description: Allows spreading players across the world
+    default: op
+  friendlycore.rtp.bypass.cooldown:
+    description: Bypasses RTP cooldown
+    default: op
+  friendlycore.rtp.bypass.warmup:
+    description: Bypasses RTP warmup delay
+    default: op
+  friendlycore.rtp.bypass.cost:
+    description: Bypasses RTP economy cost
+    default: op
+  friendlycore.rtp.admin:
+    description: Administrative access to RTP (reload, status, etc.)
+    default: op
+
+  # NightVision Permissions
+  friendlycore.nightvision.use:
+    description: Allows toggling night vision for self
+    default: true
+  friendlycore.nightvision.others:
+    description: Allows toggling night vision for other players
+    default: op
+  friendlycore.nightvision.help:
+    description: Allows viewing the NightVision help menu
+    default: true
+  friendlycore.nightvision.admin:
+    description: Full administrative access to NightVision module
+    default: op
+    children:
+      friendlycore.nightvision.use: true
+      friendlycore.nightvision.others: true
+      friendlycore.nightvision.help: true
+      nightvision.admin: true
+
+  # Legacy NightVision Compatibility Permissions
+  nightvision.use:
+    description: Allows toggling night vision (legacy)
+    default: true
+  nightvision.others:
+    description: Allows toggling night vision for others (legacy)
+    default: op
+  nightvision.reload:
+    description: Allows reloading night vision config (legacy)
+    default: op
+  nightvision.help:
+    description: Allows viewing night vision help (legacy)
+    default: true
+  nightvision.admin:
+    description: Full access to night vision (legacy)
+    default: op
+  nightvision.update:
+    description: Receive night vision updates (legacy)
+    default: op
+
+  # Pets Module Permissions
+  friendlycore.pets.use:
+    description: Allows using the pets GUI and basic player commands
+    default: true
+  friendlycore.pets.admin:
+    description: Full administrative access to EcoPets module
+    default: op
+  ecopets.command.pets:
+    description: Legacy permission for /pets
+    default: true
+  ecopets.command.ecopets:
+    description: Legacy permission for /ecopets admin commands
+    default: op
+  ecopets.craft.*:
+    description: Allows crafting all pet eggs
+    default: true
+
+  # SwiftPay Economy Permissions
+  swiftpay.admin:
+    description: Full administrative access to SwiftPay economy
+    default: op
+  swiftpay.bal.other:
+    description: Allows viewing other players' balances
+    default: op
+  swiftpay.bypass.cooldown:
+    description: Bypasses pay command cooldown
+    default: op
+
+  # Kits Bypass Permissions
+  friendlycore.kits.bypass.*:
+    description: Wildcard bypass for all kit restrictions
+    default: op
+  friendlycore.kits.bypass.cooldown.*:
+    description: Wildcard bypass for kit cooldowns
+    default: op
+  friendlycore.kits.bypass.onetime.*:
+    description: Wildcard bypass for one-time kit restrictions
+    default: op
+  friendlycore.kits.bypass.money.*:
+    description: Wildcard bypass for kit economy costs
+    default: op
+  friendlycore.kits.bypass.requirements.*:
+    description: Wildcard bypass for kit requirements
+    default: op
+
+  # PvP Module Permissions
+  friendlycore.pvp.use:
+    description: Allows accessing PvP commands and combat features
+    default: true
+  friendlycore.pvp.admin:
+    description: Full administrative access to PvP module
+    default: op
+  friendlycore.pvp.bypass:
+    description: Bypasses combat tagger and combat restrictions
+    default: false
+  friendlycore.pvp.economy.bypass:
+    description: Bypasses pvp kill economy loss and steal
+    default: false

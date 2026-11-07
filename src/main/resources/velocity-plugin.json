@@ -1,0 +1,8 @@
+{
+  "id": "friendlycore-rtp-return",
+  "name": "FriendlyCore RTP Return",
+  "version": "3.0.0",
+  "description": "Returns only failed FriendlyCore RTP transfers to their source backend",
+  "main": "dev.lyy.friendlycore.proxy.RtpReturnPlugin",
+  "authors": ["lyy"]
+}

@@ -1,0 +1,290 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                             ✦ PVP MODULE ✦                                   ║
+# ║     Combat Tagging, Safezone Barriers, Newbie Protection & Economy Steal    ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# COMBAT TAGGING & LOGOUT PUNISHMENT
+# ──────────────────────────────────────────────────────────────────────────────
+combat-tag:
+  # Enable combat tagging system
+  enabled: true
+
+  # Duration in seconds after combat damage or a combat tag refresh
+  # Ender pearls and wind charges refresh existing combat tags outside safe regions
+  duration: 15
+
+  # Treat operators and administrators as normal players for combat tagging
+  # Set to false if server operators should automatically bypass combat tagging
+  # Admins can also toggle personal bypass dynamically using /pvp bypass
+  ignore-op: true
+
+  # Tag players when damaged by TNT, crystals, respawn anchors, or environmental explosions
+  tag-for-explosions: true
+
+  # Tag players when damaged by projectiles (arrows, tridents, fireworks, etc.)
+  # Wind charge hits only refresh existing combat tags
+  tag-for-projectiles: true
+
+  # Instantly kill combat loggers when NPCs are disabled (combat kicks are always punished)
+  kill-on-leave: true
+
+  # Drop inventory contents on direct combat logout (combat kicks always drop items)
+  drop-inventory-on-leave: true
+
+  # Broadcast a public death/combat log announcement to the entire server
+  broadcast-on-leave: false
+
+  # Disable creative/essentials flight mode immediately upon entering combat
+  disable-flight: true
+
+  # Disable elytra gliding and firework boosts while in combat.
+  # The elytra stays equipped; gliding is just cancelled.
+  disable-elytra: true
+
+  # Actionbar timer display shown above the hotbar during combat
+  actionbar:
+    enabled: false
+    format: "&fCombat: #FF0000%time%s"
+
+  # Optional Bossbar countdown timer display
+  bossbar:
+    enabled: false
+    text: "<gradient:#FF4D5A:#FF9A9A><bold>⚔ COMBAT</bold></gradient> <dark_gray>•</dark_gray> <white>%time%s</white> <dark_gray>(vs <color:#E7B85C>%opponent%</color>)</dark_gray>"
+    color: "RED"
+    style: "SOLID"
+
+  # Commands permitted during active combat (all unlisted commands are blocked)
+  whitelisted-commands:
+    - "msg"
+    - "tell"
+    - "w"
+    - "r"
+    - "reply"
+    - "ping"
+    - "combattag"
+    - "ct"
+    - "tag"
+    - "pvp"
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # AUTO-UNTAG TRIGGERS
+  # ────────────────────────────────────────────────────────────────────────────
+  auto-untag:
+    # Automatically untag the victorious player when their opponent dies
+    on-opponent-death: true
+
+    # Automatically remove combat status when switching to Creative or Spectator mode
+    on-gamemode-change: true
+
+    # Automatically remove combat status when travelling into a blacklisted world
+    on-world-change: true
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # COMBAT LOGGER NPC
+  # ────────────────────────────────────────────────────────────────────────────
+  # Spawns an interactive ArmorStand clone with the player's skin on disconnect,
+  # allowing opponents to finish off players who attempt to combat log.
+  npc:
+    enabled: false
+
+    # Render the combat-logger player's custom skin and head texture on the NPC
+    prefer-player-skin-head: true
+
+    # Holographic nametag format displayed above the NPC with remaining tag duration
+    name-format: "<gradient:#FF4D5A:#FF9A9A><bold>%player%</bold></gradient> <dark_gray>•</dark_gray> <white>%time%s</white>"
+
+    # Broadcast an alert to the server when a combat logger NPC is spawned
+    broadcast-on-spawn: false
+
+    # Play subtle spawn and impact sound effects on the NPC
+    sounds: true
+
+    # Emit Nether Portal particle effects when the NPC timer expires safely
+    despawn-particles: true
+
+  # Worlds where the combat tagging system is completely disabled
+  blacklisted-worlds:
+    - "test_world"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# NEWBIE PVP PROTECTION
+# ──────────────────────────────────────────────────────────────────────────────
+# Grants temporary invulnerability against PvP combat for newly joined players.
+newbie-protection:
+  enabled: true
+
+  # Duration in seconds of starter PvP protection for new players
+  duration: 120
+
+  # Instantly forfeit newbie protection if the beginner attacks another player
+  remove-on-attack: true
+
+  # Visual Bossbar display showing remaining protection duration
+  bossbar:
+    enabled: true
+    text: "<gradient:#7BD88F:#B9FBC0><bold>✦ NEWBIE PROTECTION</bold></gradient> <dark_gray>•</dark_gray> <white>%time% remaining</white>"
+    color: "GREEN"
+    style: "SOLID"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SAFEZONE BARRIER FORCEFIELDS
+# ──────────────────────────────────────────────────────────────────────────────
+# Projects client-side barrier blocks preventing combat-tagged players from running
+# into WorldGuard regions or Lands claims to escape battle.
+barriers:
+  enabled: true
+
+  # Client-side fake block material used for rendering the forcefield
+  # Options: RED_STAINED_GLASS, BARRIER, GLASS, OBSIDIAN, CRYING_OBSIDIAN
+  material: "RED_STAINED_GLASS"
+
+  # Horizontal scan radius in blocks around tagged players
+  radius: 4
+
+  # Vertical height span in blocks above and below the player to draw barrier blocks
+  height: 3
+
+  # Minimum delay between nearby-border scans on movement or combat-tag refreshes
+  scan-interval-millis: 125
+
+  # Knockback force applied when a tagged player attempts to push into a safezone
+  knockback-strength: 1.5
+
+  # Display particle impact effects when colliding with the safezone wall
+  particles: true
+
+  # Play audible rejection sound effects on collision
+  sounds: true
+
+  # Integrate with WorldGuard regions (evaluating flag: pvp deny)
+  worldguard: true
+
+  # Treat all Lands claims as combat safezones. Tagged players cannot run or
+  # pearl from wilderness into a claim (glass wall + knockback), even if that land allows PvP.
+  lands: true
+
+  # Cancel ender pearls / chorus fruit that would land inside a combat safezone
+  block-ender-pearls: true
+
+  # Additional custom region names to treat as safezone barriers
+  custom-safezones: []
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SAFEZONE BORDER & EXPLOSION PROTECTION
+# ──────────────────────────────────────────────────────────────────────────────
+explosions:
+  # Prevent placing or detonating End Crystals and Respawn Anchors inside or near safezones
+  prevent-safezone-bombing: true
+
+  # Safety buffer distance in blocks from safezone borders where explosive anchors are blocked
+  safezone-buffer-radius: 4
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ITEM USAGE COOLDOWNS
+# ──────────────────────────────────────────────────────────────────────────────
+# Per-item cooldowns in seconds. Uses the vanilla item overlay (no action bar).
+# Keys accept GOLDEN_APPLE or golden_apple. Set an item to 0 to disable its cooldown.
+cooldowns:
+  enabled: true
+
+  # Only enforce item cooldowns while in combat (false = always)
+  combat-only: true
+
+  items:
+    GOLDEN_APPLE: 10
+    ENCHANTED_GOLDEN_APPLE: 30
+    ENDER_PEARL: 15
+    TRIDENT: 8
+    MACE: 5
+    WIND_CHARGE: 10
+    BOW: 5
+    CROSSBOW: 5
+    FIREWORK_ROCKET: 3
+    CHORUS_FRUIT: 5
+    TOTEM_OF_UNDYING: 15
+
+# ──────────────────────────────────────────────────────────────────────────────
+# COMBAT RESTRICTIONS & BANNED POTIONS
+# ──────────────────────────────────────────────────────────────────────────────
+blocker:
+  enabled: false
+
+  # Items prohibited from being used, equipped, or activated while in combat
+  blocked-items:
+    - "ELYTRA"
+    - "RESPAWN_ANCHOR"
+    - "END_CRYSTAL"
+    - "FISHING_ROD"
+
+  # Potion effect types banned during combat
+  banned-potions:
+    - "INVISIBILITY"
+
+  # Cancel totem of undying resurrection while combat tagged
+  block-totem: false
+
+  # Cancel eating any food while combat tagged (per-item eat cooldowns still apply when false)
+  block-eat: false
+
+  fireworks:
+    # Cancel firework rockets entirely while combat tagged
+    block-in-combat: false
+    # Max firework flight power while combat tagged. -1 = no limit
+    power-limit: -1
+    # Cooldown in seconds for elytra firework boosts while combat tagged. -1 = disabled
+    elytra-boost-cooldown: 3
+
+# ──────────────────────────────────────────────────────────────────────────────
+# KILL REWARDS & ECONOMY STEAL
+# ──────────────────────────────────────────────────────────────────────────────
+player-kills:
+  enabled: true
+
+  # Repeated kills of the same player give no kill stat or money reward (0 disables, max 3600)
+  anti-farm-cooldown-seconds: 300
+
+  # Reward awarded to killer: <= 1.0 for percentage (e.g. 0.7 = 70%), > 1.0 for flat money (e.g. 500 = $500), 0 to disable
+  money-reward: 0.7
+
+  # Penalty deducted from victim: <= 1.0 for percentage (e.g. 0.6 = 60%), > 1.0 for flat money (e.g. 300 = $300), 0 to disable
+  money-penalty: 0.6
+
+  # Directly transfer the reward amount from the victim's balance to the killer
+  money-steal: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# KILL & DEATH SCREEN TITLES
+# ──────────────────────────────────────────────────────────────────────────────
+# Placeholders: %victim%, %killer%, %money_lost%, %money_gained%, %streak%, %highest_streak%, %kills%, %deaths%, %kd%
+titles:
+  enabled: true
+  fade-in: 5
+  stay: 40
+  fade-out: 5
+  kill-title: "<gradient:#00e676:#00b0ff><bold>KILL!</bold></gradient>"
+  kill-subtitle: "<gray>Defeated <white>%victim%</white> <dark_gray>•</dark_gray> <green>+$%money_gained%</green></gray>"
+  death-title: "<gradient:#ff5252:#ff1744><bold>YOU DIED</bold></gradient>"
+  death-subtitle: "<gray>Slain by <white>%killer%</white> <dark_gray>•</dark_gray> <red>-$%money_lost%</red></gray>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# COMBAT SOUND EFFECTS
+# ──────────────────────────────────────────────────────────────────────────────
+sounds:
+  tag:
+    enabled: true
+    type: "ENTITY_PLAYER_ATTACK_CRIT"
+    volume: 1.0
+    pitch: 1.0
+  kill:
+    enabled: true
+    type: "ENTITY_PLAYER_LEVELUP"
+    volume: 1.0
+    pitch: 1.2
+  death:
+    enabled: true
+    type: "ENTITY_VILLAGER_DEATH"
+    volume: 1.0
+    pitch: 0.8

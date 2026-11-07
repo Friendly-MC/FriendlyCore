@@ -1,0 +1,137 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                             ✦ CHAT CONFIG ✦                                  ║
+# ║  FriendlyCore All-in-One High Performance Chat Suite (Canvas/Folia/Paper)   ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# GENERAL SETTINGS
+# ──────────────────────────────────────────────────────────────────────────────
+settings:
+  # Priority for the AsyncChatEvent listener (LOWEST, LOW, NORMAL, HIGH, HIGHEST, MONITOR)
+  # HIGHEST is recommended to ensure compatibility with other plugins and accurate formatting
+  listener-priority: HIGHEST
+
+  # Global chat format prepended to player messages
+  # Supports MiniMessage formatting, Legacy color codes (&a-f, &0-9, &l-o, &r), hover tooltips, click actions, and PlaceholderAPI
+  format:
+    message: "%luckperms_prefix% &f%player_name% &8➠ "
+    hover-message: |
+      &#25c8fa&lINFO
+      <br>&#25c8fa&l▮&r &7ʟɪғᴇ &f%player_health_scale% &c❤
+      &#25c8fa&l▮&r &7ᴘɪɴɢ &f%player_ping%ms &b☄
+      &#25c8fa&l▮&r &7ʙᴀʟᴀɴᴄᴇ &f%vault_eco_balance_formatted% &e$
+      &#25c8fa&l▮&r &7ʀᴀɴᴋ &f%luckperms_primary_group_name% &6🛡
+      <newline>
+      &#25c8fa&l→ &rᴄʟɪᴄᴋ ᴛᴏ sᴇɴᴅ ᴀ ᴘʀɪᴠᴀᴛᴇ ᴍᴇssᴀɢᴇ
+    action: "SUGGEST_COMMAND:/msg %player_name%"
+
+  # Duration in seconds to keep item and inventory snapshots cached for GUI inspection
+  items-cache-seconds: 60
+
+# ──────────────────────────────────────────────────────────────────────────────
+# COMMAND TOGGLES
+# ──────────────────────────────────────────────────────────────────────────────
+# Toggle individual chat commands on or off
+commands:
+  msg: true
+  reply: true
+  ignore: true
+  ignoreall: true
+  spymsg: true
+  staffchat: true
+  chatping: true
+  chattoggle: true
+  mutechat: true
+  clearchat: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# INTERACTIVE CHAT FEATURES
+# ──────────────────────────────────────────────────────────────────────────────
+features:
+  # Mentions match complete usernames without case sensitivity, e.g. @PlayerName.
+  # Type @ and press Tab for visible local player names; send the complete username to ping.
+  # Only players receiving this message can be mentioned; hidden/self targets are skipped.
+  # Repeated mentions notify once per message. /chatping mutes sound/title but keeps styling.
+  mentions:
+    enabled: true
+    prefix: "<!bold><gradient:#00d2ff:#3a7bd5>@%player%</gradient>"
+    sound:
+      enabled: true
+      name: "block.note_block.pling"
+      volume: 1.0
+      pitch: 2.0
+    title:
+      enabled: true
+      title: "<gradient:#ff416c:#ff4b2b><b>Mentioned!</b></gradient>"
+      subtitle: "<color:#D8D0C3><color:#E7B85C>%sender%</color> ᴍᴇɴᴛɪᴏɴᴇᴅ ʏᴏᴜ ɪɴ ᴄʜᴀᴛ!</color>"
+      fade-in: 5
+      stay: 30
+      fade-out: 10
+
+  # Dedicated staff communication channel (/sc or prefix shortcut)
+  staffchat:
+    enabled: true
+    prefix: "#"
+    format: "<color:#25c8fa><bold>[STAFF]</bold></color> <dark_gray>|</dark_gray> <red>%player%</red><dark_gray> » </dark_gray><white>{message}</white>"
+    sound:
+      enabled: true
+      name: "block.note_block.bell"
+
+  # Social Spy monitoring format for staff inspecting direct messages
+  spy:
+    format: "<dark_aqua>[SPY]</dark_aqua> <dark_gray>(</dark_gray><gray>%sender%</gray> <green>➺</green> <gray>%target%</gray><dark_gray>)</dark_gray> <white>{message}</white>"
+
+  # Direct private messaging formats and audio cues
+  msg:
+    sound:
+      enabled: true
+      name: "block.note_block.pling"
+    sender-format: "<white>✉</white> <green>⬆</green> <dark_aqua>MSG</dark_aqua> <dark_gray>(</dark_gray><green>me</green> <white>➺</white> <gray>%target%</gray><dark_gray>)</dark_gray> <white>{message}</white>"
+    receiver-format: "<white>✉</white> <green>⬇</green> <dark_aqua>MSG</dark_aqua> <dark_gray>(</dark_gray><green>%sender%</green> <white>➺</white> <gray>me</gray><dark_gray>)</dark_gray> <white>{message}</white>"
+
+  # Clickable command shortcuts embedded in chat messages (e.g. [/help])
+  command-replacer:
+    enabled: true
+    replacement: "<click:suggest_command:\"/%command%\"><hover:show_text:\"<color:#D8D0C3>ᴄʟɪᴄᴋ ᴛᴏ ᴘʀᴇᴘᴀʀᴇ <color:#E7B85C>/%command%</color></color>\"><color:#6EDBFF>[/%command%]</color></hover></click>"
+
+  # Interactive held item preview in chat
+  item-show:
+    enabled: true
+    disable-gui: false
+    prefix:
+      - "[item]"
+      - "[i]"
+      - "[hand]"
+    parser: "<click:run_command:\"/chatinv %uuid%\"><hover:show_text:\"<color:#D8D0C3>ᴄʟɪᴄᴋ ᴛᴏ ᴠɪᴇᴡ <color:#E7B85C>%player%</color>'s ɪᴛᴇᴍ</color>\"><dark_gray>[<color:#E7B85C>%item%</color>]</dark_gray></hover></click>"
+
+  # Interactive player inventory preview in chat
+  inventory-show:
+    enabled: true
+    prefix:
+      - "[inv]"
+      - "[inventory]"
+    parser: "<click:run_command:\"/chatinv %uuid%\"><hover:show_text:\"<color:#D8D0C3>ᴄʟɪᴄᴋ ᴛᴏ ᴠɪᴇᴡ <color:#E7B85C>%player%</color>'s ɪɴᴠᴇɴᴛᴏʀʏ</color>\"><dark_gray>[<color:#6EDBFF>%player%'s ɪɴᴠᴇɴᴛᴏʀʏ</color>]</dark_gray></hover></click>"
+
+  # Interactive Ender Chest preview in chat
+  enderchest-show:
+    enabled: true
+    prefix:
+      - "[enderchest]"
+      - "[ec]"
+      - "[ender]"
+    parser: "<click:run_command:\"/chatinv %uuid%\"><hover:show_text:\"<color:#D8D0C3>ᴄʟɪᴄᴋ ᴛᴏ ᴠɪᴇᴡ <color:#E7B85C>%player%</color>'s ᴇɴᴅᴇʀ ᴄʜᴇѕᴛ</color>\"><dark_gray>[<color:#FFD166>%player%'s ᴇɴᴅᴇʀᴄʜᴇѕᴛ</color>]</dark_gray></hover></click>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# CROSS-SERVER SYNCHRONIZATION
+# ──────────────────────────────────────────────────────────────────────────────
+# Redis-powered multi-server synchronization across network instances
+cross-server:
+  enabled: true
+  sync-public-chat: true
+  sync-staff-chat: true
+  sync-private-messages: true
+  sync-social-spy: true
+  sync-mute-chat: true
+  sync-clear-chat: true

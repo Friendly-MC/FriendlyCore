@@ -1,0 +1,37 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                        ✦ FILTER WHITELIST ✦                                  ║
+# ║  Whitelisted domains, words, IPs, and patterns that bypass checks           ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# FILTER EXEMPTIONS & WHITELISTS
+# ──────────────────────────────────────────────────────────────────────────────
+# Entries listed here will bypass advertisement and profanity checks
+whitelist:
+  # Trusted domains allowed in chat links and mentions
+  domains:
+    - youtube.com
+    - youtu.be
+    - discord.gg
+    - discord.com
+    - twitch.tv
+    - github.com
+
+  # Local or trusted IP addresses excluded from advertisement blocking
+  ips:
+    - 127.0.0.1
+    - 0.0.0.0
+
+  # Words containing sub-strings that might otherwise trigger false-positive filter matches
+  words:
+    - grass
+    - glass
+    - classic
+    - bass
+    - assassin
+    - pass
+    - assume
+    - asset
+    - assign

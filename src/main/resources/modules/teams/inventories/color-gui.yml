@@ -1,0 +1,60 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                       ✦ TEAMS - COLOR SELECTION GUI ✦                        ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+inventory:
+  title: '&b✹ &7Team Color &8(&7%page%&8/&7%total%&8)'
+  disposition:
+  - '---co----'
+  - '*'
+  - p-------n
+  # Number of rows allocated for available color items
+  rows: 3
+values:
+  color-item-name: '%color%&l%name%'
+  color-item-lore:
+  - '&8'
+  - '&aClick to select this color.'
+  color-item-selected-lore:
+  - '&8'
+  - '&2✔ Currently selected.'
+items:
+  custom-color:
+    name: '&d&lCustom Hex Color'
+    lore:
+    - '&7Choose your own color with #RRGGBB.'
+    material: NAME_TAG
+    actions:
+      left-click: custom_color
+    symbol: c
+  blank:
+    name: '&e'
+    material: LIGHT_GRAY_STAINED_GLASS_PANE
+    symbol: '-'
+  goback:
+    name: '&c&lGO BACK'
+    lore:
+    - '&7Click here to go back.'
+    material: ARROW
+    actions:
+      left-click: go_back
+    symbol: o
+  previous-page:
+    name: '&7PREVIOUS PAGE'
+    lore:
+    - '&7Click to go to the previous page.'
+    material: PAPER
+    actions:
+      left-click: to_previous_page
+    symbol: p
+  next-page:
+    name: '&7NEXT PAGE'
+    lore:
+    - '&7Click to go to the next page.'
+    material: PAPER
+    actions:
+      left-click: to_next_page
+    symbol: n
+version: 2

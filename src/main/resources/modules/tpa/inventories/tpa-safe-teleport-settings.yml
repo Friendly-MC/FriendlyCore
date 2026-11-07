@@ -1,0 +1,116 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                  ✦ TPA SAFE TELEPORT CHECKS MENU ✦                           ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+safe-teleport-setting-inventory:
+  name: "&8✦ #00d2ffsᴀғᴇ ᴛᴇʟᴇᴘᴏʀᴛ ᴄʜᴇᴄᴋs &8✦"
+  rows: 4
+
+  back-button:
+    slot: 31
+    material: ARROW
+    display-name: "&c&l« Back to Settings"
+    lore:
+      - "&7Click to return to previous menu."
+
+  check-vehicle-icon:
+    enabled:
+      slot: 10
+      material: LIME_STAINED_GLASS_PANE
+      display-name: "&7Vehicle Check &8» &a&lENABLED"
+      lore:
+        - "&7Prevents teleportation when player"
+        - "&7is riding a vehicle (boat, cart, etc.)"
+        - ""
+        - "<#a8ff78>➜ Click to toggle"
+    disabled:
+      slot: 10
+      material: RED_STAINED_GLASS_PANE
+      display-name: "&7Vehicle Check &8» &c&lDISABLED"
+      lore:
+        - "&7Prevents teleportation when player"
+        - "&7is riding a vehicle (boat, cart, etc.)"
+        - ""
+        - "<#a8ff78>➜ Click to toggle"
+
+  check-nearby-entities-icon:
+    enabled:
+      slot: 12
+      material: LIME_STAINED_GLASS_PANE
+      display-name: "&7Nearby Entities Check &8» &a&lENABLED"
+      lore:
+        - "&7Prevents teleportation when armor stands"
+        - "&7or items could interfere with safety."
+        - ""
+        - "<#a8ff78>➜ Click to toggle"
+    disabled:
+      slot: 12
+      material: RED_STAINED_GLASS_PANE
+      display-name: "&7Nearby Entities Check &8» &c&lDISABLED"
+      lore:
+        - "&7Prevents teleportation when armor stands"
+        - "&7or items could interfere with safety."
+        - ""
+        - "<#a8ff78>➜ Click to toggle"
+
+  check-falling-icon:
+    enabled:
+      slot: 14
+      material: LIME_STAINED_GLASS_PANE
+      display-name: "&7Falling Check &8» &a&lENABLED"
+      lore:
+        - "&7Prevents teleportation to mid-air or"
+        - "&7void without solid ground below."
+        - ""
+        - "<#a8ff78>➜ Click to toggle"
+    disabled:
+      slot: 14
+      material: RED_STAINED_GLASS_PANE
+      display-name: "&7Falling Check &8» &c&lDISABLED"
+      lore:
+        - "&7Prevents teleportation to mid-air or"
+        - "&7void without solid ground below."
+        - ""
+        - "<#a8ff78>➜ Click to toggle"
+
+  check-water-icon:
+    enabled:
+      slot: 16
+      material: LIME_STAINED_GLASS_PANE
+      display-name: "&7Water Hazard Check &8» &a&lENABLED"
+      lore:
+        - "&7Prevents teleportation into deep water"
+        - "&7avoiding unexpected swimming situations."
+        - ""
+        - "<#a8ff78>➜ Click to toggle"
+    disabled:
+      slot: 16
+      material: RED_STAINED_GLASS_PANE
+      display-name: "&7Water Hazard Check &8» &c&lDISABLED"
+      lore:
+        - "&7Prevents teleportation into deep water"
+        - "&7avoiding unexpected swimming situations."
+        - ""
+        - "<#a8ff78>➜ Click to toggle"
+
+  check-signs-icon:
+    enabled:
+      slot: 22
+      material: LIME_STAINED_GLASS_PANE
+      display-name: "&7Sign Interference Check &8» &a&lENABLED"
+      lore:
+        - "&7Prevents teleportation where signs"
+        - "&7might obstruct player placement."
+        - ""
+        - "<#a8ff78>➜ Click to toggle"
+    disabled:
+      slot: 22
+      material: RED_STAINED_GLASS_PANE
+      display-name: "&7Sign Interference Check &8» &c&lDISABLED"
+      lore:
+        - "&7Prevents teleportation where signs"
+        - "&7might obstruct player placement."
+        - ""
+        - "<#a8ff78>➜ Click to toggle"

@@ -1,0 +1,111 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                     ✦ FRIENDLY CORE - HOMES MESSAGES ✦                       ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+prefix: "<gradient:#7BD88F:#B9FBC0><bold>⌂ ʜᴏᴍᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Validation & Error Messages
+# ──────────────────────────────────────────────────────────────────────────────
+invalid-characters: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʜᴏᴍᴇ ɴᴀᴍᴇ ᴄᴏɴᴛᴀɪɴѕ ɪɴᴠᴀʟɪᴅ ᴄʜᴀʀᴀᴄᴛᴇʀѕ."
+name-too-long: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʜᴏᴍᴇ ɴᴀᴍᴇ ɪѕ ᴛᴏᴏ ʟᴏɴɢ <dark_gray>(ᴍᴀx 32 ᴄʜᴀʀѕ)</dark_gray>."
+invalid-number: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɪɴᴠᴀʟɪᴅ ʜᴏᴍᴇ ѕʟᴏᴛ ɴᴜᴍʙᴇʀ."
+invalid-player: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴘʟᴀʏᴇʀ ɴᴏᴛ ғᴏᴜɴᴅ."
+home-not-found: "<gradient:#7BD88F:#B9FBC0><bold>⌂ ʜᴏᴍᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʜᴏᴍᴇ ᴅᴏᴇѕɴ'ᴛ ᴇxɪѕᴛ."
+home-not-found-action-bar: "<gradient:#7BD88F:#B9FBC0><bold>⌂ ʜᴏᴍᴇ</bold></gradient> <dark_gray>» <color:#FF4D5A>ʜᴏᴍᴇ ᴅᴏᴇѕɴ'ᴛ ᴇxɪѕᴛ."
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Home Management (Set, Rename & Delete)
+# ──────────────────────────────────────────────────────────────────────────────
+home-renamed: "<gradient:#7BD88F:#B9FBC0><bold>⌂ ʜᴏᴍᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʜᴏᴍᴇ <color:#E7B85C>%home%</color> ʜᴀѕ ʙᴇᴇɴ ʀᴇɴᴀᴍᴇᴅ ᴛᴏ <color:#E7B85C>%name%</color>."
+home-renamed-someone-else: "<gradient:#7BD88F:#B9FBC0><bold>⌂ ʜᴏᴍᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʀᴇɴᴀᴍᴇᴅ <color:#E7B85C>%player%</color>'ѕ ʜᴏᴍᴇ <color:#E7B85C>%home%</color> ᴛᴏ <color:#E7B85C>%name%</color>."
+home-removed-someone-else: "<gradient:#7BD88F:#B9FBC0><bold>⌂ ʜᴏᴍᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʀᴇᴍᴏᴠᴇᴅ <color:#E7B85C>%player%</color>'ѕ ʜᴏᴍᴇ <color:#E7B85C>%home%</color>."
+home-deleted-chat: "<gradient:#7BD88F:#B9FBC0><bold>⌂ ʜᴏᴍᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʜᴏᴍᴇ <color:#E7B85C>%home%</color> ʜᴀѕ ʙᴇᴇɴ ʀᴇᴍᴏᴠᴇᴅ."
+home-deleted-action-bar: "<gradient:#7BD88F:#B9FBC0><bold>⌂ ʜᴏᴍᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʜᴏᴍᴇ ʀᴇᴍᴏᴠᴇᴅ."
+delete-cancel-chat: "<gradient:#7BD88F:#B9FBC0><bold>⌂ ʜᴏᴍᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴅᴇʟᴇᴛɪᴏɴ ᴄᴀɴᴄᴇʟᴇᴅ."
+delete-cancel-actionbar: "<gradient:#7BD88F:#B9FBC0><bold>⌂ ʜᴏᴍᴇ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴅᴇʟᴇᴛɪᴏɴ ᴄᴀɴᴄᴇʟᴇᴅ."
+home-set-chat: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʜᴏᴍᴇ ѕᴇᴛ ᴛᴏ ʏᴏᴜʀ ᴄᴜʀʀᴇɴᴛ ʟᴏᴄᴀᴛɪᴏɴ."
+home-set-actionbar: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʜᴏᴍᴇ ѕᴇᴛ."
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Teleportation & Countdowns
+# ──────────────────────────────────────────────────────────────────────────────
+home-teleporting-chat: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛɪɴɢ ᴛᴏ ʜᴏᴍᴇ..."
+home-teleport-chat: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ ᴛᴏ ʜᴏᴍᴇ."
+admin-home-teleport-chat: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ ᴛᴏ <color:#E7B85C>%target%</color>'ѕ ʜᴏᴍᴇ <color:#E7B85C>#%number%</color>."
+already-teleport-chat: "<gradient:#FFB703:#E7B85C><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ᴛᴇʟᴇᴘᴏʀᴛɪɴɢ."
+already-teleport-action-bar: "<gradient:#FFB703:#E7B85C><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴀʟʀᴇᴀᴅʏ ᴛᴇʟᴇᴘᴏʀᴛɪɴɢ..."
+teleport-cancel-chat: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛ ᴄᴀɴᴄᴇʟᴇᴅ ʙᴇᴄᴀᴜѕᴇ ʏᴏᴜ ᴍᴏᴠᴇᴅ."
+teleport-cancel-action-bar: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛ ᴄᴀɴᴄᴇʟᴇᴅ."
+teleporting-action-bar: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛɪɴɢ ɪɴ <color:#E7B85C>%time%</color>. ᴅᴏɴ'ᴛ ᴍᴏᴠᴇ."
+teleporting-chat: "<gradient:#6EDBFF:#A7F3FF><bold>⇄ ᴛᴇʟᴇᴘᴏʀᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛɪɴɢ ɪɴ <color:#E7B85C>%time%</color>. ᴅᴏɴ'ᴛ ᴍᴏᴠᴇ."
+teleported-action-bar: "<gradient:#7BD88F:#B9FBC0><bold>✔ ѕᴜᴄᴄᴇѕѕ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ ᴛᴏ ʜᴏᴍᴇ."
+is-in-combat: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴀʀᴇ ɪɴ ᴄᴏᴍʙᴀᴛ. ᴛᴇʟᴇᴘᴏʀᴛ ᴄᴀɴᴄᴇʟᴇᴅ."
+is-in-combat-action-bar: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ɪɴ ᴄᴏᴍʙᴀᴛ. ᴛᴇʟᴇᴘᴏʀᴛ ᴄᴀɴᴄᴇʟᴇᴅ."
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Limits, Cooldowns & Economy
+# ──────────────────────────────────────────────────────────────────────────────
+blacklisted_world: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ѕᴇᴛ ᴀ ʜᴏᴍᴇ ɪɴ ᴛʜɪѕ ᴡᴏʀʟᴅ."
+blacklisted_world_actionbar: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴄᴀɴɴᴏᴛ ѕᴇᴛ ʜᴏᴍᴇ ʜᴇʀᴇ."
+reached_max_number_of_homes: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ʜᴀᴠᴇ ʀᴇᴀᴄʜᴇᴅ ʏᴏᴜʀ ᴍᴀxɪᴍᴜᴍ ʜᴏᴍᴇ ʟɪᴍɪᴛ <dark_gray>(<color:#E7B85C>%max_homes%</color>)</dark_gray>."
+reached_max_number_of_homes_homes: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ʜᴀᴠᴇ ʀᴇᴀᴄʜᴇᴅ ʏᴏᴜʀ ᴍᴀxɪᴍᴜᴍ ʜᴏᴍᴇ ʟɪᴍɪᴛ."
+height-limit-reached: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ѕᴇᴛ ᴀ ʜᴏᴍᴇ ᴀʙᴏᴠᴇ ʏ=<color:#E7B85C>%limit%</color>."
+command-cooldown: "<gradient:#FFD166:#FFB347><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴜѕᴇ ᴛʜᴀᴛ ᴄᴏᴍᴍᴀɴᴅ ғᴏʀ <color:#E7B85C>%seconds%ѕ<color:#D8D0C3>."
+command-cooldown-action-bar: "<gradient:#FFD166:#FFB347><bold>⚠ ᴡᴀʀɴɪɴɢ</bold></gradient> <dark_gray>» <color:#D8D0C3>ᴄᴏᴍᴍᴀɴᴅ ɪѕ ᴏɴ ᴄᴏᴏʟᴅᴏᴡɴ."
+insufficient-funds: "<gradient:#FF4D5A:#FF9A9A><bold>✘ ᴇʀʀᴏʀ</bold></gradient> <dark_gray>» <color:#D8D0C3>ʏᴏᴜ ɴᴇᴇᴅ <color:#E7B85C>$%cost%</color> ᴛᴏ ᴘᴇʀғᴏʀᴍ ᴛʜɪѕ ᴀᴄᴛɪᴏɴ."
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Command Help & Guides
+# ──────────────────────────────────────────────────────────────────────────────
+help-message:
+  - "<gradient:#7BD88F:#B9FBC0><bold>⌂ ʜᴏᴍᴇ</bold></gradient> <dark_gray>• <color:#8A8A8A>ᴄᴏᴍᴍᴀɴᴅ ɢᴜɪᴅᴇ"
+  - " <dark_gray>• <color:#E7B85C>/home <dark_gray>» <color:#D8D0C3>ᴏᴘᴇɴ ʜᴏᴍᴇ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ᴍᴇɴᴜ"
+  - " <dark_gray>• <color:#E7B85C>/home <name|slot> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛ ᴛᴏ ᴀ ʜᴏᴍᴇ"
+  - " <dark_gray>• <color:#E7B85C>/sethome [name] <dark_gray>» <color:#D8D0C3>ѕᴇᴛ ᴀ ɴᴇᴡ ʜᴏᴍᴇ"
+  - " <dark_gray>• <color:#E7B85C>/delhome <name> <dark_gray>» <color:#D8D0C3>ᴅᴇʟᴇᴛᴇ ᴀɴ ᴇxɪѕᴛɪɴɢ ʜᴏᴍᴇ"
+  - " <dark_gray>• <color:#E7B85C>/home rename <slot> <name> <dark_gray>» <color:#D8D0C3>ʀᴇɴᴀᴍᴇ ᴀ ʜᴏᴍᴇ"
+
+help-message-admin:
+  - "<gradient:#7BD88F:#B9FBC0><bold>⌂ ʜᴏᴍᴇ ѕᴛᴀғғ</bold></gradient> <dark_gray>• <color:#8A8A8A>ᴀᴅᴍɪɴ ɢᴜɪᴅᴇ"
+  - " <dark_gray>• <color:#E7B85C>/ahome tp <player> <home> <dark_gray>» <color:#D8D0C3>ᴛᴇʟᴇᴘᴏʀᴛ ᴛᴏ ᴘʟᴀʏᴇʀ'ѕ ʜᴏᴍᴇ"
+  - " <dark_gray>• <color:#E7B85C>/ahome see <player> <dark_gray>» <color:#D8D0C3>ᴠɪᴇᴡ ᴘʟᴀʏᴇʀ'ѕ ʜᴏᴍᴇѕ ɢᴜɪ"
+  - " <dark_gray>• <color:#E7B85C>/ahome delete <player> <home> <dark_gray>» <color:#D8D0C3>ᴅᴇʟᴇᴛᴇ ᴘʟᴀʏᴇʀ'ѕ ʜᴏᴍᴇ"
+  - " <dark_gray>• <color:#E7B85C>/ahome reload <dark_gray>» <color:#D8D0C3>ʀᴇʟᴏᴀᴅ ᴄᴏɴғɪɢᴜʀᴀᴛɪᴏɴ"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# COMMAND, GUI AND ADMIN MESSAGES
+# ──────────────────────────────────────────────────────────────────────────────
+your-homes-are-still-loading-please: "&eYour homes are still loading. Please try again in a moment."
+you-do-not-have-permission-to: "<gradient:#ff5252:#ff1744><bold>ERROR</bold></gradient> <dark_gray>»</dark_gray> <gray>You do not have permission to execute this command.</gray>"
+friendlycore-homes-module-reloaded-successfully: "<gradient:#00e676:#00b0ff><bold>HOMES</bold></gradient> <dark_gray>»</dark_gray> <gray>FriendlyCore Homes module reloaded successfully.</gray>"
+this-subcommand-can-only-be-executed: "<gradient:#ff5252:#ff1744><bold>ERROR</bold></gradient> <dark_gray>»</dark_gray> <gray>This subcommand can only be executed by players.</gray>"
+use-ahome-see: "<gradient:#ff5252:#ff1744><bold>USAGE</bold></gradient> <dark_gray>»</dark_gray> <gray>Use <#00d2ff>/ahome see <player></#00d2ff></gray>"
+use-ahome-osee: "<gradient:#ff5252:#ff1744><bold>USAGE</bold></gradient> <dark_gray>»</dark_gray> <gray>Use <#00d2ff>/ahome osee <player></#00d2ff></gray>"
+use-ahome-tp: "<gradient:#ff5252:#ff1744><bold>USAGE</bold></gradient> <dark_gray>»</dark_gray> <gray>Use <#00d2ff>/ahome tp <player> <home></#00d2ff></gray>"
+use-ahome-otp: "<gradient:#ff5252:#ff1744><bold>USAGE</bold></gradient> <dark_gray>»</dark_gray> <gray>Use <#00d2ff>/ahome otp <player> <home></#00d2ff></gray>"
+use-ahome-rename: "<gradient:#ff5252:#ff1744><bold>USAGE</bold></gradient> <dark_gray>»</dark_gray> <gray>Use <#00d2ff>/ahome rename <player> <home> <name></#00d2ff></gray>"
+player-not-found: "<gradient:#ff5252:#ff1744><bold>HOMES</bold></gradient> <dark_gray>»</dark_gray> <gray>Player not found.</gray>"
+home-not-found-2: "<gradient:#ff5252:#ff1744><bold>HOMES</bold></gradient> <dark_gray>»</dark_gray> <gray>Home not found.</gray>"
+use-ahome-delete: "<gradient:#ff5252:#ff1744><bold>USAGE</bold></gradient> <dark_gray>»</dark_gray> <gray>Use <#00d2ff>/ahome delete <player> <home></#00d2ff></gray>"
+unknown-subcommand-type-ahome-help-for: "<gradient:#ff5252:#ff1744><bold>ERROR</bold></gradient> <dark_gray>»</dark_gray> <gray>Unknown subcommand. Type <#00d2ff>/ahome help</#00d2ff> for assistance.</gray>"
+use-delhome: "<gradient:#ff5252:#ff1744><bold>USAGE</bold></gradient> <dark_gray>»</dark_gray> <gray>Use <#00d2ff>/delhome <slot|name></#00d2ff></gray>"
+usage-home-rename-name: "<red>Usage: /home rename <slot> [name]</red>"
+usage-home-delete: "<red>Usage: /home delete <slot></red>"
+homes-are-still-loading-please-try: "&eHomes are still loading. Please try again in a moment."
+migrate-a-home-migration-is-already-in: "<gradient:#ff5252:#ff1744><bold>ERROR</bold></gradient> <dark_gray>»</dark_gray> <gray>A home migration is already in progress.</gray>"
+migrate-scanning-for-modernhome-data: "<gradient:#00e676:#00b0ff><bold>HOMES MIGRATION</bold></gradient> <dark_gray>»</dark_gray> <gray>Scanning for ModernHome data...</gray>"
+migrate-error: "<gradient:#ff5252:#ff1744><bold>ERROR</bold></gradient> <dark_gray>»</dark_gray> <gray>%err%</gray>"
+migrate-found-source: "<gradient:#00e676:#00b0ff><bold>HOMES MIGRATION</bold></gradient> <dark_gray>»</dark_gray> <gray>Found source: <aqua>%path%</aqua></gray>"
+migrate-homes-migration-completed: "<gradient:#00e676:#00b0ff><bold>✔ HOMES MIGRATION COMPLETED</bold></gradient>"
+migrate-total-homes-imported: " <gray>• Total homes imported: <green>%homes_migrated%</green></gray>"
+migrate-total-players-affected: " <gray>• Total players affected: <aqua>%players_migrated%</aqua></gray>"
+migrate-time-taken-ms: " <gray>• Time taken: <yellow>%elapsed%ms</yellow></gray>"
+migrate-migrated-gui-menu-home-yml: " <gray>• Migrated GUI menu: <aqua>home.yml</aqua></gray>"
+migrate-migrated-gui-menu-confirm-yml: " <gray>• Migrated GUI menu: <aqua>confirm.yml</aqua></gray>"
+migrate-processed-homes: " <gray>• Processed <yellow>%homes_count%</yellow> homes...</gray>"
+migrate-sqlite-error: "<gradient:#ff5252:#ff1744><bold>ERROR</bold></gradient> <dark_gray>»</dark_gray> <gray>SQLite error: %error%</gray>"
+migrate-connected-to-modernhome-mysql-database-reading: " <gray>• Connected to ModernHome MySQL database. Reading homes...</gray>"
+migrate-mysql-error: "<gradient:#ff5252:#ff1744><bold>ERROR</bold></gradient> <dark_gray>»</dark_gray> <gray>MySQL error: %error%</gray>"

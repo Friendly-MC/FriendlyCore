@@ -1,0 +1,240 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                            ✦ SPAWN MODULE ✦                                  ║
+# ║    Spawn Teleportation, First-Join Routing, Respawn & Protection System      ║
+# ║                                                                              ║
+# ║  • Multi-Server Cross-Proxy Synchronization (BungeeCord / Velocity / Redis)  ║
+# ║  • Folia & Paper Thread-Safe Asynchronous Lifecycle & Chunk Safety           ║
+# ║  • Persistent First-Join Detection (PDC) & Welcoming Effects                 ║
+# ║  • Bed & Anchor Aware PlayerRespawnEvent Redirection                         ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SPAWN TELEPORTATION SYSTEM
+# ──────────────────────────────────────────────────────────────────────────────
+spawn:
+  # Enable the core spawn teleportation module
+  enabled: true
+
+  # Multi-Server Cross-Proxy Configuration (Velocity / BungeeCord / Redis)
+  cross-server:
+    # If true, players will be routed to the spawn server across the proxy network
+    enabled: true
+    # Fallback server name if no target server is explicitly registered
+    fallback-server: "lobby"
+
+  # Warmup countdown in seconds before teleporting (0 to disable delay)
+  warmup-seconds: 3
+
+  # Cooldown in seconds between consecutive /spawn uses (0 to disable)
+  # Bypass permission: 'friendlycore.bypass.cooldown'
+  cooldown-seconds: 5
+
+  # Warmup cancellation triggers
+  cancel-on-move: true
+  cancel-on-damage: true
+  # During warmup and the proxy Connect window the player cannot take or deal
+  # damage, drop items, or be combat-tagged. Prevents death-drops from following
+  # them onto the spawn server.
+
+  # Audio sound effects played during warmup and arrival (Bukkit Sound / Adventure Key)
+  sound:
+    teleport: "ENTITY_ENDERMAN_TELEPORT"
+    warmup: "BLOCK_NOTE_BLOCK_PLING"
+
+  # Primary Spawn Location Coordinates
+  # (Automatically set and updated in-game via '/setspawn [server]')
+  # For a proxy with spawn and economy backends: run /setspawn on spawn with
+  # redis.server-id: "spawn" there, and redis.server-id: "economy" on economy.
+  # Both backends need FriendlyCore Redis enabled and the same Redis channel/secret.
+  # The server value must match the proxy's backend name on both backends.
+  location:
+    server: "spawn-eco"
+    world: "spawn"
+    x: 0.5
+    y: 64.0
+    z: 0.5
+    yaw: 0.0
+    pitch: 0.0
+
+# ──────────────────────────────────────────────────────────────────────────────
+# JOIN SPAWN ROUTING & LOGIC
+# ──────────────────────────────────────────────────────────────────────────────
+join-spawn:
+  # Players who disconnect in midair (elytra, wind charges, jumps or falls)
+  # rejoin at /setspawn, including after a normal server restart. Recovery
+  # overrides the mode and bypass below; combat NPC/death handling takes
+  # precedence, and intentional proxy transfers keep their destination.
+  # Join teleportation behavior:
+  # - "FIRST_JOIN"   : Teleports newcomers on their first join to spawn (recommended for Survival/SMP)
+  # - "ALWAYS"       : Teleports every player to spawn whenever they log in (ideal for Hub/Lobby)
+  # - "FORCE_WORLDS" : Teleports to spawn only if the player logged out in specific worlds
+  # - "DISABLED"     : Players log in at their exact logout coordinates
+  # Last-location restore (below) runs for returning players and overrides ALWAYS.
+  mode: "FIRST_JOIN"
+
+  # Delay in ticks before teleporting upon joining (ensures chunk safety on Paper & Folia)
+  delay-ticks: 2
+
+  # Bypass permission for forced join teleportation (e.g. staff / admins)
+  bypass-permission: "friendlycore.spawn.joinbypass"
+
+  # Worlds that force spawn on join when mode is set to "FORCE_WORLDS"
+  force-spawn-worlds:
+    - "world_nether"
+    - "world_the_end"
+
+  # Restore the backend the player actually logged out on after the proxy drops
+  # them on the spawn hub:
+  #   connect → spawn-eco → load saved destination
+  #     none (or after /spawn) → configured SPAWN
+  #     economy-b              → Connect(economy-b) then restore XYZ/Yaw/Pitch
+  # /spawn CLEARS last location so you are not auto-sent back to economy.
+  # Going to another server (/rtp or any plugin) saves last location again.
+  last-location:
+    enabled: true
+    # Proxy join targets that then forward players onward
+    hub-servers:
+      - spawn-eco
+    # Worlds treated as spawn on the hub only (not on economy servers)
+    spawn-worlds:
+      - spawn
+    # Blindness / darkness while transferring (no title countdown)
+    blindness-ticks: 80
+    darkness: true
+    # Always unfreeze if routing hangs (Connect failed, Redis slow, teleport stuck)
+    failsafe-ticks: 200
+
+# ──────────────────────────────────────────────────────────────────────────────
+# RESPAWN HANDLING & REDIRECTION
+# ──────────────────────────────────────────────────────────────────────────────
+respawn:
+  # Player death respawn behavior:
+  # - "NO_BED"   : Uses the bed/anchor when valid; otherwise the configured /setspawn point, including from economy to spawn
+  # - "ALWAYS"   : Always respawns at configured spawn point on the spawn server, ignoring beds and respawn anchors
+  # - "DISABLED" : Standard vanilla / Paper respawn handling
+  mode: "NO_BED"
+
+  # Whether to override the end portal exit respawn point
+  override-end-portal: false
+
+  # Sound played to the player upon respawning at spawn (Set to "none" to disable)
+  sound: "ENTITY_PLAYER_LEVELUP"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# FIRST-JOIN WELCOME & REWARDS
+# ──────────────────────────────────────────────────────────────────────────────
+first-join:
+  # Broadcast a welcome message to the entire server when a newcomer joins
+  broadcast-enabled: true
+
+  # On-screen Title & Subtitle displayed to the new player
+  title:
+    enabled: true
+    title: "<gradient:#00e676:#00b0ff><bold>WELCOME!</bold></gradient>"
+    subtitle: "<gray>Welcome to the server, <white>%player%</white>!</gray>"
+    fade-in-ticks: 10
+    stay-ticks: 70
+    fade-out-ticks: 20
+
+  # Action bar message displayed on first join
+  actionbar:
+    enabled: true
+    message: "<#00e676>Enjoy your adventure on the server!</#00e676>"
+
+  # Audio chime played on first join
+  sound:
+    enabled: true
+    name: "UI_TOAST_CHALLENGE_COMPLETE"
+    volume: 1.0
+    pitch: 1.0
+
+  # Visual particle burst spawned around the newcomer
+  particles:
+    enabled: true
+    type: "TOTEM_OF_UNDYING"
+    count: 40
+    offset-x: 0.6
+    offset-y: 1.0
+    offset-z: 0.6
+    speed: 0.1
+
+  # Launch a decorative no-damage firework on first join
+  firework:
+    enabled: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# MOB SPAWN PROTECTION
+# ──────────────────────────────────────────────────────────────────────────────
+mob-protection:
+  # Block natural hostile mob spawning and glitch spawns (Endermites from Ender Pearls, Silverfish from blocks, etc.) in designated spawn worlds.
+  enabled: false
+  spawn-worlds:
+    - "spawn"
+  # Block all hostile mobs in spawn worlds regardless of spawn method
+  block-all-hostile: true
+  # Explicit protection toggles for glitch-prone mobs
+  block-ender-pearl-endermite: true
+  block-silverfish-infestation: true
+  # Allow administrative or custom plugin spawns (/summon, NPCs, Pets)
+  allow-plugin-spawns: true
+  # Specifically blocked entity types (case-insensitive EntityType names)
+  blocked-entities:
+    - "ENDERMITE"
+    - "SILVERFISH"
+    - "ZOMBIE"
+    - "SKELETON"
+    - "CREEPER"
+    - "SPIDER"
+    - "CAVE_SPIDER"
+    - "SLIME"
+    - "MAGMA_CUBE"
+    - "PHANTOM"
+    - "GHAST"
+    - "WITHER"
+    - "WITHER_SKELETON"
+    - "WARDEN"
+    - "BREEZE"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# INTERACTIVE REWARD BLOCKS (Spawn Beacon)
+# ──────────────────────────────────────────────────────────────────────────────
+# When broken or punched, strikes lightning, prevents drop, clears block, and executes console kit dispatch.
+beacon-reward:
+  # Enable the spawn beacon break reward mechanic
+  # Keep disabled until the exact coordinates below are configured.
+  enabled: false
+
+  # World where the spawn beacon is located (use "*" or "all" to allow any world)
+  world: "spawn"
+
+  # Target block material (BEACON)
+  target-material: "BEACON"
+
+  # Require and match one exact block location so ordinary player beacons are never consumed.
+  require-coordinates: true
+  x: 0
+  y: 64
+  z: 0
+
+  # Strike lightning at beacon coordinates upon breaking (friendly-1.0-SNAPSHOT parity)
+  strike-lightning: true
+
+  # Cooldown between breaking rewards per player in seconds (0 = no cooldown / breaks every time)
+  cooldown-seconds: 0
+  cooldown-message: "<gradient:#ff416c:#8a2387><bold>BEACON</bold></gradient> <dark_gray>»</dark_gray> <red>You have already claimed the spawn beacon reward today!</red>"
+
+  # Command executed by console upon beacon break (%player% is replaced by breaker name)
+  dispatch-command: "fc givekit beacon %player%"
+
+  # Optional auto-respawn timer in seconds (0 = permanently broken / manual reset, > 0 = regenerate beacon block)
+  respawn-seconds: 0
+
+# ──────────────────────────────────────────────────────────────────────────────
+# TELEGRAM COMMUNITY PROMOTION (/telegram)
+# ──────────────────────────────────────────────────────────────────────────────
+telegram:
+  enabled: true
+  handle: "leenith1314"
+  sound: "ENTITY_EXPERIENCE_ORB_PICKUP"

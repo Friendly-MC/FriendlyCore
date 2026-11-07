@@ -1,0 +1,137 @@
+prefix: "<gradient:#E63A35:#FF6B6B><b>Orders</b></gradient> &7» "
+
+select_item: "&7Click to select an item."
+on_order: "&7You placed a buy order for &f{amount}x {itemType} &7for &a${totalPrice}&7!"
+on_order_placed: "&7You placed a buy order for &f{amount}x {itemType}&7!"
+on_deliver: "&7You delivered &f{amount}x {itemType} &7and received &a+${totalPrice}&7!"
+order_cancelled: "&aYour order has been cancelled and remaining escrow was refunded."
+order_cancel_has_items: "&cYou must collect your delivered items before cancelling this order."
+order_already_cancelled: "&cThis order is already cancelled. Collect your items instead."
+not_enough_money: "&cYou don't have enough money in your balance to place this order!"
+order_announcement: "<gradient:#E63A35:#FF6B6B><b>{player}</b></gradient> &7ordered &f{amount}x {itemType} &7for &a${priceEach}&7 each! &8(/order)"
+order_broadcast: "<gradient:#E63A35:#FF6B6B><b>{playerName}</b></gradient> &7ordered &f{itemAmount}x {itemType} &7for &a${itemPrice}&7 each! &8(/order)"
+order_broadcast_actionbar: "<gradient:#E63A35:#FF6B6B><b>{playerName}</b></gradient> &7ordered &e{itemAmount}x {itemType} &7for &a${itemPrice}&7 each!"
+sell_all: "&aSuccessfully sold your claimed items for &f${price}&a!"
+no_matching_items: "&cYou don't have any matching items in your inventory to deliver!"
+order_completed: "&aThis order has already been fully delivered by another player."
+order_locked: "&cThis order is currently being processed. Please try again in a moment."
+max_orders_reached: "&cYou have reached the maximum allowed active orders &8(&e{limit}&8)&c."
+item_blacklisted: "&cThis item cannot be ordered because it is blacklisted."
+order_created_success: "&aOrder successfully created!"
+order_expired: "&eYour order for &f{amount}x {itemType} &ehas expired. Remaining escrow refunded!"
+order_collected_single: "&aCollected &f{amount}x {itemType}&a into your inventory."
+order_collected_all: "&aCollected all available items from your delivery collection box!"
+invalid_amount: "&cInvalid amount specified! Must be an integer greater than 0."
+invalid_price: "&cInvalid price specified! Must be greater than 0."
+
+notifications:
+  items_delivered: "&7Received delivery of &f{amount}x {itemName} &7from <gradient:#E63A35:#FF6B6B><b>{senderName}</b></gradient>&7!"
+  unclaimed_order: "&7You have &e{amount} &7unclaimed deliveries! Use &c/order &7to collect them."
+  toggle:
+    on: "&aOrder notifications enabled!"
+    off: "&cOrder notifications disabled!"
+
+pricing:
+  min: "&cYour order must have a minimum total price of &a${minPrice}&c!"
+  max: "&cYour order cannot exceed a maximum total price of &a${maxPrice}&c!"
+  per_unit_min: "&cPrice per item must be at least &a${minPrice}&c!"
+  per_unit_max: "&cPrice per item cannot exceed &a${maxPrice}&c!"
+
+pick_enchantments:
+  unselected: "&7Click to select"
+  selected: "&aSelected"
+
+signs:
+  amount:
+    - ""
+    - "^^^^^^^^^^^^^^^"
+    - "Amount"
+    - ""
+  price_per_item:
+    - ""
+    - "^^^^^^^^^^^^^^^"
+    - "Price Per"
+    - "Item"
+  search:
+    - ""
+    - "^^^^^^^^^^^^^^^"
+    - "Search"
+    - ""
+
+input:
+  chat:
+    amount: "<gradient:#E63A35:#FF6B6B><b>Orders</b></gradient> &7» &fType the amount in chat &8(or type &ccancel&8):"
+    price: "<gradient:#E63A35:#FF6B6B><b>Orders</b></gradient> &7» &fType the price per unit in chat &8(or type &ccancel&8):"
+    search: "<gradient:#E63A35:#FF6B6B><b>Orders</b></gradient> &7» &fType your search query in chat &8(or type &ccancel&8):"
+  anvil:
+    amount_title: "&0Enter Amount"
+    price_title: "&0Enter Price"
+    search_title: "&0Search Here"
+  dialog:
+    amount_title: "Order Amount"
+    amount_label: "Amount"
+    price_title: "Price per Item"
+    price_label: "Price"
+    search_title: "Search Orders"
+    search_label: "Query"
+    confirm: "Confirm"
+    cancel: "Cancel"
+
+sorts:
+  MOST_PAID: "Most Paid"
+  MOST_DELIVERED: "Most Delivered"
+  RECENTLY_LISTED: "Recently Listed"
+  MOST_MONEY_PER_ITEM: "Highest Price"
+
+filters:
+  ALL: "All"
+  BLOCKS: "Blocks"
+  TOOLS: "Tools"
+  FOOD: "Food"
+  COMBAT: "Combat"
+  POTIONS: "Potions"
+  BOOKS: "Books"
+  INGREDIENTS: "Ingredients"
+  UTILITIES: "Utilities"
+
+sort_select:
+  A_Z: "A-Z"
+  Z_A: "Z-A"
+  HIGHEST_PRICE: "Highest Price"
+  LOWEST_PRICE: "Lowest Price"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# COMMAND, GUI AND ADMIN MESSAGES
+# ──────────────────────────────────────────────────────────────────────────────
+usage-delete-convert: "Usage: /%label% <gui|reload|cancel <id>|delete <id>|convert>"
+gui-can-only-be-opened-by: "GUI can only be opened by players."
+usage-cancel: "Usage: /%label% cancel <orderId>"
+order-cancelled-and-refunded-to-creator: "Order cancelled and refunded to creator."
+failed-to-cancel-order: "Failed to cancel order."
+invalid-uuid-format: "Invalid UUID format: %input%"
+usage-delete: "Usage: /%label% delete <orderId>"
+order-permanently-deleted: "Order permanently deleted."
+starting-donutorder-conversion-in-background: "Starting DonutOrder conversion in background..."
+this-command-can-only-be-executed: "This command can only be executed by players."
+migrate-no-legacy-donutorder-sqlite-database-found: "No legacy DonutOrder SQLite database found at plugins/DonutOrder/database.db"
+migrate-successfully-converted-legacy-donutorder-orders-into: "Successfully converted %count% legacy DonutOrder orders into FriendlyCore!"
+migrate-failed-to-convert-donutorder-data: "Failed to convert DonutOrder data: %error%"
+admin-moderation: "<gradient:#E63A35:#FF6B6B><b>Orders</b></gradient> &7» &cAdmin Moderation"
+anvil-input-title: "&0%title_formatted%"
+
+# Shared GUI, input and fallback text
+anvil-input-text: "&f%text%"
+anvil-input-empty: "Type here"
+sign-name-line-2: "New team name"
+sign-name-line-3: "Name / cancel"
+name-input-unavailable: "Unable to open name input. Please try again."
+dialog-rename: "Rename"
+dialog-cancel: "Cancel"
+dialog-confirm: "Confirm"
+dialog-amount-title: "Order Amount"
+dialog-amount-label: "Amount"
+dialog-price-title: "Price per Item"
+dialog-price-label: "Price"
+dialog-search: "Search"
+dialog-search-title: "Search Orders"
+dialog-query-label: "Query"

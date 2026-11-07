@@ -1,0 +1,56 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║                        ✦ RENDERS GUI CONFIG ✦                                ║
+# ║  Configuration for Item, Inventory, Enderchest, and Shulker Preview GUIs    ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+
+# ──────────────────────────────────────────────────────────────────────────────
+# INVENTORY PREVIEW GUI ([inv] / [inventory])
+# ──────────────────────────────────────────────────────────────────────────────
+# Layout configuration for the player inventory viewer menu
+inventory-gui:
+  title: "<gradient:#00d2ff:#3a7bd5><bold>✦ ɪɴᴠᴇɴᴛᴏʀʏ</bold></gradient> <dark_gray>» <color:#D8D0C3>%player%</color>"
+  size: 54
+  contents-slots: "0-35"
+  armor-slots: "45-48"
+  main-hand-slot: 51
+  off-hand-slot: 53
+  decorations:
+    divider:
+      material: BLACK_STAINED_GLASS_PANE
+      slots: "36-44,49-50,52"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ENDER CHEST PREVIEW GUI ([enderchest] / [ec])
+# ──────────────────────────────────────────────────────────────────────────────
+# Layout configuration for the player Ender Chest viewer menu
+enderchest-gui:
+  title: "<gradient:#ffb300:#ff8f00><bold>✦ ᴇɴᴅᴇʀ ᴄʜᴇѕᴛ</bold></gradient> <dark_gray>» <color:#D8D0C3>%player%</color>"
+  size: 45
+  contents-slots: "0-26"
+  decorations:
+    divider:
+      material: BLACK_STAINED_GLASS_PANE
+      slots: "27-44"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# HELD ITEM PREVIEW GUI ([item] / [i] / [hand])
+# ──────────────────────────────────────────────────────────────────────────────
+# Layout configuration for single held item inspection
+item-gui:
+  title: "<gradient:#00e676:#00b0ff><bold>✦ ɪᴛᴇᴍ ᴘʀᴇᴠɪᴇᴡ</bold></gradient> <dark_gray>» <color:#D8D0C3>%player%</color>"
+  size: 9
+  item-slot: 4
+  decorations:
+    divider1:
+      material: BLACK_STAINED_GLASS_PANE
+      slots: "0-3,5-8"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SHULKER BOX PREVIEW GUI
+# ──────────────────────────────────────────────────────────────────────────────
+# Layout configuration for nested shulker box container inspection
+shulker-box-gui:
+  title: "<gradient:#ab47bc:#7b1fa2><bold>✦ ѕʜᴜʟᴋᴇʀ ʙᴏx</bold></gradient> <dark_gray>» <color:#D8D0C3>%player%</color>"
+  size: 27
