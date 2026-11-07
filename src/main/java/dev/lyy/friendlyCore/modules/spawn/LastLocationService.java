@@ -50,6 +50,8 @@ public class LastLocationService implements Listener, PluginMessageListener {
     private final SpawnManager spawnManager;
     private final Map<UUID, SpawnData> pendingArrivals = new ConcurrentHashMap<>();
     private final Map<UUID, Object> failsafeTasks = new ConcurrentHashMap<>();
+    private final Map<UUID, Long> lastForwardAttempt = new ConcurrentHashMap<>();
+    private final Map<UUID, String> lastForwardTarget = new ConcurrentHashMap<>();
     private volatile String proxyServerName;
 
     public String getProxyServerName() {
@@ -72,6 +74,8 @@ public class LastLocationService implements Listener, PluginMessageListener {
 
     public void shutdown() {
         pendingArrivals.clear();
+        lastForwardAttempt.clear();
+        lastForwardTarget.clear();
         for (Object task : failsafeTasks.values()) {
             plugin.getScheduler().cancel(task);
         }
@@ -456,6 +460,37 @@ public class LastLocationService implements Listener, PluginMessageListener {
         }
 
         if (LastLocationPolicy.shouldForwardFromHub(hub, last, local, proxy)) {
+            UUID uuid = player.getUniqueId();
+            String target = last != null ? last.server() : null;
+            long now = System.currentTimeMillis();
+            Long lastAttempt = lastForwardAttempt.get(uuid);
+            String lastTarget = lastForwardTarget.get(uuid);
+
+            boolean isReturn = false;
+            try {
+                if (plugin.getRtpManager() != null && plugin.getRtpManager().getCrossServerService() != null) {
+                    isReturn = plugin.getRtpManager().getCrossServerService().isReturnArrival(uuid);
+                }
+            } catch (Throwable ignored) {}
+
+            boolean isLoop = (lastAttempt != null && (now - lastAttempt) < 20_000L && target != null && target.equalsIgnoreCase(lastTarget));
+
+            if (isReturn || isLoop) {
+                lastForwardAttempt.remove(uuid);
+                lastForwardTarget.remove(uuid);
+                clearLastLocation(uuid);
+                teleportToConfiguredSpawn(player);
+                try {
+                    player.sendActionBar(net.kyori.adventure.text.Component.text("§cConnection to " + (target != null ? target : "server") + " unavailable. Staying at spawn."));
+                } catch (Throwable ignored) {}
+                plugin.getLogger().warning("[LastLocation] Prevented connection loop for " + player.getName() + " to " + target + "; retained at spawn.");
+                return;
+            }
+
+            if (target != null) {
+                lastForwardAttempt.put(uuid, now);
+                lastForwardTarget.put(uuid, target);
+            }
             sendToRemote(player, last);
             return;
         }
@@ -675,8 +710,12 @@ public class LastLocationService implements Listener, PluginMessageListener {
     @EventHandler(priority = EventPriority.MONITOR)
     public void onQuitWhileRouting(PlayerQuitEvent event) {
         Player player = event.getPlayer();
-        if (player != null && player.hasMetadata(ROUTING_META)) {
-            finishRouting(player);
+        if (player != null) {
+            lastForwardAttempt.remove(player.getUniqueId());
+            lastForwardTarget.remove(player.getUniqueId());
+            if (player.hasMetadata(ROUTING_META)) {
+                finishRouting(player);
+            }
         }
     }
 

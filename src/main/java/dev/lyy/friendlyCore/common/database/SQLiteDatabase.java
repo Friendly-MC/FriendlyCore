@@ -97,6 +97,8 @@ public class SQLiteDatabase implements DatabaseManager {
             stmt.executeUpdate("CREATE INDEX IF NOT EXISTS idx_fc_tx_sender ON friendlycore_transactions(sender_uuid);");
             stmt.executeUpdate("CREATE INDEX IF NOT EXISTS idx_fc_tx_receiver ON friendlycore_transactions(receiver_uuid);");
             stmt.executeUpdate("CREATE INDEX IF NOT EXISTS idx_fc_tx_timestamp ON friendlycore_transactions(timestamp DESC);");
+            stmt.executeUpdate("CREATE INDEX IF NOT EXISTS idx_fc_tx_sender_time ON friendlycore_transactions(sender_uuid, timestamp DESC);");
+            stmt.executeUpdate("CREATE INDEX IF NOT EXISTS idx_fc_tx_receiver_time ON friendlycore_transactions(receiver_uuid, timestamp DESC);");
 
             stmt.executeUpdate("""
                 CREATE TABLE IF NOT EXISTS friendlycore_stats (
@@ -316,6 +318,7 @@ public class SQLiteDatabase implements DatabaseManager {
                 );
             """);
             stmt.executeUpdate("CREATE INDEX IF NOT EXISTS idx_ah_notif_user ON friendlycore_auction_notifications (user_uuid);");
+            stmt.executeUpdate("CREATE INDEX IF NOT EXISTS idx_ah_notif_user_id ON friendlycore_auction_notifications (user_uuid, id);");
 
             stmt.executeUpdate("""
                 CREATE TABLE IF NOT EXISTS friendlycore_auction_notification_dedup (
@@ -334,6 +337,7 @@ public class SQLiteDatabase implements DatabaseManager {
                 );
             """);
             stmt.executeUpdate("CREATE INDEX IF NOT EXISTS idx_ah_payouts_user ON friendlycore_auction_payouts (user_uuid);");
+            stmt.executeUpdate("CREATE INDEX IF NOT EXISTS idx_ah_payouts_user_id ON friendlycore_auction_payouts (user_uuid, id);");
             }
 
             // Orders module tables (only create when module is enabled)
@@ -374,6 +378,7 @@ public class SQLiteDatabase implements DatabaseManager {
             """);
             stmt.executeUpdate("CREATE INDEX IF NOT EXISTS idx_fc_order_deliv_buyer ON friendlycore_order_deliveries (buyer_uuid);");
             stmt.executeUpdate("CREATE INDEX IF NOT EXISTS idx_fc_order_deliv_claimed ON friendlycore_order_deliveries (claimed);");
+            stmt.executeUpdate("CREATE INDEX IF NOT EXISTS idx_fc_order_deliv_buyer_claimed ON friendlycore_order_deliveries (buyer_uuid, claimed, id);");
 
             stmt.executeUpdate("""
                 CREATE TABLE IF NOT EXISTS friendlycore_order_history (
@@ -757,15 +762,20 @@ public class SQLiteDatabase implements DatabaseManager {
         return CompletableFuture.supplyAsync(() -> {
             List<Transaction> list = new ArrayList<>();
             String sql = """
-                SELECT * FROM friendlycore_transactions
-                WHERE sender_uuid = ? OR receiver_uuid = ?
-                ORDER BY timestamp DESC LIMIT ?;
+                SELECT * FROM (
+                    (SELECT * FROM friendlycore_transactions WHERE sender_uuid = ? ORDER BY timestamp DESC LIMIT ?)
+                    UNION ALL
+                    (SELECT * FROM friendlycore_transactions WHERE receiver_uuid = ? AND (sender_uuid IS NULL OR sender_uuid != ?) ORDER BY timestamp DESC LIMIT ?)
+                ) AS tx_union ORDER BY timestamp DESC LIMIT ?;
             """;
             try (Connection conn = dataSource.getConnection();
                  PreparedStatement ps = conn.prepareStatement(sql)) {
                 ps.setString(1, uuid.toString());
-                ps.setString(2, uuid.toString());
-                ps.setInt(3, limit);
+                ps.setInt(2, limit);
+                ps.setString(3, uuid.toString());
+                ps.setString(4, uuid.toString());
+                ps.setInt(5, limit);
+                ps.setInt(6, limit);
                 try (ResultSet rs = ps.executeQuery()) {
                     while (rs.next()) {
                         long id = rs.getLong("id");
@@ -1438,11 +1448,22 @@ public class SQLiteDatabase implements DatabaseManager {
     @Override
     public CompletableFuture<Void> pruneTransactions(long olderThanTimestamp) {
         return CompletableFuture.runAsync(() -> {
-            String sql = "DELETE FROM friendlycore_transactions WHERE timestamp < ?";
+            String sql = "DELETE FROM friendlycore_transactions WHERE id IN (SELECT id FROM friendlycore_transactions WHERE timestamp < ? LIMIT 1000)";
             try (Connection conn = dataSource.getConnection();
                  PreparedStatement ps = conn.prepareStatement(sql)) {
                 ps.setLong(1, olderThanTimestamp);
-                ps.executeUpdate();
+                int deleted;
+                do {
+                    deleted = ps.executeUpdate();
+                    if (deleted > 0) {
+                        try {
+                            Thread.sleep(25L);
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                            break;
+                        }
+                    }
+                } while (deleted == 1000);
             } catch (SQLException e) {
                 plugin.getLogger().log(Level.SEVERE, "Failed to prune SQLite transactions", e);
             }
