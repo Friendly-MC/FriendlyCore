@@ -31,6 +31,7 @@ public final class RtpReturnPlugin {
     private final ProxyServer proxy;
     private final Map<UUID, Pending> pending = new ConcurrentHashMap<>();
     private final Map<UUID, Long> recentRedirects = new ConcurrentHashMap<>();
+    private final Map<UUID, long[]> connectKickTracker = new ConcurrentHashMap<>();
 
     @Inject
     public RtpReturnPlugin(ProxyServer proxy) {
@@ -78,6 +79,28 @@ public final class RtpReturnPlugin {
     @Subscribe(order = PostOrder.LAST)
     public void kicked(KickedFromServerEvent event) {
         Player player = event.getPlayer();
+
+        // Global cascade loop breaker: if any player is kicked during server connect 3+ times within 10 seconds,
+        // disconnect them cleanly so Velocity Netty threads don't spin in an infinite bounce loop consuming 100% CPU.
+        if (event.kickedDuringServerConnect()) {
+            long now = System.currentTimeMillis();
+            long[] tracker = connectKickTracker.compute(player.getUniqueId(), (k, v) -> {
+                if (v == null || (now - v[0]) > 10_000L) {
+                    return new long[]{now, 1};
+                }
+                v[1]++;
+                return v;
+            });
+            if (tracker != null && tracker[1] >= 3) {
+                connectKickTracker.remove(player.getUniqueId());
+                pending.remove(player.getUniqueId());
+                recentRedirects.remove(player.getUniqueId());
+                event.setResult(KickedFromServerEvent.DisconnectPlayer.create(
+                        Component.text("Server connection failed. Please reconnect in a moment.")));
+                return;
+            }
+        }
+
         Pending transfer = current(player);
         if (transfer == null) return;
 
@@ -118,6 +141,7 @@ public final class RtpReturnPlugin {
             pending.remove(event.getPlayer().getUniqueId(), transfer);
         }
         recentRedirects.remove(event.getPlayer().getUniqueId());
+        connectKickTracker.remove(event.getPlayer().getUniqueId());
     }
 
     @Subscribe
@@ -125,5 +149,6 @@ public final class RtpReturnPlugin {
         Pending transfer = pending.get(event.getPlayer().getUniqueId());
         if (transfer != null && transfer.player() == event.getPlayer()) pending.remove(event.getPlayer().getUniqueId(), transfer);
         recentRedirects.remove(event.getPlayer().getUniqueId());
+        connectKickTracker.remove(event.getPlayer().getUniqueId());
     }
 }
