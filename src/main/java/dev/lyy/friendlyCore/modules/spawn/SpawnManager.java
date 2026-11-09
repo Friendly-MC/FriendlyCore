@@ -938,12 +938,22 @@ public class SpawnManager implements Listener {
 
     @SuppressWarnings("deprecation")
     private static Location tryGetRespawnLocation(Player player) {
+        if (player == null) return null;
         try {
+            // Paper/Folia safe method: returns bed/anchor location without synchronous chunk loading
+            try {
+                java.lang.reflect.Method m = player.getClass().getMethod("getPotentialRespawnLocation");
+                Object loc = m.invoke(player);
+                if (loc instanceof Location l) {
+                    return l;
+                }
+            } catch (Throwable ignored) {}
+
             return player.getRespawnLocation();
-        } catch (NoSuchMethodError | Exception ignored) {
+        } catch (Throwable ignored) {
             try {
                 return player.getBedSpawnLocation();
-            } catch (NoSuchMethodError | Exception ignored2) {
+            } catch (Throwable ignored2) {
                 return null;
             }
         }
