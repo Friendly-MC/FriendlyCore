@@ -83,6 +83,17 @@ public class EconomyManager implements Listener {
             AccountData account = accountCache.get(uuid);
             if (account == null || account.isPlaceholder()) loadPlayerAccount(uuid, name);
         }), 100L, 100L);
+
+        // Schedule periodic transaction pruning (runs every 6 hours, retaining last 30 days)
+        plugin.getScheduler().runAsyncTimer(() -> {
+            try {
+                long retentionMillis = java.util.concurrent.TimeUnit.DAYS.toMillis(30);
+                long cutoff = System.currentTimeMillis() - retentionMillis;
+                plugin.getDatabaseManager().pruneTransactions(cutoff);
+            } catch (Exception e) {
+                plugin.getLogger().warning("Failed to run scheduled transaction pruning: " + e.getMessage());
+            }
+        }, 1200L, 20L * 60 * 60 * 6);
     }
 
     @EventHandler(priority = EventPriority.MONITOR)

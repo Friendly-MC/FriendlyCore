@@ -30,6 +30,8 @@ public final class RtpReturnPlugin {
     private record Pending(Player player, UUID request, ServerConnection source, RegisteredServer target, long deadline) {}
     private final ProxyServer proxy;
     private final Map<UUID, Pending> pending = new ConcurrentHashMap<>();
+    private final Map<UUID, Long> recentRedirects = new ConcurrentHashMap<>();
+    private final Map<UUID, long[]> connectKickTracker = new ConcurrentHashMap<>();
 
     @Inject
     public RtpReturnPlugin(ProxyServer proxy) {
@@ -58,9 +60,7 @@ public final class RtpReturnPlugin {
             if (input.available() != 0 || target == null || target.equals(source.getServer())) return;
             Player player = source.getPlayer();
             long now = System.nanoTime();
-            pending.compute(player.getUniqueId(), (uuid, previous) -> previous != null
-                    && previous.player() == player && now < previous.deadline() ? previous
-                    : new Pending(player, request, source, target, now + TimeUnit.SECONDS.toNanos(60)));
+            pending.put(player.getUniqueId(), new Pending(player, request, source, target, now + TimeUnit.SECONDS.toNanos(60)));
         } catch (IOException ignored) {
             // Invalid packets never authorize routing.
         }
@@ -79,12 +79,47 @@ public final class RtpReturnPlugin {
     @Subscribe(order = PostOrder.LAST)
     public void kicked(KickedFromServerEvent event) {
         Player player = event.getPlayer();
+
+        // Global cascade loop breaker: if any player is kicked during server connect 3+ times within 10 seconds,
+        // disconnect them cleanly so Velocity Netty threads don't spin in an infinite bounce loop consuming 100% CPU.
+        if (event.kickedDuringServerConnect()) {
+            long now = System.currentTimeMillis();
+            long[] tracker = connectKickTracker.compute(player.getUniqueId(), (k, v) -> {
+                if (v == null || (now - v[0]) > 10_000L) {
+                    return new long[]{now, 1};
+                }
+                v[1]++;
+                return v;
+            });
+            if (tracker != null && tracker[1] >= 3) {
+                connectKickTracker.remove(player.getUniqueId());
+                pending.remove(player.getUniqueId());
+                recentRedirects.remove(player.getUniqueId());
+                event.setResult(KickedFromServerEvent.DisconnectPlayer.create(
+                        Component.text("Server connection failed. Please reconnect in a moment.")));
+                return;
+            }
+        }
+
         Pending transfer = current(player);
         if (transfer == null) return;
+
+        // Loop detection: if redirected back within the last 10 seconds and kicked again during connect, disconnect cleanly
+        long now = System.currentTimeMillis();
+        Long lastRedirect = recentRedirects.get(player.getUniqueId());
+        if (lastRedirect != null && (now - lastRedirect) < 10_000L && event.kickedDuringServerConnect()) {
+            pending.remove(player.getUniqueId());
+            recentRedirects.remove(player.getUniqueId());
+            event.setResult(KickedFromServerEvent.DisconnectPlayer.create(
+                    Component.text("Connection loop detected while returning. Please reconnect.")));
+            return;
+        }
+
         String reason = event.getServerKickReason().map(PlainTextComponentSerializer.plainText()::serialize).orElse("");
         if (!event.kickedDuringServerConnect() && event.getServer().equals(transfer.source().getServer())
                 && reason.equals("friendlycore:rtp-return:" + transfer.request())) {
             if (pending.remove(player.getUniqueId(), transfer)) {
+                recentRedirects.put(player.getUniqueId(), now);
                 event.setResult(KickedFromServerEvent.RedirectPlayer.create(transfer.source().getServer(),
                         Component.text("RTP could not connect. Returned to your previous server.")));
             }
@@ -93,6 +128,7 @@ public final class RtpReturnPlugin {
                 // Sync has already released this source. Its tagged watchdog kick starts a fresh login.
                 event.setResult(KickedFromServerEvent.Notify.create(Component.text("RTP could not connect. Returning to your previous server...")));
             } else if (pending.remove(player.getUniqueId(), transfer)) {
+                recentRedirects.put(player.getUniqueId(), now);
                 event.setResult(KickedFromServerEvent.RedirectPlayer.create(transfer.source().getServer()));
             }
         }
@@ -104,11 +140,15 @@ public final class RtpReturnPlugin {
         if (transfer != null && !event.getServer().equals(transfer.source().getServer())) {
             pending.remove(event.getPlayer().getUniqueId(), transfer);
         }
+        recentRedirects.remove(event.getPlayer().getUniqueId());
+        connectKickTracker.remove(event.getPlayer().getUniqueId());
     }
 
     @Subscribe
     public void disconnected(DisconnectEvent event) {
         Pending transfer = pending.get(event.getPlayer().getUniqueId());
         if (transfer != null && transfer.player() == event.getPlayer()) pending.remove(event.getPlayer().getUniqueId(), transfer);
+        recentRedirects.remove(event.getPlayer().getUniqueId());
+        connectKickTracker.remove(event.getPlayer().getUniqueId());
     }
 }

@@ -101,7 +101,8 @@ public class CrossServerPacket {
         ORDER_ITEM_INSERT,
         ORDER_ITEM_UPDATE,
         ORDER_ITEM_DELETE,
-        ORDER_NOTIFICATION
+        ORDER_NOTIFICATION,
+        HEARTBEAT
     }
 
     private final String sourceServer;

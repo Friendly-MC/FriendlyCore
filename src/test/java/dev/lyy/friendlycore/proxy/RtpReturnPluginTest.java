@@ -171,6 +171,26 @@ class RtpReturnPluginTest {
         return bytes.toByteArray();
     }
 
+    @Test
+    void repeatedConnectKicksTriggerGlobalCascadeLoopBreaker() throws Exception {
+        Player testPlayer = player();
+        RegisteredServer serverA = server();
+        RegisteredServer serverB = server();
+
+        var kick1 = kick(testPlayer, serverA, true, "offline");
+        plugin.kicked(kick1);
+        assertFalse(kick1.getResult() instanceof KickedFromServerEvent.DisconnectPlayer);
+
+        var kick2 = kick(testPlayer, serverB, true, "too many packets");
+        plugin.kicked(kick2);
+        assertFalse(kick2.getResult() instanceof KickedFromServerEvent.DisconnectPlayer);
+
+        var kick3 = kick(testPlayer, serverA, true, "internal error");
+        plugin.kicked(kick3);
+        assertTrue(kick3.getResult() instanceof KickedFromServerEvent.DisconnectPlayer,
+                "Third connect kick within 10s must disconnect player to break CPU storm loop");
+    }
+
     private Player player() {
         return stub(Player.class, (object, method, args) -> switch (method.getName()) {
             case "getUniqueId" -> uuid;

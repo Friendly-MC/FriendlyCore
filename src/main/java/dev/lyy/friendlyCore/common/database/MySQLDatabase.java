@@ -123,6 +123,23 @@ public class MySQLDatabase implements DatabaseManager {
                 stmt.executeUpdate("ALTER TABLE friendlycore_transactions MODIFY COLUMN sender_name VARCHAR(36), MODIFY COLUMN receiver_name VARCHAR(36);");
             } catch (SQLException ignored) {}
 
+            // High performance composite indexes for large databases
+            try {
+                stmt.executeUpdate("CREATE INDEX idx_tx_sender_time ON friendlycore_transactions (sender_uuid, timestamp DESC);");
+            } catch (SQLException ignored) {}
+            try {
+                stmt.executeUpdate("CREATE INDEX idx_tx_receiver_time ON friendlycore_transactions (receiver_uuid, timestamp DESC);");
+            } catch (SQLException ignored) {}
+            try {
+                stmt.executeUpdate("CREATE INDEX idx_order_deliv_buyer_claimed ON friendlycore_order_deliveries (buyer_uuid, claimed, id);");
+            } catch (SQLException ignored) {}
+            try {
+                stmt.executeUpdate("CREATE INDEX idx_ah_notif_user_id ON friendlycore_auction_notifications (user_uuid, id);");
+            } catch (SQLException ignored) {}
+            try {
+                stmt.executeUpdate("CREATE INDEX idx_ah_payouts_user_id ON friendlycore_auction_payouts (user_uuid, id);");
+            } catch (SQLException ignored) {}
+
             stmt.executeUpdate("""
                 CREATE TABLE IF NOT EXISTS friendlycore_stats (
                     uuid VARCHAR(36) PRIMARY KEY,
@@ -796,15 +813,20 @@ public class MySQLDatabase implements DatabaseManager {
         return CompletableFuture.supplyAsync(() -> {
             List<Transaction> list = new ArrayList<>();
             String sql = """
-                SELECT * FROM friendlycore_transactions
-                WHERE sender_uuid = ? OR receiver_uuid = ?
-                ORDER BY timestamp DESC LIMIT ?;
+                SELECT * FROM (
+                    (SELECT * FROM friendlycore_transactions WHERE sender_uuid = ? ORDER BY timestamp DESC LIMIT ?)
+                    UNION ALL
+                    (SELECT * FROM friendlycore_transactions WHERE receiver_uuid = ? AND (sender_uuid IS NULL OR sender_uuid != ?) ORDER BY timestamp DESC LIMIT ?)
+                ) AS tx_union ORDER BY timestamp DESC LIMIT ?;
             """;
             try (Connection conn = dataSource.getConnection();
                  PreparedStatement ps = conn.prepareStatement(sql)) {
                 ps.setString(1, uuid.toString());
-                ps.setString(2, uuid.toString());
-                ps.setInt(3, limit);
+                ps.setInt(2, limit);
+                ps.setString(3, uuid.toString());
+                ps.setString(4, uuid.toString());
+                ps.setInt(5, limit);
+                ps.setInt(6, limit);
                 try (ResultSet rs = ps.executeQuery()) {
                     while (rs.next()) {
                         long id = rs.getLong("id");
@@ -1477,11 +1499,22 @@ public class MySQLDatabase implements DatabaseManager {
     @Override
     public CompletableFuture<Void> pruneTransactions(long olderThanTimestamp) {
         return CompletableFuture.runAsync(() -> {
-            String sql = "DELETE FROM friendlycore_transactions WHERE timestamp < ?";
+            String sql = "DELETE FROM friendlycore_transactions WHERE timestamp < ? LIMIT 1000";
             try (Connection conn = dataSource.getConnection();
                  PreparedStatement ps = conn.prepareStatement(sql)) {
                 ps.setLong(1, olderThanTimestamp);
-                ps.executeUpdate();
+                int deleted;
+                do {
+                    deleted = ps.executeUpdate();
+                    if (deleted > 0) {
+                        try {
+                            Thread.sleep(25L);
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                            break;
+                        }
+                    }
+                } while (deleted == 1000);
             } catch (SQLException e) {
                 plugin.getLogger().log(Level.SEVERE, "Failed to prune transactions from MySQL", e);
             }

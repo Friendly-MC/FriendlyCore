@@ -89,7 +89,7 @@ public class RedisService {
         int port = config.getInt("redis.port", 6379);
         String password = config.getString("redis.password", "");
         boolean ssl = config.getBoolean("redis.ssl", false);
-        int timeout = config.getInt("redis.timeout", 2000);
+        int timeout = Math.max(5000, config.getInt("redis.timeout", 5000));
         this.serverId = config.getString("redis.server-id", "server-1");
         this.pubsubChannel = config.getString("redis.channels.sync", config.getString("redis.channels.balance-update", "friendlycore:cross_sync"));
         this.sharedSecret = config.getString("redis.security.shared-secret", "");
@@ -571,6 +571,8 @@ public class RedisService {
             redisClient.sadd("friendlycore:known_servers", serverId);
             redisClient.set("friendlycore:server_heartbeat:" + serverId, "1",
                     SetParams.setParams().ex(120));
+            // Keep PubSub subscriber connection alive with periodic traffic
+            publish(new CrossServerPacket(serverId, CrossServerPacket.Action.HEARTBEAT, null, null, 0.0, null));
 
             Set<String> knownServers = redisClient.smembers("friendlycore:known_servers");
             if (knownServers != null) {
